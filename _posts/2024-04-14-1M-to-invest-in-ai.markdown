@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Questions to ask before investing in AI this year"
-date:   2024-04-12 12:03:22 -0400
+date:   2024-04-14 13:03:22 -0400
 categories: jekyll update
 ---
 
