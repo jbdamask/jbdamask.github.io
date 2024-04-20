@@ -16,6 +16,8 @@ The writing style of the post is cheesy, IMO, but I'm too lazy to write it mysel
 
 Below the blog post is the result of me asking ChatGPT to create a pitch deck for investors. Like the blog post, it's ok.
 
+----
+
 ## Working through a Business Idea with ChatGPT
 It all started with a simple question about how fish use their lateral lines to sense their environment. This led to a fascinating exploration of whether humans could mimic this sensory system through technology. This curiosity gave birth to an innovative business idea: integrating an artificial lateral line system into wetsuits for divers and snorkelers.
 
