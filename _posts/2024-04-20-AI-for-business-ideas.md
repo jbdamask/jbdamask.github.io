@@ -74,7 +74,8 @@ __Annual Market (post-replacement cycle adjustment):__
 $80 million based on a 5-year replacement cycle.
 
 ### Slide 5: Serviceable Obtainable Market (SOM)
-Our Initial Target: 10% of annual TAM.
+__Our Initial Target:__
+10% of annual TAM.
 
 __Projected Annual Revenue:__
 $8 million from direct product sales.
