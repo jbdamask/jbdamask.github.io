@@ -88,7 +88,7 @@ __Year 1 Revenue:__
 $800,000 (1,000 units).
 
 __Year 2-5 Growth:__ 
-Our goal is to capture the entire SOM within 5 years, which means we'd need to grow at nearly 60% annually to each $8M USD in sales within 5 years. This will be achieved through aggressive market penetration, international expansion and regular improvements of our product.
+Our goal is to capture the entire SOM within 5 years, which means we'd need to grow at nearly 60% annually to each $8M USD in sales within 5 years. This will be achieved through aggressive international market penetration and regular improvements of our product.
 
 __Years 5-to-10 Projection:__
 Compound annual growth rate (CAGR) projections of the wetsuit market estimates a TAM of $2.15B by 2030, or $700M USD SOM with expected 5 year average replacement or $140M USD annual SOM. 
