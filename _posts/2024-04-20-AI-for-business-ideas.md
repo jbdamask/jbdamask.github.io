@@ -7,9 +7,9 @@ categories: jekyll update
 
 ![Wetsuit Lateral Line](/assets/images/wetsuit-lateral-line.png)
 
-The blog post below was written by ChatGPT based on a conversation I had with it. It started as a curiosity but I went a few steps further to see if it would be helpful assessing a business opportunity. 
+The blog post below was written by ChatGPT based on a Saturday morning conversation we had (feels weird saying "we"). It started with a simple question about lateral lines on fish and morphed into a chat where the LLM helped me explore a business opportunity. 
 
-I think idea exploration is a great use-case for LLMs but not perfect. This is because ChatGPT can't yet do meaningful research; it's limited to training data and basic web search. But imagine having subscriptions to market research APIs that could be used for ad-hoc research. Now that would be cool.
+Idea exploration is a great use-case for LLMs but not perfect. ChatGPT can't do meaningful research yet - it's limited to training data and basic web search. But once you can connect ad-hoc sources via their native API this would be a very effective way to explore things in depth. We're on the cusp.
 
 
 # Working through a Business Idea with ChatGPT
