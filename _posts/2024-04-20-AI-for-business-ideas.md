@@ -8,7 +8,7 @@ categories: jekyll update
 ![Wetsuit Lateral Line](/assets/images/wetsuit-lateral-line.png)
 *Image by Midjourney*
 
-The blog post below was written by ChatGPT based on a Saturday morning conversation we had (feels weird saying "we"). It started with a simple question about lateral lines on fish and morphed into a chat where the LLM helped me explore a business opportunity. 
+The blog post below was written by ChatGPT based on a Saturday morning conversation we had (feels weird saying "we"). It started with a simple question about lateral lines on fish and morphed into a chat where the LLM helped me play around with a business opportunity.
 
 Idea exploration is a great use-case for LLMs but the tech isn't quite there just yet. ChatGPT can't do meaningful research yet - it's limited to training data and basic web search. But once you can connect ad-hoc sources via their native API this would be a very effective way to explore things in depth. We're on the cusp.
 
