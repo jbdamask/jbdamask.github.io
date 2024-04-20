@@ -127,3 +127,4 @@ __Net Profit Year 1:__ $260,000 USD.
 __Operational Costs:__ 
 Maintained at 30% of revenue, ensuring profitable growth.
 
+__Net Profit Years 5-10:__ $12M USD
