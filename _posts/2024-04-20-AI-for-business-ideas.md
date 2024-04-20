@@ -15,8 +15,7 @@ Idea exploration is a great use-case for LLMs but the tech isn't quite there jus
 The writing style of the post is cheesy, IMO, but I'm too lazy to write it myself. It gets the point across.
 
 
-# Working through a Business Idea with ChatGPT
-From Curiosity to Concept: A Business Idea Emerges
+## Working through a Business Idea with ChatGPT
 It all started with a simple question about how fish use their lateral lines to sense their environment. This led to a fascinating exploration of whether humans could mimic this sensory system through technology. This curiosity gave birth to an innovative business idea: integrating an artificial lateral line system into wetsuits for divers and snorkelers.
 
 ## Developing the Idea with ChatGPT
