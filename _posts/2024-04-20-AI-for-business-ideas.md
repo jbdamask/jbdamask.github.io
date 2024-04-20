@@ -6,6 +6,7 @@ categories: jekyll update
 ---
 
 ![Wetsuit Lateral Line](/assets/images/wetsuit-lateral-line.png)
+*Image by Midjourney*
 
 The blog post below was written by ChatGPT based on a Saturday morning conversation we had (feels weird saying "we"). It started with a simple question about lateral lines on fish and morphed into a chat where the LLM helped me explore a business opportunity. 
 
