@@ -37,7 +37,7 @@ In "The Phoenix Project," the Three Ways are discussed by Erik, who introduces a
 
 __User__: Tell me about these. Do they produce lots of flowers?
 
-<img src="../assets/images/flowers.jpeg" width="150" height="200">
+<img src="/assets/images/flowers.jpeg" width="150" height="200">
 
 
 __ChatGPT__:
