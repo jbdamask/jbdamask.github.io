@@ -5,7 +5,7 @@ date:   2024-05-04 09:00:00 -0400
 categories: jekyll update
 ---
 
-## Running list of things GPT knows that surpised me
+## Running list of things GPT knows, or can do, that surpised me
 
 __User__:
 What’s the Stravinsky piece that starts with a simple melody played on oboe?
