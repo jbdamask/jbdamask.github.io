@@ -44,3 +44,12 @@ __ChatGPT__:
 Oleander plants, like the one shown in your photo, are well-known for their ability to produce a lot of flowers. These plants bloom prolifically from late spring through fall, offering a continuous display of flowers. Oleander flowers can be pink, red, white, or yellow and are quite striking.
 
 However, it's important to note that every part of the oleander plant is toxic if ingested, so it should be handled with care, especially around children and pets. The plant is quite hardy, tolerating drought, heat, and various soil types, making it a popular choice for landscapes and outdoor areas. Proper care includes full sun exposure and regular watering for optimal blooming.
+
+---
+
+__User__: What's the avg over the past 3 months. be concise
+
+<img src="/assets/images/user-trend.png" width="250" height="150">
+
+__ChatGPT__:
+The average number of weekly active users over the past three months is approximately 199.85.
