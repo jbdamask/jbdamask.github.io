@@ -29,7 +29,7 @@ The fish kicked up and the next thing I knew I had a hook through my hand; and t
 
 So I was in a situation. The fish was still freaked out and I wasn't about to let another hook go in so I stood up with it hanging. It didn't hurt so I tried yanking on it tear the skin. Turns out skin is pretty tough. There was a leatherman in my pocket but I couldn't get to it because of the angle. Help was needed. 
 
-It was just after sunrise and down the beach I spotted an older couple walking my way. So I picked up the fish, attached to the lure, attached to my hand, attached to the rod, and walked towards them. "Can I bother you for a minute?!".
+It was just after sunrise and down the beach I spotted an older couple walking my way. So me and the fish, attached to the lure, attached to my hand, attached to the rod, walked towards them. "Can I bother you for a minute?!".
 
 The woman didn't like this at all and walked away. But the man recognized a fellow human in need and came over. He had a great grimace when he saw what was going on.
 
