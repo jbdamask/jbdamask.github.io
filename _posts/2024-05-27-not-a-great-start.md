@@ -35,9 +35,9 @@ The woman didn't like this at all and walked away. But the man recognized a fell
 
 "I have a tool in my front pocket. I need you to get it out and cut the hook" I said.
 
-Dutifully, he did so and managed to cut the hook. I ran the fish down to the water, figuring it still had a chance (it didn't). Then went to my car with part of the hook still embedded. The closest urgent care center didn't open for another hour and I didn't want to drive to Southampton hospital. So I did what any dummy would do - I pulled the hook out myself with the pliers.
+Dutifully, he did so and managed to cut the hook. I ran the fish down to the water, figuring it still had a chance (it didn't). Then I went to my car with part of the hook still embedded. The closest urgent care center didn't open for another hour and I didn't want to drive to Southampton hospital. So I did what any dummy would do - I pulled the hook out myself with the pliers.
 
-Now the hook is a story in itself. It was the same hook I caught my first striper on years back. That means it was the rustiest piece of metal you have every seen. Hmmmm. Maybe I should call my doctor. 
+Now the hook was the same hook I caught my first striper on years back. That means it was the rustiest piece of metal you have every seen. Hmmmm. Maybe I should call my doctor. 
 
 With a bit of an evil laugh, I snapped a picture and texted my Dr asking if I should get it looked at. He got back to me pretty quickly and said I should be find; my tetanus shot was still good. 
 
