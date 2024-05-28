@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Not a great start to the season"
+title:  "Not a great start"
 date:   2024-05-27 12:03:22 -0400
 categories: jekyll update
 ---
