@@ -27,9 +27,7 @@ Finally, one morning at sunrise, I got another one off the eastern-most groin at
 
 The fish kicked up and the next thing I knew I had a hook through my hand; and the other hook was still in the fish's mouth. I learned something the hard way that day. Two things, actually - I didn't know how to handle a striper (good thing it wasn't big) and that treble hooks suck. Since then, I crush the barbs on every lure I buy and often take off the rear treble (turns out that stripers like to hit their prey from the side or front so you only need the belly hook).
 
-So I was in a situation. The fish was still freaked out and I wasn't about to let another hook go in. It didn't hurt so I tried to pull it out - not backwards but rather yanking it to tear the skin. Turns out skin is pretty tough in that direction.
-
-There was a leatherman in my pocket but I couldn't get to it because of the angle. Help was needed. 
+So I was in a situation. The fish was still freaked out and I wasn't about to let another hook go in so I stood up with it hanging. It didn't hurt so I tried yanking on it tear the skin. Turns out skin is pretty tough. There was a leatherman in my pocket but I couldn't get to it because of the angle. Help was needed. 
 
 It was just after sunrise and down the beach I spotted an older couple walking my way. So I picked up the fish, attached to the lure, attached to my hand, attached to the rod, and walked towards them. "Can I bother you for a minute?!".
 
