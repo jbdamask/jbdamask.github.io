@@ -41,7 +41,7 @@ Now the hook was the same hook I caught my first striper on years back. That mea
 
 With a bit of an evil laugh, I snapped a picture and texted my Dr asking if I should get it looked at. He got back to me pretty quickly and said I should be find; my tetanus shot was still good. 
 
-After that, I decided I needed to learn about this game so I could protect myself. That led to a winter reading all of John Skinner's books and watching all his YouTube videos. I got all the right equipment, studied fishing forums to find got spots, learned about tides and moons and so on.
+After that, I decided I needed to learn about this game so I could protect myself. That led to a winter reading all of John Skinner's books and watching all his YouTube videos. I got all the right equipment, studied fishing forums to find good spots, learned about tides and moons and so on.
 
 Once the season started, I was ready. Nope.
 
