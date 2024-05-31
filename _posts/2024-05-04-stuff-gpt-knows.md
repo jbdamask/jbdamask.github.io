@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Surprising stuff GPT knows"
-date:   2024-05-04 09:00:00 -0400
-categories: jekyll update
+date:   2024-05-04
+tags: [ChatGPT, GPT4, it-knows]
+excerpt: "Running list of surprising things GPT knows or can do"
 ---
 
 ## Running list of things GPT knows, or can do, that surpised me
@@ -37,7 +38,7 @@ In "The Phoenix Project," the Three Ways are discussed by Erik, who introduces a
 
 __User__: Tell me about these. Do they produce lots of flowers?
 
-<img src="/assets/images/flowers.jpeg" width="150" height="200">
+<img src="/assets/img/flowers.jpeg" width="150" height="200">
 
 
 __ChatGPT__:
@@ -49,7 +50,7 @@ However, it's important to note that every part of the oleander plant is toxic i
 
 __User__: What's the avg over the past 3 months. be concise
 
-<img src="/assets/images/user-trend.png" width="250" height="150">
+<img src="/assets/img/user-trend.png" width="250" height="150">
 
 __ChatGPT__:
 The average number of weekly active users over the past three months is approximately 199.85.

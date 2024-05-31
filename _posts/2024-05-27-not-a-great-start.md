@@ -1,11 +1,13 @@
 ---
 layout: post
 title:  "Not a great start"
-date:   2024-05-27 12:03:22 -0400
-categories: jekyll update
+date:   2024-05-27
+cover-img: /assets/img/surfcasting.jpg
+thumbnail-img: /assets/img/surfcasting.jpg
+share-img: /assets/img/surfcasting.jpg
+tags: [surf-casting, surf-fishing, striped-bass, montauk]
+excerpt: "From childhood fishing memories to surfcasting, the transition from catching snappers to striped bass highlights evolving skills, essential gear, and a zen-like connection with nature."
 ---
-
-![Surfcasting](/assets/images/surfcasting.jpg)
 
 I grew up fishing for snappers off of the dock in Bellport, Long Island. Every week during the summer I'd ride my bike to the hardware store to buy a bag of frozen shiners and spend the day watching my bobber. If it dunked, I would set the hook like a pro and reel in my catch.  An 8" fish was considered a monster and whenever I caught one that big, I'd ride it home as fast as I could and put it in the fridge then ride back to the dock. Kids.
 
@@ -49,7 +51,7 @@ I logged over 100 hours fishing that summer before I caught my first striper...i
 
 Well, it turns out that I picked up this activity right around the time the bass population tanked. Nice job!
 
-![Bass population](/assets/images/bass-population.jpg)
+![Bass population](/assets/img/bass-population.jpg)
 
 I've done much better since then. In part because of chartering with the Montauk master himself, [Bill Weztel](https://www.longislandsurffishing.com/). He's taught me a ton. I also simply put in the hours and study as much as I can to reduce the element of chance. But with the population in the toilet and still going down, there just aren't that many fish.
 

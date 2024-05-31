@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Not a blogger"
-date:   2024-04-12 12:03:22 -0400
-categories: jekyll update
+date:   2024-04-12
+comments: true
+excerpt: "This is not an interesting post"
 ---
 
 We'll see how this goes. I'm not much of a writer but figure this is a good way to take notes about random thoughts and things.

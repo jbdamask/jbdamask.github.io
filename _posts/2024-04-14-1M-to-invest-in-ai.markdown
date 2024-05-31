@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Questions to ask before investing in AI this year"
-date:   2024-04-14 13:03:22 -0400
-categories: jekyll update
+date:   2024-04-14
+excerpt: "Simple thoughts about spending on AI from the perspective of a company"
 ---
 
 You have $1M to invest in AI this year, how do you think about:

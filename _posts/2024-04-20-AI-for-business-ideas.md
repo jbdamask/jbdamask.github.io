@@ -1,12 +1,13 @@
 ---
 layout: post
 title:  "Working through a business idea with ChatGPT"
-date:   2024-04-20 09:00:00 -0400
-categories: jekyll update
+date:   2024-04-20 
+cover-img: /assets/img/wetsuit-lateral-line.png
+thumbnail-img: /assets/img/wetsuit-lateral-line.png
+share-img: /assets/img/wetsuit-lateral-line.png
+tags: [AI-brainstorm, product-ideas]
+excerpt: "Example of ChatGPT collaboration around a product idea"
 ---
-
-![Wetsuit Lateral Line](/assets/images/wetsuit-lateral-line.png)
-*Image by Midjourney*
 
 The blog post below was written by ChatGPT based on a Saturday morning conversation we had (feels weird saying "we"). It started with a simple question about lateral lines on fish and morphed into a chat where the LLM helped me play around with a business opportunity.
 
