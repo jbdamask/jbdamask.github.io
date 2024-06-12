@@ -54,3 +54,10 @@ __User__: What's the avg over the past 3 months. be concise
 
 __ChatGPT__:
 The average number of weekly active users over the past three months is approximately 199.85.
+
+---
+
+__User__: Is the NIH All of Us program similar to Ancestry.com or 23andme? Be concise.
+
+__ChatGPT__:
+The NIH All of Us program is not similar to Ancestry.com or 23andMe. While Ancestry.com and 23andMe focus on providing genetic ancestry and health-related insights directly to consumers, the All of Us program aims to collect diverse health data from participants to advance medical research and precision medicine. All of Us does not provide individual genetic reports to participants.
