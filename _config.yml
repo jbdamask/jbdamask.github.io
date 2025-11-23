@@ -1,35 +1,50 @@
 # Site settings
 title: Don't over(look|state) the obvious
-tagline: John Damask's personal site
+subtitle: John Damask's personal site
 email: jbdamask@gmail.com
-description: >
-  Personal blog and website
+description: Personal blog and website
 baseurl: ""
 url: "https://jbdamask.github.io"
-permalink: pretty
+locale: "en-US"
 
 # Author information
-author: John Damask
-
-# Social media
-github_username: jbdamask
-twitter_username: jbdamask
-linkedin_username: johndamask
-medium_username: jbdamask
+author:
+  name: John Damask
+  email: jbdamask@gmail.com
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/jbdamask"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/jbdamask"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/johndamask"
+    - label: "Medium"
+      icon: "fab fa-fw fa-medium"
+      url: "https://medium.com/@jbdamask"
 
 # Build settings
 markdown: kramdown
-remote_theme: chrisrhymes/bulma-clean-theme@v0.13.4
+remote_theme: mmistakes/minimal-mistakes@4.24.0
+minimal_mistakes_skin: "default"
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
-  - jekyll-seo-tag
+  - jekyll-include-cache
   - jekyll-remote-theme
 
 # Pagination
 paginate: 5
-paginate_path: "/blog/page:num"
+paginate_path: /page:num/
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
 
 # Exclude from processing
 exclude:
@@ -44,19 +59,21 @@ exclude:
 
 # Defaults
 defaults:
-  -
-    scope:
+  # _posts
+  - scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
-      layout: "post"
-      show_sidebar: false
-  -
-    scope:
-      path: ""
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
     values:
-      layout: "page"
-      show_sidebar: false
-
-# RSS feed
-rss-description: Not sure why you would subscribe to this but here you go
+      layout: single
+      author_profile: true

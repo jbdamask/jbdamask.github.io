@@ -1,25 +1,4 @@
 ---
-layout: page
-title: Don't over(look|state) the obvious
-subtitle: Minimal musings
-show_sidebar: false
+layout: home
+author_profile: true
 ---
-
-<div class="content">
-  <h2>Recent Posts</h2>
-  {% for post in site.posts limit:5 %}
-    <article class="media">
-      <div class="media-content">
-        <div class="content">
-          <p>
-            <a href="{{ post.url | relative_url }}"><strong>{{ post.title }}</strong></a>
-            <br>
-            <small>{{ post.date | date: "%B %-d, %Y" }}</small>
-            <br>
-            {{ post.excerpt }}
-          </p>
-        </div>
-      </div>
-    </article>
-  {% endfor %}
-</div>
