@@ -19,7 +19,7 @@ medium_username: jbdamask
 
 # Build settings
 markdown: kramdown
-remote_theme: chrisrhymes/bulma-clean-theme
+remote_theme: chrisrhymes/bulma-clean-theme@v0.13.4
 plugins:
   - jekyll-feed
   - jekyll-sitemap
