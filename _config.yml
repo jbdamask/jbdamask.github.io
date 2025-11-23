@@ -5,6 +5,7 @@ email: jbdamask@gmail.com
 description: Personal blog and website
 baseurl: ""
 url: "https://jbdamask.github.io"
+repository: "jbdamask/jbdamask.github.io"
 locale: "en-US"
 
 # Author information
