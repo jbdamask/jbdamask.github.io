@@ -46,6 +46,7 @@ paginate_path: /page:num/
 include:
   - .htaccess
   - _pages
+  - tools
 
 # Exclude from processing
 exclude:
