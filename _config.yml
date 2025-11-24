@@ -11,7 +11,7 @@ locale: "en-US"
 # Author information
 author:
   name: John Damask
-  email: jbdamask@gmail.com
+  email: john@amroja.com
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -25,6 +25,9 @@ author:
     - label: "Medium"
       icon: "fab fa-fw fa-medium"
       url: "https://medium.com/@jbdamask"
+    - label: "Substack"
+      icon: "fab fa-fw fa-substack"
+      url:  "https://johndamask.substack.com/"
 
 # Build settings
 markdown: kramdown
