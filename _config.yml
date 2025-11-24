@@ -11,6 +11,7 @@ locale: "en-US"
 # Author information
 author:
   name: John Damask
+  avatar: "/assets/images/john-2025.jpeg"
   email: john@amroja.com
   links:
     - label: "GitHub"
