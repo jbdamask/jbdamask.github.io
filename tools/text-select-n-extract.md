@@ -1,6 +1,6 @@
 ---
 title: Text Select & Extract
-tool_url: /tools/text-select-n-extract.md
+tool_url: /tools/text-select-n-extract.html
 excerpt: Extract text snippets from document. 
 permalink: /tools/text-select-and-extract/
 ---
