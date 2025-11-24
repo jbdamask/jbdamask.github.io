@@ -6,21 +6,28 @@
   url: https://www.linkedin.com/posts/johndamask_building-apps-just-for-fun-beatbox-visualizer-activity-7398122643872436224-Co2y
   date: 2024-11-23
   excerpt: "The top beatboxer today is an amazing talent who calls himself Wing. I was blown away by his video for Dopamine. So I did what anyone would do...I made an app to do spectral analysis of beatboxer audio!"
-  image: ""
+  image: "https://media.licdn.com/dms/image/v2/D4E22AQHU9eOaOBTm7w/feedshare-shrink_800/B4EZqtpVWBHEAg-/0/1763849886688?e=1765411200&v=beta&t=35Mx7cy8jXGTiQwtiR3L0ag2NOkQyonJLgsVoPGD-fk"
 
 - title: "Using various AI tools to learn something new before my work day begins"
   source: linkedin
   url: https://www.linkedin.com/posts/johndamask_example-of-using-various-ai-tools-to-learn-activity-7396913670808838145-iA0z?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAA43DsBQQOqryv5OKRbJ4POIvYxDEng4o0
   date: 2024-11-19
   excerpt: "Podcasts, Perplexity, and Claude Code"
-  image: ""
+  image: "https://media.licdn.com/dms/image/v2/D4E22AQGRXOeqt4d69w/feedshare-shrink_800/B4EZqcdyBQGcAo-/0/1763561646057?e=1765411200&v=beta&t=0uOxOes63FXRF5bxjCKltDCWM-KYA70rzbzG6rtZXjw"
 
 - title: "AI in everyday life: Restaurant wine assistant"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7394420720191090688?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAA43DsBQQOqryv5OKRbJ4POIvYxDEng4o0
   date: 2024-11-19
   excerpt: "Went to a restaurant the other night and wanted a wine but didn't know any of those on the list. So I snapped a picture, uploaded to ChatGPT and..."
-  image: ""
+  image: "https://media.licdn.com/dms/image/v2/D4E22AQFaMzy0lfbN6A/feedshare-shrink_800/B4EZp5CcXwKMAg-/0/1762967280604?e=1765411200&v=beta&t=AlzcQToKVHSoM_lfH_oy0zVEN4pJ7bVzWKkFNUge0Cs"
+
+- title: "Using Claude Code to fix a bug in open source software"
+  source: linkedin
+  url: https://www.linkedin.com/posts/johndamask_this-post-is-about-using-claude-code-to-activity-7393694506237456384-kLxq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAA43DsBQQOqryv5OKRbJ4POIvYxDEng4o0
+  date: 2024-11-16
+  excerpt: "It turns out that Claude Code is a great troubleshooting partner. We had a solution in about an hour and even made a pull request."
+  image: "https://media.licdn.com/dms/image/v2/D4E22AQH2xSNQqrhm6A/feedshare-shrink_800/B4EZput940HgAg-/0/1762794136811?e=1765411200&v=beta&t=VRY9uvmlPf5f4rr6oyoJhc6mVJQFwQteUg9VKgtiPhg"
 
 
 # Add more posts below following the same format:
