@@ -24,12 +24,13 @@ async function fetchSubstackPosts() {
   return [];
 }
 
-// Fetch Twitter posts via RSSHub (direct RSS parsing)
+// Fetch Twitter posts via RSSHub with CORS proxy
 async function fetchTwitterPosts() {
   const twitterFeed = 'https://rsshub.app/twitter/user/jbdamask';
+  const corsProxy = 'https://corsproxy.io/?';
 
   try {
-    const response = await fetch(twitterFeed);
+    const response = await fetch(corsProxy + encodeURIComponent(twitterFeed));
     const text = await response.text();
 
     // Parse RSS XML
