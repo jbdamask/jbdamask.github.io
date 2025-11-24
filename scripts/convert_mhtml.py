@@ -101,7 +101,7 @@ def create_blog_post(title, html_content, date=None):
 
     # Create front matter
     front_matter = f"""---
-layout: single
+layout: app
 title: "{title}"
 date: {date_str}
 excerpt: "{excerpt}"
