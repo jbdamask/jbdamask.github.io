@@ -26,8 +26,8 @@ author:
       icon: "fab fa-fw fa-medium"
       url: "https://medium.com/@jbdamask"
     - label: "Substack"
-      icon: "fab fa-fw fa-substack"
-      url:  "https://johndamask.substack.com/"
+      icon: "fas fa-fw fa-newspaper"
+      url: "https://johndamask.substack.com/"
 
 # Build settings
 markdown: kramdown
@@ -50,6 +50,10 @@ include:
   - .htaccess
   - _pages
   - tools
+
+# Custom CSS
+after_footer_scripts:
+  - /assets/css/custom.css
 
 # Exclude from processing
 exclude:
