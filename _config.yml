@@ -51,10 +51,6 @@ include:
   - _pages
   - tools
 
-# Custom CSS
-after_footer_scripts:
-  - /assets/css/custom.css
-
 # Exclude from processing
 exclude:
   - Gemfile
