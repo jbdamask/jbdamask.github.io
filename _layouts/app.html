@@ -10,48 +10,73 @@ layout: none
 
   <style>
     /* Reset and full-width styling */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #fff;
     }
 
-    /* Header bar matching your site */
+    /* Header bar matching Minimal Mistakes theme */
     .site-header {
       background: #fff;
-      border-bottom: 1px solid #e5e5e5;
-      padding: 1rem 2rem;
+      border-bottom: 1px solid #f2f3f3;
+      padding: 0.5em 1em;
+      position: sticky;
+      top: 0;
+      z-index: 100;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
+    .site-branding {
+      display: flex;
+      align-items: center;
+    }
+
     .site-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: #333;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #494e52;
       text-decoration: none;
+      line-height: 1.2;
+      margin: 0;
+      display: block;
+    }
+
+    .site-title:hover {
+      color: #000;
     }
 
     .site-subtitle {
-      font-size: 0.875rem;
-      color: #666;
+      font-size: 0.75rem;
+      color: #7a8288;
+      font-weight: 400;
       display: block;
+      margin-top: 0.25rem;
     }
 
     .site-nav {
       display: flex;
-      gap: 2rem;
+      gap: 1.5rem;
+      align-items: center;
     }
 
     .site-nav a {
-      color: #666;
+      color: #494e52;
       text-decoration: none;
-      font-size: 1.125rem;
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 0.5rem 0;
     }
 
     .site-nav a:hover {
-      color: #0066cc;
+      color: #000;
     }
 
     /* Full-width content */
@@ -60,19 +85,35 @@ layout: none
       margin: 0;
       padding: 0;
     }
+
+    @media (max-width: 768px) {
+      .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .site-nav {
+        gap: 1rem;
+      }
+
+      .site-nav a {
+        font-size: 0.875rem;
+      }
+    }
   </style>
 </head>
 <body>
   <!-- Header matching your site -->
   <header class="site-header">
-    <div>
+    <div class="site-branding">
       <a href="{{ '/' | relative_url }}" class="site-title">
         {{ site.title }}
         <span class="site-subtitle">{{ site.subtitle }}</span>
       </a>
     </div>
     <nav class="site-nav">
-      <a href="{{ '/aboutme/' | relative_url }}">About</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
       <a href="{{ '/tools/' | relative_url }}">Tools</a>
       <a href="{{ '/posts/' | relative_url }}">Posts</a>
     </nav>
