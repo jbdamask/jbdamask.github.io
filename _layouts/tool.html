@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<div class="page">
+  <div class="page__inner-wrap">
+    <header>
+      <h1 class="page__title">{{ page.title }}</h1>
+      {% if page.excerpt %}
+        <p class="page__lead">{{ page.excerpt | markdownify }}</p>
+      {% endif %}
+    </header>
+
+    <section class="page__content">
+      <!-- Launch Tool Button -->
+      {% if page.tool_url %}
+        <div style="margin: 2rem 0; text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 8px;">
+          <a href="{{ page.tool_url | relative_url }}" class="btn btn--primary btn--large" style="font-size: 1.2rem; padding: 1rem 2rem;">
+            🚀 Launch {{ page.title }}
+          </a>
+          <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Opens in current tab</p>
+        </div>
+      {% endif %}
+
+      <!-- Tool Documentation -->
+      {{ content }}
+
+      <!-- Back to Tools -->
+      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e0e0e0;">
+        <a href="/tools/" style="color: #0066cc; text-decoration: none;">← Back to Tools</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<style>
+.btn--large {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #0066cc;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn--large:hover {
+  background-color: #0052a3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.page__lead {
+  font-size: 1.25rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+</style>

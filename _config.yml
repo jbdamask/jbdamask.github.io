@@ -79,3 +79,10 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # tools documentation
+  - scope:
+      path: "tools"
+      type: pages
+    values:
+      layout: tool
+      author_profile: false

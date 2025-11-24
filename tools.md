@@ -5,20 +5,47 @@ permalink: /tools/
 author_profile: true
 ---
 
-A collection of standalone HTML tools and apps. Simply drop an HTML file into the `tools/` directory and it will automatically appear here!
+A collection of standalone HTML tools and apps. Simply drop files into the `tools/` directory and they will automatically appear here!
 
 <div class="tools-grid">
-{% assign tool_files = site.static_files | where_exp: "file", "file.path contains 'tools/'" | where_exp: "file", "file.extname == '.html'" | sort: "basename" %}
+{% assign html_tools = site.static_files | where_exp: "file", "file.path contains 'tools/'" | where_exp: "file", "file.extname == '.html'" | sort: "basename" %}
+{% assign doc_pages = site.pages | where_exp: "page", "page.path contains 'tools/'" | where_exp: "page", "page.path contains '.md'" %}
 
-{% for tool in tool_files %}
+{% for tool in html_tools %}
   {% assign tool_name = tool.basename | replace: "-", " " | replace: "_", " " | capitalize %}
+
+  <!-- Check if there's a matching .md documentation file -->
+  {% assign has_docs = false %}
+  {% assign doc_url = "" %}
+  {% for doc in doc_pages %}
+    {% assign doc_basename = doc.path | split: "/" | last | replace: ".md", "" %}
+    {% if doc_basename == tool.basename %}
+      {% assign has_docs = true %}
+      {% assign doc_url = doc.url %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
   <div class="tool-card">
-    <h3><a href="{{ tool.path | relative_url }}">{{ tool_name }}</a></h3>
-    <p class="tool-link"><a href="{{ tool.path | relative_url }}" class="btn btn--primary">Launch Tool →</a></p>
+    <h3>
+      {% if has_docs %}
+        <a href="{{ doc_url | relative_url }}">{{ tool_name }}</a>
+      {% else %}
+        <a href="{{ tool.path | relative_url }}">{{ tool_name }}</a>
+      {% endif %}
+    </h3>
+    <p class="tool-link">
+      {% if has_docs %}
+        <a href="{{ doc_url | relative_url }}" class="btn btn--info">Learn More</a>
+        <a href="{{ tool.path | relative_url }}" class="btn btn--primary">Launch →</a>
+      {% else %}
+        <a href="{{ tool.path | relative_url }}" class="btn btn--primary">Launch Tool →</a>
+      {% endif %}
+    </p>
   </div>
 {% endfor %}
 
-{% if tool_files.size == 0 %}
+{% if html_tools.size == 0 %}
   <p class="no-tools">No tools available yet. Add HTML files to the <code>tools/</code> directory to see them here!</p>
 {% endif %}
 </div>
@@ -27,14 +54,36 @@ A collection of standalone HTML tools and apps. Simply drop an HTML file into th
 
 ### How to Add a New Tool
 
+#### Option 1: Simple Tool (HTML only)
 1. Create a standalone HTML file (e.g., `my-tool.html`)
 2. Copy it to the `tools/` directory
-3. Commit and push - the tool will automatically appear on this page!
+3. Commit and push - done!
 
-**Optional:** Add a description meta tag in your HTML:
-```html
-<meta name="tool-description" content="Description of your tool">
-```
+#### Option 2: Tool with Documentation (HTML + Markdown)
+1. Create your tool HTML file (e.g., `pretty-markdown.html`)
+2. Create a matching markdown file (e.g., `pretty-markdown.md`) with:
+   ```yaml
+   ---
+   title: Pretty Markdown
+   tool_url: /tools/pretty-markdown.html
+   excerpt: A beautiful markdown renderer with syntax highlighting
+   permalink: /tools/pretty-markdown/
+   ---
+
+   ## About
+   Description of your tool here...
+
+   ## Features
+   - Feature 1
+   - Feature 2
+   ```
+3. Copy both files to `tools/`
+4. Commit and push!
+
+The tools page will automatically:
+- Show a "Learn More" button (links to the .md documentation)
+- Show a "Launch →" button (launches the .html tool)
+- If no .md file exists, just shows "Launch Tool →"
 
 <style>
 .tools-grid {
@@ -83,5 +132,26 @@ A collection of standalone HTML tools and apps. Simply drop an HTML file into th
 
 .btn--primary:hover {
   background-color: #0052a3;
+}
+
+.btn--info {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #17a2b8;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  margin-right: 0.5rem;
+}
+
+.btn--info:hover {
+  background-color: #138496;
+}
+
+.tool-link {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 </style>

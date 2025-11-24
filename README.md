@@ -26,19 +26,37 @@ The site is automatically deployed to GitHub Pages via GitHub Actions when chang
 
 ## Adding Tools
 
-The site includes an automatic tool discovery system. To add a new tool:
+The site includes an automatic tool discovery system with two workflows:
 
-1. Create a standalone HTML file (e.g., `my-awesome-tool.html`)
+### Simple Tool (HTML only)
+
+1. Create a standalone HTML file (e.g., `my-tool.html`)
 2. Copy it to the `tools/` directory
-3. Commit and push to GitHub
-4. The tool will automatically appear on the `/tools/` page!
+3. Commit and push
+4. Tool appears on `/tools/` with a "Launch Tool →" button
 
-The file name will be converted to a display name (e.g., `my-awesome-tool.html` → "My Awesome Tool").
+### Tool with Documentation (HTML + Markdown)
 
-**Optional:** Add a description meta tag in your HTML for better documentation:
-```html
-<meta name="tool-description" content="Brief description of what this tool does">
-```
+For tools that need documentation, create companion markdown files:
+
+1. Create your tool: `pretty-markdown.html`
+2. Create matching docs: `pretty-markdown.md` with front matter:
+   ```yaml
+   ---
+   title: Pretty Markdown
+   tool_url: /tools/pretty-markdown.html
+   excerpt: Brief description
+   permalink: /tools/pretty-markdown/
+   ---
+
+   Your documentation here...
+   ```
+3. Copy both to `tools/`
+4. Tool appears with two buttons: "Learn More" and "Launch →"
+
+**The system automatically detects companion files** by matching filenames (e.g., `tool.html` + `tool.md`).
+
+File names are auto-converted to display names: `my-awesome-tool.html` → "My Awesome Tool"
 
 ## Theme Documentation
 
