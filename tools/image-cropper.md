@@ -1,8 +1,8 @@
 ---
 title: Social Media Cropper
-tool_url: /tools/social-media-cropper.html
+tool_url: /tools/image-cropper.html
 excerpt: A simple web app to resize images for various social media platforms
-permalink: /tools/social-media-cropper/
+permalink: /tools/image-cropper/
 ---
 
 # Social Media Image Cropper
