@@ -1,31 +1,47 @@
-<!-- Avatar lightbox functionality -->
-<div id="avatar-lightbox" class="avatar-lightbox">
-  <img src="" alt="Profile Picture">
+<!-- Avatar modal -->
+<div id="avatar-modal" class="avatar-modal">
+  <div class="avatar-modal-content">
+    <button class="avatar-modal-close" aria-label="Close">&times;</button>
+    <img src="" alt="Profile Picture">
+  </div>
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const avatar = document.querySelector('.author__avatar img');
-  const lightbox = document.getElementById('avatar-lightbox');
-  const lightboxImg = lightbox.querySelector('img');
+  const modal = document.getElementById('avatar-modal');
+  const modalImg = modal.querySelector('.avatar-modal-content img');
+  const closeBtn = modal.querySelector('.avatar-modal-close');
 
-  if (avatar && lightbox) {
-    // Click avatar to open lightbox
+  if (avatar && modal) {
+    // Click avatar to open modal
     avatar.addEventListener('click', function(e) {
       e.preventDefault();
-      lightboxImg.src = this.src;
-      lightbox.classList.add('active');
+      modalImg.src = this.src;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
     });
 
-    // Click lightbox to close
-    lightbox.addEventListener('click', function() {
-      this.classList.remove('active');
+    // Click close button to close
+    closeBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    // Click overlay (not content) to close
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
     });
 
     // Press ESC to close
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-        lightbox.classList.remove('active');
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
   }
