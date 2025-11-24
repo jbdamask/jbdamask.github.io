@@ -24,30 +24,44 @@ async function fetchSubstackPosts() {
   return [];
 }
 
-// Fetch Twitter posts via RSSHub
+// Fetch Twitter posts via RSSHub (direct RSS parsing)
 async function fetchTwitterPosts() {
   const twitterFeed = 'https://rsshub.app/twitter/user/jbdamask';
-  const proxyUrl = 'https://api.rss2json.com/v1/api.json?rss_url=';
 
   try {
-    const response = await fetch(proxyUrl + encodeURIComponent(twitterFeed));
-    const data = await response.json();
+    const response = await fetch(twitterFeed);
+    const text = await response.text();
 
-    if (data.status === 'ok') {
-      return data.items.map(item => ({
-        title: item.title || 'Tweet',
-        description: item.description,
-        link: item.link,
-        pubDate: new Date(item.pubDate),
-        thumbnail: extractImageFromContent(item.content),
-        source: 'twitter'
-      }));
-    }
+    // Parse RSS XML
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(text, 'text/xml');
+
+    const items = xml.querySelectorAll('item');
+    const posts = [];
+
+    items.forEach((item, index) => {
+      if (index < 20) { // Limit to 20 tweets
+        const title = item.querySelector('title')?.textContent || 'Tweet';
+        const description = item.querySelector('description')?.textContent || '';
+        const link = item.querySelector('link')?.textContent || '';
+        const pubDate = item.querySelector('pubDate')?.textContent || new Date().toISOString();
+
+        posts.push({
+          title: title,
+          description: description,
+          link: link,
+          pubDate: new Date(pubDate),
+          thumbnail: extractImageFromContent(description),
+          source: 'twitter'
+        });
+      }
+    });
+
+    return posts;
   } catch (error) {
     console.error('Error fetching Twitter posts:', error);
     return [];
   }
-  return [];
 }
 
 // Extract first image from HTML content
