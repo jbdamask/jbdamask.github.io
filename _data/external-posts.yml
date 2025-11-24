@@ -8,6 +8,21 @@
   excerpt: "The top beatboxer today is an amazing talent who calls himself Wing. I was blown away by his video for Dopamine. So I did what anyone would do...I made an app to do spectral analysis of beatboxer audio!"
   image: ""
 
+- title: "Using various AI tools to learn something new before my work day begins"
+  source: linkedin
+  url: https://www.linkedin.com/posts/johndamask_example-of-using-various-ai-tools-to-learn-activity-7396913670808838145-iA0z?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAA43DsBQQOqryv5OKRbJ4POIvYxDEng4o0
+  date: 2024-11-19
+  excerpt: "Podcasts, Perplexity, and Claude Code"
+  image: ""
+
+- title: "AI in everyday life: Restaurant wine assistant"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7394420720191090688?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAA43DsBQQOqryv5OKRbJ4POIvYxDEng4o0
+  date: 2024-11-19
+  excerpt: "Went to a restaurant the other night and wanted a wine but didn't know any of those on the list. So I snapped a picture, uploaded to ChatGPT and..."
+  image: ""
+
+
 # Add more posts below following the same format:
 # - title: "Your post title"
 #   source: linkedin  # or twitter
