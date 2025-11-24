@@ -7,4 +7,4 @@ author_profile: true
 
 ## John Damask
 
-Interested autodidact. 
+No patience for life in real time
