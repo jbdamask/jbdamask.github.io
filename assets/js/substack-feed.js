@@ -24,45 +24,14 @@ async function fetchSubstackPosts() {
   return [];
 }
 
-// Fetch Twitter posts via RSSHub with CORS proxy
+// Fetch Twitter posts - disable for now due to CORS/API limitations
+// Users can view Twitter directly via the link in the footer
 async function fetchTwitterPosts() {
-  const twitterFeed = 'https://rsshub.app/twitter/user/jbdamask';
-  const corsProxy = 'https://corsproxy.io/?';
-
-  try {
-    const response = await fetch(corsProxy + encodeURIComponent(twitterFeed));
-    const text = await response.text();
-
-    // Parse RSS XML
-    const parser = new DOMParser();
-    const xml = parser.parseFromString(text, 'text/xml');
-
-    const items = xml.querySelectorAll('item');
-    const posts = [];
-
-    items.forEach((item, index) => {
-      if (index < 20) { // Limit to 20 tweets
-        const title = item.querySelector('title')?.textContent || 'Tweet';
-        const description = item.querySelector('description')?.textContent || '';
-        const link = item.querySelector('link')?.textContent || '';
-        const pubDate = item.querySelector('pubDate')?.textContent || new Date().toISOString();
-
-        posts.push({
-          title: title,
-          description: description,
-          link: link,
-          pubDate: new Date(pubDate),
-          thumbnail: extractImageFromContent(description),
-          source: 'twitter'
-        });
-      }
-    });
-
-    return posts;
-  } catch (error) {
-    console.error('Error fetching Twitter posts:', error);
-    return [];
-  }
+  // Twitter RSS feeds are blocked by CORS and most free proxies are unreliable
+  // For now, return empty array - tweets won't show in feed
+  // Alternative: Use Twitter's official embed widget (separate implementation)
+  console.log('Twitter feed temporarily disabled due to API restrictions');
+  return [];
 }
 
 // Extract first image from HTML content
