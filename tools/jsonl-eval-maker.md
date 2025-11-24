@@ -1,8 +1,8 @@
 ---
 title: JSON Eval Maker
-tool_url: /tools/json-eval-maker.html
+tool_url: /tools/jsonl-eval-maker.html
 excerpt: A simple tool to create evaluation datasets in JSONL format.
-permalink: /tools/json-eval-maker/
+permalink: /tools/jsonl-eval-maker/
 ---
 
 # JSONL Eval Maker
