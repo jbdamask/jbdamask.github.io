@@ -12,7 +12,7 @@ from datetime import datetime
 
 # Configuration
 TWITTER_USERNAME = "jbdamask"
-MAX_TWEETS = 10
+MAX_TWEETS = 5  # Keep it low for Free tier (max 10)
 OUTPUT_FILE = "_data/twitter-posts.yml"
 
 def get_user_id(bearer_token, username):
@@ -43,6 +43,12 @@ def fetch_tweets(bearer_token, user_id, max_results=10):
     }
 
     response = requests.get(url, headers=headers, params=params)
+
+    if response.status_code == 429:
+        print("Rate limit exceeded (429). This is expected on Twitter Free tier.")
+        print("The workflow runs daily, so rate limits will reset before the next run.")
+        print("Keeping existing twitter-posts.yml file (if it exists).")
+        return None
 
     if response.status_code != 200:
         print(f"Error fetching tweets: {response.status_code}")
@@ -110,6 +116,12 @@ def main():
 
     # Fetch tweets
     tweets_data = fetch_tweets(bearer_token, user_id, MAX_TWEETS)
+
+    # If rate limited, exit gracefully without updating the file
+    if tweets_data is None:
+        print("Skipping update due to rate limit.")
+        sys.exit(0)
+
     print(f"Fetched {len(tweets_data.get('data', []))} tweets")
 
     # Convert to YAML format
