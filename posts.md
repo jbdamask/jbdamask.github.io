@@ -82,6 +82,11 @@ author_profile: true
   color: white;
 }
 
+.post-source.twitter {
+  background: #1DA1F2;
+  color: white;
+}
+
 .post-date {
   color: #666;
 }

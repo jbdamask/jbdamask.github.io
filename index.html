@@ -86,6 +86,11 @@ author_profile: true
   color: white;
 }
 
+.home-post-source.twitter {
+  background: #1DA1F2;
+  color: white;
+}
+
 .home-post-date {
   color: #666;
   font-size: 0.85rem;
@@ -146,10 +151,11 @@ document.addEventListener('DOMContentLoaded', async function() {
   const container = document.getElementById('home-posts');
   if (!container) return;
 
-  // Fetch Substack posts
+  // Fetch all posts
   const substackPosts = await fetchSubstackPosts();
+  const twitterPosts = await fetchTwitterPosts();
   const jekyllPosts = getJekyllPosts();
-  const allPosts = [...substackPosts, ...jekyllPosts];
+  const allPosts = [...substackPosts, ...twitterPosts, ...jekyllPosts];
 
   // Sort by date, newest first, limit to 5
   allPosts.sort((a, b) => b.pubDate - a.pubDate);
@@ -167,9 +173,14 @@ document.addEventListener('DOMContentLoaded', async function() {
       day: 'numeric'
     });
 
-    const sourceLabel = post.source === 'substack'
-      ? '<span class="home-post-source substack">Substack</span>'
-      : '<span class="home-post-source blog">Blog</span>';
+    let sourceLabel;
+    if (post.source === 'substack') {
+      sourceLabel = '<span class="home-post-source substack">Substack</span>';
+    } else if (post.source === 'twitter') {
+      sourceLabel = '<span class="home-post-source twitter">Twitter</span>';
+    } else {
+      sourceLabel = '<span class="home-post-source blog">Blog</span>';
+    }
 
     const thumbnail = post.thumbnail
       ? `<img src="${post.thumbnail}" alt="${post.title}" class="home-post-thumbnail">`

@@ -24,6 +24,32 @@ async function fetchSubstackPosts() {
   return [];
 }
 
+// Fetch Twitter posts via RSSHub
+async function fetchTwitterPosts() {
+  const twitterFeed = 'https://rsshub.app/twitter/user/jbdamask';
+  const proxyUrl = 'https://api.rss2json.com/v1/api.json?rss_url=';
+
+  try {
+    const response = await fetch(proxyUrl + encodeURIComponent(twitterFeed));
+    const data = await response.json();
+
+    if (data.status === 'ok') {
+      return data.items.map(item => ({
+        title: item.title || 'Tweet',
+        description: item.description,
+        link: item.link,
+        pubDate: new Date(item.pubDate),
+        thumbnail: extractImageFromContent(item.content),
+        source: 'twitter'
+      }));
+    }
+  } catch (error) {
+    console.error('Error fetching Twitter posts:', error);
+    return [];
+  }
+  return [];
+}
+
 // Extract first image from HTML content
 function extractImageFromContent(content) {
   const parser = new DOMParser();
@@ -71,9 +97,14 @@ function renderCombinedPosts(posts) {
       day: 'numeric'
     });
 
-    const sourceLabel = post.source === 'substack'
-      ? '<span class="post-source substack">Substack</span>'
-      : '<span class="post-source blog">Blog</span>';
+    let sourceLabel;
+    if (post.source === 'substack') {
+      sourceLabel = '<span class="post-source substack">Substack</span>';
+    } else if (post.source === 'twitter') {
+      sourceLabel = '<span class="post-source twitter">Twitter</span>';
+    } else {
+      sourceLabel = '<span class="post-source blog">Blog</span>';
+    }
 
     const thumbnail = post.thumbnail
       ? `<img src="${post.thumbnail}" alt="${post.title}" class="post-thumbnail">`
@@ -110,8 +141,9 @@ function stripHtml(html) {
 // Initialize
 document.addEventListener('DOMContentLoaded', async function() {
   const substackPosts = await fetchSubstackPosts();
+  const twitterPosts = await fetchTwitterPosts();
   const jekyllPosts = getJekyllPosts();
-  const allPosts = [...substackPosts, ...jekyllPosts];
+  const allPosts = [...substackPosts, ...twitterPosts, ...jekyllPosts];
 
   renderCombinedPosts(allPosts);
 });
