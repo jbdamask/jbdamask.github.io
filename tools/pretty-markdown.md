@@ -1,3 +1,10 @@
+---
+title: Pretty Markdown
+tool_url: /tools/pretty-markdown.html
+excerpt: A beautiful markdown renderer with syntax highlighting
+permalink: /tools/pretty-markdown/
+---
+
 # Pretty Markdown
 
 A simple, elegant single-page web application for viewing and editing Markdown files directly in your browser.
