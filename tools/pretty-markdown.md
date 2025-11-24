@@ -1,59 +1,79 @@
----
-title: Pretty Markdown
-tool_url: /tools/pretty-markdown.html
-excerpt: A beautiful markdown renderer with live preview, syntax highlighting, and Mermaid diagram support
-permalink: /tools/pretty-markdown/
----
+# Pretty Markdown
 
-## About
+A simple, elegant single-page web application for viewing and editing Markdown files directly in your browser.
 
-Pretty Markdown is a full-featured markdown editor and renderer that provides a split-pane interface for writing and previewing markdown content in real-time.
+## What is Pretty Markdown?
 
-## Features
+Pretty Markdown is a lightweight Markdown viewer and editor that provides a clean, intuitive interface for working with Markdown documents. Whether you need to quickly preview a README file, edit documentation, or create new Markdown content, this tool offers everything you need in a streamlined web interface.
 
-- **Live Preview**: See your markdown rendered instantly as you type
-- **Syntax Highlighting**: Code blocks are beautifully highlighted
-- **Mermaid Diagrams**: Create flowcharts, sequence diagrams, and more
-- **Collapsible Sidebar**: Maximize your workspace when needed
-- **Clean Interface**: Distraction-free writing experience
-- **Responsive Design**: Works on desktop and mobile devices
+## Key Features
 
-## How to Use
+### File Management
+- **Drag & Drop Support**: Simply drag Markdown files directly into the application
+- **File Upload**: Click to browse and select files from your computer
+- **Collapsible Sidebar**: Minimize the file selector to maximize your workspace
 
-1. Click the "Launch Pretty Markdown" button above
-2. Type or paste your markdown in the left editor pane
-3. See the live preview on the right
-4. Use the sidebar toggle to collapse/expand the file list (if applicable)
+### Dual-Panel Interface
+- **Preview Tab**: Real-time rendering of your Markdown content with proper styling
+- **Edit Tab**: Full-featured text editor for modifying your documents
+- **Live Updates**: Changes in the editor instantly reflect in the preview
 
-## Supported Markdown
+### Export Functionality
+- **Save Changes**: Download your edited files directly to your computer
+- **Preserve Formatting**: Maintains original file names and Markdown formatting
 
-Pretty Markdown supports all standard markdown features including:
+## Use Cases
 
-- Headers (h1-h6)
-- Bold, italic, strikethrough
-- Links and images
+- **Documentation Review**: Quickly preview README files, documentation, and technical guides
+- **Content Editing**: Make quick edits to existing Markdown files without switching applications  
+- **Learning Markdown**: Practice Markdown syntax with instant visual feedback
+- **Collaborative Work**: Share and review Markdown content in a user-friendly format
+- **Blog Post Creation**: Draft and preview blog posts written in Markdown
+- **Project Documentation**: View and edit project wikis, changelogs, and documentation
+
+## Supported Content
+
+Pretty Markdown supports standard Markdown syntax including:
+- Headers (H1-H6)
+- Text formatting (bold, italic, strikethrough)
+- Code blocks and inline code
 - Lists (ordered and unordered)
-- Code blocks with syntax highlighting
-- Tables
+- Links and images
 - Blockquotes
+- Tables
 - Horizontal rules
+- **Mermaid Diagrams**: Interactive flowcharts, sequence diagrams, and more
 
-## Mermaid Diagrams
+## Getting Started
 
-Create beautiful diagrams using Mermaid syntax:
+1. Open `pretty-markdown.html` in any modern web browser
+2. Upload a Markdown file using the file selector or drag it into the application
+3. View the rendered content in the Preview tab
+4. Switch to the Edit tab to make changes
+5. Click the save button to download your modified file
 
+### Using Mermaid Diagrams
+
+To create interactive diagrams, use Mermaid code blocks in your Markdown:
+
+````markdown
 ```mermaid
 graph TD
-    A[Start] --> B{Is it working?}
-    B -->|Yes| C[Great!]
-    B -->|No| D[Debug]
-    D --> A
+    A[Start] --> B{Is it ready?}
+    B -->|Yes| C[Deploy]
+    B -->|No| D[Keep working]
+    D --> B
 ```
+````
+
+Supported diagram types include flowcharts, sequence diagrams, class diagrams, state diagrams, and more.
 
 ## Technical Details
 
-Built with:
-- [Marked.js](https://marked.js.org/) for markdown parsing
-- [Mermaid](https://mermaid.js.org/) for diagram rendering
-- Pure JavaScript, HTML, and CSS - no build step required
-- Fully self-contained in a single HTML file
+- **No Installation Required**: Runs entirely in the browser
+- **Client-Side Processing**: All file processing happens locally for privacy
+- **Modern Browser Support**: Compatible with Chrome, Firefox, Safari, and Edge
+- **Responsive Design**: Works on desktop and tablet devices
+- **Lightweight**: Single HTML file with embedded CSS and JavaScript
+
+Pretty Markdown is perfect for developers, writers, and anyone who works with Markdown files and needs a quick, reliable way to view and edit them without installing additional software.
