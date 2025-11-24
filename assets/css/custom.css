@@ -60,32 +60,6 @@ a[href*="substack.com"]:hover .svg-inline--fa {
   border-radius: 8px;
 }
 
-/* Close button */
-.avatar-modal-close {
-  position: absolute;
-  top: -15px;
-  right: -15px;
-  width: 40px;
-  height: 40px;
-  background: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 24px;
-  line-height: 1;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  transition: all 0.2s;
-  color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.avatar-modal-close:hover {
-  background: #f0f0f0;
-  transform: scale(1.1);
-}
-
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
