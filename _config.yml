@@ -23,12 +23,12 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/johndamask"
-    - label: "Medium"
-      icon: "fab fa-fw fa-medium"
-      url: "https://medium.com/@jbdamask"
     - label: "Substack"
       icon: "fas fa-fw fa-newspaper"
       url: "https://johndamask.substack.com/"
+    - label: "Medium"
+      icon: "fab fa-fw fa-medium"
+      url: "https://medium.com/@jbdamask"
 
 # Build settings
 markdown: kramdown

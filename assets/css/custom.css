@@ -11,3 +11,38 @@ a[href*="substack.com"] .svg-inline--fa {
 a[href*="substack.com"]:hover .svg-inline--fa {
   color: #e55a15;
 }
+
+/* Make avatar clickable and show full size on click */
+.author__avatar img {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.author__avatar img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox for avatar */
+.avatar-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+
+.avatar-lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}

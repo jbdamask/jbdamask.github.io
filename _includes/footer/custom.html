@@ -1,0 +1,33 @@
+<!-- Avatar lightbox functionality -->
+<div id="avatar-lightbox" class="avatar-lightbox">
+  <img src="" alt="Profile Picture">
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const avatar = document.querySelector('.author__avatar img');
+  const lightbox = document.getElementById('avatar-lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+
+  if (avatar && lightbox) {
+    // Click avatar to open lightbox
+    avatar.addEventListener('click', function(e) {
+      e.preventDefault();
+      lightboxImg.src = this.src;
+      lightbox.classList.add('active');
+    });
+
+    // Click lightbox to close
+    lightbox.addEventListener('click', function() {
+      this.classList.remove('active');
+    });
+
+    // Press ESC to close
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        lightbox.classList.remove('active');
+      }
+    });
+  }
+});
+</script>
