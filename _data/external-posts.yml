@@ -1,0 +1,17 @@
+# External posts from LinkedIn, Twitter, etc.
+# Add your posts here and they'll appear in the unified feed
+
+- title: "Building apps just for fun - Beatbox Visualizer"
+  source: linkedin
+  url: https://www.linkedin.com/posts/johndamask_building-apps-just-for-fun-beatbox-visualizer-activity-7398122643872436224-Co2y
+  date: 2024-11-23
+  excerpt: "The top beatboxer today is an amazing talent who calls himself Wing. I was blown away by his video for Dopamine. So I did what anyone would do...I made an app to do spectral analysis of beatboxer audio!"
+  image: ""
+
+# Add more posts below following the same format:
+# - title: "Your post title"
+#   source: linkedin  # or twitter
+#   url: https://...
+#   date: 2024-11-20
+#   excerpt: "Brief description..."
+#   image: "/assets/images/your-image.png"  # optional

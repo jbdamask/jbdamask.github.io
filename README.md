@@ -18,6 +18,7 @@ The site is automatically deployed to GitHub Pages via GitHub Actions when chang
 ## Site Structure
 
 - `_posts/` - Blog posts
+- `_data/external-posts.yml` - Manual LinkedIn/Twitter posts
 - `_config.yml` - Jekyll configuration
 - `aboutme.md` - About page
 - `index.html` - Homepage
@@ -57,6 +58,21 @@ For tools that need documentation, create companion markdown files:
 **The system automatically detects companion files** by matching filenames (e.g., `tool.html` + `tool.md`).
 
 File names are auto-converted to display names: `my-awesome-tool.html` → "My Awesome Tool"
+
+## Adding External Posts (LinkedIn, Twitter, etc.)
+
+Since LinkedIn and Twitter don't provide free API access, you can manually add posts to `_data/external-posts.yml`:
+
+```yaml
+- title: "Your post title"
+  source: linkedin  # or twitter
+  url: https://www.linkedin.com/posts/...
+  date: 2024-11-23
+  excerpt: "Brief description of the post..."
+  image: "/assets/images/post-image.png"  # optional
+```
+
+These posts will automatically appear in your unified feed alongside Substack and blog posts, sorted by date.
 
 ## Theme Documentation
 

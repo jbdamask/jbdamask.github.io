@@ -20,6 +20,18 @@ author_profile: true
        data-image="{{ post.image | default: '' }}">
   </div>
 {% endfor %}
+
+<!-- External posts (LinkedIn, Twitter, etc.) -->
+{% for post in site.data.external-posts %}
+  <div class="external-post-item"
+       data-title="{{ post.title | xml_escape }}"
+       data-excerpt="{{ post.excerpt | xml_escape }}"
+       data-url="{{ post.url }}"
+       data-date="{{ post.date | date_to_xmlschema }}"
+       data-image="{{ post.image | default: '' }}"
+       data-source="{{ post.source }}">
+  </div>
+{% endfor %}
 </div>
 
 <style>

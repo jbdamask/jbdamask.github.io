@@ -61,6 +61,25 @@ function getJekyllPosts() {
   return posts;
 }
 
+// Get external posts (LinkedIn, Twitter, etc.) from the page
+function getExternalPosts() {
+  const posts = [];
+  const postElements = document.querySelectorAll('.external-post-item');
+
+  postElements.forEach(el => {
+    posts.push({
+      title: el.dataset.title,
+      description: el.dataset.excerpt,
+      link: el.dataset.url,
+      pubDate: new Date(el.dataset.date),
+      thumbnail: el.dataset.image || null,
+      source: el.dataset.source // 'linkedin' or 'twitter'
+    });
+  });
+
+  return posts;
+}
+
 // Render combined posts
 function renderCombinedPosts(posts) {
   const container = document.getElementById('combined-posts');
@@ -127,7 +146,8 @@ document.addEventListener('DOMContentLoaded', async function() {
   const substackPosts = await fetchSubstackPosts();
   const twitterPosts = await fetchTwitterPosts();
   const jekyllPosts = getJekyllPosts();
-  const allPosts = [...substackPosts, ...twitterPosts, ...jekyllPosts];
+  const externalPosts = getExternalPosts();
+  const allPosts = [...substackPosts, ...twitterPosts, ...jekyllPosts, ...externalPosts];
 
   renderCombinedPosts(allPosts);
 });
