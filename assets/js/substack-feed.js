@@ -24,14 +24,23 @@ async function fetchSubstackPosts() {
   return [];
 }
 
-// Fetch Twitter posts - disable for now due to CORS/API limitations
-// Users can view Twitter directly via the link in the footer
-async function fetchTwitterPosts() {
-  // Twitter RSS feeds are blocked by CORS and most free proxies are unreliable
-  // For now, return empty array - tweets won't show in feed
-  // Alternative: Use Twitter's official embed widget (separate implementation)
-  console.log('Twitter feed temporarily disabled due to API restrictions');
-  return [];
+// Get Twitter posts from the page (fetched by GitHub Actions)
+function getTwitterPosts() {
+  const posts = [];
+  const postElements = document.querySelectorAll('.twitter-post-item');
+
+  postElements.forEach(el => {
+    posts.push({
+      title: el.dataset.title,
+      description: el.dataset.excerpt,
+      link: el.dataset.url,
+      pubDate: new Date(el.dataset.date),
+      thumbnail: el.dataset.image || null,
+      source: 'twitter'
+    });
+  });
+
+  return posts;
 }
 
 // Extract first image from HTML content
@@ -144,7 +153,7 @@ function stripHtml(html) {
 // Initialize
 document.addEventListener('DOMContentLoaded', async function() {
   const substackPosts = await fetchSubstackPosts();
-  const twitterPosts = await fetchTwitterPosts();
+  const twitterPosts = getTwitterPosts();
   const jekyllPosts = getJekyllPosts();
   const externalPosts = getExternalPosts();
   const allPosts = [...substackPosts, ...twitterPosts, ...jekyllPosts, ...externalPosts];

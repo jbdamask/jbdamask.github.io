@@ -21,7 +21,7 @@ author_profile: true
   </div>
 {% endfor %}
 
-<!-- External posts (LinkedIn, Twitter, etc.) -->
+<!-- External posts (LinkedIn) -->
 {% for post in site.data.external-posts %}
   <div class="external-post-item"
        data-title="{{ post.title | xml_escape }}"
@@ -32,6 +32,19 @@ author_profile: true
        data-source="{{ post.source }}">
   </div>
 {% endfor %}
+
+<!-- Twitter posts (from GitHub Actions) -->
+{% if site.data.twitter-posts %}
+{% for post in site.data.twitter-posts %}
+  <div class="twitter-post-item"
+       data-title="{{ post.title | xml_escape }}"
+       data-excerpt="{{ post.excerpt | xml_escape }}"
+       data-url="{{ post.url }}"
+       data-date="{{ post.date | date_to_xmlschema }}"
+       data-image="{{ post.image | default: '' }}">
+  </div>
+{% endfor %}
+{% endif %}
 </div>
 
 <style>
