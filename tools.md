@@ -5,7 +5,9 @@ permalink: /tools/
 author_profile: true
 ---
 
-A collection of standalone HTML tools and apps. Simply drop files into the `tools/` directory and they will automatically appear here!
+This page is where I store little tools that I've built. Currently, they're just single page web apps. I may eventually host more sophisticated ones here but that's really TBD. 
+
+See my [GitHub](https://github.com/jbdamask) for source code of these and more.
 
 <div class="tools-grid">
 {% assign html_tools = site.static_files | where_exp: "file", "file.path contains 'tools/'" | where_exp: "file", "file.extname == '.html'" | sort: "basename" %}
@@ -51,39 +53,6 @@ A collection of standalone HTML tools and apps. Simply drop files into the `tool
 </div>
 
 ---
-
-### How to Add a New Tool
-
-#### Option 1: Simple Tool (HTML only)
-1. Create a standalone HTML file (e.g., `my-tool.html`)
-2. Copy it to the `tools/` directory
-3. Commit and push - done!
-
-#### Option 2: Tool with Documentation (HTML + Markdown)
-1. Create your tool HTML file (e.g., `pretty-markdown.html`)
-2. Create a matching markdown file (e.g., `pretty-markdown.md`) with:
-   ```yaml
-   ---
-   title: Pretty Markdown
-   tool_url: /tools/pretty-markdown.html
-   excerpt: A beautiful markdown renderer with syntax highlighting
-   permalink: /tools/pretty-markdown/
-   ---
-
-   ## About
-   Description of your tool here...
-
-   ## Features
-   - Feature 1
-   - Feature 2
-   ```
-3. Copy both files to `tools/`
-4. Commit and push!
-
-The tools page will automatically:
-- Show a "Learn More" button (links to the .md documentation)
-- Show a "Launch →" button (launches the .html tool)
-- If no .md file exists, just shows "Launch Tool →"
 
 <style>
 .tools-grid {
