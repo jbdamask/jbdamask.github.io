@@ -1,40 +1,86 @@
 ---
-layout: default
+layout: none
 ---
+<!DOCTYPE html>
+<html lang="{{ site.locale | slice: 0,2 | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} - {{ site.title }}</title>
 
-<style>
-  /* Full-width layout for app pages */
-  .page {
-    max-width: 100% !important;
-    padding: 0 !important;
-  }
+  <style>
+    /* Reset and full-width styling */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
 
-  .page__content {
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
+    /* Header bar matching your site */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  .page__inner-wrap {
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
+    .site-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #333;
+      text-decoration: none;
+    }
 
-  /* Remove default content padding */
-  article.page {
-    padding: 0 !important;
-  }
+    .site-subtitle {
+      font-size: 0.875rem;
+      color: #666;
+      display: block;
+    }
 
-  /* Ensure full width for embedded app content */
-  .page__content > * {
-    max-width: 100% !important;
-  }
-</style>
+    .site-nav {
+      display: flex;
+      gap: 2rem;
+    }
 
-<article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-  <div class="page__inner-wrap">
-    <section class="page__content" itemprop="text">
-      {{ content }}
-    </section>
+    .site-nav a {
+      color: #666;
+      text-decoration: none;
+      font-size: 1.125rem;
+    }
+
+    .site-nav a:hover {
+      color: #0066cc;
+    }
+
+    /* Full-width content */
+    .app-content {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header matching your site -->
+  <header class="site-header">
+    <div>
+      <a href="{{ '/' | relative_url }}" class="site-title">
+        {{ site.title }}
+        <span class="site-subtitle">{{ site.subtitle }}</span>
+      </a>
+    </div>
+    <nav class="site-nav">
+      <a href="{{ '/aboutme/' | relative_url }}">About</a>
+      <a href="{{ '/tools/' | relative_url }}">Tools</a>
+      <a href="{{ '/posts/' | relative_url }}">Posts</a>
+    </nav>
+  </header>
+
+  <!-- Full-width app content -->
+  <div class="app-content">
+    {{ content }}
   </div>
-</article>
+</body>
+</html>
