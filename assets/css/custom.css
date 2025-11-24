@@ -1,13 +1,13 @@
-/* Custom Substack icon using SVG */
+/* Custom Substack icon styling */
 .fa-newspaper:before {
   /* Keep default newspaper icon as fallback */
 }
 
-/* Optional: Add custom Substack branding color */
-a[href*="substack.com"] {
-  color: #FF6719 !important;
+/* Substack link - use default color, only change icon color */
+a[href*="substack.com"] .svg-inline--fa {
+  color: #FF6719;
 }
 
-a[href*="substack.com"]:hover {
-  color: #e55a15 !important;
+a[href*="substack.com"]:hover .svg-inline--fa {
+  color: #e55a15;
 }
