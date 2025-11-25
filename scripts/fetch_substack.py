@@ -12,7 +12,7 @@ from datetime import datetime
 # Configuration
 SUBSTACK_FEED = 'https://johndamask.substack.com/feed'
 PROXY_URL = 'https://api.rss2json.com/v1/api.json?rss_url='
-MAX_POSTS = 10
+MAX_POSTS = 100  # Fetch all posts (RSS2JSON max is 100)
 OUTPUT_FILE = "_data/substack-posts.yml"
 
 def extract_image_from_content(content):
