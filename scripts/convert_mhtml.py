@@ -10,6 +10,7 @@ import quopri
 from pathlib import Path
 from datetime import datetime
 import argparse
+from urllib.parse import urlparse
 
 def convert_mhtml_to_html(mhtml_path, output_path):
     """Convert MHTML file to standalone HTML"""
@@ -17,6 +18,13 @@ def convert_mhtml_to_html(mhtml_path, output_path):
     # Read the MHTML file
     with open(mhtml_path, 'r', encoding='utf-8', errors='ignore') as f:
         content = f.read()
+
+    # Extract the main snapshot URL to identify the primary content
+    snapshot_match = re.search(r'Snapshot-Content-Location:\s*(.+)', content)
+    snapshot_domain = None
+    if snapshot_match:
+        snapshot_url = snapshot_match.group(1).strip()
+        snapshot_domain = urlparse(snapshot_url).netloc
 
     # Find the boundary marker
     boundary_match = re.search(r'boundary="([^"]+)"', content)
@@ -32,40 +40,50 @@ def convert_mhtml_to_html(mhtml_path, output_path):
     # Split by boundary
     parts = content.split(f'--{boundary}')
 
-    html_content = None
-    css_content = None
+    html_parts = []  # Store all HTML parts with their metadata
 
-    # Extract HTML and CSS parts
+    # Extract HTML parts only (skip CSS - external links in HTML are sufficient)
     for part in parts:
         # Check content type
         if 'Content-Type: text/html' in part:
-            # Extract HTML content (after headers)
-            match = re.search(r'Content-Transfer-Encoding: quoted-printable\s+(.*)', part, re.DOTALL)
+            # Extract Content-Location if present
+            location_match = re.search(r'Content-Location:\s*(.+)', part)
+            part_url = location_match.group(1).strip() if location_match else None
+            part_domain = urlparse(part_url).netloc if part_url else None
+
+            # Extract HTML content (skip all headers until blank line)
+            # MHTML format has headers, then blank line, then content
+            match = re.search(r'\n\n(.+)', part, re.DOTALL)
             if match:
                 html_encoded = match.group(1).strip()
                 # Decode quoted-printable
-                html_content = quopri.decodestring(html_encoded.encode()).decode('utf-8', errors='ignore')
+                decoded_html = quopri.decodestring(html_encoded.encode()).decode('utf-8', errors='ignore')
+                html_parts.append({
+                    'content': decoded_html,
+                    'domain': part_domain,
+                    'url': part_url
+                })
 
-        elif 'Content-Type: text/css' in part:
-            # Extract CSS content
-            match = re.search(r'Content-Transfer-Encoding: quoted-printable\s+(.*)', part, re.DOTALL)
-            if match:
-                css_encoded = match.group(1).strip()
-                # Decode quoted-printable
-                css_content = quopri.decodestring(css_encoded.encode()).decode('utf-8', errors='ignore')
+    # Choose the best HTML part
+    html_content = None
+    if html_parts:
+        # Prefer HTML part from the same domain as snapshot
+        if snapshot_domain:
+            for part in html_parts:
+                if part['domain'] == snapshot_domain:
+                    html_content = part['content']
+                    break
+
+        # Fall back to first HTML part if no domain match
+        if html_content is None:
+            html_content = html_parts[0]['content']
 
     if not html_content:
         print("Error: No HTML content found in MHTML file")
         return False
 
-    # Remove external CSS references (cid: links)
+    # Remove internal CSS references (cid: links) - these won't work in the output
     html_content = re.sub(r'<link[^>]*href="cid:[^"]*"[^>]*>', '', html_content)
-
-    # If we found CSS, embed it inline
-    if css_content:
-        # Find the </head> tag and insert CSS before it
-        css_tag = f'\n<style>\n{css_content}\n</style>\n'
-        html_content = re.sub(r'</head>', f'{css_tag}</head>', html_content, count=1)
 
     # Write output
     with open(output_path, 'w', encoding='utf-8') as f:
