@@ -59,6 +59,48 @@ For tools that need documentation, create companion markdown files:
 
 File names are auto-converted to display names: `my-awesome-tool.html` → "My Awesome Tool"
 
+## Adding Blog Posts
+
+### Markdown Posts (Recommended)
+
+Create a markdown file in `_posts/` with the naming pattern `YYYY-MM-DD-your-post-title.md`:
+
+```markdown
+---
+layout: single
+title: "Your Post Title"
+date: 2025-11-25
+excerpt: "A brief description that appears in the timeline"
+categories:
+  - Blog
+tags:
+  - your-tags
+---
+
+Your markdown content here...
+
+## Heading
+
+Content with **bold** and *italic* text.
+
+- Lists work great
+- Another item
+
+```code blocks too```
+```
+
+The post will automatically appear in your timeline with proper styling.
+
+### HTML Posts (For App Outputs)
+
+For interactive app outputs saved as MHTML, use the conversion script:
+
+```bash
+python scripts/convert_mhtml.py ~/Downloads/my-app.mhtml --title "My App Results"
+```
+
+See `ADDING_HTML_PAGES.md` for full details.
+
 ## Adding External Posts (LinkedIn, Twitter, etc.)
 
 Since LinkedIn and Twitter don't provide free API access, you can manually add posts to `_data/external-posts.yml`:
