@@ -1,181 +1,136 @@
 # Adding HTML and MHTML Pages
 
-## Adding HTML Pages
+## Quick Start
 
-### Method 1: HTML with Jekyll Layout (Recommended)
+### Adding MHTML Pages (From Your Apps)
 
-Create an `.html` file anywhere in your site:
+**The easiest way** - Use the automated conversion script:
 
+```bash
+# Basic usage (auto-generates title from filename)
+python scripts/convert_mhtml.py ~/Downloads/my-app-output.mhtml
+
+# With custom title
+python scripts/convert_mhtml.py ~/Downloads/my-app-output.mhtml --title "My App Results"
+
+# With custom date
+python scripts/convert_mhtml.py ~/Downloads/my-app-output.mhtml --title "My App Results" --date 2025-11-20
+```
+
+The script will:
+- Convert MHTML to HTML
+- Auto-generate Jekyll front matter (title, date, excerpt)
+- Extract a text preview for the post card
+- Save to `_posts/YYYY-MM-DD-title.html`
+- Use full-width app layout (no sidebars)
+- Show you the git commands to run next
+
+Then just commit and push:
+```bash
+git add _posts/2025-11-24-my-app-results.html
+git commit -m "Add post: My App Results"
+git push
+```
+
+Your app page will appear in your timeline as a card with the BLOG badge!
+
+### Adding Regular HTML Pages
+
+For static HTML pages that don't need to be in the timeline:
+
+**Option 1: With Site Header/Footer**
 ```html
 ---
 layout: single
 title: "My Page"
 permalink: /my-page/
-author_profile: true
 ---
 
 <h2>Your Content</h2>
 <p>Any HTML here...</p>
 ```
 
-**Access at**: `https://yourdomain.com/my-page/`
-
-### Method 2: Standalone HTML (No Layout)
-
-Create an `.html` file without front matter:
-
+**Option 2: Full-Width (Like App Pages)**
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Standalone Page</title>
-</head>
-<body>
-    <h1>Standalone HTML</h1>
-</body>
-</html>
+---
+layout: app
+title: "My Full-Width Page"
+---
+
+<h2>Your Content</h2>
+<p>Uses entire viewport width...</p>
 ```
 
-**Access at**: `https://yourdomain.com/filename.html`
+**Option 3: Standalone (No Header)**
+Create `.html` file without front matter - served as-is.
 
-### Method 3: HTML in Subdirectories
+## Script Options
 
-Organize HTML files in folders:
+The `convert_mhtml.py` script supports:
 
-```
-/projects/
-  /project1/
-    index.html      → /projects/project1/
-  /project2/
-    index.html      → /projects/project2/
-```
-
-## Adding MHTML Pages
-
-MHTML (MIME HTML) files are email/archive formats. Browsers don't render them well directly.
-
-### Option A: Convert MHTML to HTML
-
-**Using Python:**
 ```bash
-pip install mhtml2html
-mhtml2html input.mhtml output.html
+# Show help
+python scripts/convert_mhtml.py --help
+
+# Examples
+python scripts/convert_mhtml.py input.mhtml --title "Custom Title"
+python scripts/convert_mhtml.py input.mhtml --date 2025-11-20
+python scripts/convert_mhtml.py input.mhtml --output _posts/2025-11-24-custom-name.html
 ```
 
-**Using Online Tools:**
-- https://www.zamzar.com/convert/mhtml-to-html/
-- https://convertio.co/mhtml-html/
+## How It Works
 
-**Manual Extraction:**
-1. Open MHTML in a text editor
-2. Find the HTML content section
-3. Copy the HTML between `Content-Type: text/html` boundaries
-4. Save as `.html`
+### MHTML Conversion Process
 
-### Option B: Serve MHTML Directly (Not Recommended)
+1. **Parse MHTML** - Splits file by MIME boundaries
+2. **Extract HTML & CSS** - Finds `Content-Type: text/html` and `text/css` sections
+3. **Decode quoted-printable** - Converts `=3D` → `=`, `=E2=96=BA` → `►`, etc.
+4. **Embed CSS inline** - Inserts `<style>` tag in `<head>`
+5. **Add front matter** - Creates Jekyll metadata (title, date, excerpt)
+6. **Generate filename** - Creates `_posts/YYYY-MM-DD-slug.html`
 
-```html
----
-layout: single
-title: "View MHTML"
----
+### What You Get
 
-<p>Download the file:</p>
-<a href="/assets/files/document.mhtml" download>Download MHTML</a>
-```
-
-Users will need to download and open locally.
-
-## Examples
-
-### Example 1: Project Page
-
-File: `projects.html`
-```html
----
-layout: single
-title: "My Projects"
-permalink: /projects/
----
-
-<div class="projects-grid">
-  <div class="project">
-    <h3>Project 1</h3>
-    <p>Description...</p>
-  </div>
-</div>
-```
-
-### Example 2: Interactive Tool
-
-File: `tools/calculator.html`
-```html
----
-layout: single
-title: "Calculator"
-permalink: /tools/calculator/
----
-
-<input type="number" id="num1">
-<input type="number" id="num2">
-<button onclick="calculate()">Calculate</button>
-<div id="result"></div>
-
-<script>
-function calculate() {
-  const a = document.getElementById('num1').value;
-  const b = document.getElementById('num2').value;
-  document.getElementById('result').textContent = +a + +b;
-}
-</script>
-```
+- **Full-width layout** - App content uses entire viewport
+- **Matching header** - Site title and navigation at top
+- **Post card** - Appears in timeline with excerpt
+- **Self-contained** - All CSS and assets embedded
+- **Clickable** - Opens full interactive app page
 
 ## Directory Structure
 
 ```
 /
-├── page1.html              → /page1.html
-├── example-page.html       → /example-page/
-├── projects/
-│   └── index.html         → /projects/
+├── _posts/
+│   ├── 2025-11-24-my-app-output.html    ← MHTML conversions go here
+│   └── 2025-11-24-blog-post.md          ← Regular blog posts
 ├── tools/
-│   ├── tool1.html         → /tools/tool1.html
-│   └── tool2.html         → /tools/tool2.html
-└── assets/
-    └── files/
-        └── document.mhtml → /assets/files/document.mhtml
+│   ├── calculator.html                   ← Standalone tools
+│   └── calculator.md                     ← Tool documentation
+├── example-page.html                     ← Static pages
+└── scripts/
+    └── convert_mhtml.py                  ← Conversion script
 ```
 
 ## Tips
 
-1. **Use permalinks** in front matter for clean URLs
-2. **Organize by topic** in subdirectories
-3. **Convert MHTML to HTML** for better compatibility
-4. **Test locally** with `bundle exec jekyll serve`
-5. **Link from navigation** by editing `_data/navigation.yml`
+1. **For app outputs**: Always use the MHTML conversion script
+2. **For static tools**: Put in `tools/` directory (see README.md)
+3. **For blog posts**: Use markdown in `_posts/` (see example)
+4. **Test locally**: `bundle exec jekyll serve` before pushing
+5. **Check the card**: Excerpt is auto-generated from first 200 chars
 
-## Converting MHTML Script
+## Troubleshooting
 
-Here's a quick Python script to convert MHTML to HTML:
+**"No HTML content found in MHTML file"**
+- Make sure you saved as "Webpage, Single File (.mhtml)" in your browser
+- Try re-saving the page
 
-```python
-import re
+**"Layout 'app' not found"**
+- Make sure `_layouts/app.html` exists in your repo
+- Pull latest changes: `git pull`
 
-def mhtml_to_html(mhtml_file, output_file):
-    with open(mhtml_file, 'r', encoding='utf-8') as f:
-        content = f.read()
-
-    # Find HTML content between boundaries
-    html_match = re.search(r'Content-Type: text/html.*?\n\n(.*?)(?=\n--)', content, re.DOTALL)
-
-    if html_match:
-        html_content = html_match.group(1)
-        with open(output_file, 'w', encoding='utf-8') as f:
-            f.write(html_content)
-        print(f"Converted {mhtml_file} to {output_file}")
-    else:
-        print("Could not find HTML content in MHTML file")
-
-# Usage
-mhtml_to_html('input.mhtml', 'output.html')
-```
+**Post doesn't appear in timeline**
+- Check filename format: `YYYY-MM-DD-title.html`
+- Verify it's in `_posts/` directory
+- Check front matter has `layout: app`, `title`, `date`, `excerpt`
