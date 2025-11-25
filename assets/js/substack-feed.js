@@ -1,27 +1,20 @@
-// Fetch and display Substack posts
-async function fetchSubstackPosts() {
-  const substackFeed = 'https://johndamask.substack.com/feed';
-  const proxyUrl = 'https://api.rss2json.com/v1/api.json?rss_url=';
+// Get Substack posts from the page (fetched by GitHub Actions)
+function getSubstackPosts() {
+  const posts = [];
+  const postElements = document.querySelectorAll('.substack-post-item');
 
-  try {
-    const response = await fetch(proxyUrl + encodeURIComponent(substackFeed));
-    const data = await response.json();
+  postElements.forEach(el => {
+    posts.push({
+      title: el.dataset.title,
+      description: el.dataset.excerpt,
+      link: el.dataset.url,
+      pubDate: new Date(el.dataset.date),
+      thumbnail: el.dataset.image || null,
+      source: 'substack'
+    });
+  });
 
-    if (data.status === 'ok') {
-      return data.items.map(item => ({
-        title: item.title,
-        description: item.description,
-        link: item.link,
-        pubDate: new Date(item.pubDate),
-        thumbnail: item.thumbnail || extractImageFromContent(item.content),
-        source: 'substack'
-      }));
-    }
-  } catch (error) {
-    console.error('Error fetching Substack posts:', error);
-    return [];
-  }
-  return [];
+  return posts;
 }
 
 // Get Twitter posts from the page (fetched by GitHub Actions)
@@ -41,14 +34,6 @@ function getTwitterPosts() {
   });
 
   return posts;
-}
-
-// Extract first image from HTML content
-function extractImageFromContent(content) {
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(content, 'text/html');
-  const img = doc.querySelector('img');
-  return img ? img.src : null;
 }
 
 // Get Jekyll posts from the page
@@ -153,8 +138,8 @@ function stripHtml(html) {
 }
 
 // Initialize
-document.addEventListener('DOMContentLoaded', async function() {
-  const substackPosts = await fetchSubstackPosts();
+document.addEventListener('DOMContentLoaded', function() {
+  const substackPosts = getSubstackPosts();
   const twitterPosts = getTwitterPosts();
   const jekyllPosts = getJekyllPosts();
   const externalPosts = getExternalPosts();
