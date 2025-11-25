@@ -114,6 +114,8 @@ function renderCombinedPosts(posts) {
       sourceLabel = '<span class="post-source substack">Substack</span>';
     } else if (post.source === 'twitter') {
       sourceLabel = '<span class="post-source twitter">Twitter</span>';
+    } else if (post.source === 'linkedin') {
+      sourceLabel = '<span class="post-source linkedin">LinkedIn</span>';
     } else {
       sourceLabel = '<span class="post-source blog">Blog</span>';
     }
