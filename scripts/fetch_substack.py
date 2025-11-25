@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fetch recent posts from Substack RSS feed and save to _data/substack-posts.yml
+Fetch all posts from Substack RSS feed and save to _data/substack-posts.yml
 """
 
 import os
@@ -8,50 +8,75 @@ import sys
 import requests
 import yaml
 from datetime import datetime
+import xml.etree.ElementTree as ET
+import re
 
 # Configuration
 SUBSTACK_FEED = 'https://johndamask.substack.com/feed'
-PROXY_URL = 'https://api.rss2json.com/v1/api.json?rss_url='
-MAX_POSTS = 100  # Fetch all posts (RSS2JSON max is 100)
 OUTPUT_FILE = "_data/substack-posts.yml"
 
 def extract_image_from_content(content):
     """Extract first image URL from HTML content"""
-    import re
     match = re.search(r'<img[^>]+src="([^"]+)"', content)
     return match.group(1) if match else None
 
+def strip_html(text):
+    """Remove HTML tags from text"""
+    return re.sub(r'<[^>]+>', '', text)
+
 def fetch_substack_posts():
-    """Fetch recent posts from Substack RSS feed"""
+    """Fetch all posts directly from Substack RSS feed"""
     try:
-        url = PROXY_URL + SUBSTACK_FEED
-        response = requests.get(url, timeout=30)
+        print(f"Fetching from {SUBSTACK_FEED}...")
+        response = requests.get(SUBSTACK_FEED, timeout=30)
 
         if response.status_code != 200:
             print(f"Error fetching Substack feed: {response.status_code}")
             return []
 
-        data = response.json()
-
-        if data.get('status') != 'ok':
-            print(f"Error in RSS feed response: {data}")
-            return []
+        # Parse XML RSS feed
+        root = ET.fromstring(response.content)
 
         posts = []
-        for item in data.get('items', [])[:MAX_POSTS]:
-            # Parse date
-            pub_date = datetime.strptime(item['pubDate'], "%Y-%m-%d %H:%M:%S")
 
-            # Extract image
-            thumbnail = item.get('thumbnail') or extract_image_from_content(item.get('content', ''))
+        # Find all items in the feed
+        for item in root.findall('.//item'):
+            title_elem = item.find('title')
+            link_elem = item.find('link')
+            pub_date_elem = item.find('pubDate')
+            description_elem = item.find('description')
+            content_elem = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
+
+            if title_elem is None or link_elem is None or pub_date_elem is None:
+                continue
+
+            title = title_elem.text
+            link = link_elem.text
+
+            # Parse date (RSS format: "Wed, 22 Nov 2025 10:00:00 GMT")
+            pub_date_str = pub_date_elem.text
+            pub_date = datetime.strptime(pub_date_str, "%a, %d %b %Y %H:%M:%S %Z")
+
+            # Get description/excerpt
+            description = ''
+            if description_elem is not None and description_elem.text:
+                description = strip_html(description_elem.text)
+
+            # Extract image from content
+            image = ''
+            if content_elem is not None and content_elem.text:
+                image = extract_image_from_content(content_elem.text) or ''
+
+            # Truncate excerpt
+            excerpt = description[:200] + '...' if len(description) > 200 else description
 
             post = {
-                'title': item['title'],
+                'title': title,
                 'source': 'substack',
-                'url': item['link'],
+                'url': link,
                 'date': pub_date.strftime('%Y-%m-%d'),
-                'excerpt': item.get('description', '')[:200] + '...' if len(item.get('description', '')) > 200 else item.get('description', ''),
-                'image': thumbnail or ''
+                'excerpt': excerpt,
+                'image': image
             }
             posts.append(post)
 
@@ -60,6 +85,8 @@ def fetch_substack_posts():
 
     except Exception as e:
         print(f"Error fetching Substack posts: {e}")
+        import traceback
+        traceback.print_exc()
         return []
 
 def main():
