@@ -14,6 +14,75 @@ layout: default
   {% endunless %}
 {% endif %}
 
+<style>
+/* Split pane layout with independent scrolling */
+#main {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  max-height: calc(100vh - 120px); /* Account for header */
+}
+
+/* Left sidebar */
+.sidebar {
+  flex-shrink: 0;
+}
+
+/* Center content pane - scrollable */
+.page {
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 120px);
+  padding-right: 0.5rem;
+}
+
+/* Right sidebar (Twitter) - scrollable */
+.sidebar__right {
+  flex-shrink: 0;
+  width: 300px;
+  overflow-y: auto;
+  max-height: calc(100vh - 120px);
+  position: sticky;
+  top: 0;
+}
+
+/* Scrollbar styling */
+.page::-webkit-scrollbar,
+.sidebar__right::-webkit-scrollbar {
+  width: 8px;
+}
+
+.page::-webkit-scrollbar-track,
+.sidebar__right::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.page::-webkit-scrollbar-thumb,
+.sidebar__right::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.page::-webkit-scrollbar-thumb:hover,
+.sidebar__right::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (max-width: 1024px) {
+  #main {
+    flex-direction: column;
+    max-height: none;
+  }
+
+  .page,
+  .sidebar__right {
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+</style>
+
 <div id="main" role="main">
   {% include sidebar.html %}
 
@@ -32,20 +101,6 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
-        {% if page.toc %}
-          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h4></header>
-              {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
-            </nav>
-          </aside>
-        {% endif %}
-
-        <!-- Add Twitter feed to sidebar -->
-        <aside class="sidebar__right">
-          {% include sidebar/twitter-feed.html %}
-        </aside>
-
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
@@ -67,6 +122,11 @@ layout: default
       {% include comments.html %}
     {% endif %}
   </article>
+
+  <!-- Twitter feed sidebar with independent scroll -->
+  <aside class="sidebar__right">
+    {% include sidebar/twitter-feed.html %}
+  </aside>
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
