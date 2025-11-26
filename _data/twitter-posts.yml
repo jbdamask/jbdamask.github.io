@@ -41,3 +41,12 @@
   excerpt: Next, I had John Code make a single page web app that animated a Mandlebrot
     set and scroll through a list of video game champs from the 1980s and 1990s.
   image: ''
+- title: I spent several hours trying to get various AI IDEs to disclose their system
+    and tool prompts. I cou...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/1993691498991546632
+  date: '2025-11-26'
+  excerpt: I spent several hours trying to get various AI IDEs to disclose their system
+    and tool prompts. I could have just just used a reverse proxy. Now I know. Thanks
+    @kirshatrov
+  image: https://pbs.twimg.com/news_img/1963962479152611328/V5v2tg2C?format=jpg&name=orig
