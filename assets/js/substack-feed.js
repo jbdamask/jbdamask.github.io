@@ -74,20 +74,23 @@ function getExternalPosts() {
   return posts;
 }
 
-// Render combined posts
+// Render main posts (blog, substack, linkedin)
 function renderCombinedPosts(posts) {
   const container = document.getElementById('combined-posts');
   if (!container) return;
 
-  // Sort by date, newest first
-  posts.sort((a, b) => b.pubDate - a.pubDate);
+  // Filter out Twitter posts
+  const mainPosts = posts.filter(p => p.source !== 'twitter');
 
-  if (posts.length === 0) {
+  // Sort by date, newest first
+  mainPosts.sort((a, b) => b.pubDate - a.pubDate);
+
+  if (mainPosts.length === 0) {
     container.innerHTML = '<p>No posts yet.</p>';
     return;
   }
 
-  const html = posts.map(post => {
+  const html = mainPosts.map(post => {
     const dateStr = post.pubDate.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -97,8 +100,6 @@ function renderCombinedPosts(posts) {
     let sourceLabel;
     if (post.source === 'substack') {
       sourceLabel = '<span class="post-source substack">Substack</span>';
-    } else if (post.source === 'twitter') {
-      sourceLabel = '<span class="post-source twitter">Twitter</span>';
     } else if (post.source === 'linkedin') {
       sourceLabel = '<span class="post-source linkedin">LinkedIn</span>';
     } else {
@@ -130,6 +131,43 @@ function renderCombinedPosts(posts) {
   container.innerHTML = html;
 }
 
+// Render Twitter feed in sidebar
+function renderTwitterFeed(posts) {
+  const container = document.getElementById('twitter-feed');
+  if (!container) return;
+
+  // Filter only Twitter posts
+  const twitterPosts = posts.filter(p => p.source === 'twitter');
+
+  // Sort by date, newest first
+  twitterPosts.sort((a, b) => b.pubDate - a.pubDate);
+
+  if (twitterPosts.length === 0) {
+    container.innerHTML = '<p class="loading">No tweets yet.</p>';
+    return;
+  }
+
+  const html = twitterPosts.map(post => {
+    const dateStr = post.pubDate.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
+    });
+
+    // Clean description (strip HTML, limit length)
+    const description = stripHtml(post.description || post.title);
+
+    return `
+      <div class="twitter-item">
+        <a href="${post.link}" target="_blank" rel="noopener noreferrer">${description}</a>
+        <div class="twitter-date">${dateStr}</div>
+      </div>
+    `;
+  }).join('');
+
+  container.innerHTML = html;
+}
+
 // Strip HTML tags
 function stripHtml(html) {
   const tmp = document.createElement('div');
@@ -146,4 +184,5 @@ document.addEventListener('DOMContentLoaded', function() {
   const allPosts = [...substackPosts, ...twitterPosts, ...jekyllPosts, ...externalPosts];
 
   renderCombinedPosts(allPosts);
+  renderTwitterFeed(allPosts);
 });
