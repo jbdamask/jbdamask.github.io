@@ -131,42 +131,7 @@ function renderCombinedPosts(posts) {
   container.innerHTML = html;
 }
 
-// Render Twitter feed in sidebar
-function renderTwitterFeed(posts) {
-  const container = document.getElementById('twitter-feed');
-  if (!container) return;
-
-  // Filter only Twitter posts
-  const twitterPosts = posts.filter(p => p.source === 'twitter');
-
-  // Sort by date, newest first
-  twitterPosts.sort((a, b) => b.pubDate - a.pubDate);
-
-  if (twitterPosts.length === 0) {
-    container.innerHTML = '<p class="loading">No tweets yet.</p>';
-    return;
-  }
-
-  const html = twitterPosts.map(post => {
-    const dateStr = post.pubDate.toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric'
-    });
-
-    // Clean description (strip HTML, limit length)
-    const description = stripHtml(post.description || post.title);
-
-    return `
-      <div class="twitter-item">
-        <a href="${post.link}" target="_blank" rel="noopener noreferrer">${description}</a>
-        <div class="twitter-date">${dateStr}</div>
-      </div>
-    `;
-  }).join('');
-
-  container.innerHTML = html;
-}
+// Note: Twitter feed rendering is handled by sidebar/twitter-feed.html include
 
 // Strip HTML tags
 function stripHtml(html) {
@@ -184,5 +149,5 @@ document.addEventListener('DOMContentLoaded', function() {
   const allPosts = [...substackPosts, ...twitterPosts, ...jekyllPosts, ...externalPosts];
 
   renderCombinedPosts(allPosts);
-  renderTwitterFeed(allPosts);
+  // Twitter feed is rendered by sidebar/twitter-feed.html include
 });
