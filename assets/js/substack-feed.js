@@ -178,9 +178,11 @@ function stripHtml(html) {
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
   const substackPosts = getSubstackPosts();
+  const twitterPosts = getTwitterPosts();
   const jekyllPosts = getJekyllPosts();
   const externalPosts = getExternalPosts();
-  const allPosts = [...substackPosts, ...jekyllPosts, ...externalPosts];
+  const allPosts = [...substackPosts, ...twitterPosts, ...jekyllPosts, ...externalPosts];
 
   renderCombinedPosts(allPosts);
+  renderTwitterFeed(allPosts);
 });
