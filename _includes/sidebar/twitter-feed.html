@@ -1,0 +1,128 @@
+<aside class="twitter-sidebar-custom">
+  <h3>Tweets</h3>
+  <div id="twitter-feed-sidebar" class="twitter-feed-sidebar">
+    <p class="loading">Loading tweets...</p>
+  </div>
+</aside>
+
+<!-- Hidden Twitter post data for JavaScript -->
+<div style="display: none;">
+{% if site.data.twitter-posts %}
+{% for post in site.data.twitter-posts %}
+  <div class="twitter-post-data"
+       data-title="{{ post.title | xml_escape }}"
+       data-excerpt="{{ post.excerpt | xml_escape }}"
+       data-url="{{ post.url }}"
+       data-date="{{ post.date | date_to_xmlschema }}">
+  </div>
+{% endfor %}
+{% endif %}
+</div>
+
+<style>
+.twitter-sidebar-custom {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.twitter-sidebar-custom h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1DA1F2;
+}
+
+.twitter-feed-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.twitter-item-sidebar {
+  padding: 0.5rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+  border-left: 2px solid #1DA1F2;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+
+.twitter-item-sidebar a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 400;
+}
+
+.twitter-item-sidebar a:hover {
+  color: #1DA1F2;
+}
+
+.twitter-date-sidebar {
+  color: #999;
+  font-size: 0.65rem;
+  margin-top: 0.25rem;
+}
+
+.loading {
+  text-align: center;
+  color: #666;
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+</style>
+
+<script>
+// Render Twitter feed in sidebar
+function renderTwitterSidebar() {
+  const container = document.getElementById('twitter-feed-sidebar');
+  if (!container) return;
+
+  const posts = [];
+  const postElements = document.querySelectorAll('.twitter-post-data');
+
+  postElements.forEach(el => {
+    posts.push({
+      title: el.dataset.title,
+      excerpt: el.dataset.excerpt,
+      url: el.dataset.url,
+      date: new Date(el.dataset.date)
+    });
+  });
+
+  // Sort by date, newest first
+  posts.sort((a, b) => b.date - a.date);
+
+  if (posts.length === 0) {
+    container.innerHTML = '<p class="loading">No tweets yet.</p>';
+    return;
+  }
+
+  const html = posts.map(post => {
+    const dateStr = post.date.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
+    });
+
+    return `
+      <div class="twitter-item-sidebar">
+        <a href="${post.url}" target="_blank" rel="noopener noreferrer">${post.excerpt || post.title}</a>
+        <div class="twitter-date-sidebar">${dateStr}</div>
+      </div>
+    `;
+  }).join('');
+
+  container.innerHTML = html;
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderTwitterSidebar);
+} else {
+  renderTwitterSidebar();
+}
+</script>
