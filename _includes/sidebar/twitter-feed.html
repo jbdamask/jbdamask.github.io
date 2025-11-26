@@ -108,9 +108,12 @@ function renderTwitterSidebar() {
       year: 'numeric'
     });
 
+    // Strip URLs from text as a fallback
+    const text = (post.excerpt || post.title).replace(/https?:\/\/\S+/g, '').replace(/\s+/g, ' ').trim();
+
     return `
       <div class="twitter-item-sidebar">
-        <a href="${post.url}" target="_blank" rel="noopener noreferrer">${post.excerpt || post.title}</a>
+        <a href="${post.url}" target="_blank" rel="noopener noreferrer">${text}</a>
         <div class="twitter-date-sidebar">${dateStr}</div>
       </div>
     `;

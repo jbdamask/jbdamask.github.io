@@ -8,6 +8,7 @@ import os
 import sys
 import requests
 import yaml
+import re
 from datetime import datetime
 
 # Configuration
@@ -57,6 +58,14 @@ def fetch_tweets(bearer_token, user_id, max_results=10):
 
     return response.json()
 
+def strip_urls(text):
+    """Remove URLs from tweet text"""
+    # Remove URLs (http/https)
+    text = re.sub(r'https?://\S+', '', text)
+    # Remove trailing/leading whitespace and collapse multiple spaces
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
 def extract_image_url(tweet):
     """Extract first image URL from tweet entities if available"""
     if 'entities' in tweet and 'urls' in tweet['entities']:
@@ -77,8 +86,8 @@ def tweets_to_yaml(tweets_data):
         # Parse date
         created_at = datetime.strptime(tweet['created_at'], "%Y-%m-%dT%H:%M:%S.%fZ")
 
-        # Get tweet text (truncate if needed for excerpt)
-        text = tweet['text']
+        # Get tweet text and strip URLs
+        text = strip_urls(tweet['text'])
         excerpt = text[:200] + "..." if len(text) > 200 else text
 
         # Build tweet URL
