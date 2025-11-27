@@ -2,17 +2,26 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- 'title': 'I spent several hours trying to get various AI IDEs to disclose their
+    system and tool prompts. I cou...'
+  'source': 'twitter'
+  'url': 'https://twitter.com/jbdamask/status/1993691498991546632'
+  'date': '2025-11-26T14:41:09'
+  'excerpt': 'I spent several hours trying to get various AI IDEs to disclose their
+    system and tool prompts. I could have just just used a reverse proxy. Now I know.
+    Thanks @kirshatrov'
+  'image': 'https://pbs.twimg.com/news_img/1993691542662602755/dukvBN9k?format=jpg&name=orig'
 - 'title': 'Nice, the John Code WebFetch tool works!'
   'source': 'twitter'
   'url': 'https://twitter.com/jbdamask/status/1993543059506917389'
-  'date': '2025-11-26'
+  'date': '2025-11-26T04:51:18'
   'excerpt': 'Nice, the John Code WebFetch tool works!'
   'image': ''
 - 'title': 'lol, now that I''ve recreated Claude Code as John Code, I''m getting back
     talk about showing me the sy...'
   'source': 'twitter'
   'url': 'https://twitter.com/jbdamask/status/1993542458400293323'
-  'date': '2025-11-26'
+  'date': '2025-11-26T04:48:54'
   'excerpt': 'lol, now that I''ve recreated Claude Code as John Code, I''m getting
     back talk about showing me the system message I gave it'
   'image': ''
@@ -20,7 +29,7 @@
     the problem and fix it. No...'
   'source': 'twitter'
   'url': 'https://twitter.com/jbdamask/status/1993539311523017108'
-  'date': '2025-11-26'
+  'date': '2025-11-26T04:36:24'
   'excerpt': 'Once that was in place, John Code to see the issue, read the file, locate
     the problem and fix it. Noice.'
   'image': ''
@@ -28,7 +37,7 @@
     that, I needed Amp to add t...'
   'source': 'twitter'
   'url': 'https://twitter.com/jbdamask/status/1993539160561664209'
-  'date': '2025-11-26'
+  'date': '2025-11-26T04:35:48'
   'excerpt': 'Pretty good but there was a bug in the fractal animator. In order to
     fix that, I needed Amp to add the feature of pasting in images by pressing Ctrl+v
     (just like Claude Code)'
@@ -41,12 +50,3 @@
   'excerpt': 'Next, I had John Code make a single page web app that animated a Mandlebrot
     set and scroll through a list of video game champs from the 1980s and 1990s.'
   'image': ''
-- 'title': 'I spent several hours trying to get various AI IDEs to disclose their
-    system and tool prompts. I cou...'
-  'source': 'twitter'
-  'url': 'https://twitter.com/jbdamask/status/1993691498991546632'
-  'date': '2025-11-26'
-  'excerpt': 'I spent several hours trying to get various AI IDEs to disclose their
-    system and tool prompts. I could have just just used a reverse proxy. Now I know.
-    Thanks @kirshatrov'
-  'image': 'https://pbs.twimg.com/news_img/1993691542662602755/dukvBN9k?format=jpg&name=orig'
