@@ -2,6 +2,18 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- 'title': 'ouch....burning through cash with Amp Code.'
+  'source': 'twitter'
+  'url': 'https://twitter.com/jbdamask/status/1994056990318842303'
+  'date': '2025-11-27T14:53:28'
+  'excerpt': 'ouch....burning through cash with Amp Code.'
+  'image': ''
+- 'title': 'Like my logo for John Code?'
+  'source': 'twitter'
+  'url': 'https://twitter.com/jbdamask/status/1994050982464893307'
+  'date': '2025-11-27T14:29:36'
+  'excerpt': 'Like my logo for John Code?'
+  'image': ''
 - 'title': 'I spent several hours trying to get various AI IDEs to disclose their
     system and tool prompts. I cou...'
   'source': 'twitter'
