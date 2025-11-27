@@ -2,6 +2,12 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- 'title': 'Nice. Got slash commands working in John Code'
+  'source': 'twitter'
+  'url': 'https://twitter.com/jbdamask/status/1994065319137095921'
+  'date': '2025-11-27T15:26:34'
+  'excerpt': 'Nice. Got slash commands working in John Code'
+  'image': ''
 - 'title': 'ouch....burning through cash with Amp Code.'
   'source': 'twitter'
   'url': 'https://twitter.com/jbdamask/status/1994056990318842303'
