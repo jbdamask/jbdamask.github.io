@@ -89,12 +89,18 @@ function renderTwitterSidebar() {
       title: el.dataset.title,
       excerpt: el.dataset.excerpt,
       url: el.dataset.url,
-      date: new Date(el.dataset.date)
+      date: new Date(el.dataset.date),
+      tweetId: el.dataset.url.split('/').pop()  // Extract tweet ID from URL
     });
   });
 
-  // Sort by date, newest first
-  posts.sort((a, b) => b.date - a.date);
+  // Sort by tweet ID (chronological), newest first
+  // Twitter IDs are snowflake IDs and are chronologically sortable
+  posts.sort((a, b) => {
+    const idA = BigInt(a.tweetId);
+    const idB = BigInt(b.tweetId);
+    return idB > idA ? 1 : -1;
+  });
 
   if (posts.length === 0) {
     container.innerHTML = '<p class="loading">No tweets yet.</p>';

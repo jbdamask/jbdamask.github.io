@@ -101,7 +101,7 @@ def tweets_to_yaml(tweets_data):
             'title': text[:100] + "..." if len(text) > 100 else text,
             'source': 'twitter',
             'url': tweet_url,
-            'date': created_at.strftime("%Y-%m-%d"),
+            'date': created_at.isoformat(),  # Store full timestamp for proper sorting
             'excerpt': excerpt,
             'image': image
         }
