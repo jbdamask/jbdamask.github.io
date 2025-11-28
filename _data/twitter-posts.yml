@@ -29,6 +29,14 @@
   date: '2025-11-28'
   excerpt: Not even three years ago we realized LLMs could code.
   image: ''
+- title: Now having @AmpCode add multi-provider/model support to John Code. It's cranking
+    away.
+  source: twitter
+  url: https://twitter.com/jbdamask/status/1994539982116327459
+  date: '2025-11-28'
+  excerpt: Now having @AmpCode add multi-provider/model support to John Code. It's
+    cranking away.
+  image: ''
 - title: Nice. Got slash commands working in John Code
   source: twitter
   url: https://twitter.com/jbdamask/status/1994065319137095921
