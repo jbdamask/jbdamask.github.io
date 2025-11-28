@@ -2,6 +2,21 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- 'title': 'I added MCP support to John Code. Nice!'
+  'source': 'twitter'
+  'url': 'https://twitter.com/jbdamask/status/1994437610421284892'
+  'date': '2025-11-28T16:05:55'
+  'excerpt': 'I added MCP support to John Code. Nice!'
+  'image': ''
+- 'title': 'One amazing aspect of LLMs is their knowledge and ability to find open
+    source libraries that fit the...'
+  'source': 'twitter'
+  'url': 'https://twitter.com/jbdamask/status/1994433580970201578'
+  'date': '2025-11-28T15:49:55'
+  'excerpt': 'One amazing aspect of LLMs is their knowledge and ability to find open
+    source libraries that fit the need of a feature. It''s another question as to
+    whether the libs are good and safe'
+  'image': ''
 - 'title': 'Nice. Got slash commands working in John Code'
   'source': 'twitter'
   'url': 'https://twitter.com/jbdamask/status/1994065319137095921'
