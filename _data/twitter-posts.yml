@@ -23,6 +23,12 @@
   date: '2025-11-28'
   excerpt: changed the logo for John Code
   image: ''
+- title: Not even three years ago we realized LLMs could code.
+  source: twitter
+  url: https://twitter.com/jbdamask/status/1994506904064995531
+  date: '2025-11-28'
+  excerpt: Not even three years ago we realized LLMs could code.
+  image: ''
 - title: Nice. Got slash commands working in John Code
   source: twitter
   url: https://twitter.com/jbdamask/status/1994065319137095921
