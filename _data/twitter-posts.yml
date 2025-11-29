@@ -10,6 +10,14 @@
   excerpt: I'd like agentic coding tools to introduce small, local models that act
     as the context librarians. That way they could avoid compaction
   image: ''
+- title: John Code's support for different frontier models works pretty well. Just
+    used it to spelunk Amp's C...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/1994764500449575309
+  date: '2025-11-29'
+  excerpt: John Code's support for different frontier models works pretty well. Just
+    used it to spelunk Amp's CLI.
+  image: ''
 - title: I added MCP support to John Code. Nice!
   source: twitter
   url: https://twitter.com/jbdamask/status/1994437610421284892
