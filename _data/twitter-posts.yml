@@ -18,6 +18,15 @@
   excerpt: John Code's support for different frontier models works pretty well. Just
     used it to spelunk Amp's CLI.
   image: ''
+- title: I used Amp to create a working version of Claude Code from its system and
+    tool prompts, called John ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/1994873034545725738
+  date: '2025-11-29'
+  excerpt: I used Amp to create a working version of Claude Code from its system and
+    tool prompts, called John Code. Here's a video of John Code making a video game
+    and testing it using the Playwrite MCP
+  image: https://pbs.twimg.com/news_img/1994873038073204738/9r64NCHT?format=jpg&name=orig
 - title: I added MCP support to John Code. Nice!
   source: twitter
   url: https://twitter.com/jbdamask/status/1994437610421284892
