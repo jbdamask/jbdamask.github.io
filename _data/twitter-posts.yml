@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: I'd like agentic coding tools to introduce small, local models that act as
+    the context librarians. T...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/1994557211763487110
+  date: '2025-11-29'
+  excerpt: I'd like agentic coding tools to introduce small, local models that act
+    as the context librarians. That way they could avoid compaction
+  image: ''
 - title: I added MCP support to John Code. Nice!
   source: twitter
   url: https://twitter.com/jbdamask/status/1994437610421284892
