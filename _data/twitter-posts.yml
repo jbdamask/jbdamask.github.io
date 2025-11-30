@@ -2,6 +2,12 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: '% try (create new) % claude &gt; Build me a …'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/1995174168174940362
+  date: '2025-11-30'
+  excerpt: '% try (create new) % claude &gt; Build me a …'
+  image: ''
 - title: I'd like agentic coding tools to introduce small, local models that act as
     the context librarians. T...
   source: twitter
