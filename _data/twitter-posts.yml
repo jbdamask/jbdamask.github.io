@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: i wonder if celebrities and influencers will have a new side hustle as taste
+    labelers for AI
+  source: twitter
+  url: https://twitter.com/jbdamask/status/1998061059001954528
+  date: '2025-12-08'
+  excerpt: i wonder if celebrities and influencers will have a new side hustle as
+    taste labelers for AI
+  image: ''
 - title: '% try (create new) % claude &gt; Build me a …'
   source: twitter
   url: https://twitter.com/jbdamask/status/1995174168174940362
