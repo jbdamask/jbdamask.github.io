@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: As Public Enemy once said, Can't Truss It. That's still true even with the
+    best models. The more imp...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/1998933192179626083
+  date: '2025-12-11'
+  excerpt: As Public Enemy once said, Can't Truss It. That's still true even with
+    the best models. The more important the task you assign to an LLM, the more important
+    it is to review it.
+  image: ''
 - title: i wonder if celebrities and influencers will have a new side hustle as taste
     labelers for AI
   source: twitter
