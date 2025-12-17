@@ -1,4 +1,4 @@
-___
+---
 layout: single
 title: "The age of realization"
 date: 2025-12-17
