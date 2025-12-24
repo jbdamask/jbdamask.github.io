@@ -2,6 +2,46 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: The biggest problem with spec-driven development of apps of any size is there's
+    nothing for the huma...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2003605930999709830
+  date: '2025-12-23'
+  excerpt: The biggest problem with spec-driven development of apps of any size is
+    there's nothing for the human to do while the agent is working. So it's really
+    easy to get distracted which makes some things ta...
+  image: ''
+- title: Notion is such a great app. Really smart core features and I keep finding
+    little things that make me...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2003605469638930592
+  date: '2025-12-23'
+  excerpt: Notion is such a great app. Really smart core features and I keep finding
+    little things that make me happy - like native mermaid support
+  image: ''
+- title: The big question for 2026 is how to stay focused when agents do the work,
+    but not in YOLO mode
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2003601892405088662
+  date: '2025-12-23'
+  excerpt: The big question for 2026 is how to stay focused when agents do the work,
+    but not in YOLO mode
+  image: ''
+- title: ''
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2003594116416811354
+  date: '2025-12-23'
+  excerpt: ''
+  image: ''
+- title: Somewhere along the line, I asked Claude Code to say "woof" at the end of
+    long processes. Dunno why,...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2003580103201296734
+  date: '2025-12-23'
+  excerpt: Somewhere along the line, I asked Claude Code to say "woof" at the end
+    of long processes. Dunno why, when, or where but I have no intention of removing
+    it
+  image: ''
 - title: As Public Enemy once said, Can't Truss It. That's still true even with the
     best models. The more imp...
   source: twitter
