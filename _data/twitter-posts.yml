@@ -2,6 +2,12 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Best present for a bouldering fan
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2004318904035037648
+  date: '2025-12-25'
+  excerpt: Best present for a bouldering fan
+  image: ''
 - title: How often should /init be run from Claude Code on a project under development?
   source: twitter
   url: https://twitter.com/jbdamask/status/2003820706166153289
