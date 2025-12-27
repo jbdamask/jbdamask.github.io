@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYHKMP85KC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-NYHKMP85KC');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pretty Markdown</title>
     <script src="https://cdn.jsdelivr.net/npm/marked@9.1.2/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+    <script src="https://amroja-shared-web-pages.s3.amazonaws.com/share.js"></script>    
     <style>
         * {
             margin: 0;
@@ -372,6 +364,10 @@
                     <span>📄</span>
                     Save as PDF
                 </button>
+                <button class="share-btn" id="shareBtnPreview" disabled onclick="ShareIt.share()">
+                    <span>🔗</span>
+                    Share
+                </button>
             </div>
             <div class="preview-panel">
                 <div class="empty-state">
@@ -442,7 +438,7 @@
         const saveBtnPreview = document.getElementById('saveBtnPreview');
         const copyBtnPreview = document.getElementById('copyBtnPreview');
         const pdfBtnPreview = document.getElementById('pdfBtnPreview');
-
+        const shareBtnPreview = document.getElementById('shareBtnPreview');
         uploadArea.addEventListener('click', () => {
             fileInput.click();
         });
@@ -488,6 +484,7 @@
                 copyBtnPreview.disabled = false;
                 saveBtnPreview.disabled = false;
                 pdfBtnPreview.disabled = false;
+                shareBtnPreview.disabled = false;
             };
 
             reader.readAsText(file);
@@ -674,6 +671,7 @@
             copyBtnPreview.disabled = !hasContent;
             saveBtnPreview.disabled = !hasContent;
             pdfBtnPreview.disabled = !hasContent;
+            shareBtnPreview.disabled = !hasContent;
         }
 
         // Update preview when editor content changes
