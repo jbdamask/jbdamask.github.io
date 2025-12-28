@@ -2,6 +2,12 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: $1 says Anthropic and OpenAI will launch one-touch app deployments in 2026
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2005276525013389473
+  date: '2025-12-28'
+  excerpt: $1 says Anthropic and OpenAI will launch one-touch app deployments in 2026
+  image: ''
 - title: Best present for a bouldering fan
   source: twitter
   url: https://twitter.com/jbdamask/status/2004318904035037648
