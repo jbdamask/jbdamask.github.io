@@ -22,13 +22,13 @@
             --gray-900: #111827;
         }
 
-        * {
+        *, *::before, *::after {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
         body {
+            margin: 0;
+            padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             background-color: var(--gray-100);
             color: var(--gray-800);
@@ -935,10 +935,14 @@ You can drag and drop images directly into the editor!"></textarea>
 
         // Password hash (SHA-256 of "changeme")
         // To change the password:
-        // 1. Go to https://emn178.github.io/online-tools/sha256.html
-        // 2. Enter your new password and get the hash
-        // 3. Replace the value below
-        const PASSWORD_HASH = 'df6b9fb15cfdbb7527be5a8a6e39f39e572c8ddb943fbc79a943438e9d3d85ebef';
+        // 1. Run: echo -n "yourpassword" | sha256sum
+        // 2. Or use: https://emn178.github.io/online-tools/sha256.html
+        // 3. Replace the value below with the 64-character hash
+        //
+        // SECURITY NOTE: This is client-side authentication for convenience only.
+        // It can be bypassed by anyone with browser dev tools. Do not use for
+        // sensitive content. Consider this a basic deterrent, not real security.
+        const PASSWORD_HASH = '057ba03d6c44104863dc7361fe4578965d1887360f90a0895882e58a6248fc86';
 
         // Session storage key
         const SESSION_KEY = 'blog_editor_authenticated';
@@ -1146,6 +1150,8 @@ You can drag and drop images directly into the editor!"></textarea>
         }
 
         function showImageModal() {
+            // Clear any previously dropped file
+            droppedImageFile = null;
             document.getElementById('image-file').value = '';
             document.getElementById('image-url').value = '';
             document.getElementById('image-alt').value = '';
@@ -1179,9 +1185,11 @@ You can drag and drop images directly into the editor!"></textarea>
 
             let imageUrl = urlInput.value;
 
-            // If file is uploaded, use base64 or suggest saving
-            if (fileInput.files && fileInput.files[0]) {
-                const file = fileInput.files[0];
+            // Check for dropped file first, then file input
+            const file = droppedImageFile || (fileInput.files && fileInput.files[0]);
+
+            // If file is uploaded or dropped, use base64 or suggest saving
+            if (file) {
                 const reader = new FileReader();
 
                 reader.onload = function(e) {
@@ -1223,6 +1231,8 @@ You can drag and drop images directly into the editor!"></textarea>
                 return;
             }
 
+            // Clear dropped file reference
+            droppedImageFile = null;
             closeModal('image-modal');
         }
 
@@ -1242,6 +1252,9 @@ You can drag and drop images directly into the editor!"></textarea>
             e.currentTarget.classList.remove('drop-zone-active');
         }
 
+        // Store dropped file for use in image modal
+        let droppedImageFile = null;
+
         function handleDrop(e) {
             e.preventDefault();
             e.stopPropagation();
@@ -1249,9 +1262,22 @@ You can drag and drop images directly into the editor!"></textarea>
 
             const files = e.dataTransfer.files;
             if (files.length > 0 && files[0].type.startsWith('image/')) {
-                // Show image modal with the dropped file
-                document.getElementById('image-file').files = files;
-                previewImage(document.getElementById('image-file'));
+                // Store the dropped file and show modal
+                droppedImageFile = files[0];
+
+                // Preview the dropped image
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    const preview = document.getElementById('image-preview');
+                    preview.src = evt.target.result;
+                    preview.style.display = 'block';
+                };
+                reader.readAsDataURL(droppedImageFile);
+
+                // Clear URL field and open modal
+                document.getElementById('image-url').value = '';
+                document.getElementById('image-alt').value = '';
+                document.getElementById('image-title').value = '';
                 openModal('image-modal');
             }
         }
