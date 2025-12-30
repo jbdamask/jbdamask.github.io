@@ -2,6 +2,32 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Claude Code sessions running on my computer and from my phone. I have no
+    idea what I’m working on an...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2006034304443306306
+  date: '2025-12-30'
+  excerpt: Claude Code sessions running on my computer and from my phone. I have no
+    idea what I’m working on anymore
+  image: ''
+- title: Remember, ChatGPT sessions are NOT equivalent to notebooks. In a notebook,
+    output from prior cells a...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2006032902706930081
+  date: '2025-12-30'
+  excerpt: Remember, ChatGPT sessions are NOT equivalent to notebooks. In a notebook,
+    output from prior cells are facts that later cells can reuse. ChatGPT regularly
+    fails to reuse prior work in a multi-step ana...
+  image: ''
+- title: AI in business apps is now an upsold feature, but will be commodity soon...like
+    spell check. It woul...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2005980953081188769
+  date: '2025-12-30'
+  excerpt: AI in business apps is now an upsold feature, but will be commodity soon...like
+    spell check. It wouldn't surprise me to see costs come down as this becomes a
+    point of competitive pricing
+  image: ''
 - title: $1 says Anthropic and OpenAI will launch one-touch app deployments in 2026
   source: twitter
   url: https://twitter.com/jbdamask/status/2005276525013389473
