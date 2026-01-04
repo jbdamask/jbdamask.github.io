@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: One of the most useful prompt hacks with frontier models is to say “look
+    it up”. ChatGPT gives chron...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2007790437780865382
+  date: '2026-01-04'
+  excerpt: One of the most useful prompt hacks with frontier models is to say “look
+    it up”. ChatGPT gives chronically wrong answers without it It’s surprising chat
+    apps don’t include this by default when asked a...
+  image: ''
 - title: Claude Code sessions running on my computer and from my phone. I have no
     idea what I’m working on an...
   source: twitter
