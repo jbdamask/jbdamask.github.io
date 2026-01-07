@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Claude Skills are so freaking cool. I asked it to make one that finds when
+    the ISS flies over my hou...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2008657744195449169
+  date: '2026-01-06'
+  excerpt: Claude Skills are so freaking cool. I asked it to make one that finds when
+    the ISS flies over my house and had the skill creator use Anthropic's frontend-design
+    skill to visualize it against my visibl...
+  image: ''
 - title: One of the most useful prompt hacks with frontier models is to say “look
     it up”. ChatGPT gives chron...
   source: twitter
