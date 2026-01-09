@@ -11,6 +11,15 @@
     track of projects/sessions (I love Try by @tobi and trying Agent Deck) , how to
     structure work for parallel agents (Worktrees? M...
   image: ''
+- title: When using Claude Code in planning mode, it's good to specify what you're
+    planning. Otherwise, the m...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2009632276095844663
+  date: '2026-01-09'
+  excerpt: When using Claude Code in planning mode, it's good to specify what you're
+    planning. Otherwise, the models seem to default to technical planning instead
+    of product planning.
+  image: ''
 - title: Claude Skills are so freaking cool. I asked it to make one that finds when
     the ISS flies over my hou...
   source: twitter
