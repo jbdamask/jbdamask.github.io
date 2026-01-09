@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Problems come quick when you dive into agentic coding like, how to keep track
+    of projects/sessions (...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2009621125836452298
+  date: '2026-01-09'
+  excerpt: Problems come quick when you dive into agentic coding like, how to keep
+    track of projects/sessions (I love Try by @tobi and trying Agent Deck) , how to
+    structure work for parallel agents (Worktrees? M...
+  image: ''
 - title: Claude Skills are so freaking cool. I asked it to make one that finds when
     the ISS flies over my hou...
   source: twitter
