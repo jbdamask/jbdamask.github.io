@@ -2,6 +2,12 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: I'm liking Agent Deck by @asheshgoplani.
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2010013581149167962
+  date: '2026-01-10'
+  excerpt: I'm liking Agent Deck by @asheshgoplani.
+  image: ''
 - title: Problems come quick when you dive into agentic coding like, how to keep track
     of projects/sessions (...
   source: twitter
