@@ -14,6 +14,14 @@
   date: '2026-01-10'
   excerpt: claude code + opus 4.5 But sometimes this still happens
   image: ''
+- title: I just had Claude Code fire up a spot instance for converting a model. Let’s
+    see how this goes
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2010080126785245484
+  date: '2026-01-10'
+  excerpt: I just had Claude Code fire up a spot instance for converting a model.
+    Let’s see how this goes
+  image: ''
 - title: Problems come quick when you dive into agentic coding like, how to keep track
     of projects/sessions (...
   source: twitter
