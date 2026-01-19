@@ -1,7 +1,7 @@
 ---
 title: JSONL Viewer
-tool_url: /tools/jsonl-viewer
-excerpt: A sleek record-by-record viewer for JSONL files with search functionality
+tool_url: /tools/jsonl-viewer.html
+excerpt: A browser-based viewer for JSON Lines files with search capabilities
 permalink: /tools/jsonl-viewer/
 ---
 
