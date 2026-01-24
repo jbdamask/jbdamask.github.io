@@ -2,6 +2,44 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Industrial software development. We’re already here. Just a few tweaks to
+    the tools and techniques a...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2014162479748632859
+  date: '2026-01-22'
+  excerpt: Industrial software development. We’re already here. Just a few tweaks
+    to the tools and techniques and everyone will be making software while they sleep.
+    In fact, if Ralph loops aren’t running 24/7, t...
+  image: ''
+- title: The new breed of hello world apps is pretty spectacular
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2014078008143794577
+  date: '2026-01-21'
+  excerpt: The new breed of hello world apps is pretty spectacular
+  image: ''
+- title: Using Ralph to explore models from Hugging Face. Thanks @GeoffreyHuntley
+    and @ryancarson.
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2013811658481717503
+  date: '2026-01-21'
+  excerpt: Using Ralph to explore models from Hugging Face. Thanks @GeoffreyHuntley
+    and @ryancarson.
+  image: ''
+- title: ok, let's see what we got
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2013783378361745772
+  date: '2026-01-21'
+  excerpt: ok, let's see what we got
+  image: ''
+- title: Well, it wasn't obvious when I read the PRD, but I wasn't explicit enough
+    about creating a backend. ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2013779266526208044
+  date: '2026-01-21'
+  excerpt: Well, it wasn't obvious when I read the PRD, but I wasn't explicit enough
+    about creating a backend. So Claude assumed I wanted Vercel with Alibaba endpoints.
+    Just handed Ralph a backend PRD to cook
+  image: ''
 - title: I'm liking Agent Deck by @asheshgoplani.
   source: twitter
   url: https://twitter.com/jbdamask/status/2010013581149167962
