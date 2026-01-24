@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: I’m on a two week surge with a client to change their engineering practices.
+    To keep things focused,...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2015034203180617815
+  date: '2026-01-24'
+  excerpt: I’m on a two week surge with a client to change their engineering practices.
+    To keep things focused, we standardized on Claude Code, Opus 4.5, and spec-driven
+    development. Everything is done via Ralph...
+  image: ''
 - title: Industrial software development. We’re already here. Just a few tweaks to
     the tools and techniques a...
   source: twitter
