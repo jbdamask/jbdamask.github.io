@@ -11,6 +11,24 @@
     To keep things focused, we standardized on Claude Code, Opus 4.5, and spec-driven
     development. Everything is done via Ralph...
   image: ''
+- title: 'Week 1 Ralph learnings, part 2: * Team standards for integrating loop activities
+    and git are needed....'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2015038555865657767
+  date: '2026-01-24'
+  excerpt: 'Week 1 Ralph learnings, part 2: * Team standards for integrating loop
+    activities and git are needed. * Always use Opus 4.5 * If Ralph loops aren’t running
+    overnight, you’re not feeding it enough specs...'
+  image: https://pbs.twimg.com/news_img/2014202059067936768/Bpr5pcBS?format=jpg&name=orig
+- title: 'Some learnings from week 1: * Ralph loop is weirdly powerful * Specs are
+    essential * If output is ba...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2015036730982715435
+  date: '2026-01-24'
+  excerpt: 'Some learnings from week 1: * Ralph loop is weirdly powerful * Specs are
+    essential * If output is bad, delete and rerun loop - don’t get stuck debugging
+    * Careless loop/prompt instructions can wreak h...'
+  image: ''
 - title: Industrial software development. We’re already here. Just a few tweaks to
     the tools and techniques a...
   source: twitter
