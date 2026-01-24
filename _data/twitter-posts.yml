@@ -29,6 +29,15 @@
     essential * If output is bad, delete and rerun loop - don’t get stuck debugging
     * Careless loop/prompt instructions can wreak h...'
   image: ''
+- title: GPT 5.2 feels like it was trained on a steady stream of slop. I have a hard
+    time using it as a thoug...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2015067310097158429
+  date: '2026-01-24'
+  excerpt: GPT 5.2 feels like it was trained on a steady stream of slop. I have a
+    hard time using it as a thought partner for software architecture because output
+    is often verbose and vague. It lacks pragmatism
+  image: ''
 - title: Industrial software development. We’re already here. Just a few tweaks to
     the tools and techniques a...
   source: twitter
