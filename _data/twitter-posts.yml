@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: There’s soooo much innovation going on. An engineer’s time is better spent
+    running Ralph loops and s...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2015409337863204883
+  date: '2026-01-25'
+  excerpt: There’s soooo much innovation going on. An engineer’s time is better spent
+    running Ralph loops and scrolling X for the next tool/technique/idea to incorporate
+    then in an IDE
+  image: ''
 - title: I’m on a two week surge with a client to change their engineering practices.
     To keep things focused,...
   source: twitter
