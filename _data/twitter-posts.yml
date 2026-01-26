@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: 'Claude Code 2.1.19 bug: Brackets in Skill front-matter causes loss of native
+    slash commands Replicat...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2015807831157473748
+  date: '2026-01-26'
+  excerpt: 'Claude Code 2.1.19 bug: Brackets in Skill front-matter causes loss of
+    native slash commands Replicate: 1. Add skill with front-matter, name: [TODO]
+    2. Open CC 3. Type native slash comand, e.g. /plugin...'
+  image: ''
 - title: There’s soooo much innovation going on. An engineer’s time is better spent
     running Ralph loops and s...
   source: twitter
