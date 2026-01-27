@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: I'd love to know how the Claude Code dev team uses Skills in their work.
+    Typical Skills encapsulate ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2016124661084352628
+  date: '2026-01-27'
+  excerpt: I'd love to know how the Claude Code dev team uses Skills in their work.
+    Typical Skills encapsulate all relevant info w/in their folder structure, e.g.
+    assets/font.ttf. But this seems an anti-pattern ...
+  image: ''
 - title: 'Claude Code 2.1.19 bug: Brackets in Skill front-matter causes loss of native
     slash commands Replicat...'
   source: twitter
