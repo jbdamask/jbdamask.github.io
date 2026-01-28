@@ -11,6 +11,15 @@
     Typical Skills encapsulate all relevant info w/in their folder structure, e.g.
     assets/font.ttf. But this seems an anti-pattern ...
   image: ''
+- title: 'Tip for using Claude Code in headless mode in your terminal. Add this to
+    your .zshrc: yolo() { claud...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2016290219834699792
+  date: '2026-01-27'
+  excerpt: 'Tip for using Claude Code in headless mode in your terminal. Add this
+    to your .zshrc: yolo() { claude -p --dangerously-skip-permissions --model claude-haiku-4-5
+    "$@" } Then yolo all you want.'
+  image: ''
 - title: 'Claude Code 2.1.19 bug: Brackets in Skill front-matter causes loss of native
     slash commands Replicat...'
   source: twitter
