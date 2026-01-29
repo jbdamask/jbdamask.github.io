@@ -10,6 +10,15 @@
   excerpt: 'Wondering about Ralph loops with inner loops that go thru a list of steps:
     pick issue, code, double check, tests, PR'
   image: ''
+- title: Maybe Ralph should be used with inner loops. innerLoops = [SELEC_TASK.md,
+    CODE_IT.md, CODE_REVIEW.md...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2016874238351655375
+  date: '2026-01-29'
+  excerpt: 'Maybe Ralph should be used with inner loops. innerLoops = [SELEC_TASK.md,
+    CODE_IT.md, CODE_REVIEW.md, RUN_TESTS.md] while True: for prompt in innerLoops:
+    cat prompt | claude -p'
+  image: ''
 - title: Using Claude Code to decompile Claude Code is fun
   source: twitter
   url: https://twitter.com/jbdamask/status/2016630272695935161
