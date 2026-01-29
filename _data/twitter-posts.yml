@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: 'Wondering about Ralph loops with inner loops that go thru a list of steps:
+    pick issue, code, double ...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2016860907951784363
+  date: '2026-01-29'
+  excerpt: 'Wondering about Ralph loops with inner loops that go thru a list of steps:
+    pick issue, code, double check, tests, PR'
+  image: ''
 - title: Using Claude Code to decompile Claude Code is fun
   source: twitter
   url: https://twitter.com/jbdamask/status/2016630272695935161
