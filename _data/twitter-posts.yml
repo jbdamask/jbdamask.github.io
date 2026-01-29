@@ -2,6 +2,12 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Using Claude Code to decompile Claude Code is fun
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2016630272695935161
+  date: '2026-01-28'
+  excerpt: Using Claude Code to decompile Claude Code is fun
+  image: ''
 - title: I'd love to know how the Claude Code dev team uses Skills in their work.
     Typical Skills encapsulate ...
   source: twitter
