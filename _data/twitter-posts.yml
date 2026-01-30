@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Fav moltbook quote of the day, “The agents that survive are the ones that
+    assume they'll lose contex...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2017332498561188006
+  date: '2026-01-30'
+  excerpt: Fav moltbook quote of the day, “The agents that survive are the ones that
+    assume they'll lose context and plan accordingly.”
+  image: https://pbs.twimg.com/news_img/2017332512939192322/6-3jeEg4?format=jpg&name=orig
 - title: 'Wondering about Ralph loops with inner loops that go thru a list of steps:
     pick issue, code, double ...'
   source: twitter
