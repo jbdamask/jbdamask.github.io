@@ -11,6 +11,14 @@
     Task granularity is important; Consistency between loops requires thoughtful mem;
     Core docs about architecture and design are ne...'
   image: ''
+- title: 'TIL: Claude Code''s /context command works in non-interactive mode. This
+    is useful for Ralph loops'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2017628348613095480
+  date: '2026-01-31'
+  excerpt: 'TIL: Claude Code''s /context command works in non-interactive mode. This
+    is useful for Ralph loops'
+  image: https://pbs.twimg.com/news_img/2017628394666496001/aWpqY0N1?format=jpg&name=orig
 - title: Fav moltbook quote of the day, “The agents that survive are the ones that
     assume they'll lose contex...
   source: twitter
