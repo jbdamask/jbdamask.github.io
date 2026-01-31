@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: 'Some things learned about the Ralph loop: Good specs are hard to write;
+    Task granularity is importan...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2017421291804897653
+  date: '2026-01-31'
+  excerpt: 'Some things learned about the Ralph loop: Good specs are hard to write;
+    Task granularity is important; Consistency between loops requires thoughtful mem;
+    Core docs about architecture and design are ne...'
+  image: ''
 - title: Fav moltbook quote of the day, “The agents that survive are the ones that
     assume they'll lose contex...
   source: twitter
