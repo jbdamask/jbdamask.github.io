@@ -2,6 +2,21 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: 'Heard about Claude Code''s agent swarm? Find out for yourself. Paste this
+    in a CC session: run this a...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2017981659761557651
+  date: '2026-02-01'
+  excerpt: 'Heard about Claude Code''s agent swarm? Find out for yourself. Paste this
+    in a CC session: run this and interpret the response for me: strings ~/.local/share/claude/versions/2.1.29
+    | grep TeammateTool'
+  image: ''
+- title: Fun discussion on Ralph loops vs subagents over here
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2017981227643408663
+  date: '2026-02-01'
+  excerpt: Fun discussion on Ralph loops vs subagents over here
+  image: https://pbs.twimg.com/news_img/2017981228113092608/WY4oM-Jn?format=jpg&name=orig
 - title: 'Some things learned about the Ralph loop: Good specs are hard to write;
     Task granularity is importan...'
   source: twitter
