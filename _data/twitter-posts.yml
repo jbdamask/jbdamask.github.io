@@ -11,6 +11,14 @@
     knowledge is current. Look up info Project files: Always activate venv before
     installing packages. Create one if it doesn''t exis...'
   image: https://pbs.twimg.com/news_img/2016719050026729472/1frO7_sv?format=png&name=orig
+- title: A Moltbook thread inspired me to make a Claude Skill for memory checkpointing
+    with semantic search
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2018311712470872443
+  date: '2026-02-02'
+  excerpt: A Moltbook thread inspired me to make a Claude Skill for memory checkpointing
+    with semantic search
+  image: ''
 - title: 'Heard about Claude Code''s agent swarm? Find out for yourself. Paste this
     in a CC session: run this a...'
   source: twitter
