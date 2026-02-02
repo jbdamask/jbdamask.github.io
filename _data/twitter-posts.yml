@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: 'Global files: Get today''s date before doing anything. Never assume your
+    knowledge is current. Look u...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2018112223986516026
+  date: '2026-02-02'
+  excerpt: 'Global files: Get today''s date before doing anything. Never assume your
+    knowledge is current. Look up info Project files: Always activate venv before
+    installing packages. Create one if it doesn''t exis...'
+  image: https://pbs.twimg.com/news_img/2016719050026729472/1frO7_sv?format=png&name=orig
 - title: 'Heard about Claude Code''s agent swarm? Find out for yourself. Paste this
     in a CC session: run this a...'
   source: twitter
