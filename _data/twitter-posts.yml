@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: I think the definition of AGI should be updated to, “LLMs can write code
+    without CORS errors”
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2018513822345245109
+  date: '2026-02-03'
+  excerpt: I think the definition of AGI should be updated to, “LLMs can write code
+    without CORS errors”
+  image: ''
 - title: 'Global files: Get today''s date before doing anything. Never assume your
     knowledge is current. Look u...'
   source: twitter
