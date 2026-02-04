@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: One of the most useful Claude Code agents I've made. Just ask "where were
+    we" when starting a sessio...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2018857334261399797
+  date: '2026-02-04'
+  excerpt: One of the most useful Claude Code agents I've made. Just ask "where were
+    we" when starting a session. A subagent queries recent git history, planning files,
+    devlog, chat history, Beads and task lists...
+  image: https://pbs.twimg.com/news_img/2018857337130242048/Vi_0AFg-?format=jpg&name=orig
 - title: I think the definition of AGI should be updated to, “LLMs can write code
     without CORS errors”
   source: twitter
