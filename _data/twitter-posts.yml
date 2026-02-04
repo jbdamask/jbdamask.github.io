@@ -59,6 +59,23 @@
   date: '2026-02-04'
   excerpt: 'It just makes me happy to look at this #beadsviewer'
   image: ''
+- title: We'll see how long context rot exists - maybe the problem goes away w/ the
+    next Opus release. In the...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2019088890951328003
+  date: '2026-02-04'
+  excerpt: We'll see how long context rot exists - maybe the problem goes away w/
+    the next Opus release. In the meantime, it's useful to keep md files around to
+    track common gotchas. Then you can have your agent...
+  image: ''
+- title: Land the plane! @Steve_Yegge little instruction to agents when using Beads
+    is gold.
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2019086777458319365
+  date: '2026-02-04'
+  excerpt: Land the plane! @Steve_Yegge little instruction to agents when using Beads
+    is gold.
+  image: ''
 - title: I think the definition of AGI should be updated to, “LLMs can write code
     without CORS errors”
   source: twitter
