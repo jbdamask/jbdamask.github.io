@@ -76,6 +76,15 @@
   excerpt: Land the plane! @Steve_Yegge little instruction to agents when using Beads
     is gold.
   image: ''
+- title: Fun ways coding agents f$@% with AWS resources, During deployment, accidentally
+    corrupted JWT_SECRET...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2019128880003477933
+  date: '2026-02-04'
+  excerpt: Fun ways coding agents f$@% with AWS resources, During deployment, accidentally
+    corrupted JWT_SECRET and GITHUB_CLIENT_SECRET by passing "UsePreviousValue" as
+    literal strings to `aws cloudformation de...
+  image: ''
 - title: I think the definition of AGI should be updated to, “LLMs can write code
     without CORS errors”
   source: twitter
