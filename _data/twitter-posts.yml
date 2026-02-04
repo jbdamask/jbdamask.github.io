@@ -11,6 +11,48 @@
     we" when starting a session. A subagent queries recent git history, planning files,
     devlog, chat history, Beads and task lists...
   image: https://pbs.twimg.com/news_img/2018857337130242048/Vi_0AFg-?format=jpg&name=orig
+- title: When I renovated my home, I used a great contractor and his team worked very
+    fast. But near the end ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2018881780531835221
+  date: '2026-02-04'
+  excerpt: 'When I renovated my home, I used a great contractor and his team worked
+    very fast. But near the end I saw problems: crooked window here, something no
+    to spec there. "This is typical", he said. Then hi...'
+  image: ''
+- title: 'Agentic coding for AWS architecture improves greatly by: 1 - Passing the
+    spec to Claude Code''s AskUs...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2018878795097256134
+  date: '2026-02-04'
+  excerpt: 'Agentic coding for AWS architecture improves greatly by: 1 - Passing the
+    spec to Claude Code''s AskUserQuestion tool 2 - Decomposing into epics and tasks
+    3 - Using Beads for issue tracking'
+  image: ''
+- title: The problem I have with running multi-agent sessions is the amount of flipping
+    back and forth. Beads...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2018877457609511224
+  date: '2026-02-04'
+  excerpt: The problem I have with running multi-agent sessions is the amount of flipping
+    back and forth. Beads solves the task management and Beads Viewer makes it easy
+    to follow along. Going to experiment with...
+  image: ''
+- title: Interesting...Claude Code Opus decides to kick of Sonnet in plan mode to
+    figure out how to implement...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2018875209277997404
+  date: '2026-02-04'
+  excerpt: Interesting...Claude Code Opus decides to kick of Sonnet in plan mode to
+    figure out how to implement a Beads task. I think this means the task wasn't granular
+    enough
+  image: ''
+- title: Thank you for Beads Viewer @doodlestein !
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2018866417035247722
+  date: '2026-02-04'
+  excerpt: Thank you for Beads Viewer @doodlestein !
+  image: ''
 - title: I think the definition of AGI should be updated to, “LLMs can write code
     without CORS errors”
   source: twitter
