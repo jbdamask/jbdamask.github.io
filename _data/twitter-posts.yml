@@ -2,6 +2,23 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Buying BABA when it looked like Ant was going to IPO was one of my better
+    decisions 🙄
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2019379268195893718
+  date: '2026-02-05'
+  excerpt: Buying BABA when it looked like Ant was going to IPO was one of my better
+    decisions 🙄
+  image: ''
+- title: When using agents to make AWS apps, I find it best to coach from the sidelines.
+    They'll make mistake...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2019377052466733282
+  date: '2026-02-05'
+  excerpt: When using agents to make AWS apps, I find it best to coach from the sidelines.
+    They'll make mistakes but are pretty good about cleaning up after themselves.
+    If I grab control, I'm usually left with s...
+  image: ''
 - title: One of the most useful Claude Code agents I've made. Just ask "where were
     we" when starting a sessio...
   source: twitter
