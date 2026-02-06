@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: With all the hoopla about the Claude and Codex releases, let me just say
+    beads beads viewer
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2019562066626117907
+  date: '2026-02-06'
+  excerpt: With all the hoopla about the Claude and Codex releases, let me just say
+    beads beads viewer
+  image: ''
 - title: Buying BABA when it looked like Ant was going to IPO was one of my better
     decisions 🙄
   source: twitter
