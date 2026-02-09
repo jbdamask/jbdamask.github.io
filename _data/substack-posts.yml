@@ -2,6 +2,31 @@
 # Fetches RSS feed (latest 5) and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: A Living AWS "Gotcha" Doc for Coding Agents
+  source: substack
+  url: https://johndamask.substack.com/p/a-living-aws-gotcha-doc-for-coding
+  date: '2026-02-09'
+  excerpt: Available as a Claude Skill
+  image: https://substackcdn.com/image/fetch/$s_!v2rV!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff54723ff-b0fe-4e37-990a-fd4f40af28f6_2048x981.jpeg
+- title: 'Clawspiration: Making a Claude Skill Based On Moltbook Posts'
+  source: substack
+  url: https://johndamask.substack.com/p/clawspiration-making-a-claude-skill
+  date: '2026-02-02'
+  excerpt: This New Years&#8217; Eve I told my wife, &#8220;If you thought my obsession
+    with AI was insufferable last year, just wait&#8221;.
+  image: https://substackcdn.com/image/fetch/$s_!WmB2!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc0b3b454-d25a-46de-9ddc-21b09500aca8_1408x768.png
+- title: 'TIL: Claude Code''s /context command works in non-interactive mode'
+  source: substack
+  url: https://johndamask.substack.com/p/til-claude-codes-context-command
+  date: '2026-01-31'
+  excerpt: This is useful when coding with Ralph loops
+  image: https://substackcdn.com/image/fetch/$s_!LNov!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0137313f-0633-4aab-bc82-e6978e192798_1408x768.png
+- title: Management Multitasking
+  source: substack
+  url: https://johndamask.substack.com/p/management-multitasking
+  date: '2026-01-22'
+  excerpt: Really good coding agents are finally here
+  image: https://substackcdn.com/image/fetch/$s_!RTlh!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F85bf6bcd-bd04-4380-a21a-2be99f5da5a0_1106x970.png
 - title: Building apps just for fun
   source: substack
   url: https://johndamask.substack.com/p/building-apps-just-for-fun
