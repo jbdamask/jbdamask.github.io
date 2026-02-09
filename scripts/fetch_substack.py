@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 import re
 
 # Configuration
-SUBSTACK_FEED = 'https://johndamask.substack.com/feed'
+SUBSTACK_FEED = 'https://substack-rss.jbdamask.workers.dev'
 OUTPUT_FILE = "_data/substack-posts.yml"
 
 def extract_image_from_content(content):
@@ -96,7 +96,7 @@ def main():
 
     if not new_posts:
         print("No posts fetched. Keeping existing file if it exists.")
-        sys.exit(0)
+        sys.exit(1)
 
     # Ensure _data directory exists
     os.makedirs('_data', exist_ok=True)
