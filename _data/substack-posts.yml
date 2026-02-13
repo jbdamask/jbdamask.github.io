@@ -2,6 +2,12 @@
 # Fetches RSS feed (latest 5) and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: Vibe Coding Cheatsheet
+  source: substack
+  url: https://johndamask.substack.com/p/vibe-coding-cheatsheet
+  date: '2026-02-13'
+  excerpt: Simple tips to get started
+  image: ''
 - title: A Living AWS "Gotcha" Doc for Coding Agents
   source: substack
   url: https://johndamask.substack.com/p/a-living-aws-gotcha-doc-for-coding
