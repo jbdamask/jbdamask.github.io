@@ -2,6 +2,12 @@
 # Fetches RSS feed (latest 5) and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: 'DevLog - Building a Genomic Variant Research Plugin '
+  source: substack
+  url: https://johndamask.substack.com/p/devlog-building-a-genomic-variant
+  date: '2026-02-17'
+  excerpt: Built with Claude Code
+  image: https://substackcdn.com/image/fetch/$s_!2xWq!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F52129642-3efc-43dd-955d-bd869b4c3917_1400x1000.jpeg
 - title: Vibe Coding Cheatsheet
   source: substack
   url: https://johndamask.substack.com/p/vibe-coding-cheatsheet
