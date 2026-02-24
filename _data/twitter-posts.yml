@@ -2,6 +2,40 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Deploying from a laptop on a plane wifi is dumb. I should have thought ahead
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2025282185230778423
+  date: '2026-02-21'
+  excerpt: Deploying from a laptop on a plane wifi is dumb. I should have thought
+    ahead
+  image: ''
+- title: Humans are still needed. Not sure for how long but it’s nice to feel important
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2025185712895561937
+  date: '2026-02-21'
+  excerpt: Humans are still needed. Not sure for how long but it’s nice to feel important
+  image: ''
+- title: Is it weird to feel a little paternal pride when your agent learns?
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2025182011233567136
+  date: '2026-02-21'
+  excerpt: Is it weird to feel a little paternal pride when your agent learns?
+  image: ''
+- title: This is working pretty well. I use GitHub for Issues, then use my beads-planner
+    plugin to build a pl...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2024994557989962048
+  date: '2026-02-20'
+  excerpt: This is working pretty well. I use GitHub for Issues, then use my beads-planner
+    plugin to build a plan and decompose into Beads. The Beads are branch-specific
+    so another agent can pick up and code whi...
+  image: https://pbs.twimg.com/news_img/2024994606333517824/9QBAddqm?format=jpg&name=orig
+- title: What software engineers do these days
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2024986733264167262
+  date: '2026-02-20'
+  excerpt: What software engineers do these days
+  image: ''
 - title: With all the hoopla about the Claude and Codex releases, let me just say
     beads beads viewer
   source: twitter
