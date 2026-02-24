@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Understanding scientific articles can be tough, even in your own field. Trying
+    to comprehend article...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2026162973975499080
+  date: '2026-02-24'
+  excerpt: Understanding scientific articles can be tough, even in your own field.
+    Trying to comprehend articles from others? Good luck. I made this app for curious
+    people. Free for now - I cap it to 20 articles...
+  image: ''
 - title: Deploying from a laptop on a plane wifi is dumb. I should have thought ahead
   source: twitter
   url: https://twitter.com/jbdamask/status/2025282185230778423
