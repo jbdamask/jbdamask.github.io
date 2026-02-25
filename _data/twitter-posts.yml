@@ -2,6 +2,18 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: 'I just love this: claude --dangerously-skip-permissions'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2026728484199084488
+  date: '2026-02-25'
+  excerpt: 'I just love this: claude --dangerously-skip-permissions'
+  image: ''
+- title: Sometimes Claude gets a bit overzealous with planning
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2026725522483581267
+  date: '2026-02-25'
+  excerpt: Sometimes Claude gets a bit overzealous with planning
+  image: ''
 - title: Understanding scientific articles can be tough, even in your own field. Trying
     to comprehend article...
   source: twitter
