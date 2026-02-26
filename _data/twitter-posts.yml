@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: The last step of my "beads-planner" plugin decomposes a comprehensive plan
+    into beads with relations...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2026847905022132651
+  date: '2026-02-26'
+  excerpt: The last step of my "beads-planner" plugin decomposes a comprehensive plan
+    into beads with relationships. Everything is branched so beads are self-contained
+    for workers to bang out.
+  image: ''
 - title: 'I just love this: claude --dangerously-skip-permissions'
   source: twitter
   url: https://twitter.com/jbdamask/status/2026728484199084488
