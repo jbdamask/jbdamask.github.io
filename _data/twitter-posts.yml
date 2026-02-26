@@ -11,6 +11,15 @@
     into beads with relationships. Everything is branched so beads are self-contained
     for workers to bang out.
   image: ''
+- title: It's tempting to ignore plan review. Don't. Even when using Opus, Claude
+    will sometimes give poor an...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2027099903919321228
+  date: '2026-02-26'
+  excerpt: It's tempting to ignore plan review. Don't. Even when using Opus, Claude
+    will sometimes give poor answers. For example, it doesn't know that Skills are
+    a thing. But you can always revise plans and poi...
+  image: ''
 - title: 'I just love this: claude --dangerously-skip-permissions'
   source: twitter
   url: https://twitter.com/jbdamask/status/2026728484199084488
