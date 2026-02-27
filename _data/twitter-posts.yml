@@ -2,6 +2,12 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Nice note from an old colleague about
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2027436429870047282
+  date: '2026-02-27'
+  excerpt: Nice note from an old colleague about
+  image: ''
 - title: The last step of my "beads-planner" plugin decomposes a comprehensive plan
     into beads with relations...
   source: twitter
