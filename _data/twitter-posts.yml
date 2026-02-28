@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: DevLog for building Now I Get It! - an app that makes it easy to understand
+    scientific articles
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2027539743555121245
+  date: '2026-02-28'
+  excerpt: DevLog for building Now I Get It! - an app that makes it easy to understand
+    scientific articles
+  image: https://pbs.twimg.com/news_img/2027539527485562880/YUAhVjag?format=jpg&name=orig
 - title: Nice note from an old colleague about
   source: twitter
   url: https://twitter.com/jbdamask/status/2027436429870047282
