@@ -2,6 +2,24 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: I opened up to people on Hacker News for two days. Each day I paid for 100
+    posts (~$64 per day). Thi...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2028325057332711761
+  date: '2026-03-02'
+  excerpt: 'I opened up to people on Hacker News for two days. Each day I paid for
+    100 posts (~$64 per day). This little app hit #1 in the Show discussions and people
+    went to town. Really cool to see and great co...'
+  image: ''
+- title: If I was in my 20s, with no family, and it was just me, I wouldn't sleep.
+    I would be building all th...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2028324300948738257
+  date: '2026-03-02'
+  excerpt: If I was in my 20s, with no family, and it was just me, I wouldn't sleep.
+    I would be building all the freaking time. In fact, if you are in your 20s with
+    no family and it's just you, don't bother gett...
+  image: ''
 - title: DevLog for building Now I Get It! - an app that makes it easy to understand
     scientific articles
   source: twitter
