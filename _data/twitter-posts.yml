@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Since there's interest in my little app, it's time to get serious about DevOps
+    and AppOps. The last ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2028990927843254398
+  date: '2026-03-04'
+  excerpt: Since there's interest in my little app, it's time to get serious about
+    DevOps and AppOps. The last thing I want is to deploy something people like and
+    get bogged down on operations. First step, make ...
+  image: ''
 - title: I opened up to people on Hacker News for two days. Each day I paid for 100
     posts (~$64 per day). Thi...
   source: twitter
