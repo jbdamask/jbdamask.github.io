@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: As an alternative to all the amazing things people are posting about on X,
+    I'm posting about putting...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2029364310867095965
+  date: '2026-03-05'
+  excerpt: As an alternative to all the amazing things people are posting about on
+    X, I'm posting about putting text on telling people when the daily processing
+    limit has been hit. This involved changing index.h...
+  image: ''
 - title: Since there's interest in my little app, it's time to get serious about DevOps
     and AppOps. The last ...
   source: twitter
