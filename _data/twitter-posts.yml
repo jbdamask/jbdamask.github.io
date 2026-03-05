@@ -20,6 +20,15 @@
     found this: DynamoDB records for failed jobs were being assigned a TTL...meaning
     these records automatically delete after an hou...'
   image: ''
+- title: You learn so much by shipping a product in its infancy. By self-funding Now
+    I Get It! and letting a ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2029519907155513633
+  date: '2026-03-05'
+  excerpt: You learn so much by shipping a product in its infancy. By self-funding
+    Now I Get It! and letting a few people use it every day, I'm rewarded by seeing
+    creativity in action. Someone uploaded a Qwen-ge...
+  image: ''
 - title: Since there's interest in my little app, it's time to get serious about DevOps
     and AppOps. The last ...
   source: twitter
