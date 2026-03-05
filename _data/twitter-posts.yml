@@ -54,6 +54,14 @@
     Opus wants to put everything in the smallest design package possible. It doesn't
     think about distributed architecture unless remi...
   image: ''
+- title: Added modes to 1) Native, for technical audiences 2) Non-technical 3) Kid-friendly
+    Getting closer to...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2029632123779338654
+  date: '2026-03-05'
+  excerpt: Added modes to 1) Native, for technical audiences 2) Non-technical 3) Kid-friendly
+    Getting closer to launch.
+  image: ''
 - title: Since there's interest in my little app, it's time to get serious about DevOps
     and AppOps. The last ...
   source: twitter
