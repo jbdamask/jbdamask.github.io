@@ -62,6 +62,20 @@
   excerpt: Added modes to 1) Native, for technical audiences 2) Non-technical 3) Kid-friendly
     Getting closer to launch.
   image: ''
+- title: Sometimes, even the best mess up
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2029677830120857930
+  date: '2026-03-05'
+  excerpt: Sometimes, even the best mess up
+  image: ''
+- title: Cool, got down-to-the-penny tokens reporting working for papers processed
+    by
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2029675225990734270
+  date: '2026-03-05'
+  excerpt: Cool, got down-to-the-penny tokens reporting working for papers processed
+    by
+  image: ''
 - title: Since there's interest in my little app, it's time to get serious about DevOps
     and AppOps. The last ...
   source: twitter
