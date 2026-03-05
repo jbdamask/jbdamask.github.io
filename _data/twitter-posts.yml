@@ -45,6 +45,15 @@
   excerpt: Why is it so hard to understand my Claude bills? And what's with the 90s-era
     support page?
   image: ''
+- title: Another tip about Claude Opus 4.6 and cloud-first architecture is that Opus
+    wants to put everything ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2029586803615768697
+  date: '2026-03-05'
+  excerpt: Another tip about Claude Opus 4.6 and cloud-first architecture is that
+    Opus wants to put everything in the smallest design package possible. It doesn't
+    think about distributed architecture unless remi...
+  image: ''
 - title: Since there's interest in my little app, it's time to get serious about DevOps
     and AppOps. The last ...
   source: twitter
