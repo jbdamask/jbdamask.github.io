@@ -11,6 +11,15 @@
     X, I'm posting about putting text on telling people when the daily processing
     limit has been hit. This involved changing index.h...
   image: ''
+- title: 'Even the best models will do crazy stuff when building AWS apps. I just
+    found this: DynamoDB records...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2029390823696015591
+  date: '2026-03-05'
+  excerpt: 'Even the best models will do crazy stuff when building AWS apps. I just
+    found this: DynamoDB records for failed jobs were being assigned a TTL...meaning
+    these records automatically delete after an hou...'
+  image: ''
 - title: Since there's interest in my little app, it's time to get serious about DevOps
     and AppOps. The last ...
   source: twitter
