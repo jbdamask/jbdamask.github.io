@@ -23,6 +23,15 @@
   excerpt: Another reason why I use Opus 4.6 to troubleshoot. There's no way I would
     have identified the root cause of my bug that fast
   image: ''
+- title: One of the more insidious things that LLMs write into coding plans is options,
+    like, "Include KaTeX ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2030027742591238476
+  date: '2026-03-06'
+  excerpt: One of the more insidious things that LLMs write into coding plans is options,
+    like, "Include KaTeX or MathJax". This can f*** up your app in weird ways. Another
+    reason why humans still need to scruti...
+  image: ''
 - title: As an alternative to all the amazing things people are posting about on X,
     I'm posting about putting...
   source: twitter
