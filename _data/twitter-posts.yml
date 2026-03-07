@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: I'm pretty happy about this. Just opened up the waitlist yesterday and did
+    very little advertising (...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2030091646654689747
+  date: '2026-03-07'
+  excerpt: I'm pretty happy about this. Just opened up the waitlist yesterday and
+    did very little advertising (here and LinkedIn). People are mostly just finding
+    the site
+  image: ''
 - title: Ok, that took me too long but I finally put up a waitlist for Now I Get It!
   source: twitter
   url: https://twitter.com/jbdamask/status/2029745818056495372
