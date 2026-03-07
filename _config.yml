@@ -11,8 +11,10 @@ locale: "en-US"
 author:
   name: John Damask
   avatar: "/assets/images/john-2025.jpeg"
-  email: john@amroja.com
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:john@amroja.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jbdamask"
