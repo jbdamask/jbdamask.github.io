@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Added a cost-tracking skill to In Claude Code, just type /cost-tracking before
+    running the command y...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2030660949313560974
+  date: '2026-03-08'
+  excerpt: Added a cost-tracking skill to In Claude Code, just type /cost-tracking
+    before running the command you want to track. When ready, say "stop tracking"
+    and you'll get a nice breakdown.
+  image: https://pbs.twimg.com/news_img/2024994606333517824/9QBAddqm?format=jpg&name=orig
 - title: I'm pretty happy about this. Just opened up the waitlist yesterday and did
     very little advertising (...
   source: twitter
