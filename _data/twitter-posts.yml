@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: I'm having a lot of trouble trusting ChatGPT lately. This kind of thing is
+    fairly common where it co...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2030804995939922169
+  date: '2026-03-09'
+  excerpt: I'm having a lot of trouble trusting ChatGPT lately. This kind of thing
+    is fairly common where it contradicts itself.
+  image: ''
 - title: Added a cost-tracking skill to In Claude Code, just type /cost-tracking before
     running the command y...
   source: twitter
