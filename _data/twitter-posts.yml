@@ -101,6 +101,20 @@
   date: '2026-03-09'
   excerpt: It's March 9. Yup
   image: ''
+- title: Hey Claude, analyze all my endpoints for security vulnerabilities and come
+    back with a plan! beep bo...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2031080780605042855
+  date: '2026-03-09'
+  excerpt: Hey Claude, analyze all my endpoints for security vulnerabilities and come
+    back with a plan! beep boop beep
+  image: ''
+- title: First hack...and the app isn't even live. Maybe that's a good thing.
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2031073957105787159
+  date: '2026-03-09'
+  excerpt: First hack...and the app isn't even live. Maybe that's a good thing.
+  image: ''
 - title: Added a cost-tracking skill to In Claude Code, just type /cost-tracking before
     running the command y...
   source: twitter
