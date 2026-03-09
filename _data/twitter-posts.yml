@@ -24,6 +24,32 @@
   excerpt: Added a feedback mechanism to web pages created by Now I Get It! This helps
     me improve the app over time
   image: ''
+- title: Added chips to the carousel so you can easily see if article translations
+    are Native (full science),...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2030835427909714067
+  date: '2026-03-09'
+  excerpt: Added chips to the carousel so you can easily see if article translations
+    are Native (full science), Non-technical (for smart people without all the math),
+    or Kid-friendly
+  image: ''
+- title: Opus 4.6 still makes a lot of questionable decisions when it comes to distributed
+    cloud architecture...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2030831819671646321
+  date: '2026-03-09'
+  excerpt: Opus 4.6 still makes a lot of questionable decisions when it comes to distributed
+    cloud architecture, but it's great when given guidance.
+  image: ''
+- title: 'Three development tools I can''t live without: * Beads by @Steve_Yegge *
+    Beads Viewer and Destructive...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2030826637227360290
+  date: '2026-03-09'
+  excerpt: 'Three development tools I can''t live without: * Beads by @Steve_Yegge
+    * Beads Viewer and Destructive Command Guard by @doodlestein Agentic engineering
+    has been so smooth since I started using these.'
+  image: ''
 - title: Added a cost-tracking skill to In Claude Code, just type /cost-tracking before
     running the command y...
   source: twitter
