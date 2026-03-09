@@ -10,6 +10,20 @@
   excerpt: I'm having a lot of trouble trusting ChatGPT lately. This kind of thing
     is fairly common where it contradicts itself.
   image: ''
+- title: Claude's frontend designer skill puts it on par with Lovable apps
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2030816496830517391
+  date: '2026-03-09'
+  excerpt: Claude's frontend designer skill puts it on par with Lovable apps
+  image: ''
+- title: Added a feedback mechanism to web pages created by Now I Get It! This helps
+    me improve the app over ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2030815590839971899
+  date: '2026-03-09'
+  excerpt: Added a feedback mechanism to web pages created by Now I Get It! This helps
+    me improve the app over time
+  image: ''
 - title: Added a cost-tracking skill to In Claude Code, just type /cost-tracking before
     running the command y...
   source: twitter
