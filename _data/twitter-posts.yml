@@ -2,6 +2,13 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: 199 people have signed up for the waitlist for Super excited to launch this!
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2031553365000229345
+  date: '2026-03-11'
+  excerpt: 199 people have signed up for the waitlist for Super excited to launch
+    this!
+  image: ''
 - title: I'm having a lot of trouble trusting ChatGPT lately. This kind of thing is
     fairly common where it co...
   source: twitter
