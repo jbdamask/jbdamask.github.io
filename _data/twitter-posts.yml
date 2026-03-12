@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: it doesn't matter if engineers aren't coding anymore - there's still endless
+    work to do
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2032084583269957951
+  date: '2026-03-12'
+  excerpt: it doesn't matter if engineers aren't coding anymore - there's still endless
+    work to do
+  image: ''
 - title: 199 people have signed up for the waitlist for Super excited to launch this!
   source: twitter
   url: https://twitter.com/jbdamask/status/2031553365000229345
