@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: 16 hrs and 6 PRs today. I'm of two minds about that. Solid progress and ever
+    closer to launch. But a...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2032282558092714347
+  date: '2026-03-13'
+  excerpt: 16 hrs and 6 PRs today. I'm of two minds about that. Solid progress and
+    ever closer to launch. But at the same time, I thought I would have more to show.
+  image: ''
 - title: it doesn't matter if engineers aren't coding anymore - there's still endless
     work to do
   source: twitter
