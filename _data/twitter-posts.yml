@@ -19,6 +19,15 @@
     it with breaking apart my deployment scripts and it realized that it should add
     a reminder in CLAUDE.md
   image: ''
+- title: The job of an engineer remains that of an engineer, even though coding is
+    now done by agents. Engine...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2032516947632382226
+  date: '2026-03-13'
+  excerpt: The job of an engineer remains that of an engineer, even though coding
+    is now done by agents. Engineers need to think through problems, decompose them,
+    architect solutions, and keep the LLM on track. ...
+  image: ''
 - title: it doesn't matter if engineers aren't coding anymore - there's still endless
     work to do
   source: twitter
