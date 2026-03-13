@@ -40,6 +40,12 @@
   date: '2026-03-13'
   excerpt: 'Before agentic engineering: Worktree wha? Now: Oh yea, totally worktrees'
   image: ''
+- title: This is what combining git worktrees with Beads looks like.
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2032539574874849349
+  date: '2026-03-13'
+  excerpt: This is what combining git worktrees with Beads looks like.
+  image: ''
 - title: it doesn't matter if engineers aren't coding anymore - there's still endless
     work to do
   source: twitter
