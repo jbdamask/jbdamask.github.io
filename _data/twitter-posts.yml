@@ -10,6 +10,15 @@
   excerpt: 16 hrs and 6 PRs today. I'm of two minds about that. Solid progress and
     ever closer to launch. But at the same time, I thought I would have more to show.
   image: ''
+- title: Here's another example of how Opus 4.6 thinks like an engineer. I tasked
+    it with breaking apart my d...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2032473008548254208
+  date: '2026-03-13'
+  excerpt: Here's another example of how Opus 4.6 thinks like an engineer. I tasked
+    it with breaking apart my deployment scripts and it realized that it should add
+    a reminder in CLAUDE.md
+  image: ''
 - title: it doesn't matter if engineers aren't coding anymore - there's still endless
     work to do
   source: twitter
