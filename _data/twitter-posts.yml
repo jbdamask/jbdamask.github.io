@@ -2,6 +2,23 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Tell me I should cancel my ski trip without telling I should cancel my ski
+    trip
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2032657255502336305
+  date: '2026-03-14'
+  excerpt: Tell me I should cancel my ski trip without telling I should cancel my
+    ski trip
+  image: ''
+- title: 5 PRs today for Now I Get It! 1. Add support for Opus 1M token window 2.
+    Scrub PII 3. Add BCDR to th...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2032655672031031376
+  date: '2026-03-14'
+  excerpt: 5 PRs today for Now I Get It! 1. Add support for Opus 1M token window 2.
+    Scrub PII 3. Add BCDR to the system 4. Modularize deploy scripts 5. Automate copyright
+    claim response emails Blog posts for eac...
+  image: ''
 - title: 16 hrs and 6 PRs today. I'm of two minds about that. Solid progress and ever
     closer to launch. But a...
   source: twitter
