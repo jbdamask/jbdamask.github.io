@@ -57,6 +57,19 @@ author_profile: true
   </div>
 {% endfor %}
 {% endif %}
+
+<!-- Now I Get It! DevLog posts (from GitHub Actions) -->
+{% if site.data.nowigetit-posts %}
+{% for post in site.data.nowigetit-posts %}
+  <div class="nowigetit-post-item"
+       data-title="{{ post.title | xml_escape }}"
+       data-excerpt="{{ post.excerpt | xml_escape }}"
+       data-url="{{ post.url }}"
+       data-date="{{ post.date | date_to_xmlschema }}"
+       data-image="">
+  </div>
+{% endfor %}
+{% endif %}
 </div>
 
 <style>
@@ -129,6 +142,20 @@ author_profile: true
 .post-source.linkedin {
   background: #0077B5;
   color: white;
+}
+
+.post-source.nowigetit {
+  background: #0a0d17;
+  color: #e8a838;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.post-source.nowigetit svg {
+  width: 0.7em;
+  height: 0.7em;
+  flex-shrink: 0;
 }
 
 .post-date {

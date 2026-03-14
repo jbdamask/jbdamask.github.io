@@ -14,7 +14,7 @@ on:
   # Rebuild when data-fetching workflows complete (their GITHUB_TOKEN pushes
   # don't trigger the push event, so we chain via workflow_run instead)
   workflow_run:
-    workflows: ["Fetch Substack Posts", "Fetch Twitter Posts"]
+    workflows: ["Fetch Substack Posts", "Fetch Twitter Posts", "Fetch Now I Get It Posts"]
     types: [completed]
 
   # Allows you to run this workflow manually from the Actions tab

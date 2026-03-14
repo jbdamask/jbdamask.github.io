@@ -74,7 +74,26 @@ function getExternalPosts() {
   return posts;
 }
 
-// Render main posts (blog, substack, linkedin)
+// Get Now I Get It! DevLog posts from the page (fetched by GitHub Actions)
+function getNowigetitPosts() {
+  const posts = [];
+  const postElements = document.querySelectorAll('.nowigetit-post-item');
+
+  postElements.forEach(el => {
+    posts.push({
+      title: el.dataset.title,
+      description: el.dataset.excerpt,
+      link: el.dataset.url,
+      pubDate: new Date(el.dataset.date),
+      thumbnail: null,
+      source: 'nowigetit'
+    });
+  });
+
+  return posts;
+}
+
+// Render main posts (blog, substack, linkedin, nowigetit)
 function renderCombinedPosts(posts) {
   const container = document.getElementById('combined-posts');
   if (!container) return;
@@ -102,6 +121,8 @@ function renderCombinedPosts(posts) {
       sourceLabel = '<span class="post-source substack">Substack</span>';
     } else if (post.source === 'linkedin') {
       sourceLabel = '<span class="post-source linkedin">LinkedIn</span>';
+    } else if (post.source === 'nowigetit') {
+      sourceLabel = '<span class="post-source nowigetit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 1 4 12.7V17H8v-2.3A7 7 0 0 1 12 2z"/></svg>Now I Get It! DevLog</span>';
     } else {
       sourceLabel = '<span class="post-source blog">Blog</span>';
     }
@@ -146,7 +167,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const twitterPosts = getTwitterPosts();
   const jekyllPosts = getJekyllPosts();
   const externalPosts = getExternalPosts();
-  const allPosts = [...substackPosts, ...twitterPosts, ...jekyllPosts, ...externalPosts];
+  const nowigetitPosts = getNowigetitPosts();
+  const allPosts = [...substackPosts, ...twitterPosts, ...jekyllPosts, ...externalPosts, ...nowigetitPosts];
 
   renderCombinedPosts(allPosts);
   // Twitter feed is rendered by sidebar/twitter-feed.html include
