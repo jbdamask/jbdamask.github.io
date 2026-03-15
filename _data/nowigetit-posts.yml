@@ -39,6 +39,14 @@
   excerpt: Now I Get It! blog now has an RSS feed -- and the implementation didn't
     require a single new AWS resource.
   image: ''
+- title: Open Coding for AI Evals
+  source: nowigetit
+  url: https://nowigetit.us/blog/open-coding-for-ai-evals.html
+  date: '2026-03-14'
+  excerpt: Before you can build evals for an AI application, you need to understand
+    how it fails. Now I Get It! now has tooling for systematic open coding of generated
+    pages.
+  image: ''
 - title: Modularized Deployments
   source: nowigetit
   url: https://nowigetit.us/blog/modularized-deployments.html
