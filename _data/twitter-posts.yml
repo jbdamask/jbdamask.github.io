@@ -20,6 +20,15 @@
     their workers was actually a fake North Korean operative, the feedback was ‘are
     you 100 per cent sure, because he’s one of our be...'
   image: ''
+- title: Releasing a software product means building two apps since you need admin
+    and operations tooling as ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2033211312193298608
+  date: '2026-03-15'
+  excerpt: Releasing a software product means building two apps since you need admin
+    and operations tooling as well. Claude makes short work of this because it just
+    has to read the code and grok the architecture...
+  image: ''
 - title: Tell me I should cancel my ski trip without telling I should cancel my ski
     trip
   source: twitter
