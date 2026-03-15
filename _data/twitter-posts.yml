@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: A key learning from @HamelHusain and @sh_reya Evals course is to make it
+    easy to annotate failure mo...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2033021236515582241
+  date: '2026-03-15'
+  excerpt: A key learning from @HamelHusain and @sh_reya Evals course is to make it
+    easy to annotate failure modes. I added an open coding feature to the ops plane
+    for my Now I Get It! app to do just that
+  image: ''
 - title: Tell me I should cancel my ski trip without telling I should cancel my ski
     trip
   source: twitter
