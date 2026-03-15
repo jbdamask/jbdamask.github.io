@@ -2,6 +2,14 @@
 # Fetches RSS feed and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: Adding MFA in an Afternoon
+  source: nowigetit
+  url: https://nowigetit.us/blog/adding-mfa-in-an-afternoon.html
+  date: '2026-03-15'
+  excerpt: Multi-factor authentication used to be a week-long project. With AI-assisted
+    development, I added full TOTP 2FA -- enrollment, recovery codes, multi-device
+    support -- to Now I Get It! in a single sess...
+  image: ''
 - title: The Chart That Ate the Page
   source: nowigetit
   url: https://nowigetit.us/blog/the-chart-that-ate-the-page.html
