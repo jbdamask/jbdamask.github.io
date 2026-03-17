@@ -2,6 +2,13 @@
 # Fetches RSS feed and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: The Logs That Said Nothing
+  source: nowigetit
+  url: https://nowigetit.us/blog/the-logs-that-said-nothing.html
+  date: '2026-03-16'
+  excerpt: When Anthropic's API returns an error, you want to know exactly what happened.
+    Now I Get It! was throwing away every useful detail before it reached CloudWatch.
+  image: ''
 - title: Adding MFA in an Afternoon
   source: nowigetit
   url: https://nowigetit.us/blog/adding-mfa-in-an-afternoon.html
