@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: If Apple keeps surprising me with awful UI each time iOS updates, I may just
+    build my own phone
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2033858226408636881
+  date: '2026-03-17'
+  excerpt: If Apple keeps surprising me with awful UI each time iOS updates, I may
+    just build my own phone
+  image: ''
 - title: A key learning from @HamelHusain and @sh_reya Evals course is to make it
     easy to annotate failure mo...
   source: twitter
