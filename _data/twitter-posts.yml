@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Putting Claude’s 1M context window to work! Now I Get It! translated a 172
+    pg doc on Copyright law i...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2034245693418750251
+  date: '2026-03-18'
+  excerpt: Putting Claude’s 1M context window to work! Now I Get It! translated a
+    172 pg doc on Copyright law into a much easier to understand webpage
+  image: ''
 - title: If Apple keeps surprising me with awful UI each time iOS updates, I may just
     build my own phone
   source: twitter
