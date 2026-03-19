@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Love the idea of tracking skill use but I want to do it across a company,
+    which means central storag...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2034726018146071015
+  date: '2026-03-19'
+  excerpt: Love the idea of tracking skill use but I want to do it across a company,
+    which means central storage. Here's a skill to quickly create an AWS endpoint
+    backed by a single DDB table. Then the hook scri...
+  image: ''
 - title: Putting Claude’s 1M context window to work! Now I Get It! translated a 172
     pg doc on Copyright law i...
   source: twitter
