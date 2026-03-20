@@ -11,6 +11,12 @@
     me an endpoint to track Chuck Norris memes". Here's a skill. The skill creates
     a Lambda with CRUD endpoints backed by a DDB t...
   image: ''
+- title: Running Claude Code outside of yolo mode is a complete buzzkill
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2034974609406071050
+  date: '2026-03-20'
+  excerpt: Running Claude Code outside of yolo mode is a complete buzzkill
+  image: ''
 - title: Love the idea of tracking skill use but I want to do it across a company,
     which means central storag...
   source: twitter
