@@ -2,6 +2,13 @@
 # Fetches RSS feed and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: Let Users Drive
+  source: nowigetit
+  url: https://nowigetit.us/blog/let-users-drive.html
+  date: '2026-03-20'
+  excerpt: Now I Get It! users can now customize how the AI explains a paper -- and
+    the results range from genuinely useful to completely wild.
+  image: ''
 - title: The Logs That Said Nothing
   source: nowigetit
   url: https://nowigetit.us/blog/the-logs-that-said-nothing.html
