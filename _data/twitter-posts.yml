@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Sometimes, I just need an endpoint. "Make me an logging endpoint" or "Make
+    me an endpoint to track C...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2034803043670122662
+  date: '2026-03-20'
+  excerpt: Sometimes, I just need an endpoint. "Make me an logging endpoint" or "Make
+    me an endpoint to track Chuck Norris memes". Here's a skill. The skill creates
+    a Lambda with CRUD endpoints backed by a DDB t...
+  image: ''
 - title: Love the idea of tracking skill use but I want to do it across a company,
     which means central storag...
   source: twitter
