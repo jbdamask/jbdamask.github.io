@@ -2,6 +2,14 @@
 # Fetches RSS feed and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: Singleton footer
+  source: nowigetit
+  url: https://nowigetit.us/blog/singleton-footer.html
+  date: '2026-03-22'
+  excerpt: Now I Get It! had 11 pages with 11 copy-pasted footers. I replaced them
+    with a single JavaScript file -- and learned more about CSS centering than I ever
+    wanted to.
+  image: ''
 - title: Let Users Drive
   source: nowigetit
   url: https://nowigetit.us/blog/let-users-drive.html
