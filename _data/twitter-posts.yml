@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: 'When planning, it''s always worth instructing your model to reflect: "Double
+    check your plan to ensur...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2035899690613350506
+  date: '2026-03-23'
+  excerpt: 'When planning, it''s always worth instructing your model to reflect: "Double
+    check your plan to ensure that it is complete, accurate, and elegant. It should
+    adhere to our existing architecture and aest...'
+  image: ''
 - title: Sometimes, I just need an endpoint. "Make me an logging endpoint" or "Make
     me an endpoint to track C...
   source: twitter
