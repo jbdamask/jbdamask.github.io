@@ -10,6 +10,13 @@
     with a single JavaScript file -- and learned more about CSS centering than I ever
     wanted to.
   image: ''
+- title: Adding a Help Page
+  source: nowigetit
+  url: https://nowigetit.us/blog/adding-a-help-page.html
+  date: '2026-03-22'
+  excerpt: Now I Get It! has a help page now -- with product info, usage guide, and
+    a support contact form backed by DynamoDB and SNS.
+  image: ''
 - title: Let Users Drive
   source: nowigetit
   url: https://nowigetit.us/blog/let-users-drive.html
