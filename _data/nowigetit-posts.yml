@@ -2,6 +2,13 @@
 # Fetches RSS feed and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: Regex Won't Save You
+  source: nowigetit
+  url: https://nowigetit.us/blog/regex-wont-save-you.html
+  date: '2026-03-23'
+  excerpt: I replaced Now I Get It!'s regex-based prompt injection filter with a Haiku
+    LLM classifier -- and the difference in catch quality is night and day.
+  image: ''
 - title: Singleton footer
   source: nowigetit
   url: https://nowigetit.us/blog/singleton-footer.html
