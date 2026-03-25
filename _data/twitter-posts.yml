@@ -2,6 +2,24 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Landing pages, in general, are awful when it comes to conveying information.
+    They exist only for SEO...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2036754293064093899
+  date: '2026-03-25'
+  excerpt: Landing pages, in general, are awful when it comes to conveying information.
+    They exist only for SEO and now GEO (or is it AEO). Certainly not for humans.
+    This is the type of design we get when purely...
+  image: ''
+- title: And this is why you check for attacks. Not I Get It!, the app that translates
+    scientific articles in...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2036751078843097430
+  date: '2026-03-25'
+  excerpt: And this is why you check for attacks. Not I Get It!, the app that translates
+    scientific articles into web sites anyone can understand, checks all user-provided
+    for bad stuff using traditional and LLM...
+  image: ''
 - title: 'When planning, it''s always worth instructing your model to reflect: "Double
     check your plan to ensur...'
   source: twitter
