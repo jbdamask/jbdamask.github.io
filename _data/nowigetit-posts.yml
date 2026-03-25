@@ -2,12 +2,27 @@
 # Fetches RSS feed and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: 'Defense in Depth: Securing an LLM App Against Its Own Users'
+  source: nowigetit
+  url: https://nowigetit.us/blog/defense-in-depth-securing-an-llm-app-against-its-o.html
+  date: '2026-03-25'
+  excerpt: Now I Get It! accepts user-uploaded PDFs and user-written instructions,
+    then hands them to Claude. Here's how I built four layers of defense to keep that
+    from going sideways — and how it compares to w...
+  image: ''
 - title: Regex Won't Save You
   source: nowigetit
   url: https://nowigetit.us/blog/regex-wont-save-you.html
   date: '2026-03-23'
   excerpt: I replaced Now I Get It!'s regex-based prompt injection filter with a Haiku
     LLM classifier -- and the difference in catch quality is night and day.
+  image: ''
+- title: When Users Upload Textbooks
+  source: nowigetit
+  url: https://nowigetit.us/blog/when-users-upload-textbooks.html
+  date: '2026-03-23'
+  excerpt: 'A 449-page machine learning textbook broke Now I Get It!''s upload flow.
+    The fix: stop doing expensive work in a synchronous Lambda.'
   image: ''
 - title: Singleton footer
   source: nowigetit
