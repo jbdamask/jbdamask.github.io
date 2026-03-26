@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Be careful with your code out there. The upcoming changes mean you have to
+    opt-out.
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2037126855560438197
+  date: '2026-03-26'
+  excerpt: Be careful with your code out there. The upcoming changes mean you have
+    to opt-out.
+  image: ''
 - title: Landing pages, in general, are awful when it comes to conveying information.
     They exist only for SEO...
   source: twitter
