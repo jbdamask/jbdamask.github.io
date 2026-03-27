@@ -2,6 +2,22 @@
 # Fetches RSS feed and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: Sometimes your AI needs to phone a friend
+  source: nowigetit
+  url: https://nowigetit.us/blog/sometimes-your-ai-needs-to-phone-a-friend.html
+  date: '2026-03-26'
+  excerpt: The homepage carousel was crashing mobile browsers. Fixing it took paginating
+    the API, gutting the DOM, and -- after five failed guesses -- having Claude debug
+    itself with a second Claude.
+  image: ''
+- title: Are engineers still needed?
+  source: nowigetit
+  url: https://nowigetit.us/blog/are-engineers-still-needed.html
+  date: '2026-03-26'
+  excerpt: There's too much noise about whether software engineers are still needed
+    now that AI can write code. At this point, the answer is yes. This post shows
+    an example of the significant number of design de...
+  image: ''
 - title: 'Defense in Depth: Securing an LLM App Against Its Own Users'
   source: nowigetit
   url: https://nowigetit.us/blog/defense-in-depth-securing-an-llm-app-against-its-o.html
