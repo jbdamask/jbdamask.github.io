@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Ok, this was pretty cool. Opus struggled squashing a frontend bug on mobile.
+    Felt like Sonnet 3.5 de...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2037359013566808161
+  date: '2026-03-27'
+  excerpt: Ok, this was pretty cool. Opus struggled squashing a frontend bug on mobile.
+    Felt like Sonnet 3.5 deja vu. After going in circles I had Claude spin up a subagent
+    to help. The two coordinated and solve...
+  image: ''
 - title: Be careful with your code out there. The upcoming changes mean you have to
     opt-out.
   source: twitter
