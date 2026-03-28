@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: When building larger projects with LLMs, even the best frontier models optimize
+    for things that you ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2037867109443620869
+  date: '2026-03-28'
+  excerpt: When building larger projects with LLMs, even the best frontier models
+    optimize for things that you may not expect. It's important to tell them what
+    factors are important to you.
+  image: ''
 - title: Ok, this was pretty cool. Opus struggled squashing a frontend bug on mobile.
     Felt like Sonnet 3.5 de...
   source: twitter
