@@ -29,6 +29,14 @@
     Code. If something smells off with a plan, I'll have Claude fire up a sub-agent
     to do research. Invariably, it comes back w...
   image: ''
+- title: More often than not, I regret having my AI buddy make code changes without
+    filing Beads first
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2037937404846190797
+  date: '2026-03-28'
+  excerpt: More often than not, I regret having my AI buddy make code changes without
+    filing Beads first
+  image: ''
 - title: Ok, this was pretty cool. Opus struggled squashing a frontend bug on mobile.
     Felt like Sonnet 3.5 de...
   source: twitter
