@@ -11,6 +11,24 @@
     optimize for things that you may not expect. It's important to tell them what
     factors are important to you.
   image: ''
+- title: Our jobs as engineers are to scrutinize AI plans and question design decisions.
+    The more complex a s...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2037891101890068523
+  date: '2026-03-28'
+  excerpt: Our jobs as engineers are to scrutinize AI plans and question design decisions.
+    The more complex a system gets, the more important it is that we partner with
+    AI, not just delegate to it.
+  image: ''
+- title: Adversarial sub-agents are quickly becoming a thing for me when using Claude
+    Code. If something smel...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2037884911126798735
+  date: '2026-03-28'
+  excerpt: Adversarial sub-agents are quickly becoming a thing for me when using Claude
+    Code. If something smells off with a plan, I'll have Claude fire up a sub-agent
+    to do research. Invariably, it comes back w...
+  image: ''
 - title: Ok, this was pretty cool. Opus struggled squashing a frontend bug on mobile.
     Felt like Sonnet 3.5 de...
   source: twitter
