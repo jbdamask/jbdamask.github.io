@@ -11,6 +11,15 @@
     plan AND tests are comprehensive I added user accounts to Now I Get It! yesterday
     and had Claude test it in Chrome. Good thing I...
   image: ''
+- title: Like I said, the agentic engineer's job doesn't stop at planning - you need
+    to consider tests. Somet...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2038310932221145513
+  date: '2026-03-29'
+  excerpt: 'Like I said, the agentic engineer''s job doesn''t stop at planning - you
+    need to consider tests. Sometimes even the best LLM''s don''t think it all through.
+    Full post:'
+  image: ''
 - title: When building larger projects with LLMs, even the best frontier models optimize
     for things that you ...
   source: twitter
