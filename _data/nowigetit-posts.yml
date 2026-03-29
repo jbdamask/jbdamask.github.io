@@ -2,6 +2,14 @@
 # Fetches RSS feed and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: Pre-launch bug squash party
+  source: nowigetit
+  url: https://nowigetit.us/blog/pre-launch-bug-squash-party.html
+  date: '2026-03-29'
+  excerpt: 'Two bugs that slipped through AI-planned, AI-tested development: private
+    page thumbnails returning 403s, and auth cookies silently blocked on Safari, iOS,
+    and Firefox. One was a logic oversight, the o...'
+  image: ''
 - title: Sometimes your AI needs to phone a friend
   source: nowigetit
   url: https://nowigetit.us/blog/sometimes-your-ai-needs-to-phone-a-friend.html
