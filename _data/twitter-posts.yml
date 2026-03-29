@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: Remember, the job of a software engineer these days is to make sure the plan
+    AND tests are comprehen...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2038280113385533465
+  date: '2026-03-29'
+  excerpt: Remember, the job of a software engineer these days is to make sure the
+    plan AND tests are comprehensive I added user accounts to Now I Get It! yesterday
+    and had Claude test it in Chrome. Good thing I...
+  image: ''
 - title: When building larger projects with LLMs, even the best frontier models optimize
     for things that you ...
   source: twitter
