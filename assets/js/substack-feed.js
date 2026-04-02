@@ -67,7 +67,7 @@ function getExternalPosts() {
       link: el.dataset.url,
       pubDate: new Date(el.dataset.date),
       thumbnail: el.dataset.image || null,
-      source: el.dataset.source // 'linkedin' or 'twitter'
+      source: el.dataset.source
     });
   });
 
@@ -93,7 +93,7 @@ function getNowigetitPosts() {
   return posts;
 }
 
-// Render main posts (blog, substack, linkedin, nowigetit)
+// Render main posts in editorial format
 function renderCombinedPosts(posts) {
   const container = document.getElementById('combined-posts');
   if (!container) return;
@@ -105,54 +105,45 @@ function renderCombinedPosts(posts) {
   mainPosts.sort((a, b) => b.pubDate - a.pubDate);
 
   if (mainPosts.length === 0) {
-    container.innerHTML = '<p>No posts yet.</p>';
+    container.innerHTML = '<p class="ed-loading">No posts yet.</p>';
     return;
   }
 
   const html = mainPosts.map(post => {
     const dateStr = post.pubDate.toLocaleDateString('en-US', {
       year: 'numeric',
-      month: 'long',
+      month: 'short',
       day: 'numeric'
     });
 
+    let sourceClass = post.source || 'blog';
     let sourceLabel;
-    if (post.source === 'substack') {
-      sourceLabel = '<span class="post-source substack">Substack</span>';
-    } else if (post.source === 'linkedin') {
-      sourceLabel = '<span class="post-source linkedin">LinkedIn</span>';
-    } else if (post.source === 'nowigetit') {
-      sourceLabel = '<span class="post-source nowigetit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 1 4 12.7V17H8v-2.3A7 7 0 0 1 12 2z"/></svg>Now I Get It! DevLog</span>';
+    if (sourceClass === 'nowigetit') {
+      sourceLabel = 'Now I Get It!';
     } else {
-      sourceLabel = '<span class="post-source blog">Blog</span>';
+      sourceLabel = sourceClass.charAt(0).toUpperCase() + sourceClass.slice(1);
     }
 
-    const thumbnail = post.thumbnail
-      ? `<img src="${post.thumbnail}" alt="${post.title}" class="post-thumbnail">`
-      : '';
-
     // Clean description (strip HTML, limit length)
-    const description = stripHtml(post.description).substring(0, 200) + '...';
+    const description = stripHtml(post.description);
+    const truncated = description.length > 200 ? description.substring(0, 200) + '...' : description;
 
     return `
-      <article class="post-card">
-        ${thumbnail}
-        <div class="post-content">
-          <div class="post-meta">
-            ${sourceLabel}
-            <span class="post-date">${dateStr}</span>
-          </div>
-          <h3><a href="${post.link}" target="_blank" rel="noopener noreferrer">${post.title}</a></h3>
-          <p class="post-excerpt">${description}</p>
+      <a href="${post.link}" class="ed-post-item" target="_blank" rel="noopener noreferrer">
+        <div class="ed-post-item-content">
+          <div class="ed-post-title">${post.title}</div>
+          <p class="ed-post-excerpt">${truncated}</p>
         </div>
-      </article>
+        <div class="ed-post-meta-right">
+          <span class="ed-post-date">${dateStr}</span>
+          <span class="ed-source-tag ${sourceClass}">${sourceLabel}</span>
+        </div>
+      </a>
     `;
   }).join('');
 
   container.innerHTML = html;
 }
-
-// Note: Twitter feed rendering is handled by sidebar/twitter-feed.html include
 
 // Strip HTML tags
 function stripHtml(html) {
@@ -171,5 +162,4 @@ document.addEventListener('DOMContentLoaded', function() {
   const allPosts = [...substackPosts, ...twitterPosts, ...jekyllPosts, ...externalPosts, ...nowigetitPosts];
 
   renderCombinedPosts(allPosts);
-  // Twitter feed is rendered by sidebar/twitter-feed.html include
 });

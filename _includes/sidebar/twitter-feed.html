@@ -1,9 +1,9 @@
-<aside class="twitter-sidebar-custom">
-  <h3>Tweets</h3>
-  <div id="twitter-feed-sidebar" class="twitter-feed-sidebar">
-    <p class="loading">Loading tweets...</p>
+<div class="ed-tweets-section">
+  <div class="ed-section-label">Latest Tweets</div>
+  <div class="ed-tweets-list" id="twitter-feed-sidebar">
+    <p class="ed-loading">Loading tweets...</p>
   </div>
-</aside>
+</div>
 
 <!-- Hidden Twitter post data for JavaScript -->
 <div style="display: none;">
@@ -19,117 +19,55 @@
 {% endif %}
 </div>
 
-<style>
-.twitter-sidebar-custom {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-}
-
-.twitter-sidebar-custom h3 {
-  margin: 0 0 0.75rem 0;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #1DA1F2;
-}
-
-.twitter-feed-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.twitter-item-sidebar {
-  padding: 0.35rem 0.5rem;
-  background: #f9f9f9;
-  border-radius: 4px;
-  border-left: 2px solid #1DA1F2;
-  font-size: 0.55rem !important;
-  line-height: 1.2;
-}
-
-.twitter-item-sidebar a {
-  color: #333;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 0.15rem;
-  font-size: 0.55rem !important;
-  font-weight: 400;
-}
-
-.twitter-item-sidebar a:hover {
-  color: #1DA1F2;
-}
-
-.twitter-date-sidebar {
-  color: #999;
-  font-size: 0.5rem !important;
-  margin-top: 0.15rem;
-}
-
-.loading {
-  text-align: center;
-  color: #666;
-  padding: 1rem;
-  font-size: 0.875rem;
-}
-</style>
-
 <script>
 // Render Twitter feed in sidebar
 function renderTwitterSidebar() {
-  const container = document.getElementById('twitter-feed-sidebar');
+  var container = document.getElementById('twitter-feed-sidebar');
   if (!container) return;
 
-  const posts = [];
-  const postElements = document.querySelectorAll('.twitter-post-data');
+  var posts = [];
+  var postElements = document.querySelectorAll('.twitter-post-data');
 
-  postElements.forEach(el => {
+  postElements.forEach(function(el) {
     posts.push({
       title: el.dataset.title,
       excerpt: el.dataset.excerpt,
       url: el.dataset.url,
       date: new Date(el.dataset.date),
-      tweetId: el.dataset.url.split('/').pop()  // Extract tweet ID from URL
+      tweetId: el.dataset.url.split('/').pop()
     });
   });
 
-  // Sort by tweet ID (chronological), newest first
-  // Twitter IDs are snowflake IDs and are chronologically sortable
-  posts.sort((a, b) => {
-    const idA = BigInt(a.tweetId);
-    const idB = BigInt(b.tweetId);
+  // Sort by tweet ID (snowflake, chronological), newest first
+  posts.sort(function(a, b) {
+    var idA = BigInt(a.tweetId);
+    var idB = BigInt(b.tweetId);
     return idB > idA ? 1 : -1;
   });
 
   if (posts.length === 0) {
-    container.innerHTML = '<p class="loading">No tweets yet.</p>';
+    container.innerHTML = '<p class="ed-loading">No tweets yet.</p>';
     return;
   }
 
-  const html = posts.map(post => {
-    const dateStr = post.date.toLocaleDateString('en-US', {
+  var html = posts.map(function(post) {
+    var dateStr = post.date.toLocaleDateString('en-US', {
       month: 'short',
       day: 'numeric',
       year: 'numeric'
     });
 
-    // Strip URLs from text as a fallback
-    const text = (post.excerpt || post.title).replace(/https?:\/\/\S+/g, '').replace(/\s+/g, ' ').trim();
+    var text = (post.excerpt || post.title).replace(/https?:\/\/\S+/g, '').replace(/\s+/g, ' ').trim();
 
-    return `
-      <div class="twitter-item-sidebar">
-        <a href="${post.url}" target="_blank" rel="noopener noreferrer">${text}</a>
-        <div class="twitter-date-sidebar">${dateStr}</div>
-      </div>
-    `;
+    return '<div class="ed-tweet-item">' +
+      '<p class="ed-tweet-text"><a href="' + post.url + '" target="_blank" rel="noopener noreferrer">' + text + '</a></p>' +
+      '<p class="ed-tweet-date">' + dateStr + '</p>' +
+    '</div>';
   }).join('');
 
   container.innerHTML = html;
 }
 
-// Initialize when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', renderTwitterSidebar);
 } else {

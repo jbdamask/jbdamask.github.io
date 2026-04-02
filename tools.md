@@ -1,8 +1,7 @@
 ---
-layout: single
+layout: editorial-page
 title: Tools
 permalink: /tools/
-author_profile: true
 ---
 
 This page is where I store little tools that I've built. Currently, they're just single page web apps. I may eventually host more sophisticated ones here but that's really TBD. 
@@ -54,73 +53,3 @@ See my [GitHub](https://github.com/jbdamask) for source code of these and more.
 
 ---
 
-<style>
-.tools-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.tool-card {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 1.5rem;
-  background: #f9f9f9;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.tool-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.tool-card h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
-}
-
-.tool-card h3 a {
-  text-decoration: none;
-  color: #494e52;
-}
-
-.tool-card h3 a:hover {
-  color: #0066cc;
-}
-
-.btn--primary {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #0066cc;
-  color: white !important;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.2s;
-}
-
-.btn--primary:hover {
-  background-color: #0052a3;
-}
-
-.btn--info {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #17a2b8;
-  color: white !important;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.2s;
-  margin-right: 0.5rem;
-}
-
-.btn--info:hover {
-  background-color: #138496;
-}
-
-.tool-link {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-</style>

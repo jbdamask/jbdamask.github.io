@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="{{ site.locale | default: 'en-US' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/editorial.css' | relative_url }}">
+  {% include head/custom.html %}
+  {% feed_meta %}
+</head>
+<body>
+
+  <header class="ed-header">
+    <div class="ed-header-inner">
+      <a href="{{ '/' | relative_url }}" class="ed-brand">
+        <span class="mark"></span>
+        <h1>{{ site.author.name }}</h1>
+      </a>
+      <nav class="ed-nav">
+        {% for link in site.data.navigation.main %}
+          <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <section class="ed-hero">
+    <div class="ed-hero-text">
+      <h2>Interested<br><em>autodidact</em></h2>
+      <p class="subtitle">No patience for life in real time</p>
+    </div>
+    <div class="ed-hero-profile">
+      <div class="ed-avatar-frame" onclick="openAvatarModal(this)">
+        <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
+      </div>
+      <div class="ed-social-row">
+        {% for link in site.author.links %}
+          <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+        {% endfor %}
+        <a href="#" class="ed-email-link" onclick="navigator.clipboard.writeText('{{ site.email }}').then(function(){var el=document.getElementById('ed-email-copied');el.style.display='block';setTimeout(function(){el.style.display='none'},2000)});return false;">
+          Email
+          <span id="ed-email-copied" class="ed-email-copied">Copied!</span>
+        </a>
+        <a href="https://amroja.com" target="_blank" rel="noopener noreferrer">Amroja</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="ed-divider"><hr></div>
+
+  <main class="ed-main">
+    <section class="ed-posts-section">
+      <div class="ed-section-label">Recent Writing</div>
+      {{ content }}
+    </section>
+
+    <aside class="ed-sidebar">
+      {% include sidebar/twitter-feed.html %}
+    </aside>
+  </main>
+
+  <footer class="ed-footer">
+    <div class="ed-footer-inner">
+      <span>&copy; {{ 'now' | date: '%Y' }} {{ site.author.name }}</span>
+      <a href="#" onclick="navigator.clipboard.writeText('{{ site.email }}').then(function(){alert('Email copied!')});return false;">{{ site.email }}</a>
+    </div>
+  </footer>
+
+  <!-- Avatar modal -->
+  <div class="ed-avatar-modal" id="ed-avatar-modal" onclick="this.classList.remove('active')">
+    <img src="" alt="Profile Picture">
+  </div>
+
+  <script>
+  function openAvatarModal(el) {
+    var modal = document.getElementById('ed-avatar-modal');
+    modal.querySelector('img').src = el.querySelector('img').src;
+    modal.classList.add('active');
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.getElementById('ed-avatar-modal').classList.remove('active');
+    }
+  });
+  // Open social links in new tab
+  document.querySelectorAll('.ed-social-row a').forEach(function(a) {
+    if (!a.classList.contains('ed-email-link') && !a.getAttribute('onclick')) {
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+  </script>
+
+</body>
+</html>

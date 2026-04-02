@@ -68,8 +68,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
+      layout: editorial-page
       read_time: true
       comments: false
       share: false
@@ -79,12 +78,10 @@ defaults:
       path: "_pages"
       type: pages
     values:
-      layout: single
-      author_profile: true
+      layout: editorial-page
   # tools documentation
   - scope:
       path: "tools"
       type: pages
     values:
-      layout: tool
-      author_profile: false
+      layout: editorial-tool

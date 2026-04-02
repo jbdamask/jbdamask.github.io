@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: editorial-page
 title: "The age of realization"
 date: 2025-12-17
 excerpt: Ideas have potential. They are realized when brought into the world.

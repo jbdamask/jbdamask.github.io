@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ site.locale | default: 'en-US' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/editorial.css' | relative_url }}">
+  {% include head/custom.html %}
+</head>
+<body>
+
+  <header class="ed-header">
+    <div class="ed-header-inner">
+      <a href="{{ '/' | relative_url }}" class="ed-brand">
+        <span class="mark"></span>
+        <h1>{{ site.author.name }}</h1>
+      </a>
+      <nav class="ed-nav">
+        {% for link in site.data.navigation.main %}
+          <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main class="ed-main-single">
+    <div class="ed-page-header">
+      <h2>{{ page.title }}</h2>
+      {% if page.excerpt and page.layout != 'editorial-page' %}
+        <p class="ed-page-excerpt">{{ page.excerpt | strip_html }}</p>
+      {% endif %}
+      {% if page.date %}
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">
+          {{ page.date | date: "%B %d, %Y" }}
+          {% if page.read_time %}
+            &middot; {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read
+          {% endif %}
+        </p>
+      {% endif %}
+    </div>
+    <div class="ed-page-content">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="ed-footer">
+    <div class="ed-footer-inner">
+      <span>&copy; {{ 'now' | date: '%Y' }} {{ site.author.name }}</span>
+      <a href="#" onclick="navigator.clipboard.writeText('{{ site.email }}').then(function(){alert('Email copied!')});return false;">{{ site.email }}</a>
+    </div>
+  </footer>
+
+</body>
+</html>

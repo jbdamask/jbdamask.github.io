@@ -1,8 +1,7 @@
 ---
-layout: single
+layout: editorial-page
 title: About Me
 permalink: /about/
-author_profile: true
 ---
 
 ## John Damask

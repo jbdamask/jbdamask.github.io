@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: editorial-page
 title: "All of Amp's prompts"
 date: 2025-11-24
 excerpt: System and tool prompts from Amp CLI
