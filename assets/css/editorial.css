@@ -150,6 +150,7 @@ a:hover { color: #b33d1e; }
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
+  filter: brightness(1.15);
 }
 
 .ed-social-row {
