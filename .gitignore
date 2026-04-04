@@ -7,3 +7,6 @@ vendor
 
 # bv (beads viewer) local config and caches
 .bv/
+.beads/dolt-access.lock
+.beads/dolt/
+.venv/
