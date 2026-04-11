@@ -2,6 +2,58 @@
 # Fetches RSS feed and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: Adding a job queue
+  source: nowigetit
+  url: https://nowigetit.us/blog/adding-a-job-queue.html
+  date: '2026-04-10'
+  excerpt: Adding an SQS queue between upload confirmation and PDF processing, sized
+    against real production data, with retries that don't block other jobs.
+  image: ''
+- title: Zero-downtime updates
+  source: nowigetit
+  url: https://nowigetit.us/blog/zero-downtime-updates.html
+  date: '2026-04-10'
+  excerpt: Replacing sequential Lambda updates with an atomic alias flip, and the
+    five bugs that only showed up when I actually ran the new deploy script end to
+    end.
+  image: ''
+- title: Deleting the daily processing limit
+  source: nowigetit
+  url: https://nowigetit.us/blog/deleting-the-daily-processing-limit.html
+  date: '2026-04-10'
+  excerpt: Removing a pre-user-accounts safety valve that credit-based pricing made
+    redundant, and enjoying the rare pleasure of a PR that's almost all deletions.
+  image: ''
+- title: Automating the fraud response pipeline
+  source: nowigetit
+  url: https://nowigetit.us/blog/automating-the-fraud-response-pipeline.html
+  date: '2026-04-09'
+  excerpt: Rebuilding Now I Get It!'s fraud response from manual admin buttons into
+    an async auto-executing pipeline, and the verification walkthrough that found
+    bugs the automated tests didn't.
+  image: ''
+- title: Stripe disputes, refunds, and chargebacks
+  source: nowigetit
+  url: https://nowigetit.us/blog/stripe-disputes-refunds-and-chargebacks.html
+  date: '2026-04-06'
+  excerpt: Building out the full dispute, refund, and chargeback lifecycle for Now
+    I Get It! ahead of commercial launch.
+  image: ''
+- title: A Stripe audit that caught a double-credit bug
+  source: nowigetit
+  url: https://nowigetit.us/blog/a-stripe-audit-that-caught-a-double-credit-bug.html
+  date: '2026-04-05'
+  excerpt: Auditing Now I Get It!'s Stripe integration against Stripe's own best-practices
+    docs surfaced a subtle idempotency flaw that would have doubled user credits on
+    any webhook retry.
+  image: ''
+- title: Terms of Service at signup, without duplicating the terms
+  source: nowigetit
+  url: https://nowigetit.us/blog/terms-of-service-at-signup-without-duplicating-the.html
+  date: '2026-04-05'
+  excerpt: Adding a legally-required Terms of Service checkbox at signup while keeping
+    a single source of truth for the terms text.
+  image: ''
 - title: Pre-launch bug squash party
   source: nowigetit
   url: https://nowigetit.us/blog/pre-launch-bug-squash-party.html
