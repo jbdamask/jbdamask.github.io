@@ -30,6 +30,13 @@
   excerpt: A general-purpose gift code system whose first job is giving five free
     credits to the earliest 200 waitlist signups at launch.
   image: ''
+- title: Pre-launch audit of the test suite
+  source: nowigetit
+  url: https://nowigetit.us/blog/pre-launch-audit-of-the-test-suite.html
+  date: '2026-04-12'
+  excerpt: A full audit of the test suite before launch surfaced fixture rot, two
+    real bugs in existing tests, and coverage gaps on the modules added most recently.
+  image: ''
 - title: Tag filtering for the private gallery
   source: nowigetit
   url: https://nowigetit.us/blog/tag-filtering-for-the-private-gallery.html
@@ -119,6 +126,14 @@
   excerpt: Now I Get It! gets a GDPR-compliant cookie consent banner -- consent-gated
     Google Analytics, updated privacy policy, and a lesson about deploying feature
     branches.
+  image: ''
+- title: User galleries and private pages
+  source: nowigetit
+  url: https://nowigetit.us/blog/user-galleries-and-private-pages.html
+  date: '2026-03-28'
+  excerpt: Turning Now I Get It! from a wholly public site into one where every new
+    paper belongs to its uploader, and the architecture that makes private pages actually
+    private.
   image: ''
 - title: Sometimes your AI needs to phone a friend
   source: nowigetit
