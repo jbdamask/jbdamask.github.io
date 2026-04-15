@@ -2,6 +2,48 @@
 # Fetches RSS feed and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: Launch night!
+  source: nowigetit
+  url: https://nowigetit.us/blog/launch-night.html
+  date: '2026-04-13'
+  excerpt: Now I Get It! went live tonight -- 60K lines of code, 39 Lambda functions,
+    807 tests, and one person working part-time for seven weeks.
+  image: ''
+- title: Translation mode as a pre-filled tag
+  source: nowigetit
+  url: https://nowigetit.us/blog/translation-mode-as-a-pre-filled-tag.html
+  date: '2026-04-12'
+  excerpt: Making translation mode filterable by reusing the tag system instead of
+    building a parallel badge mechanism.
+  image: ''
+- title: Sparse GSI and edge caching for the public gallery
+  source: nowigetit
+  url: https://nowigetit.us/blog/sparse-gsi-and-edge-caching-for-the-public-gallery.html
+  date: '2026-04-12'
+  excerpt: Replacing a scan-then-filter DynamoDB query with a sparse GSI and CloudFront
+    edge caching, then measuring what actually improved.
+  image: ''
+- title: Gift codes for promotional campaigns
+  source: nowigetit
+  url: https://nowigetit.us/blog/gift-codes-for-promotional-campaigns.html
+  date: '2026-04-12'
+  excerpt: A general-purpose gift code system whose first job is giving five free
+    credits to the earliest 200 waitlist signups at launch.
+  image: ''
+- title: Tag filtering for the private gallery
+  source: nowigetit
+  url: https://nowigetit.us/blog/tag-filtering-for-the-private-gallery.html
+  date: '2026-04-11'
+  excerpt: Adding free-form tags to personal galleries, and why the interesting design
+    question wasn't the feature shape but where to put the data.
+  image: ''
+- title: Geo-restricting credit purchases via Stripe Radar
+  source: nowigetit
+  url: https://nowigetit.us/blog/geo-restricting-credit-purchases-via-stripe-radar.html
+  date: '2026-04-11'
+  excerpt: Enforcing Anthropic's supported-countries list at checkout without adding
+    a single line of frontend code, by delegating to Stripe.
+  image: ''
 - title: Adding a job queue
   source: nowigetit
   url: https://nowigetit.us/blog/adding-a-job-queue.html
@@ -23,6 +65,14 @@
   date: '2026-04-10'
   excerpt: Removing a pre-user-accounts safety valve that credit-based pricing made
     redundant, and enjoying the rare pleasure of a PR that's almost all deletions.
+  image: ''
+- title: A missing heartbeat, a false timeout
+  source: nowigetit
+  url: https://nowigetit.us/blog/a-missing-heartbeat-a-false-timeout.html
+  date: '2026-04-10'
+  excerpt: A staleness detector from the previous day's queue refactor was declaring
+    long-running papers dead at 5 minutes because nothing was updating the progress
+    timestamp while Opus was streaming.
   image: ''
 - title: Automating the fraud response pipeline
   source: nowigetit
