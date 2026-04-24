@@ -64,6 +64,13 @@
   excerpt: "Two things: an aws-quick-endpoint Claude Skill that scaffolds a CRUD Lambda + DynamoDB endpoint from a single prompt, and wiring one of those endpoints into Anthropic's new Discord Channel so I can chat to Claude from Discord."
   image: ""
 
+- title: "Now I Get It! Blows Up on Hacker News"
+  source: linkedin
+  url: https://www.linkedin.com/posts/johndamask_now-i-get-it-the-app-that-translates-scientific-share-7434570168829280256-J60R/
+  date: 2026-03-03
+  excerpt: "Now I Get It! hit #1 on the Hacker News \"Show\" page last weekend. A ton of useful feedback, and a wildly diverse set of papers processed — CS and AI, but also kindergarten design, mining asteroids for space food, the aesthetics of horror movies, and even a paper in Russian."
+  image: ""
+
 - title: "Recreating Claude Code"
   source: linkedin
   url: https://www.linkedin.com/posts/johndamask_this-post-is-about-as-geeky-as-it-gets-activity-7400635184649302016-pFQS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAA43DsBQQOqryv5OKRbJ4POIvYxDEng4o0
