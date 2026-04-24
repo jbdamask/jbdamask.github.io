@@ -1,6 +1,62 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Claude Opus 4.7 composes a Mozart-esque piano sonata"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7453111529304158209/
+  date: 2026-04-23
+  excerpt: "Last year, large language models didn't speak music. But now they're starting to. A video of Claude Opus 4.7 composing a Mozart-esque piano sonata, writing the sheet music, and producing an audio file — with its own music-theory annotations on the exposition."
+  image: ""
+
+- title: "The Cringelinter Ralph Loop"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7452019142448197633/
+  date: 2026-04-20
+  excerpt: "LLMs are naturally terrible at writing — you can spot AI slop a mile away. A Claude Skill that defines a taxonomy of AI slop (fingerprint words, qualifiers, overstatement, mic-drops) and runs in a Ralph loop to iteratively clean a document, logging every violation and replacement."
+  image: ""
+
+- title: "A talk-to-my-database Claude Skill for every app"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7450894573041717249/
+  date: 2026-04-17
+  excerpt: "An easy, high-leverage trick: add a read-only talk-to-my-database Claude Skill to every app you build. Three steps with Claude Code, and you can ask plain-English questions about your DynamoDB, relational, or graph data and get back tables and ASCII time-series charts."
+  image: ""
+
+- title: "Claude Cowork vs. terrible utility websites"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7450161074227720192/
+  date: 2026-04-15
+  excerpt: "Claude Cowork is very good at clicking through websites on your behalf. Which comes in handy when dealing with terrible websites like those from utility companies that seem to exist to waste our time."
+  image: ""
+
+- title: "Now I Get It! launched"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7449322345959309312/
+  date: 2026-04-13
+  excerpt: "Now I Get It! went live — idea to launch in about two months, with 60,000 lines of code, 22 database tables, 39 Lambda functions, 409 commits, 86 PRs, and 807 tests. First 200 registrations get 5 free credits."
+  image: ""
+
+- title: "Phone a Friend: a second-opinion Claude Skill"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7449113943861678080/
+  date: 2026-04-12
+  excerpt: "A Claude Code Skill built around the generator-verifier pattern — one agent spins up another to critique its plan, debate to consensus (or agree to disagree), and even rerun the jury if the first round wasn't satisfying."
+  image: ""
+
+- title: "Mythos, the positive side: what the system card says it's genuinely great at"
+  source: linkedin
+  url: https://www.linkedin.com/posts/johndamask_this-is-a-companion-to-my-post-about-the-share-7447622053114834944-DIn0/
+  date: 2026-04-08
+  excerpt: "A companion to the Mythos-is-scary post: the other side of the system card. Mythos is exceptional at coding and cybersecurity — including finding zero-days — and dramatically better at math and reasoning, with real upside for hardening the software infrastructure we all depend on."
+  image: ""
+
+- title: "Anthropic's Mythos model is astonishing — and genuinely scary"
+  source: linkedin
+  url: https://www.linkedin.com/posts/johndamask_all-the-talk-is-about-anthropics-mythos-share-7447477812028145664-eOMv/
+  date: 2026-04-08
+  excerpt: "Uploaded Anthropic's 244-page Mythos system card into Now I Get It! and asked for a page on deception and jailbreaks. Takeaway: Anthropic built its most powerful model ever and chose not to release it publicly — cybersecurity capabilities too dangerous, plus concerning alignment findings and self-jailbreaks."
+  image: ""
+
 - title: "Recreating Claude Code"
   source: linkedin
   url: https://www.linkedin.com/posts/johndamask_this-post-is-about-as-geeky-as-it-gets-activity-7400635184649302016-pFQS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAA43DsBQQOqryv5OKRbJ4POIvYxDEng4o0
