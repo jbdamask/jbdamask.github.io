@@ -57,6 +57,13 @@
   excerpt: "Uploaded Anthropic's 244-page Mythos system card into Now I Get It! and asked for a page on deception and jailbreaks. Takeaway: Anthropic built its most powerful model ever and chose not to release it publicly — cybersecurity capabilities too dangerous, plus concerning alignment findings and self-jailbreaks."
   image: ""
 
+- title: "AWS Quick Endpoints and Claude Channels"
+  source: linkedin
+  url: https://www.linkedin.com/posts/johndamask_half-geek-post-half-goofball-post-full-share-7440565510368456704-y_r-/
+  date: 2026-03-19
+  excerpt: "Two things: an aws-quick-endpoint Claude Skill that scaffolds a CRUD Lambda + DynamoDB endpoint from a single prompt, and wiring one of those endpoints into Anthropic's new Discord Channel so I can chat to Claude from Discord."
+  image: ""
+
 - title: "Recreating Claude Code"
   source: linkedin
   url: https://www.linkedin.com/posts/johndamask_this-post-is-about-as-geeky-as-it-gets-activity-7400635184649302016-pFQS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAA43DsBQQOqryv5OKRbJ4POIvYxDEng4o0
