@@ -2,6 +2,36 @@
 # Fetches RSS feed and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: TIME BOMB BUG!!
+  source: nowigetit
+  url: https://nowigetit.us/blog/time-bomb-bug.html
+  date: '2026-05-01'
+  excerpt: A latent CloudFront key-rotation bug went off in test four days before
+    I noticed, and prod was a few hours away from the same fate. Three layered bugs
+    lined up to half-complete a scheduled rotation si...
+  image: ''
+- title: Two galleries, side by side
+  source: nowigetit
+  url: https://nowigetit.us/blog/two-galleries-side-by-side.html
+  date: '2026-04-27'
+  excerpt: A small UX cleanup with an outsized discoverability win, plus a thumbnail-403
+    red herring during smoke testing that I attributed to a benign cookie expiry.
+  image: ''
+- title: 'From 50/day to 50,000/day: real Cognito email verification'
+  source: nowigetit
+  url: https://nowigetit.us/blog/from-50day-to-50000day-real-cognito-email-verifica.html
+  date: '2026-04-26'
+  excerpt: AWS approved SES production access, so the auto-confirm hack from launch
+    night came off and Cognito started sending real verification codes.
+  image: ''
+- title: 'Closing the SES abuse window: bounce and complaint handling'
+  source: nowigetit
+  url: https://nowigetit.us/blog/closing-the-ses-abuse-window-bounce-and-complaint-.html
+  date: '2026-04-26'
+  excerpt: The thousand-fold SES headroom that came with production access also opens
+    a real attack surface. Detection-and-recording lands today; prevention is filed
+    separately.
+  image: ''
 - title: Launch night!
   source: nowigetit
   url: https://nowigetit.us/blog/launch-night.html
