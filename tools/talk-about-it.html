@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk About It</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        :root {
+            /* Warm editorial palette — cream paper, terracotta + sage accents */
+            --bg: #faf5ec;
+            --paper: #ffffff;
+            --paper-soft: #fdfaf3;
+            --ink: #2c2620;
+            --ink-soft: #564a3d;
+            --ink-muted: #8a7c6a;
+            --rule: #ead9bd;
+            --rule-soft: #f3e8d2;
+            --accent: #c75a3c;          /* terracotta (primary) */
+            --accent-hover: #ad4a30;
+            --accent-tint: rgba(199, 90, 60, 0.10);
+            --sage: #6a8c63;
+            --ocean: #3a7a96;
+            --rose: #a44a76;
+            --amber: #c08832;
+            --warm-yellow: #d4a017;
+            --warning: #b8801a;
+            --warning-tint: rgba(212, 160, 23, 0.12);
+
+            --shadow-xs: 0 1px 2px rgba(44, 38, 32, 0.05);
+            --shadow-sm: 0 1px 3px rgba(44, 38, 32, 0.05), 0 2px 8px rgba(44, 38, 32, 0.04);
+            --shadow-md: 0 2px 6px rgba(44, 38, 32, 0.06), 0 8px 24px rgba(44, 38, 32, 0.05);
+
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 18px;
+            --radius-pill: 999px;
+
+            --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+            --font-body: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+            /* per-panelist accent colors */
+            --panel-a: #6a8c63;   /* sage */
+            --panel-b: #3a7a96;   /* ocean */
+            --panel-c: #c75a3c;   /* terracotta */
+            --panel-d: #a44a76;   /* rose */
+            --panel-e: #c08832;   /* amber */
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body { margin: 0; padding: 0; }
+
+        body {
+            background:
+                radial-gradient(ellipse at top left, rgba(199, 90, 60, 0.05), transparent 50%),
+                radial-gradient(ellipse at bottom right, rgba(106, 140, 99, 0.06), transparent 55%),
+                var(--bg);
+            background-attachment: fixed;
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.5;
+            min-height: 100vh;
+            padding: 56px 24px 80px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: "ss01", "ss02";
+        }
+
+        .container { max-width: 820px; margin: 0 auto; }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .header-content { flex: 1; }
+        h1 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: clamp(2.4rem, 5vw, 3.4rem);
+            font-variation-settings: "opsz" 144, "SOFT" 50;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+            margin: 0 0 0.4rem;
+        }
+        h1 em {
+            font-style: italic;
+            color: var(--accent);
+            font-variation-settings: "opsz" 144, "SOFT" 100;
+        }
+        .subtitle {
+            color: var(--ink-soft);
+            font-size: 1rem;
+            margin: 0;
+            max-width: 52ch;
+        }
+        .help-btn {
+            padding: 10px;
+            border: 1px solid var(--rule);
+            background: var(--paper);
+            color: var(--accent);
+            border-radius: var(--radius-pill);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow-xs);
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+        }
+        .help-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
+            background: var(--paper-soft);
+        }
+
+        /* Settings (details/summary) */
+        details {
+            margin-bottom: 1.75rem;
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-xs);
+            overflow: hidden;
+        }
+        summary {
+            cursor: pointer;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--ink);
+            padding: 14px 18px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            user-select: none;
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 6px solid var(--accent);
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            transition: transform 0.2s ease;
+        }
+        details[open] summary::before { transform: rotate(90deg); }
+        .settings-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            padding: 4px 18px 18px;
+            border-top: 1px dashed var(--rule);
+        }
+        .settings-row {
+            display: flex;
+            gap: 0.6rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .settings-label {
+            color: var(--ink-soft);
+            font-size: 0.8125rem;
+            font-weight: 500;
+            min-width: 88px;
+        }
+        .settings-help {
+            color: var(--ink-soft);
+            font-size: 0.85rem;
+            margin: 0 0 0.5rem 0;
+            line-height: 1.5;
+        }
+        .settings-help a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+        .settings-help a:hover { color: var(--accent-hover); }
+        .settings-help code {
+            background: var(--rule-soft);
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-family: var(--font-body);
+        }
+
+        /* Inputs */
+        input[type="text"], input[type="password"], input[type="number"], textarea, select {
+            flex: 1;
+            min-width: 0;
+            padding: 11px 14px;
+            background: var(--paper-soft);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-sm);
+            color: var(--ink);
+            font-size: 0.95rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+            resize: vertical;
+        }
+        input[type="number"] { flex: 0 0 90px; }
+        input:focus, textarea:focus, select:focus {
+            border-color: var(--accent);
+            background: var(--paper);
+            box-shadow: 0 0 0 3px var(--accent-tint);
+        }
+        input::placeholder, textarea::placeholder { color: var(--ink-muted); }
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='%23564a3d' stroke-width='1.5'><path d='M3 4.5l3 3 3-3'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 12px;
+            padding-right: 32px;
+            cursor: pointer;
+        }
+
+        /* Buttons */
+        button {
+            padding: 11px 18px;
+            border: 1px solid transparent;
+            background: var(--accent);
+            color: #fff;
+            border-radius: var(--radius-pill);
+            font-size: 0.9rem;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.12s ease, box-shadow 0.15s ease, background 0.15s ease;
+            white-space: nowrap;
+            box-shadow: var(--shadow-xs);
+            letter-spacing: 0.01em;
+        }
+        button:hover:not(:disabled) {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
+        }
+        button:active:not(:disabled) { transform: translateY(0); }
+        button:disabled {
+            background: var(--rule);
+            color: var(--ink-muted);
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        button.secondary {
+            background: var(--paper);
+            border-color: var(--rule);
+            color: var(--ink-soft);
+        }
+        button.secondary:hover:not(:disabled) {
+            background: var(--paper-soft);
+            color: var(--ink);
+            border-color: var(--ink-muted);
+        }
+        button.danger {
+            background: var(--paper);
+            border-color: rgba(199, 90, 60, 0.4);
+            color: var(--accent);
+        }
+        button.danger:hover:not(:disabled) {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+        .icon-btn {
+            padding: 9px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--paper);
+            color: var(--ink-soft);
+            border: 1px solid var(--rule);
+        }
+        .icon-btn:hover:not(:disabled) {
+            background: var(--paper-soft);
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* Tooltip */
+        [data-tooltip] { position: relative; }
+        [data-tooltip]::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(4px);
+            padding: 5px 10px;
+            background: var(--ink);
+            color: var(--bg);
+            font-size: 0.75rem;
+            border-radius: 6px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.18s, transform 0.18s;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        [data-tooltip]:hover::after { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+        /* Spinner */
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .spinner {
+            width: 14px; height: 14px;
+            border: 2px solid var(--rule);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        .error {
+            color: var(--accent);
+            background: var(--accent-tint);
+            border-radius: var(--radius-sm);
+            padding: 0.6rem 0.9rem;
+            margin: 0.6rem 0;
+            font-size: 0.9rem;
+            min-height: 0;
+        }
+        .error:empty { display: none; }
+
+        /* Topic form */
+        .topic-form {
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+        .topic-form::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 24px;
+            right: 24px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--panel-a), var(--panel-b), var(--panel-c), var(--panel-d), var(--panel-e));
+            border-radius: 0 0 var(--radius-pill) var(--radius-pill);
+            opacity: 0.85;
+        }
+        .topic-form label {
+            color: var(--ink-soft);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: 0.4rem;
+        }
+        .topic-form label:first-of-type { margin-top: 0; }
+        .form-actions {
+            display: flex;
+            gap: 0.6rem;
+            justify-content: flex-end;
+            margin-top: 0.4rem;
+        }
+
+        /* Chat log */
+        .chat-log {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            margin: 1.5rem 0;
+        }
+        @keyframes msgIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .msg {
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            border-left: 4px solid var(--accent, var(--ink-muted));
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            color: var(--ink);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            box-shadow: var(--shadow-xs);
+            animation: msgIn 0.3s ease both;
+        }
+        .msg-header {
+            font-size: 0.78rem;
+            color: var(--ink-muted);
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+        .msg-name {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--accent, var(--ink));
+            letter-spacing: 0.005em;
+        }
+        .msg-body p { margin: 0.55rem 0; }
+        .msg-body p:first-child { margin-top: 0; }
+        .msg-body p:last-child { margin-bottom: 0; }
+        .msg-body strong { color: var(--ink); font-weight: 600; }
+        .msg-body code {
+            background: var(--rule-soft);
+            color: var(--ink);
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: 0.88em;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        }
+        .msg-body pre {
+            background: var(--paper-soft);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-sm);
+            padding: 0.85rem 1rem;
+            overflow-x: auto;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.85rem;
+        }
+        .msg-body pre code { background: none; padding: 0; }
+        .msg-body blockquote {
+            border-left: 3px solid var(--rule);
+            padding: 0.2rem 0 0.2rem 1rem;
+            color: var(--ink-soft);
+            margin: 0.6rem 0;
+            font-style: italic;
+        }
+        .msg-body ul, .msg-body ol {
+            padding-left: 1.4rem;
+            margin: 0.6rem 0;
+        }
+        .msg-body li { margin: 0.2rem 0; }
+        .msg-body a { color: var(--accent); }
+
+        .msg.streaming {
+            box-shadow: 0 0 0 1px var(--accent-tint), var(--shadow-sm);
+        }
+        .msg.moderator {
+            background: var(--paper-soft);
+            border-left-color: var(--ink-muted);
+            font-style: italic;
+            color: var(--ink-soft);
+        }
+        .msg.moderator .msg-name { color: var(--ink-soft); font-style: italic; }
+        .msg.user {
+            background: var(--accent-tint);
+            border-color: rgba(199, 90, 60, 0.25);
+            border-left-color: var(--accent);
+        }
+        .msg.user .msg-name { color: var(--accent); }
+        .msg.system {
+            background: var(--paper-soft);
+            border-style: dashed;
+            border-left: 3px solid var(--rule);
+            border-color: var(--rule);
+            color: var(--ink-soft);
+            font-size: 0.9rem;
+            box-shadow: none;
+        }
+        .msg.system .msg-name { color: var(--ink-soft); font-style: normal; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; font-family: var(--font-body); font-weight: 600; }
+        .msg.ask {
+            background: var(--warning-tint);
+            border-color: rgba(212, 160, 23, 0.35);
+            border-left-color: var(--warning);
+        }
+        .msg.ask .msg-name { color: var(--warning); }
+
+        /* Highlight: TOPIC banner gets a serif "headline" treatment */
+        .msg.system .msg-body p:first-child strong:only-child,
+        .msg.system .msg-body strong:first-child {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-style: italic;
+            font-size: 1.4rem;
+            line-height: 1.2;
+            color: var(--ink);
+            display: block;
+            margin: 0.2rem 0 0.6rem;
+            font-variation-settings: "opsz" 144;
+        }
+
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+        .cursor::after {
+            content: '●';
+            display: inline-block;
+            margin-left: 4px;
+            color: var(--accent);
+            animation: pulse 1.1s ease-in-out infinite;
+            font-size: 0.7em;
+            vertical-align: 0.15em;
+        }
+
+        /* Status bar */
+        .status-bar {
+            position: sticky;
+            bottom: 12px;
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-lg);
+            padding: 14px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+            box-shadow: var(--shadow-md);
+            backdrop-filter: blur(6px);
+        }
+        .status-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.8rem;
+            color: var(--ink-soft);
+        }
+        .status-actions { display: flex; gap: 0.5rem; }
+        .status-actions button {
+            padding: 7px 14px;
+            font-size: 0.8rem;
+        }
+        .interject-row {
+            display: flex;
+            gap: 0.5rem;
+            align-items: flex-end;
+        }
+        .interject-row textarea {
+            min-height: 42px;
+            padding: 10px 14px;
+            border-radius: var(--radius-md);
+        }
+
+        /* Clarifying questions */
+        .clarify-block {
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            border-left: 4px solid var(--warning);
+            border-radius: var(--radius-md);
+            padding: 22px;
+            margin: 1rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+        .clarify-block label {
+            display: block;
+            color: var(--ink-soft);
+            font-size: 0.8125rem;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            margin-top: 0.85rem;
+        }
+        .clarify-block label:first-child { margin-top: 0; }
+
+        /* Wrap-up report — feels like the closing editorial */
+        .wrap-up {
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-lg);
+            padding: 36px 36px 32px;
+            margin: 1.25rem 0;
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+        .wrap-up::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 36px;
+            right: 36px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--panel-a), var(--panel-c), var(--panel-d));
+            border-radius: 0 0 var(--radius-pill) var(--radius-pill);
+        }
+        .wrap-up h2 {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-weight: 600;
+            font-size: 2rem;
+            margin: 0 0 1rem;
+            color: var(--ink);
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.01em;
+        }
+        .wrap-up h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--accent);
+            margin: 1.25rem 0 0.5rem;
+        }
+        .wrap-up ul { padding-left: 1.4rem; margin: 0.4rem 0; }
+        .wrap-up li { margin: 0.3rem 0; line-height: 1.55; }
+        .wrap-up p { margin: 0.5rem 0; line-height: 1.6; }
+
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(44, 38, 32, 0.45);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            animation: fadeIn 0.18s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .modal-overlay.active { display: flex; }
+        .modal {
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            padding: 28px 30px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-md), 0 24px 60px rgba(44, 38, 32, 0.18);
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+        .modal-title {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--ink);
+            margin: 0;
+            font-variation-settings: "opsz" 144;
+        }
+        .modal-close {
+            padding: 4px 12px;
+            font-size: 1.2rem;
+            line-height: 1;
+            background: transparent;
+            color: var(--ink-muted);
+            border: 1px solid var(--rule);
+        }
+        .modal-close:hover:not(:disabled) {
+            background: var(--paper-soft);
+            color: var(--ink);
+        }
+        .modal-body { color: var(--ink); line-height: 1.65; }
+        .modal-body h3 {
+            font-family: var(--font-display);
+            color: var(--accent);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.4rem 0 0.5rem;
+        }
+        .modal-body p { margin: 0.55rem 0; }
+        .modal-body ul, .modal-body ol { padding-left: 1.5rem; }
+        .modal-body code {
+            background: var(--rule-soft);
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: 0.875em;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        }
+        .modal-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+        .modal-body a:hover { color: var(--accent-hover); }
+
+        .cost-display {
+            text-align: right;
+            font-size: 0.75rem;
+            font-style: italic;
+            color: var(--ink-muted);
+        }
+
+        /* Jump-to-latest pill */
+        .jump-btn {
+            position: fixed;
+            bottom: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--ink);
+            color: var(--bg);
+            border: 1px solid var(--ink);
+            padding: 9px 16px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            border-radius: var(--radius-pill);
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            box-shadow: var(--shadow-md);
+            z-index: 50;
+            animation: jumpIn 0.22s ease;
+        }
+        .jump-btn:hover:not(:disabled) {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+            transform: translateX(-50%) translateY(-1px);
+        }
+        @keyframes jumpIn {
+            from { opacity: 0; transform: translateX(-50%) translateY(8px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+
+        /* Mobile tweaks */
+        @media (max-width: 640px) {
+            body { padding: 32px 16px 60px; }
+            .topic-form, .modal { padding: 20px; }
+            .wrap-up { padding: 24px 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <h1>Talk <em>About</em> It</h1>
+                <p class="subtitle">Pull up a chair. Convene a small panel of Claude agents — each with their own point of view — and let them work through your topic together.</p>
+            </div>
+            <button class="icon-btn help-btn" data-tooltip="What is this?" onclick="openHelp()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--primary)">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                </svg>
+            </button>
+        </div>
+
+        <details id="settingsPanel" open>
+            <summary>Settings</summary>
+            <div class="settings-content">
+                <p class="settings-help">
+                    Bring your own Anthropic API key. It's stored only in this browser's localStorage and sent directly to <code>api.anthropic.com</code>.
+                    Get one at <a href="https://console.anthropic.com/settings/keys" target="_blank">console.anthropic.com</a>.
+                </p>
+                <div class="settings-row">
+                    <span class="settings-label">API Key</span>
+                    <input type="password" id="apiKey" placeholder="sk-ant-...">
+                    <button class="icon-btn" data-tooltip="Save key to localStorage" onclick="saveApiKey()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+                    </button>
+                    <button class="icon-btn secondary" data-tooltip="Clear stored key" onclick="clearApiKey()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"></path></svg>
+                    </button>
+                </div>
+                <div class="settings-row">
+                    <span class="settings-label">Model</span>
+                    <select id="modelSelect">
+                        <option value="claude-sonnet-4-6">Sonnet 4.6 (default)</option>
+                        <option value="claude-haiku-4-5-20251001">Haiku 4.5 (cheaper)</option>
+                        <option value="claude-opus-4-7">Opus 4.7 (slower, smarter)</option>
+                    </select>
+                </div>
+                <div class="settings-row">
+                    <span class="settings-label">Max rounds</span>
+                    <input type="number" id="maxRounds" min="1" max="30" value="10">
+                    <span class="settings-label" style="min-width:auto">Hard cap on conversation rounds before forced wrap-up.</span>
+                </div>
+            </div>
+        </details>
+
+        <!-- TOPIC INPUT (initial state) -->
+        <div id="topicView">
+            <form class="topic-form" onsubmit="startSession(event)">
+                <label for="topic">Topic — one sentence on what the panel should discuss.</label>
+                <textarea id="topic" rows="2" placeholder="e.g., 'Should we rewrite our API gateway in Rust?'" required></textarea>
+
+                <label for="context">Context (optional) — background, files, constraints, what you want from this.</label>
+                <textarea id="context" rows="3" placeholder="Paste anything that matters: prior decisions, snippets, why you're asking."></textarea>
+
+                <div class="settings-row">
+                    <span class="settings-label">Panel size</span>
+                    <input type="number" id="panelSize" min="1" max="5" value="3">
+                    <span class="settings-label">Roles</span>
+                    <select id="rolesMode">
+                        <option value="auto">Auto (let the moderator pick)</option>
+                        <option value="custom">Custom (I'll specify)</option>
+                    </select>
+                </div>
+                <div id="customRolesRow" class="settings-row" style="display:none;">
+                    <span class="settings-label">Custom</span>
+                    <input type="text" id="customRoles" placeholder="comma-separated names, e.g., 'Senior Engineer, Designer, PM, Customer'">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="startBtn">Start session</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- CLARIFYING QUESTIONS (intermediate state) -->
+        <div id="clarifyView" style="display:none;"></div>
+
+        <!-- CHAT LOG (running state) -->
+        <div id="chatLog" class="chat-log"></div>
+
+        <!-- STATUS BAR (running state) -->
+        <div id="statusBar" class="status-bar" style="display:none;">
+            <div class="interject-row">
+                <textarea id="interjectInput" placeholder="Interject — your message goes to the moderator next round (Cmd/Ctrl+Enter to send)"></textarea>
+                <button onclick="sendInterject()" id="interjectBtn">Send</button>
+            </div>
+            <div class="status-line">
+                <span id="statusText">—</span>
+                <span class="status-actions">
+                    <button class="secondary" onclick="exportSession()" id="exportBtn" data-tooltip="Download chat as Markdown">Export</button>
+                    <button class="secondary" onclick="requestWrapUp()" id="wrapBtn">Wrap up</button>
+                    <button class="danger" onclick="abortSession()" id="abortBtn">Stop</button>
+                </span>
+            </div>
+            <div class="cost-display" id="costDisplay"></div>
+        </div>
+
+        <!-- WRAP-UP REPORT -->
+        <div id="wrapUpView"></div>
+
+        <div id="error" class="error"></div>
+    </div>
+
+    <!-- Jump-to-latest button (shown when user has scrolled up while conversation is live) -->
+    <button id="jumpBtn" class="jump-btn" onclick="jumpToBottom()" style="display:none;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        <span>Jump to latest</span>
+    </button>
+
+    <!-- HELP MODAL -->
+    <div id="helpModal" class="modal-overlay" onclick="closeHelp(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 class="modal-title">About Talk About It</h2>
+                <button class="icon-btn modal-close" onclick="closeHelp()">×</button>
+            </div>
+            <div class="modal-body">
+                <p>A browser-based port of the <code>talk-about-it</code> Claude Code skill. Spawns 1–5 Claude Sonnet "panelists" on a topic of your choosing, with a Sonnet moderator that routes messages between them. You watch the conversation stream in real time and can interject any time.</p>
+
+                <h3>Setup</h3>
+                <ol>
+                    <li>Get an Anthropic API key at <a href="https://console.anthropic.com/settings/keys" target="_blank">console.anthropic.com</a>.</li>
+                    <li>Paste it into Settings and click the save icon.</li>
+                </ol>
+
+                <h3>How it works</h3>
+                <ol>
+                    <li>Enter a topic and (optionally) some context.</li>
+                    <li>The moderator may ask 1–3 clarifying questions and propose specific roles for the panel.</li>
+                    <li>Once you confirm, panelists are spawned in parallel and stream their responses into the chat.</li>
+                    <li>After each round the moderator decides who speaks next — relaying quotes, asking follow-ups, or pausing to ask you something.</li>
+                    <li>Click <strong>Wrap up</strong> at any time for a summary report.</li>
+                </ol>
+
+                <h3>Privacy</h3>
+                <p>Your API key never leaves the browser except to talk to <code>api.anthropic.com</code> directly. There is no server. The page uses the <code>anthropic-dangerous-direct-browser-access</code> header — fine for personal BYOK use, but don't ship this page to users you don't trust with your key.</p>
+
+                <h3>Cost</h3>
+                <p>Token usage and a rough USD estimate are shown live. Default rates assume Sonnet 4.6 ($3 / $15 per million input/output tokens). Adjust mentally if you switch models. A 3-panelist 8-round session typically costs $0.05–$0.30.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ASK-USER MODAL (moderator escalation) -->
+    <div id="askModal" class="modal-overlay" onclick="">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">The panel needs your input</h2>
+            </div>
+            <div class="modal-body">
+                <p id="askQuestion" style="color: var(--card-foreground);"></p>
+                <textarea id="askAnswer" rows="3" placeholder="Your answer..." style="width: 100%; margin: 0.75rem 0;"></textarea>
+                <div style="display:flex; gap: 0.5rem; justify-content: flex-end;">
+                    <button onclick="submitAskAnswer()">Send to panel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ---- Config ----
+        const API_URL = 'https://api.anthropic.com/v1/messages';
+        const PANEL_LABELS = ['A', 'B', 'C', 'D', 'E'];
+        const PANEL_COLORS = {
+            A: 'var(--panel-a)', B: 'var(--panel-b)', C: 'var(--panel-c)',
+            D: 'var(--panel-d)', E: 'var(--panel-e)',
+        };
+        // Rough Sonnet 4.6 pricing per million tokens ($USD).
+        const PRICING = {
+            'claude-sonnet-4-6': { in: 3.00, out: 15.00 },
+            'claude-haiku-4-5-20251001': { in: 1.00, out: 5.00 },
+            'claude-opus-4-7': { in: 15.00, out: 75.00 },
+        };
+        const MAX_TOKENS_PANELIST = 1024;
+        const MAX_TOKENS_MODERATOR = 1500;
+
+        // ---- State ----
+        const state = {
+            apiKey: '',
+            model: 'claude-sonnet-4-6',
+            maxRounds: 10,
+            topic: '',
+            context: '',
+            briefing: '',                 // shared briefing string used in panelist system prompts
+            panelists: [],                // [{ id, label, role, systemPrompt, history: [...] }]
+            roundsCompleted: 0,
+            interjectQueue: [],           // user messages to forward next round
+            running: false,
+            aborted: false,
+            wantWrapUp: false,
+            usage: { input: 0, output: 0 },
+            askResolver: null,
+        };
+
+        // ---- API key persistence ----
+        function loadApiKey() {
+            const k = localStorage.getItem('tai_api_key') || '';
+            document.getElementById('apiKey').value = k;
+            state.apiKey = k;
+        }
+        function saveApiKey() {
+            const k = document.getElementById('apiKey').value.trim();
+            localStorage.setItem('tai_api_key', k);
+            state.apiKey = k;
+            flashStatus('API key saved.');
+        }
+        function clearApiKey() {
+            localStorage.removeItem('tai_api_key');
+            document.getElementById('apiKey').value = '';
+            state.apiKey = '';
+            flashStatus('API key cleared.');
+        }
+
+        // ---- Help modal ----
+        function openHelp() { document.getElementById('helpModal').classList.add('active'); }
+        function closeHelp(e) {
+            if (!e || e.target === e.currentTarget || e.target.classList.contains('modal-close')) {
+                document.getElementById('helpModal').classList.remove('active');
+            }
+        }
+
+        // ---- Roles mode toggle ----
+        document.getElementById('rolesMode').addEventListener('change', (e) => {
+            document.getElementById('customRolesRow').style.display = e.target.value === 'custom' ? 'flex' : 'none';
+        });
+
+        // ---- Status / error ----
+        function flashStatus(msg) {
+            const el = document.getElementById('statusText');
+            el.textContent = msg;
+        }
+        function showError(msg) {
+            document.getElementById('error').textContent = msg;
+        }
+        function clearError() { showError(''); }
+
+        // ---- Cost / token tracking ----
+        function addUsage(u) {
+            if (!u) return;
+            state.usage.input += (u.input_tokens || 0) + (u.cache_creation_input_tokens || 0);
+            state.usage.output += u.output_tokens || 0;
+            renderCost();
+        }
+        function renderCost() {
+            const p = PRICING[state.model] || PRICING['claude-sonnet-4-6'];
+            const cost = (state.usage.input / 1e6) * p.in + (state.usage.output / 1e6) * p.out;
+            document.getElementById('costDisplay').textContent =
+                `Tokens — in: ${state.usage.input.toLocaleString()}  out: ${state.usage.output.toLocaleString()}  ≈ $${cost.toFixed(4)}`;
+        }
+
+        // ---- Anthropic SSE streaming ----
+        async function* streamSSE(body) {
+            const res = await fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json',
+                    'x-api-key': state.apiKey,
+                    'anthropic-version': '2023-06-01',
+                    'anthropic-dangerous-direct-browser-access': 'true',
+                },
+                body: JSON.stringify({ ...body, stream: true }),
+            });
+            if (!res.ok) {
+                const text = await res.text();
+                throw new Error(`Anthropic API ${res.status}: ${text}`);
+            }
+            const reader = res.body.getReader();
+            const decoder = new TextDecoder();
+            let buffer = '';
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+                buffer += decoder.decode(value, { stream: true });
+                const lines = buffer.split('\n');
+                buffer = lines.pop();
+                for (const line of lines) {
+                    const trimmed = line.trim();
+                    if (!trimmed.startsWith('data:')) continue;
+                    const data = trimmed.slice(5).trim();
+                    if (!data || data === '[DONE]') continue;
+                    try { yield JSON.parse(data); } catch {}
+                }
+            }
+        }
+
+        async function streamMessage(body, onDelta) {
+            let full = '';
+            let usage = { input_tokens: 0, output_tokens: 0, cache_creation_input_tokens: 0 };
+            for await (const evt of streamSSE(body)) {
+                if (state.aborted) throw new Error('aborted');
+                if (evt.type === 'message_start' && evt.message?.usage) {
+                    usage.input_tokens = evt.message.usage.input_tokens || 0;
+                    usage.cache_creation_input_tokens = evt.message.usage.cache_creation_input_tokens || 0;
+                } else if (evt.type === 'content_block_delta' && evt.delta?.type === 'text_delta') {
+                    full += evt.delta.text;
+                    if (onDelta) onDelta(evt.delta.text, full);
+                } else if (evt.type === 'message_delta' && evt.usage) {
+                    if (evt.usage.output_tokens != null) usage.output_tokens = evt.usage.output_tokens;
+                }
+            }
+            addUsage(usage);
+            return { text: full, usage };
+        }
+
+        async function callMessage(body) {
+            // Non-streaming convenience for moderator JSON calls.
+            const res = await fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json',
+                    'x-api-key': state.apiKey,
+                    'anthropic-version': '2023-06-01',
+                    'anthropic-dangerous-direct-browser-access': 'true',
+                },
+                body: JSON.stringify(body),
+            });
+            if (!res.ok) {
+                const text = await res.text();
+                throw new Error(`Anthropic API ${res.status}: ${text}`);
+            }
+            const json = await res.json();
+            addUsage(json.usage);
+            return json;
+        }
+
+        // ---- Chat log rendering ----
+        function appendMsg({ kind, name, color, body, streaming }) {
+            const log = document.getElementById('chatLog');
+            const wrap = document.createElement('div');
+            wrap.className = 'msg ' + (kind || '');
+            if (streaming) wrap.classList.add('streaming');
+            wrap.style.setProperty('--accent', color || 'var(--primary)');
+            wrap.innerHTML = `
+                <div class="msg-header"><span class="msg-name">${escapeHtml(name)}</span></div>
+                <div class="msg-body"></div>
+            `;
+            log.appendChild(wrap);
+            const bodyEl = wrap.querySelector('.msg-body');
+            if (streaming) {
+                bodyEl.classList.add('cursor');
+                bodyEl.dataset.raw = '';
+            } else if (typeof body === 'string') {
+                bodyEl.dataset.raw = body;
+                bodyEl.innerHTML = renderMd(body);
+            }
+            // Stash kind for the exporter
+            wrap.dataset.kind = kind || 'panelist';
+            scrollToBottom();
+            return { wrap, bodyEl };
+        }
+        function streamInto(bodyEl, text) {
+            bodyEl.dataset.raw = (bodyEl.dataset.raw || '') + text;
+            bodyEl.innerHTML = renderMd(bodyEl.dataset.raw);
+            scrollToBottom();
+        }
+        function finalizeStream(bodyEl, wrap) {
+            bodyEl.classList.remove('cursor');
+            wrap.classList.remove('streaming');
+            bodyEl.innerHTML = renderMd(bodyEl.dataset.raw || '');
+        }
+        function renderMd(s) {
+            try { return marked.parse(s, { breaks: true }); } catch { return escapeHtml(s); }
+        }
+        function escapeHtml(s) {
+            return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+        }
+        // ---- Auto-scroll that yields to the user ----
+        // followBottom=true means we keep snapping to bottom as new content arrives.
+        // The user scrolling up flips it off; scrolling back near the bottom flips it on.
+        let followBottom = true;
+        const SCROLL_THRESHOLD = 120; // px from bottom counts as "near bottom"
+        function nearBottom() {
+            const scrollY = window.scrollY || window.pageYOffset;
+            const viewport = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight;
+            return (docHeight - (scrollY + viewport)) < SCROLL_THRESHOLD;
+        }
+        window.addEventListener('scroll', () => {
+            const atBottom = nearBottom();
+            if (atBottom !== followBottom) {
+                followBottom = atBottom;
+                document.getElementById('jumpBtn').style.display = followBottom ? 'none' : 'flex';
+            }
+        }, { passive: true });
+        function scrollToBottom() {
+            if (!followBottom) {
+                document.getElementById('jumpBtn').style.display = 'flex';
+                return;
+            }
+            requestAnimationFrame(() => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'auto' }));
+        }
+        function jumpToBottom() {
+            followBottom = true;
+            document.getElementById('jumpBtn').style.display = 'none';
+            window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+        }
+
+        // ---- Validation ----
+        function ensureKey() {
+            if (!state.apiKey) {
+                showError('Set your Anthropic API key in Settings before starting.');
+                return false;
+            }
+            clearError();
+            return true;
+        }
+        function readSettings() {
+            state.model = document.getElementById('modelSelect').value;
+            state.maxRounds = parseInt(document.getElementById('maxRounds').value, 10) || 10;
+        }
+
+        // ---- Phase 1: clarifier ----
+        async function startSession(e) {
+            e.preventDefault();
+            clearError();
+            if (!ensureKey()) return;
+            readSettings();
+
+            state.topic = document.getElementById('topic').value.trim();
+            state.context = document.getElementById('context').value.trim();
+            const panelSize = parseInt(document.getElementById('panelSize').value, 10);
+            const rolesMode = document.getElementById('rolesMode').value;
+            const customRoles = document.getElementById('customRoles').value.trim();
+
+            if (!state.topic) return;
+            if (panelSize < 1 || panelSize > 5) {
+                showError('Panel size must be 1–5.');
+                return;
+            }
+
+            document.getElementById('topicView').style.display = 'none';
+            document.getElementById('startBtn').disabled = true;
+
+            const clarifyView = document.getElementById('clarifyView');
+            clarifyView.style.display = 'block';
+            clarifyView.innerHTML = `<div class="msg system"><div class="msg-header"><span class="msg-name">SYSTEM</span></div><div class="msg-body"><span class="spinner"></span>Moderator is thinking about roles and any clarifying questions…</div></div>`;
+
+            try {
+                const plan = await runClarifier({ panelSize, rolesMode, customRoles });
+                renderClarifyForm(plan);
+            } catch (err) {
+                showError(err.message);
+                document.getElementById('topicView').style.display = 'block';
+                document.getElementById('startBtn').disabled = false;
+                clarifyView.style.display = 'none';
+            }
+        }
+
+        async function runClarifier({ panelSize, rolesMode, customRoles }) {
+            const sys = `You are the moderator for a panel-discussion tool. Given a topic, you (a) propose distinct, topic-specific roles for the panel, and (b) ask 0–3 short clarifying questions only if they would meaningfully change how the panel approaches the topic.
+
+Return ONLY valid minified JSON, no prose, no code fences. Schema:
+{
+  "roles": [{"name":"<2–3 word title-cased name>","role":"<one-line specific role descriptor>"}, ...],
+  "clarifying_questions": ["question 1", "question 2"],
+  "rationale": "<one sentence: why these roles>"
+}
+
+Rules:
+- "name" is a short label used in the chat UI. 2–3 words, title-cased, distinct from the others. Examples: "Perennial Specialist", "Senior Engineer", "Skeptical CFO". No quotes or punctuation.
+- "role" is a one-line descriptor of what perspective they bring. Be specific to the topic.
+- Names must be UNIQUE within the panel.
+- Roles must be SPECIFIC to the topic. Generic "skeptic / optimist" only as a last resort.
+- Use exactly the panel size requested.
+- Clarifying questions: maximum 3, only ask if genuinely needed. Empty array is preferred when topic is clear.
+- No questions about panel size or roles themselves — those are decided.`;
+
+            const userMsg = `Topic: ${state.topic}
+Context from user: ${state.context || '(none)'}
+Requested panel size: ${panelSize}
+${rolesMode === 'custom' ? `User-specified roles (use these verbatim, comma-separated): ${customRoles}` : 'Roles: pick them yourself.'}`;
+
+            const json = await callMessage({
+                model: state.model,
+                max_tokens: 800,
+                system: sys,
+                messages: [{ role: 'user', content: userMsg }],
+            });
+            const text = json.content?.map(c => c.text).join('') || '';
+            const plan = parseJsonLoose(text);
+            if (!plan || !Array.isArray(plan.roles) || plan.roles.length !== panelSize) {
+                throw new Error('Moderator returned malformed plan: ' + text.slice(0, 200));
+            }
+            // Backfill: if the moderator omitted "name", derive one from "role".
+            plan.roles.forEach(r => {
+                if (!r.name) r.name = deriveName(r.role || 'Panelist');
+            });
+            // If user gave custom roles, override (each comma-separated entry becomes both name and role descriptor).
+            if (rolesMode === 'custom' && customRoles) {
+                const split = customRoles.split(',').map(s => s.trim()).filter(Boolean).slice(0, panelSize);
+                plan.roles = split.map((entry) => ({ name: entry, role: entry }));
+                plan.clarifying_questions = plan.clarifying_questions || [];
+            }
+            // Ensure unique names.
+            const seen = new Set();
+            plan.roles.forEach((r, i) => {
+                let n = r.name;
+                let suffix = 2;
+                while (seen.has(n.toLowerCase())) { n = `${r.name} ${suffix++}`; }
+                r.name = n;
+                seen.add(n.toLowerCase());
+            });
+            return plan;
+        }
+
+        function deriveName(role) {
+            const words = role.split(/\s+/).slice(0, 3).join(' ');
+            return words.replace(/[^\w\s\-]/g, '').trim() || 'Panelist';
+        }
+
+        function parseJsonLoose(text) {
+            const m = text.match(/\{[\s\S]*\}/);
+            if (!m) return null;
+            try { return JSON.parse(m[0]); } catch { return null; }
+        }
+
+        function renderClarifyForm(plan) {
+            const view = document.getElementById('clarifyView');
+            const rolesHtml = plan.roles.map((r, i) => `
+                <div style="display:flex; gap:0.5rem; margin-top:0.5rem;">
+                    <input type="text" data-name-idx="${i}" value="${escapeHtml(r.name)}" placeholder="Name" style="flex: 0 0 200px;">
+                    <input type="text" data-role-idx="${i}" value="${escapeHtml(r.role)}" placeholder="Role descriptor">
+                </div>`).join('');
+            const questionsHtml = (plan.clarifying_questions || []).map((q, i) =>
+                `<label>Q${i + 1}: ${escapeHtml(q)}</label><textarea data-q-idx="${i}" rows="2" placeholder="Your answer (or leave blank)"></textarea>`
+            ).join('');
+            view.innerHTML = `
+                <div class="clarify-block">
+                    <div style="color: var(--muted-foreground); font-size: 0.75rem; margin-bottom: 0.75rem;">
+                        <strong style="color: var(--warning);">MODERATOR:</strong> ${escapeHtml(plan.rationale || 'Proposed roles below.')}
+                    </div>
+                    ${rolesHtml}
+                    ${questionsHtml ? `<div style="margin-top:0.75rem; color:var(--muted-foreground); font-size:0.75rem;">A few clarifying questions (optional — leave blank to skip):</div>${questionsHtml}` : ''}
+                    <div class="form-actions" style="margin-top: 1rem;">
+                        <button class="secondary" onclick="cancelClarify()">Back</button>
+                        <button onclick="confirmAndStart()">Confirm and start panel</button>
+                    </div>
+                </div>
+            `;
+            // Stash plan for confirm
+            view.dataset.plan = JSON.stringify(plan);
+        }
+
+        function cancelClarify() {
+            document.getElementById('clarifyView').style.display = 'none';
+            document.getElementById('clarifyView').innerHTML = '';
+            document.getElementById('topicView').style.display = 'block';
+            document.getElementById('startBtn').disabled = false;
+        }
+
+        async function confirmAndStart() {
+            const view = document.getElementById('clarifyView');
+            const plan = JSON.parse(view.dataset.plan);
+            // Read edited roles
+            view.querySelectorAll('[data-role-idx]').forEach(inp => {
+                const i = parseInt(inp.dataset.roleIdx, 10);
+                plan.roles[i].role = inp.value.trim() || plan.roles[i].role;
+            });
+            view.querySelectorAll('[data-name-idx]').forEach(inp => {
+                const i = parseInt(inp.dataset.nameIdx, 10);
+                plan.roles[i].name = inp.value.trim() || plan.roles[i].name;
+            });
+            // Read clarifier answers
+            const answers = [];
+            view.querySelectorAll('[data-q-idx]').forEach(inp => {
+                const i = parseInt(inp.dataset.qIdx, 10);
+                const v = inp.value.trim();
+                if (v) answers.push({ q: plan.clarifying_questions[i], a: v });
+            });
+            view.style.display = 'none';
+            view.innerHTML = '';
+
+            await spawnPanel(plan.roles, answers);
+        }
+
+        // ---- Phase 2 + 3: build briefing, spawn panel ----
+        function buildBriefing(roles, clarifierAnswers) {
+            const otherList = roles.map(r => `- ${r.name} — ${r.role}`).join('\n');
+            const clarifyBlock = clarifierAnswers.length
+                ? `\nUser answered some clarifying questions:\n${clarifierAnswers.map(c => `- Q: ${c.q}\n  A: ${c.a}`).join('\n')}\n`
+                : '';
+            return `# Panel Briefing
+
+## Topic
+${state.topic}
+
+## Background / why it matters
+${state.context || '(The user did not provide additional background.)'}
+${clarifyBlock}
+## The other panelists in the room
+${otherList}
+
+## Conversation rules (read carefully)
+- You are part of a multi-agent panel discussion. Your role is described in your role addendum below. Stay in that role.
+- You may address the moderator, the user, or another panelist by their name (e.g., "To Garden Designer:" or "Reply to Annual Specialist:"). The moderator will relay messages between panelists.
+- Keep responses tight — one or two short paragraphs unless the question genuinely requires more. This is a conversation, not an essay.
+- You are a thought partner, not an actor. Do not propose state-mutating actions as steps to execute; describe and recommend instead.
+- If you genuinely have nothing to add this turn, say "pass" — do not pad.
+- If you need information only the human user has, say so explicitly and the moderator will surface the question.
+- Do not produce code fences longer than ~20 lines unless asked. Snippets are fine; don't write whole programs.
+`;
+        }
+
+        async function spawnPanel(roles, clarifierAnswers) {
+            state.briefing = buildBriefing(roles, clarifierAnswers);
+
+            // Initialize panelists
+            state.panelists = roles.map((r, i) => {
+                const label = PANEL_LABELS[i];
+                const sys = `${state.briefing}
+
+## Your role addendum
+You are **${r.name}** — ${r.role}. Stay in this role throughout the conversation. When you reply, do not prefix your message with your own name; the UI labels you automatically.`;
+                return {
+                    id: r.name,
+                    label,
+                    name: r.name,
+                    role: r.role,
+                    color: PANEL_COLORS[label],
+                    systemPrompt: sys,
+                    history: [],
+                };
+            });
+
+            // Reveal status bar
+            document.getElementById('statusBar').style.display = 'flex';
+            state.running = true;
+            state.aborted = false;
+
+            // Show topic banner
+            const panelLines = state.panelists.map(p => `- **${p.name}** — ${p.role}`).join('\n');
+            appendMsg({
+                kind: 'system',
+                name: 'TOPIC',
+                body: `**${state.topic}**\n\n${panelLines}`,
+            });
+
+            // Round 1: every panelist gets the same opening
+            const opening = `Share your initial take on this topic from your perspective. Keep it tight — one or two short paragraphs.`;
+            await runRound(state.panelists.map(p => ({ panelist: p, prompt: opening })));
+
+            // Loop
+            while (state.running && !state.aborted) {
+                if (state.roundsCompleted >= state.maxRounds) {
+                    appendMsg({ kind: 'system', name: 'SYSTEM', body: `Reached max rounds (${state.maxRounds}). Wrapping up.` });
+                    state.wantWrapUp = true;
+                }
+                let plan;
+                try {
+                    plan = await runModerator();
+                } catch (err) {
+                    if (err.message === 'aborted') break;
+                    showError('Moderator error: ' + err.message);
+                    break;
+                }
+                if (plan.status_note) {
+                    appendMsg({ kind: 'moderator', name: 'MODERATOR', body: plan.status_note });
+                }
+                if (plan.action === 'wrap_up' || state.wantWrapUp) {
+                    await renderWrapUp(plan.wrap_up || null);
+                    break;
+                }
+                if (plan.action === 'ask_user') {
+                    const answer = await askUser(plan.user_question || 'The panel needs input.');
+                    if (answer == null) break;
+                    state.interjectQueue.push(`User answered moderator's question: "${answer}"`);
+                    continue;
+                }
+                if (plan.action === 'continue' && Array.isArray(plan.next_round) && plan.next_round.length) {
+                    const dispatch = plan.next_round
+                        .map(item => {
+                            const target = String(item.to || '').trim().toLowerCase();
+                            const panelist = state.panelists.find(p =>
+                                p.name.toLowerCase() === target || p.label.toLowerCase() === target
+                            );
+                            return { panelist, prompt: item.prompt };
+                        })
+                        .filter(x => x.panelist && x.prompt);
+                    if (!dispatch.length) {
+                        appendMsg({ kind: 'system', name: 'SYSTEM', body: 'Moderator returned no valid panelist actions. Wrapping up.' });
+                        await renderWrapUp(null);
+                        break;
+                    }
+                    await runRound(dispatch);
+                } else {
+                    appendMsg({ kind: 'system', name: 'SYSTEM', body: 'Moderator did not return a valid action. Wrapping up.' });
+                    await renderWrapUp(null);
+                    break;
+                }
+            }
+
+            state.running = false;
+            document.getElementById('interjectBtn').disabled = true;
+            document.getElementById('wrapBtn').disabled = true;
+            flashStatus('Session complete.');
+        }
+
+        async function runRound(dispatch) {
+            const total = dispatch.length;
+            for (let i = 0; i < total; i++) {
+                if (state.aborted) break;
+                const { panelist, prompt } = dispatch[i];
+                flashStatus(`Round ${state.roundsCompleted + 1} — ${panelist.name} (${i + 1}/${total})…`);
+                try {
+                    await callPanelistStreaming(panelist, prompt);
+                } catch (err) {
+                    if (err.message === 'aborted') break;
+                    appendMsg({ kind: 'system', name: 'SYSTEM', body: `${panelist.name} failed: ${err.message}` });
+                }
+            }
+            state.roundsCompleted += 1;
+        }
+
+        async function callPanelistStreaming(panelist, userMessage) {
+            panelist.history.push({ role: 'user', content: userMessage });
+            const { wrap, bodyEl } = appendMsg({
+                kind: 'panelist',
+                name: panelist.name,
+                color: panelist.color,
+                streaming: true,
+            });
+            try {
+                const { text } = await streamMessage({
+                    model: state.model,
+                    max_tokens: MAX_TOKENS_PANELIST,
+                    system: panelist.systemPrompt,
+                    messages: panelist.history,
+                }, (delta) => streamInto(bodyEl, delta));
+                finalizeStream(bodyEl, wrap);
+                panelist.history.push({ role: 'assistant', content: text });
+                return text;
+            } catch (err) {
+                finalizeStream(bodyEl, wrap);
+                if (bodyEl.dataset.raw) {
+                    panelist.history.push({ role: 'assistant', content: bodyEl.dataset.raw });
+                } else {
+                    // remove the orphaned user push so history stays clean
+                    panelist.history.pop();
+                }
+                throw err;
+            }
+        }
+
+        // ---- Phase 4: moderator routing ----
+        async function runModerator() {
+            // Build the recap: each panelist's most recent assistant message.
+            const recap = state.panelists.map(p => {
+                const last = [...p.history].reverse().find(m => m.role === 'assistant');
+                return last ? `${p.name} (${p.role}) said:\n"""\n${last.content}\n"""` : `${p.name} (${p.role}): (no response)`;
+            }).join('\n\n');
+
+            const interjections = state.interjectQueue.slice();
+            state.interjectQueue.length = 0;
+            const interjectBlock = interjections.length
+                ? `\nUser interjected this round (treat as authoritative input — incorporate verbatim where useful):\n${interjections.map(i => `> ${i}`).join('\n')}\n`
+                : '';
+            const wrapHint = state.wantWrapUp
+                ? '\nThe user has requested wrap-up. Set action="wrap_up" and produce the wrap_up object.\n'
+                : '';
+
+            const sys = `You are the moderator of a panel discussion. After each round, you decide what happens next: relay messages between panelists, ask the user a clarifying question, or wrap up.
+
+You return ONLY a single minified JSON object. No prose, no code fences, no explanation. Schema:
+
+{
+  "status_note": "<short 1-line note for the user, or null. Only include for non-obvious meta-events like 'B conceded the latency concern'.>",
+  "action": "continue" | "ask_user" | "wrap_up",
+  "user_question": "<if action=ask_user, the question to surface to the user, else null>",
+  "next_round": [
+    {"to": "<panelist name exactly as listed>", "prompt": "<specific prompt for that panelist this round — relay quote, follow-up, or new angle>"}
+  ],
+  "wrap_up": {
+    "key_threads": ["..."],
+    "agreement": ["..."],
+    "disagreement": ["..."],
+    "insights": ["..."],
+    "next_step": "<one short sentence or empty string>"
+  }
+}
+
+Rules:
+- Use action="continue" by default. Include 1 to N entries in next_round, one per panelist that should speak. A panelist may be omitted if they have nothing useful to add this round.
+- When relaying between panelists, QUOTE THE ORIGINAL VERBATIM in the prompt (use quotation marks) so the recipient sees the unfiltered text. Then add your follow-up.
+- Use action="ask_user" ONLY if a panelist explicitly asked the user something, OR if the conversation is genuinely blocked on information only the user can provide. Don't escalate things panelists could research themselves.
+- Use action="wrap_up" when: the user requested it, two consecutive rounds added nothing new, every panelist passed, or the panel reached real convergence.
+- Panelist names (use these EXACTLY in "to" — case-sensitive): ${state.panelists.map(p => `"${p.name}"`).join(', ')}. Don't invent others.
+- Keep prompts tight. Don't summarize the whole transcript back to the panelist — they already remember.
+- "pass" responses don't need a relay; just skip that panelist next round.`;
+
+            const userMsg = `Topic: ${state.topic}
+
+Panel:
+${state.panelists.map(p => `- ${p.name}: ${p.role}`).join('\n')}
+
+Round ${state.roundsCompleted} just completed (rounds remaining: ${state.maxRounds - state.roundsCompleted}).
+
+Latest exchange:
+
+${recap}
+${interjectBlock}${wrapHint}
+Decide the next move and return the JSON.`;
+
+            flashStatus('Moderator deciding next move…');
+            const json = await callMessage({
+                model: state.model,
+                max_tokens: MAX_TOKENS_MODERATOR,
+                system: sys,
+                messages: [{ role: 'user', content: userMsg }],
+            });
+            const text = json.content?.map(c => c.text).join('') || '';
+            const plan = parseJsonLoose(text);
+            if (!plan || !plan.action) {
+                throw new Error('Moderator returned malformed JSON: ' + text.slice(0, 200));
+            }
+            return plan;
+        }
+
+        // ---- User interaction during run ----
+        async function askUser(question) {
+            return new Promise((resolve) => {
+                state.askResolver = resolve;
+                document.getElementById('askQuestion').textContent = question;
+                document.getElementById('askAnswer').value = '';
+                document.getElementById('askModal').classList.add('active');
+                appendMsg({
+                    kind: 'ask',
+                    name: 'MODERATOR ASKS YOU',
+                    body: question,
+                });
+                setTimeout(() => document.getElementById('askAnswer').focus(), 50);
+            });
+        }
+        function submitAskAnswer() {
+            const v = document.getElementById('askAnswer').value.trim();
+            if (!v) return;
+            document.getElementById('askModal').classList.remove('active');
+            appendMsg({ kind: 'user', name: 'YOU', body: v });
+            if (state.askResolver) {
+                const r = state.askResolver;
+                state.askResolver = null;
+                r(v);
+            }
+        }
+
+        function sendInterject() {
+            const ta = document.getElementById('interjectInput');
+            const v = ta.value.trim();
+            if (!v) return;
+            ta.value = '';
+            state.interjectQueue.push(v);
+            appendMsg({ kind: 'user', name: 'YOU (interjection — moderator will route)', body: v });
+            flashStatus('Interjection queued — will be sent to moderator next round.');
+        }
+
+        // Cmd/Ctrl+Enter to send interject
+        document.addEventListener('keydown', (e) => {
+            if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+                if (document.activeElement?.id === 'interjectInput') {
+                    e.preventDefault();
+                    sendInterject();
+                } else if (document.activeElement?.id === 'askAnswer') {
+                    e.preventDefault();
+                    submitAskAnswer();
+                }
+            }
+        });
+
+        // ---- Export ----
+        function exportSession() {
+            const lines = [];
+            const date = new Date().toISOString().replace(/\.\d+Z$/, 'Z');
+            lines.push(`# Talk About It — ${state.topic || 'Untitled session'}`);
+            lines.push(`*Exported ${date}*`);
+            lines.push('');
+            if (state.panelists.length) {
+                lines.push('## Panel');
+                state.panelists.forEach(p => lines.push(`- **${p.name}** — ${p.role}`));
+                lines.push('');
+            }
+            lines.push('---');
+            lines.push('');
+
+            const msgs = document.querySelectorAll('#chatLog .msg');
+            msgs.forEach(m => {
+                const kind = m.dataset.kind || 'panelist';
+                const nameEl = m.querySelector('.msg-name');
+                const bodyEl = m.querySelector('.msg-body');
+                const name = nameEl ? nameEl.textContent.trim() : '';
+                const raw = bodyEl ? (bodyEl.dataset.raw || bodyEl.textContent || '').trim() : '';
+                if (!raw) return;
+                if (kind === 'system') {
+                    lines.push(`> _${name}_`);
+                    lines.push(raw.split('\n').map(l => `> ${l}`).join('\n'));
+                } else {
+                    lines.push(`### ${name}`);
+                    lines.push(raw);
+                }
+                lines.push('');
+            });
+
+            const wrap = document.querySelector('#wrapUpView .wrap-up');
+            if (wrap) {
+                lines.push('---');
+                lines.push('');
+                lines.push('## Wrap-up');
+                lines.push('');
+                wrap.querySelectorAll('h3').forEach(h => {
+                    lines.push(`### ${h.textContent.trim()}`);
+                    let sib = h.nextElementSibling;
+                    while (sib && sib.tagName !== 'H3') {
+                        if (sib.tagName === 'UL') {
+                            sib.querySelectorAll('li').forEach(li => lines.push(`- ${li.textContent.trim()}`));
+                        } else if (sib.tagName === 'P') {
+                            lines.push(sib.textContent.trim());
+                        }
+                        sib = sib.nextElementSibling;
+                    }
+                    lines.push('');
+                });
+            }
+
+            const p = PRICING[state.model] || PRICING['claude-sonnet-4-6'];
+            const cost = (state.usage.input / 1e6) * p.in + (state.usage.output / 1e6) * p.out;
+            lines.push('---');
+            lines.push(`*Model: ${state.model} · Tokens — in: ${state.usage.input.toLocaleString()}, out: ${state.usage.output.toLocaleString()} · ≈ $${cost.toFixed(4)}*`);
+
+            const blob = new Blob([lines.join('\n')], { type: 'text/markdown;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const slug = (state.topic || 'session')
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '')
+                .slice(0, 60) || 'session';
+            const stamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `talk-about-it-${slug}-${stamp}.md`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            setTimeout(() => URL.revokeObjectURL(url), 1000);
+        }
+
+        function requestWrapUp() {
+            state.wantWrapUp = true;
+            flashStatus('Wrap-up requested — will fire after the current round completes.');
+            document.getElementById('wrapBtn').disabled = true;
+        }
+        function abortSession() {
+            state.aborted = true;
+            state.running = false;
+            flashStatus('Aborted by user.');
+            document.getElementById('wrapBtn').disabled = true;
+            document.getElementById('abortBtn').disabled = true;
+            document.getElementById('interjectBtn').disabled = true;
+        }
+
+        // ---- Phase 6: wrap-up ----
+        async function renderWrapUp(wrapUp) {
+            // If the moderator didn't include a wrap-up, request one explicitly.
+            if (!wrapUp) {
+                try {
+                    flashStatus('Requesting final summary…');
+                    wrapUp = await requestExplicitWrapUp();
+                } catch (err) {
+                    showError('Wrap-up summary failed: ' + err.message);
+                    return;
+                }
+            }
+            const view = document.getElementById('wrapUpView');
+            const li = arr => (arr && arr.length) ? arr.map(s => `<li>${escapeHtml(s)}</li>`).join('') : '<li><em>(none)</em></li>';
+            view.innerHTML = `
+                <div class="wrap-up">
+                    <h2>Wrap-up</h2>
+                    <p><strong>Topic:</strong> ${escapeHtml(state.topic)}</p>
+                    <p><strong>Panel:</strong> ${state.panelists.map(p => `<span style="color:${p.color}">${escapeHtml(p.name)}</span> — ${escapeHtml(p.role)}`).join('  ·  ')}</p>
+                    <h3>Key threads</h3><ul>${li(wrapUp.key_threads)}</ul>
+                    <h3>Points of agreement</h3><ul>${li(wrapUp.agreement)}</ul>
+                    <h3>Points of disagreement</h3><ul>${li(wrapUp.disagreement)}</ul>
+                    <h3>Surprises / insights</h3><ul>${li(wrapUp.insights)}</ul>
+                    ${wrapUp.next_step ? `<h3>Suggested next step</h3><p>${escapeHtml(wrapUp.next_step)}</p>` : ''}
+                </div>
+            `;
+            window.scrollTo({ top: view.offsetTop, behavior: 'smooth' });
+        }
+
+        async function requestExplicitWrapUp() {
+            const recap = state.panelists.map(p => {
+                const msgs = p.history.filter(m => m.role === 'assistant').map(m => m.content);
+                return `${p.name} (${p.role}) said across the session:\n${msgs.map(t => `- ${t}`).join('\n')}`;
+            }).join('\n\n');
+
+            const sys = `You are wrapping up a panel discussion. Read the full panel exchange and produce a JSON summary. Return ONLY minified JSON, no prose.
+
+Schema:
+{
+  "key_threads": ["..."],
+  "agreement": ["..."],
+  "disagreement": ["..."],
+  "insights": ["..."],
+  "next_step": "<one short sentence or empty string>"
+}
+
+Be specific. Attribute by panelist name where useful (e.g., "Garden Designer argued..."). Keep each bullet to one line. Maximum 6 items per list.`;
+
+            const userMsg = `Topic: ${state.topic}\n\n${recap}`;
+            const json = await callMessage({
+                model: state.model,
+                max_tokens: 1200,
+                system: sys,
+                messages: [{ role: 'user', content: userMsg }],
+            });
+            const text = json.content?.map(c => c.text).join('') || '';
+            const wrapUp = parseJsonLoose(text);
+            if (!wrapUp) throw new Error('Could not parse wrap-up JSON: ' + text.slice(0, 200));
+            return wrapUp;
+        }
+
+        // ---- Boot ----
+        loadApiKey();
+        renderCost();
+    </script>
+</body>
+</html>
