@@ -582,25 +582,51 @@
             background: linear-gradient(90deg, var(--panel-a), var(--panel-c), var(--panel-d));
             border-radius: 0 0 var(--radius-pill) var(--radius-pill);
         }
+        .wrap-up-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-size: 0.82rem;
+            color: var(--ink-muted);
+            margin-bottom: 0.6rem;
+        }
+        .wrap-up-topic {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--ink-soft);
+        }
         .wrap-up h2 {
             font-family: var(--font-display);
             font-style: italic;
             font-weight: 600;
-            font-size: 2rem;
-            margin: 0 0 1rem;
-            color: var(--ink);
+            font-size: 1.4rem;
+            margin: 0.4rem 0 0.6rem;
+            color: var(--ink-soft);
             font-variation-settings: "opsz" 144;
-            letter-spacing: -0.01em;
+            letter-spacing: -0.005em;
+        }
+        .wrap-up .bottom-line {
+            font-family: var(--font-display);
+            font-size: 1.55rem;
+            line-height: 1.3;
+            font-weight: 500;
+            color: var(--ink);
+            margin: 0 0 1.4rem;
+            padding: 0.4rem 0 1.2rem;
+            border-bottom: 1px dashed var(--rule);
+            font-variation-settings: "opsz" 144, "SOFT" 50;
+            letter-spacing: -0.005em;
         }
         .wrap-up h3 {
             font-family: var(--font-display);
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--accent);
             margin: 1.25rem 0 0.5rem;
         }
         .wrap-up ul { padding-left: 1.4rem; margin: 0.4rem 0; }
-        .wrap-up li { margin: 0.3rem 0; line-height: 1.55; }
+        .wrap-up li { margin: 0.35rem 0; line-height: 1.55; }
         .wrap-up p { margin: 0.5rem 0; line-height: 1.6; }
 
         /* Modal */
@@ -1317,6 +1343,7 @@ ${otherList}
 
 ## Conversation rules (read carefully)
 - You are part of a multi-agent panel discussion. Your role is described in your role addendum below. Stay in that role.
+- **The goal is a useful, converged answer for the user — not a debate scoreboard.** Aim to resolve differences as the conversation progresses. Build on what other panelists have said, concede when their argument is stronger, and work toward a clear recommendation. Do not fake agreement — but if you genuinely agree with another panelist, say so plainly in one sentence and add something specific rather than restating their point.
 - You may address the moderator, the user, or another panelist by their name (e.g., "To Garden Designer:" or "Reply to Annual Specialist:"). The moderator will relay messages between panelists.
 - Keep responses tight — one or two short paragraphs unless the question genuinely requires more. This is a conversation, not an essay.
 - You are a thought partner, not an actor. Do not propose state-mutating actions as steps to execute; describe and recommend instead.
@@ -1495,19 +1522,19 @@ You return ONLY a single minified JSON object. No prose, no code fences, no expl
     {"to": "<panelist name exactly as listed>", "prompt": "<specific prompt for that panelist this round — relay quote, follow-up, or new angle>"}
   ],
   "wrap_up": {
-    "key_threads": ["..."],
-    "agreement": ["..."],
-    "disagreement": ["..."],
-    "insights": ["..."],
-    "next_step": "<one short sentence or empty string>"
+    "bottom_line": "<one or two sentences: the panel's actual answer/recommendation to the user. Be direct. This is what the user came here for.>",
+    "reasoning": ["<2–5 short bullets explaining why this is the answer. Attribute by panelist name only when it actually helps the user understand the reasoning. Do not narrate the debate.>"],
+    "caveats": ["<optional — substantive remaining disagreements, edge cases, or limits the user should know about. Empty array if none meaningful.>"],
+    "next_steps": ["<optional — concrete actions the user should take. Empty array if not applicable.>"]
   }
 }
 
 Rules:
 - Use action="continue" by default. Include 1 to N entries in next_round, one per panelist that should speak. A panelist may be omitted if they have nothing useful to add this round.
 - When relaying between panelists, QUOTE THE ORIGINAL VERBATIM in the prompt (use quotation marks) so the recipient sees the unfiltered text. Then add your follow-up.
+- Your job is to drive the panel toward a USEFUL ANSWER for the user, not to chronicle the debate. When two panelists disagree, push them to resolve it: ask one to respond to the strongest version of the other's argument, force a trade-off, or have them propose a synthesis. Don't let the conversation circle.
 - Use action="ask_user" ONLY if a panelist explicitly asked the user something, OR if the conversation is genuinely blocked on information only the user can provide. Don't escalate things panelists could research themselves.
-- Use action="wrap_up" when: the user requested it, two consecutive rounds added nothing new, every panelist passed, or the panel reached real convergence.
+- Use action="wrap_up" when: the user requested it, two consecutive rounds added nothing new, every panelist passed, or the panel has reached enough convergence to give the user a clear answer (perfect consensus not required — "we agree on X with a known trade-off on Y" is enough to wrap).
 - Panelist names (use these EXACTLY in "to" — case-sensitive): ${state.panelists.map(p => `"${p.name}"`).join(', ')}. Don't invent others.
 - Keep prompts tight. Don't summarize the whole transcript back to the panelist — they already remember.
 - "pass" responses don't need a relay; just skip that panelist next round.`;
@@ -1627,8 +1654,13 @@ Decide the next move and return the JSON.`;
             if (wrap) {
                 lines.push('---');
                 lines.push('');
-                lines.push('## Wrap-up');
+                lines.push("## The panel's answer");
                 lines.push('');
+                const bottomLine = wrap.querySelector('.bottom-line');
+                if (bottomLine) {
+                    lines.push(`**${bottomLine.textContent.trim()}**`);
+                    lines.push('');
+                }
                 wrap.querySelectorAll('h3').forEach(h => {
                     lines.push(`### ${h.textContent.trim()}`);
                     let sib = h.nextElementSibling;
@@ -1693,20 +1725,42 @@ Decide the next move and return the JSON.`;
                 }
             }
             const view = document.getElementById('wrapUpView');
-            const li = arr => (arr && arr.length) ? arr.map(s => `<li>${escapeHtml(s)}</li>`).join('') : '<li><em>(none)</em></li>';
+            const normalized = normalizeWrapUp(wrapUp);
+            const liList = arr => arr.map(s => `<li>${escapeHtml(s)}</li>`).join('');
+            const section = (title, arr) => arr && arr.length
+                ? `<h3>${escapeHtml(title)}</h3><ul>${liList(arr)}</ul>`
+                : '';
             view.innerHTML = `
                 <div class="wrap-up">
-                    <h2>Wrap-up</h2>
-                    <p><strong>Topic:</strong> ${escapeHtml(state.topic)}</p>
-                    <p><strong>Panel:</strong> ${state.panelists.map(p => `<span style="color:${p.color}">${escapeHtml(p.name)}</span> — ${escapeHtml(p.role)}`).join('  ·  ')}</p>
-                    <h3>Key threads</h3><ul>${li(wrapUp.key_threads)}</ul>
-                    <h3>Points of agreement</h3><ul>${li(wrapUp.agreement)}</ul>
-                    <h3>Points of disagreement</h3><ul>${li(wrapUp.disagreement)}</ul>
-                    <h3>Surprises / insights</h3><ul>${li(wrapUp.insights)}</ul>
-                    ${wrapUp.next_step ? `<h3>Suggested next step</h3><p>${escapeHtml(wrapUp.next_step)}</p>` : ''}
+                    <div class="wrap-up-meta">
+                        <span class="wrap-up-topic">${escapeHtml(state.topic)}</span>
+                        <span class="wrap-up-panel">${state.panelists.map(p => `<span style="color:${p.color}">${escapeHtml(p.name)}</span>`).join(' · ')}</span>
+                    </div>
+                    <h2>The panel's answer</h2>
+                    <p class="bottom-line">${escapeHtml(normalized.bottom_line)}</p>
+                    ${section('Why', normalized.reasoning)}
+                    ${section('Caveats', normalized.caveats)}
+                    ${section('Next steps', normalized.next_steps)}
                 </div>
             `;
             window.scrollTo({ top: view.offsetTop, behavior: 'smooth' });
+        }
+
+        function normalizeWrapUp(w) {
+            if (!w) w = {};
+            // Backfill if the moderator slipped and returned the old schema.
+            let bottom_line = w.bottom_line || '';
+            let reasoning = Array.isArray(w.reasoning) ? w.reasoning : [];
+            let caveats = Array.isArray(w.caveats) ? w.caveats : (Array.isArray(w.disagreement) ? w.disagreement : []);
+            let next_steps = Array.isArray(w.next_steps)
+                ? w.next_steps
+                : (typeof w.next_step === 'string' && w.next_step ? [w.next_step] : []);
+            if (!bottom_line && Array.isArray(w.agreement) && w.agreement.length) {
+                bottom_line = w.agreement[0];
+                reasoning = w.agreement.slice(1).concat(reasoning);
+            }
+            if (!bottom_line) bottom_line = '(The panel did not produce a clear bottom-line answer.)';
+            return { bottom_line, reasoning, caveats, next_steps };
         }
 
         async function requestExplicitWrapUp() {
@@ -1715,18 +1769,20 @@ Decide the next move and return the JSON.`;
                 return `${p.name} (${p.role}) said across the session:\n${msgs.map(t => `- ${t}`).join('\n')}`;
             }).join('\n\n');
 
-            const sys = `You are wrapping up a panel discussion. Read the full panel exchange and produce a JSON summary. Return ONLY minified JSON, no prose.
+            const sys = `You are wrapping up a panel discussion. Read the full exchange and produce a CONSENSUS ANSWER for the user — not a meta-summary of who said what. The user came here to figure something out; give them an answer, not a transcript review.
 
-Schema:
+Return ONLY minified JSON, no prose. Schema:
 {
-  "key_threads": ["..."],
-  "agreement": ["..."],
-  "disagreement": ["..."],
-  "insights": ["..."],
-  "next_step": "<one short sentence or empty string>"
+  "bottom_line": "<one or two sentences: the panel's direct answer/recommendation to the user. Lead with the verdict (yes/no/conditional), then the most important reason. This is the headline.>",
+  "reasoning": ["<2–5 short bullets explaining why. Each bullet stands on its own. Attribute by panelist name only when it actually helps the user understand — don't narrate the debate.>"],
+  "caveats": ["<optional — substantive remaining disagreements, edge cases, or limits. Empty array if nothing meaningful.>"],
+  "next_steps": ["<optional — concrete actions the user should take to act on this answer. Empty array if not applicable.>"]
 }
 
-Be specific. Attribute by panelist name where useful (e.g., "Garden Designer argued..."). Keep each bullet to one line. Maximum 6 items per list.`;
+Rules:
+- The bottom_line must actually answer the user's question. If the panel didn't converge, state the best-supported recommendation and flag the open question in caveats — do not punt.
+- Keep each bullet to one line where possible.
+- No filler ("the panel discussed..."). Be direct.`;
 
             const userMsg = `Topic: ${state.topic}\n\n${recap}`;
             const json = await callMessage({
