@@ -2,6 +2,12 @@
 # Fetches RSS feed (latest 5) and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: Agentic Engineering Tips
+  source: substack
+  url: https://johndamask.substack.com/p/agentic-engineering-tips
+  date: '2026-05-15'
+  excerpt: It's Not Just Vibe Coding Anymore
+  image: https://substackcdn.com/image/fetch/$s_!7VrB!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8f2606f1-ba27-4e25-bb8a-5c62294319d0_1024x559.png
 - title: 'DevLog: Now I Get It!'
   source: substack
   url: https://johndamask.substack.com/p/devlog-now-i-get-it
