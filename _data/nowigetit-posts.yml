@@ -2,6 +2,14 @@
 # Fetches RSS feed and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: Bulk-translating papers with Anthropic's Message Batches API
+  source: nowigetit
+  url: https://nowigetit.us/blog/bulk-translating-papers-with-anthropics-message-ba.html
+  date: '2026-05-16'
+  excerpt: Adding an admin-only bulk endpoint that uses Anthropic's batch API for
+    cheaper, async processing -- plus the regression review that found a latent bug
+    nobody knew was there, and the 504 that wasn't ac...
+  image: ''
 - title: TIME BOMB BUG!!
   source: nowigetit
   url: https://nowigetit.us/blog/time-bomb-bug.html
