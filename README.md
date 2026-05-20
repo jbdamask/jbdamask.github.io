@@ -116,6 +116,16 @@ Since LinkedIn and Twitter don't provide free API access, you can manually add p
 
 These posts will automatically appear in your unified feed alongside Substack and blog posts, sorted by date.
 
+### Syncing LinkedIn Posts Automatically
+
+To pull in recent LinkedIn posts without copy-pasting, run the `sync-linkedin-posts` skill from Claude Code:
+
+```
+/sync-linkedin-posts
+```
+
+Or just ask Claude to "sync my linkedin posts" / "pull in new linkedin posts". The skill scrapes [johndamask's recent activity](https://www.linkedin.com/in/johndamask/recent-activity/all/) via the Claude-in-Chrome MCP, skips URNs already present in `_data/external-posts.yml`, appends new entries, validates the YAML, then commits and pushes.
+
 ## Theme Documentation
 
 For theme customization options, see the [Minimal Mistakes documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/).
