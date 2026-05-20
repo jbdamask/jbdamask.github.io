@@ -1522,10 +1522,10 @@ You return ONLY a single minified JSON object. No prose, no code fences, no expl
     {"to": "<panelist name exactly as listed>", "prompt": "<specific prompt for that panelist this round — relay quote, follow-up, or new angle>"}
   ],
   "wrap_up": {
-    "bottom_line": "<one or two sentences: the panel's actual answer/recommendation to the user. Be direct. This is what the user came here for.>",
-    "reasoning": ["<2–5 short bullets explaining why this is the answer. Attribute by panelist name only when it actually helps the user understand the reasoning. Do not narrate the debate.>"],
-    "caveats": ["<optional — substantive remaining disagreements, edge cases, or limits the user should know about. Empty array if none meaningful.>"],
-    "next_steps": ["<optional — concrete actions the user should take. Empty array if not applicable.>"]
+    "bottom_line": "<2–4 sentences. State the panel's recommendation directly, the single most important reason, and the one condition or trade-off the user must know up front. Plain language — no mic-drop, no rhetorical flourishes.>",
+    "reasoning": ["<3–6 bullets, each a complete thought (usually one or two sentences). Explain WHY in terms the user can verify. Attribute to a panelist only when it adds information.>"],
+    "caveats": ["<0–3 bullets — only substantive remaining disagreements, edge cases, or risks the user genuinely needs to weigh. Empty if nothing meaningful.>"],
+    "next_steps": ["<0–5 bullets — concrete actions in roughly the order they should be done. Empty if the answer is informational rather than actionable.>"]
   }
 }
 
@@ -1769,25 +1769,35 @@ Decide the next move and return the JSON.`;
                 return `${p.name} (${p.role}) said across the session:\n${msgs.map(t => `- ${t}`).join('\n')}`;
             }).join('\n\n');
 
-            const sys = `You are wrapping up a panel discussion. Read the full exchange and produce a CONSENSUS ANSWER for the user — not a meta-summary of who said what. The user came here to figure something out; give them an answer, not a transcript review.
+            const sys = `You are wrapping up a panel discussion. The user came here for a specific answer — give them one they can actually act on. Not a transcript review, not a meta-summary of who said what.
 
 Return ONLY minified JSON, no prose. Schema:
 {
-  "bottom_line": "<one or two sentences: the panel's direct answer/recommendation to the user. Lead with the verdict (yes/no/conditional), then the most important reason. This is the headline.>",
-  "reasoning": ["<2–5 short bullets explaining why. Each bullet stands on its own. Attribute by panelist name only when it actually helps the user understand — don't narrate the debate.>"],
-  "caveats": ["<optional — substantive remaining disagreements, edge cases, or limits. Empty array if nothing meaningful.>"],
-  "next_steps": ["<optional — concrete actions the user should take to act on this answer. Empty array if not applicable.>"]
+  "bottom_line": "<2–4 sentences. State the panel's recommendation directly. Include the single most important reason, and the one condition or trade-off the user must know up front. Enough information to be useful; not so much it becomes a wall of text.>",
+  "reasoning": ["<3–6 bullets, each a complete thought (usually one or two sentences). Explain WHY in terms the user can verify. Attribute to a panelist only when it adds information.>"],
+  "caveats": ["<0–3 bullets — only substantive remaining disagreements, edge cases, or risks the user genuinely needs to weigh. Empty if nothing meaningful.>"],
+  "next_steps": ["<0–5 bullets — concrete actions in roughly the order they should be done. Empty if the answer is informational rather than actionable.>"]
 }
 
-Rules:
-- The bottom_line must actually answer the user's question. If the panel didn't converge, state the best-supported recommendation and flag the open question in caveats — do not punt.
-- Keep each bullet to one line where possible.
-- No filler ("the panel discussed..."). Be direct.`;
+Hard rules:
+- ANSWER THE ORIGINAL ASK. If the user asked "should I switch to AWS SES?", the bottom_line answers that — yes, no, or conditional — and explains the key reason. Don't drift into adjacent topics the panel happened to explore. Don't broaden the question.
+- Use plain, direct speech. No mic-drop conclusions, no rhetorical questions, no "in summary" framing, no marketing voice. Say what you mean in the simplest accurate words.
+- Aim for something the user can read in roughly 60–90 seconds and act on. Not a tweet, not an essay. Don't pad to look thorough; don't crunch to look punchy.
+- If the panel genuinely split, state the better-supported recommendation in bottom_line and put the dissent in caveats — do not punt with "it depends."
+- No filler narration ("the panel discussed...", "after consideration..."). Deliver the answer.`;
+            // Slightly more headroom so the model doesn't truncate the bottom_line + reasoning.
+            const wrapMaxTokens = 1600;
 
-            const userMsg = `Topic: ${state.topic}\n\n${recap}`;
+            const userMsg = `The user's original ask: ${state.topic}
+
+${state.context ? `User-provided context: ${state.context}\n\n` : ''}Full panel exchange:
+
+${recap}
+
+Reminder: answer the original ask above, in plain language, with enough substance to be useful but no tangents.`;
             const json = await callMessage({
                 model: state.model,
-                max_tokens: 1200,
+                max_tokens: wrapMaxTokens,
                 system: sys,
                 messages: [{ role: 'user', content: userMsg }],
             });
