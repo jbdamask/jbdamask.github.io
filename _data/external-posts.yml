@@ -1,6 +1,41 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Claude Cowork isn't ready for enterprise training"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7462490776632111104/
+  date: 2026-05-19
+  excerpt: "Clients are asking for AI training focused on Claude Cowork, but inconsistent behavior — broken folder access on Macs, sandbox file-copy limits, and unpredictable configurations — forced a mid-class switch to Plan B during a legal department training."
+  image: ""
+
+- title: "Now I Get It! adds free Collections of landmark papers"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7461636054824022016/
+  date: 2026-05-17
+  excerpt: "A new Collections feature with translated versions of historically important scientific papers, starting with The Greatest Papers — For Kids and A Brief History of AI. Free for everyone, no registration required."
+  image: ""
+
+- title: "Agentic Engineering tips for building commercial software"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7461100918248378369/
+  date: 2026-05-15
+  excerpt: "An article expanding on tips for using AI agents to build production software. Software engineering isn't going away, but the job has always been to bring ideas to life — coding was just the time-consuming technical necessity."
+  image: ""
+
+- title: "Talk About It: an AI agent team web app"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7460534792493842432/
+  date: 2026-05-14
+  excerpt: "A web app that spawns a team of AI agents to discuss your topic. Provide a topic, answer a few questions, and watch the agents chat and debate while working toward a solution. Runs on johndamask.com with your own Anthropic API key."
+  image: ""
+
+- title: "Agentic Engineering tips for Claude Code"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7459919188422459392/
+  date: 2026-05-12
+  excerpt: "A practical list of tips for building real-world software with Claude Code — from Beads task tracking and Git worktrees to subagent plan reviews and the Testing Trophy method. Vibe coding is punk rock; agentic engineering is composing a symphony."
+  image: ""
+
 - title: "Claude Opus 4.7 composes a Mozart-esque piano sonata"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7453111529304158209/
@@ -55,6 +90,13 @@
   url: https://www.linkedin.com/posts/johndamask_all-the-talk-is-about-anthropics-mythos-share-7447477812028145664-eOMv/
   date: 2026-04-08
   excerpt: "Uploaded Anthropic's 244-page Mythos system card into Now I Get It! and asked for a page on deception and jailbreaks. Takeaway: Anthropic built its most powerful model ever and chose not to release it publicly — cybersecurity capabilities too dangerous, plus concerning alignment findings and self-jailbreaks."
+  image: ""
+
+- title: "When your AI needs to phone a friend"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7443134054801219584/
+  date: 2026-03-27
+  excerpt: "After 30 minutes of Claude trying random fixes for a stubborn bug, the breakthrough came from telling it to fire up a subagent to debate the problem. The subagent researched, they discussed, and the fix worked on the next test."
   image: ""
 
 - title: "AWS Quick Endpoints and Claude Channels"
