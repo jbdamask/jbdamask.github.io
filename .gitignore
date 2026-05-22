@@ -9,4 +9,11 @@ vendor
 .bv/
 .beads/dolt-access.lock
 .beads/dolt/
+.beads/dolt-server.lock
+.beads/dolt-server.log
+.beads/dolt-server.pid
+.beads/dolt-server.port
+.beads/embeddeddolt/
+.beads/backup/
+.beads/issues.jsonl
 .venv/
