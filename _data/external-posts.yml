@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Claude Code mobile builds an X video transcriber"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7463258757507088384/
+  date: 2026-05-21
+  excerpt: "Stuck on a train without earbuds and unable to play a video on X, I asked Claude Code mobile to build a transcriber. Anthropic's servers block X, so it pivoted to running the code as a GitHub Action and writing the transcript to a GitHub Issue."
+  image: ""
+
 - title: "Claude Cowork isn't ready for enterprise training"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7462490776632111104/
