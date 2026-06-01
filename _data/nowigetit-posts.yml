@@ -2,12 +2,28 @@
 # Fetches RSS feed and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: LLM post-processing
+  source: nowigetit
+  url: https://nowigetit.us/blog/llm-post-processing.html
+  date: '2026-06-01'
+  excerpt: Claude's response is never the final answer. Between the model's last token
+    and the HTML that lands in S3, Now I Get It! runs a pipeline that filters, augments,
+    and instruments the page. Here's what's...
+  image: ''
 - title: Inline editing now available!
   source: nowigetit
   url: https://nowigetit.us/blog/inline-editing-now-available.html
   date: '2026-05-25'
   excerpt: Sometimes, AI-generated web pages contain small errors. These are now fixable
     by using the built-in HTML and KaTeX editor.
+  image: ''
+- title: Curated design styles, no deploy required
+  source: nowigetit
+  url: https://nowigetit.us/blog/curated-design-styles-no-deploy-required-2.html
+  date: '2026-05-25'
+  excerpt: A dropdown now lets customers pick a visual style for their generated page
+    -- Academic Editorial, Vintage Travel Poster, Brutalist, and more. The interesting
+    part was making the styles editable by an ...
   image: ''
 - title: Bulk-translating papers with Anthropic's Message Batches API
   source: nowigetit
