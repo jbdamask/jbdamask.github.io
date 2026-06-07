@@ -1,6 +1,27 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "What should companies budget for AI tokens?"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7468316732483489792/
+  date: 2026-06-04
+  excerpt: "$86 — the cost of one day using Claude Cowork to manage files, or about $21.5k annualized. A back-of-the-envelope look at enterprise token budgets, and why banning Opus to save money is a reaction, not a strategy."
+  image: ""
+
+- title: "McBrain: an LLM wiki plugin for Claude Cowork"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7467418420716797952/
+  date: 2026-06-02
+  excerpt: "Inspired by Andrej Karpathy's idea of using LLMs to build wikis from documents, McBrain is an easy-to-install Claude Cowork plugin that turns the pattern into personal knowledge bases exposed as MCPs — no technical setup required."
+  image: ""
+
+- title: "Now I Get It! adds visual themes"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7467215215701561345/
+  date: 2026-06-01
+  excerpt: "Upload a paper, pick an optional theme, and the translated web page takes on a different personality — minimal, fun, or artistic. Theme prompts live in a versioned database, and the generated HTML runs through a post-processing engine for structure and security."
+  image: ""
+
 - title: "Claude Code mobile builds an X video transcriber"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7463258757507088384/
