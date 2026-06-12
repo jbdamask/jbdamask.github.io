@@ -57,6 +57,38 @@ excerpt: "One-line summary for the post card."
 ---
 ```
 
+### Adding a Social / Open Graph Card
+
+Posts using `layout: app` emit Open Graph + Twitter `summary_large_image`
+tags automatically. To give a post its own share image, add an `image:`
+key to the front matter pointing at a **1200×630** PNG:
+
+```yaml
+---
+layout: app
+title: "A Random Walk Through Gas Town"
+image: /assets/images/random-walk-through-gas-town-card.png
+---
+```
+
+If `image:` is omitted, the card falls back to the site author avatar.
+
+To build a card image, keep an HTML source under
+`assets/social-cards/` and render it to PNG with headless Chrome (this is
+how the Gas Town card was made — see
+`assets/social-cards/random-walk-through-gas-town.html`):
+
+```bash
+# Serve the repo, then screenshot the card source at exactly 1200x630
+python3 -m http.server 8911 &
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+  --headless=new --disable-gpu --hide-scrollbars \
+  --force-device-scale-factor=1 --window-size=1200,630 \
+  --screenshot=assets/images/MY-CARD.png \
+  http://localhost:8911/assets/social-cards/MY-CARD.html \
+  --virtual-time-budget=4000
+```
+
 ### Adding MHTML Pages (From Your Apps)
 
 **The easiest way** - Use the automated conversion script:
