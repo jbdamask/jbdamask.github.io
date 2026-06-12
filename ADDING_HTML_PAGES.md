@@ -2,6 +2,61 @@
 
 ## Quick Start
 
+### Adding a Complete, Self-Contained HTML File (As a Blog Post)
+
+**Use this when** you already have a finished HTML document — one that
+carries its own `<!DOCTYPE html>`, `<head>`, inline `<style>`, `<body>`,
+and any scripts — and you just want it to appear in the timeline. (This
+is the path for hand-authored or app-exported pages that are *already*
+plain `.html`, not `.mhtml`.)
+
+The helper script copies the file into `_posts/` with the right
+`YYYY-MM-DD-slug.html` name and prepends Jekyll front matter using
+`layout: app` (full-width, site header, no sidebars). It does **not**
+modify your HTML.
+
+```bash
+# Title auto-derived from filename, date = today, excerpt = first paragraph
+python scripts/add_html_post.py ~/Downloads/my-page.html
+
+# Override any of them
+python scripts/add_html_post.py ~/Downloads/my-page.html \
+  --title "A Random Walk Through Gas Town" \
+  --date 2026-06-12 \
+  --excerpt "One-line summary shown on the post card."
+```
+
+Then build, commit, and push:
+
+```bash
+bundle exec jekyll build      # verify it renders
+git add _posts/2026-06-12-a-random-walk-through-gas-town.html
+git commit -m "Add post: A Random Walk Through Gas Town"
+git push
+```
+
+**How it renders:** the file ends up with front matter on top, followed
+by your untouched HTML document. The `app` layout wraps it in the site
+header and a full-width container. A self-contained document nested this
+way renders fine (the browser collapses the inner `<html>/<body>` tags);
+your inline `<style>` still applies, and because your `body { ... }`
+rules come later in the document they win the cascade over the layout's
+defaults. First example of this pattern in the repo:
+`_posts/2025-11-25-claude-code-complete-prompts.html`.
+
+If you'd rather not use the script, do it by hand: prepend this block to
+the top of your HTML file and save it into `_posts/` as
+`YYYY-MM-DD-slug.html`:
+
+```yaml
+---
+layout: app
+title: "Your Title"
+date: 2026-06-12
+excerpt: "One-line summary for the post card."
+---
+```
+
 ### Adding MHTML Pages (From Your Apps)
 
 **The easiest way** - Use the automated conversion script:
