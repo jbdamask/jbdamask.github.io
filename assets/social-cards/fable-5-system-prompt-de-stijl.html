@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Source for the post's social/OG card. Render at 1200x630 and screenshot
+     to assets/images/fable-5-system-prompt-de-stijl-card.png. Reuses the exact
+     fonts/colors/grid language from the post so the two stay in sync. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red:    #D40000;
+    --yellow: #F5C400;
+    --blue:   #003DA5;
+    --black:  #000000;
+    --white:  #FFFFFF;
+    --border:       4px solid #000000;
+    --border-thick: 6px solid #000000;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { width: 1200px; height: 630px; }
+
+  body {
+    font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
+    background: var(--white);
+    color: var(--black);
+    overflow: hidden;
+  }
+
+  .card {
+    width: 1200px;
+    height: 630px;
+    display: grid;
+    grid-template-rows: 96px 1fr 26px;
+    border: var(--border-thick);
+  }
+
+  /* ═══ TOP NAV BAR ═══ */
+  .nav {
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr 1fr;
+    border-bottom: var(--border-thick);
+  }
+  .nav-logo {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.16em;
+    display: flex; align-items: center; justify-content: center;
+    border-right: var(--border-thick);
+    text-align: center;
+    line-height: 1.05;
+  }
+  .nav-item {
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-right: var(--border);
+    font-weight: 900;
+  }
+  .nav-item:last-child { border-right: none; }
+  .nav-item.red    { background: var(--red);    color: var(--white); }
+  .nav-item.blue   { background: var(--blue);   color: var(--white); }
+  .nav-item.yellow { background: var(--yellow); color: var(--black); }
+
+  /* ═══ HERO ═══ */
+  .hero {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+  }
+  .hero-title-block {
+    border-right: var(--border-thick);
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+  .hero-title {
+    background: var(--white);
+    padding: 44px 56px;
+    border-bottom: var(--border);
+    display: flex;
+    align-items: center;
+  }
+  .hero-title h1 {
+    font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
+    font-size: 116px;
+    letter-spacing: 0.04em;
+    line-height: 0.86;
+    color: var(--black);
+    text-transform: uppercase;
+  }
+  .hero-title h1 span { color: var(--blue); }
+  .hero-meta {
+    background: var(--black);
+    color: var(--white);
+    padding: 20px 56px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 18px;
+    letter-spacing: 0.12em;
+    display: flex; align-items: center; gap: 28px;
+    flex-wrap: wrap;
+  }
+  .hero-meta span { opacity: 0.82; }
+  .hero-meta .tag {
+    background: var(--yellow);
+    color: var(--black);
+    padding: 3px 14px;
+    font-weight: 900;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 20px;
+    opacity: 1;
+  }
+
+  .hero-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .hero-block {
+    border-bottom: var(--border);
+    display: flex; align-items: center; justify-content: center;
+    padding: 18px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.05;
+  }
+  .hero-block:last-child { border-bottom: none; }
+  .hero-block.red    { background: var(--red);    color: var(--white); }
+  .hero-block.yellow { background: var(--yellow); color: var(--black); }
+  .hero-block.blue   { background: var(--blue);   color: var(--white); }
+
+  /* ═══ BOTTOM STRIPE ═══ */
+  .stripe {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-top: var(--border-thick);
+  }
+  .stripe-seg { border-right: var(--border); }
+  .stripe-seg:last-child { border-right: none; }
+  .stripe-seg.red    { background: var(--red); }
+  .stripe-seg.black  { background: var(--black); }
+  .stripe-seg.yellow { background: var(--yellow); }
+  .stripe-seg.blue   { background: var(--blue); }
+  .stripe-seg.white  { background: var(--white); }
+</style>
+</head>
+<body>
+<div class="card">
+  <nav class="nav">
+    <div class="nav-logo">CLAUDE FABLE 5</div>
+    <div class="nav-item red">Identity</div>
+    <div class="nav-item blue">Safety</div>
+    <div class="nav-item yellow">Tools</div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-title-block">
+      <div class="hero-title">
+        <h1>SYSTEM<br><span>PROMPT</span></h1>
+      </div>
+      <div class="hero-meta">
+        <span class="tag">MYTHOS CLASS</span>
+        <span>CUTOFF: JAN 2026</span>
+        <span class="tag">DE STIJL</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-block red">MOST INTELLIGENT<br>G.A. MODEL</div>
+      <div class="hero-block yellow">DUAL-USE SAFETY<br>ACTIVE</div>
+      <div class="hero-block blue">MYTHOS-CLASS<br>TIER</div>
+    </div>
+  </div>
+
+  <div class="stripe">
+    <div class="stripe-seg white"></div>
+    <div class="stripe-seg red"></div>
+    <div class="stripe-seg black"></div>
+    <div class="stripe-seg yellow"></div>
+    <div class="stripe-seg blue"></div>
+  </div>
+</div>
+</body>
+</html>
