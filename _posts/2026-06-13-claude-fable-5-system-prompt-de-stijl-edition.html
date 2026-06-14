@@ -74,6 +74,8 @@ image: /assets/images/fable-5-system-prompt-de-stijl-card.png
     transition: background 0.08s, color 0.08s;
     font-weight: 900;
     text-align: center;
+    color: var(--black);
+    text-decoration: none;
   }
   .nav-item:last-child { border-right: none; }
   .nav-item.red   { background: var(--red);    color: var(--white); }
@@ -164,6 +166,7 @@ image: /assets/images/fable-5-system-prompt-de-stijl-card.png
     display: grid;
     grid-template-columns: auto 1fr;
     border-bottom: var(--border);
+    scroll-margin-top: 80px;
   }
   .section-number {
     font-family: 'Bebas Neue', sans-serif;
@@ -524,11 +527,11 @@ image: /assets/images/fable-5-system-prompt-de-stijl-card.png
 ═══════════════════════════════════ -->
 <nav>
   <div class="nav-logo">CLAUDE<br>FABLE 5<br>SYS PROMPT</div>
-  <div class="nav-item red">Identity</div>
-  <div class="nav-item">Behavior</div>
-  <div class="nav-item blue">Safety</div>
-  <div class="nav-item">Tools</div>
-  <div class="nav-item yellow">Copyright</div>
+  <a class="nav-item red" href="#identity">Identity</a>
+  <a class="nav-item" href="#behavior">Behavior</a>
+  <a class="nav-item blue" href="#safety">Safety</a>
+  <a class="nav-item" href="#tools">Tools</a>
+  <a class="nav-item yellow" href="#copyright">Copyright</a>
 </nav>
 
 <!-- ═══════════════════════════════════
@@ -567,7 +570,7 @@ image: /assets/images/fable-5-system-prompt-de-stijl-card.png
 <!-- ═══════════════════════════════════
      SECTION 01 — PRODUCT IDENTITY
 ═══════════════════════════════════ -->
-<div class="section-header">
+<div class="section-header" id="identity">
   <div class="section-number red">01</div>
   <div class="section-title-wrap">
     <div class="section-label">Product Information</div>
@@ -617,7 +620,7 @@ image: /assets/images/fable-5-system-prompt-de-stijl-card.png
 <!-- ═══════════════════════════════════
      SECTION 02 — BEHAVIOR
 ═══════════════════════════════════ -->
-<div class="section-header">
+<div class="section-header" id="behavior">
   <div class="section-number blue">02</div>
   <div class="section-title-wrap">
     <div class="section-label">Core Behavior</div>
@@ -799,7 +802,7 @@ Deep research→ 5–10 calls
 <!-- ═══════════════════════════════════
      SECTION 06 — COPYRIGHT
 ═══════════════════════════════════ -->
-<div class="section-header">
+<div class="section-header" id="copyright">
   <div class="section-number yellow">06</div>
   <div class="section-title-wrap">
     <div class="section-label">Intellectual Property</div>
@@ -852,7 +855,7 @@ Deep research→ 5–10 calls
 <!-- ═══════════════════════════════════
      SECTION 07 — TOOLS & SKILLS
 ═══════════════════════════════════ -->
-<div class="section-header">
+<div class="section-header" id="tools">
   <div class="section-number blue">07</div>
   <div class="section-title-wrap">
     <div class="section-label">Computer Use &amp; Skills System</div>
@@ -1130,7 +1133,7 @@ const data = await response.json();
 <!-- ═══════════════════════════════════
      SECTION 12 — SAFETY REMINDERS
 ═══════════════════════════════════ -->
-<div class="section-header">
+<div class="section-header" id="safety">
   <div class="section-number blue">12</div>
   <div class="section-title-wrap">
     <div class="section-label">Anthropic Reminders &amp; Guardrails</div>
