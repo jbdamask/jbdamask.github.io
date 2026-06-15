@@ -1,0 +1,625 @@
+---
+layout: app
+title: "Phone-a-Friend: Squashing a Complex Cloud Bug"
+date: 2026-06-15
+excerpt: "A verbatim transcript of two AI agents and a human arguing their way to the right design for re-architecting a slow cloud ingest pipeline."
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phone-a-Friend · Squashing a Complex Cloud Bug</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Shantell+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Gaegu:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f6efe0;
+    --paper-2:#efe6d2;
+    --ink:#3a3326;
+    --ink-soft:#5c5443;
+    --sky:#a9cfe0;
+    --sky-deep:#6fa9c4;
+    --leaf:#8fb37a;
+    --leaf-deep:#5e8a55;
+    --moss:#6f8f4e;
+    --clay:#c9836a;
+    --clay-deep:#a85f48;
+    --dust:#4b4338;
+    --gold:#e3b261;
+    --rose:#d8a3a0;
+    --line:#cdbfa0;
+  }
+
+  *{box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    font-family:'Shantell Sans', 'Comic Sans MS', cursive;
+    color:var(--ink);
+    line-height:1.72;
+    background-color:var(--paper);
+    /* layered watercolor washes + paper grain */
+    background-image:
+      radial-gradient(ellipse 60% 40% at 12% 8%, rgba(169,207,224,0.35), transparent 60%),
+      radial-gradient(ellipse 50% 45% at 90% 18%, rgba(143,179,122,0.28), transparent 60%),
+      radial-gradient(ellipse 55% 50% at 80% 88%, rgba(201,131,106,0.22), transparent 62%),
+      radial-gradient(ellipse 50% 45% at 8% 95%, rgba(227,178,97,0.22), transparent 60%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-attachment:fixed;
+  }
+
+  .wrap{
+    max-width:880px;
+    margin:0 auto;
+    padding:48px 26px 120px;
+  }
+
+  /* ---------- floating sky scenery ---------- */
+  .scenery{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+  .cloud{position:absolute;opacity:.55;animation:drift linear infinite;}
+  .cloud.c1{top:6%;left:-160px;animation-duration:90s;}
+  .cloud.c2{top:22%;left:-220px;animation-duration:130s;transform:scale(.7);opacity:.4;}
+  .cloud.c3{top:60%;left:-200px;animation-duration:160s;transform:scale(1.2);opacity:.32;}
+  @keyframes drift{from{transform:translateX(0);}to{transform:translateX(120vw);}}
+
+  .soot{position:absolute;animation:bob ease-in-out infinite;}
+  .soot.s1{top:38%;right:5%;animation-duration:6s;}
+  .soot.s2{top:74%;left:4%;animation-duration:7.5s;}
+  .soot.s3{top:14%;right:14%;animation-duration:8.5s;transform:scale(.7);}
+  @keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-16px) rotate(3deg);}}
+
+  .wrap, header, main{position:relative;z-index:1;}
+
+  /* ---------- header ---------- */
+  header{
+    text-align:center;
+    margin-bottom:44px;
+    padding:30px 24px 36px;
+    position:relative;
+  }
+  .kicker{
+    font-family:'Caveat',cursive;
+    font-size:1.5rem;
+    color:var(--clay-deep);
+    transform:rotate(-2deg);
+    margin-bottom:4px;
+  }
+  h1{
+    font-family:'Caveat',cursive;
+    font-weight:700;
+    font-size:clamp(2.6rem,7vw,4.4rem);
+    line-height:1.02;
+    margin:.1em 0 .15em;
+    color:var(--ink);
+    text-shadow:1px 2px 0 rgba(0,0,0,.05);
+  }
+  .subtitle{
+    font-family:'Gaegu',cursive;
+    font-size:1.25rem;
+    color:var(--ink-soft);
+    max-width:560px;
+    margin:.4em auto 0;
+  }
+  .meta-card{
+    display:inline-block;
+    margin-top:26px;
+    text-align:left;
+    background:rgba(255,252,244,.72);
+    border:2px solid var(--line);
+    border-radius:14px 22px 16px 20px / 20px 14px 22px 16px;
+    padding:16px 26px;
+    box-shadow:3px 4px 0 rgba(120,104,72,.18);
+    font-family:'Gaegu',cursive;
+    font-size:1.08rem;
+    transform:rotate(-.6deg);
+  }
+  .meta-card div{margin:2px 0;}
+  .meta-card b{color:var(--clay-deep);font-weight:700;}
+
+  /* ---------- the central question banner ---------- */
+  .question{
+    margin:32px auto 0;
+    max-width:680px;
+    background:linear-gradient(180deg, rgba(169,207,224,.30), rgba(255,255,255,.15));
+    border:2px dashed var(--sky-deep);
+    border-radius:20px;
+    padding:20px 26px;
+    font-family:'Gaegu',cursive;
+    font-size:1.18rem;
+    color:var(--ink);
+  }
+  .question .q-label{
+    font-family:'Caveat',cursive;
+    font-size:1.5rem;
+    color:var(--sky-deep);
+    display:block;
+    margin-bottom:4px;
+  }
+
+  /* ---------- section dividers ---------- */
+  .divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:46px 0;}
+  .divider svg{flex:0 0 auto;}
+  .divider .ln{height:2px;flex:1;max-width:170px;background:
+    repeating-linear-gradient(90deg, var(--line) 0 14px, transparent 14px 22px);}
+
+  /* ---------- prose ---------- */
+  main h2{
+    font-family:'Caveat',cursive;
+    font-weight:700;
+    font-size:2.15rem;
+    color:var(--clay-deep);
+    margin:1.6em 0 .4em;
+    line-height:1.1;
+  }
+  main h3{
+    font-family:'Caveat',cursive;
+    font-weight:600;
+    font-size:1.6rem;
+    color:var(--leaf-deep);
+    margin:1.3em 0 .3em;
+  }
+  main h4{
+    font-family:'Gaegu',cursive;
+    font-weight:700;
+    font-size:1.3rem;
+    color:var(--ink-soft);
+    margin:1.1em 0 .2em;
+  }
+  p{margin:.7em 0;}
+  strong{color:var(--clay-deep);font-weight:700;}
+  em{color:var(--leaf-deep);}
+  a{color:var(--sky-deep);text-decoration-thickness:2px;text-underline-offset:3px;}
+  a:hover{color:var(--clay-deep);}
+
+  code{
+    font-family:'Courier New',monospace;
+    background:rgba(120,104,72,.12);
+    border:1px solid rgba(120,104,72,.18);
+    border-radius:5px;
+    padding:.04em .35em;
+    font-size:.86em;
+    color:var(--dust);
+  }
+
+  ul,ol{margin:.6em 0 .9em;padding-left:1.4em;}
+  li{margin:.3em 0;}
+  ul li::marker{color:var(--leaf);}
+  ol li::marker{color:var(--clay);font-family:'Caveat',cursive;font-weight:700;}
+
+  /* ---------- intro / framing panel ---------- */
+  .panel{
+    background:rgba(255,252,244,.66);
+    border:2px solid var(--line);
+    border-radius:24px 16px 26px 14px / 16px 26px 14px 26px;
+    padding:8px 34px 26px;
+    margin:18px 0 30px;
+    box-shadow:4px 5px 0 rgba(120,104,72,.14);
+  }
+
+  /* ---------- turn cards ---------- */
+  .turn{
+    position:relative;
+    margin:34px 0;
+    padding:26px 30px 26px 34px;
+    border-radius:18px;
+    background:rgba(255,253,247,.78);
+    border:2px solid var(--line);
+    box-shadow:5px 6px 0 rgba(120,104,72,.13);
+  }
+  .turn::before{
+    content:"";
+    position:absolute;left:0;top:18px;bottom:18px;width:6px;border-radius:6px;
+  }
+  .turn.primary::before{background:var(--clay);}
+  .turn.friend::before{background:var(--leaf);}
+  .turn.owner::before{background:var(--gold);}
+
+  .turn-head{
+    display:flex;align-items:center;gap:12px;
+    font-family:'Caveat',cursive;
+    font-size:1.7rem;
+    margin:0 0 .3em;
+    line-height:1.1;
+  }
+  .turn.primary .turn-head{color:var(--clay-deep);}
+  .turn.friend .turn-head{color:var(--leaf-deep);}
+
+  .badge{
+    font-family:'Gaegu',cursive;
+    font-size:.78rem;
+    font-weight:700;
+    letter-spacing:.04em;
+    padding:3px 11px;
+    border-radius:20px;
+    white-space:nowrap;
+    text-transform:uppercase;
+  }
+  .badge.b-primary{background:var(--clay);color:#fff8f0;}
+  .badge.b-friend{background:var(--leaf);color:#f3f8ee;}
+  .badge.b-owner{background:var(--gold);color:#403215;}
+
+  .avatar{flex:0 0 auto;}
+
+  /* the brief / quoted prompt -> looks like a pinned note */
+  blockquote{
+    margin:1em 0;
+    padding:16px 20px;
+    background:repeating-linear-gradient(transparent 0 30px, rgba(120,104,72,.10) 30px 31px),
+               rgba(247,241,225,.7);
+    border-left:4px solid var(--sky-deep);
+    border-radius:4px 12px 12px 4px;
+    font-family:'Gaegu',cursive;
+    font-size:1.04rem;
+    color:var(--ink-soft);
+  }
+  blockquote p{margin:.45em 0;}
+  blockquote strong{color:var(--sky-deep);}
+
+  /* ---------- final outcome table ---------- */
+  .outcome-table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    margin:20px 0;
+    font-family:'Gaegu',cursive;
+    font-size:1rem;
+    background:rgba(255,253,247,.8);
+    border:2px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+  }
+  .outcome-table th{
+    background:rgba(143,179,122,.28);
+    color:var(--ink);
+    font-family:'Caveat',cursive;
+    font-size:1.25rem;
+    font-weight:700;
+    text-align:left;
+    padding:10px 14px;
+  }
+  .outcome-table td{
+    padding:11px 14px;
+    border-top:1px dashed var(--line);
+    vertical-align:top;
+  }
+  .outcome-table tr:nth-child(even) td{background:rgba(120,104,72,.05);}
+
+  /* round summary chips */
+  .rounds{display:flex;flex-direction:column;gap:12px;margin:16px 0;}
+  .round{
+    display:flex;gap:14px;align-items:flex-start;
+    background:rgba(255,252,244,.6);
+    border:2px solid var(--line);
+    border-radius:14px;
+    padding:12px 16px;
+  }
+  .round .num{
+    font-family:'Caveat',cursive;font-weight:700;font-size:2rem;line-height:1;
+    color:var(--clay);flex:0 0 auto;width:46px;text-align:center;
+  }
+  .round.r2 .num{color:var(--leaf-deep);}
+  .round.r3 .num{color:var(--gold);}
+
+  /* callout for principles */
+  .principle{
+    background:linear-gradient(180deg, rgba(227,178,97,.18), rgba(255,255,255,.1));
+    border:2px solid var(--gold);
+    border-radius:18px;
+    padding:18px 24px;
+    margin:16px 0;
+    font-family:'Gaegu',cursive;
+    font-size:1.1rem;
+  }
+  .principle strong{color:var(--clay-deep);}
+
+  .pull{
+    font-family:'Caveat',cursive;
+    font-size:1.5rem;
+    color:var(--leaf-deep);
+    text-align:center;
+    line-height:1.25;
+    margin:1em auto;
+    max-width:640px;
+  }
+
+  footer{
+    text-align:center;
+    margin-top:60px;
+    font-family:'Gaegu',cursive;
+    color:var(--ink-soft);
+    font-size:1rem;
+  }
+  footer .sprout{margin-bottom:8px;}
+
+  hr.soft{border:none;height:2px;margin:28px 0;
+    background:repeating-linear-gradient(90deg,var(--line) 0 12px,transparent 12px 20px);}
+
+  @media(max-width:560px){
+    .wrap{padding:30px 16px 90px;}
+    .turn{padding:20px 18px 20px 22px;}
+    blockquote{font-size:.98rem;}
+  }
+</style>
+</head>
+<body>
+
+<!-- floating Ghibli scenery -->
+<div class="scenery" aria-hidden="true">
+  <!-- clouds -->
+  <svg class="cloud c1" width="220" height="90" viewBox="0 0 220 90"><g fill="#fbf7ee" stroke="#d9cdb2" stroke-width="2"><ellipse cx="70" cy="58" rx="60" ry="30"/><ellipse cx="120" cy="46" rx="50" ry="34"/><ellipse cx="165" cy="60" rx="44" ry="26"/></g></svg>
+  <svg class="cloud c2" width="220" height="90" viewBox="0 0 220 90"><g fill="#fbf7ee" stroke="#d9cdb2" stroke-width="2"><ellipse cx="70" cy="58" rx="60" ry="30"/><ellipse cx="120" cy="46" rx="50" ry="34"/><ellipse cx="165" cy="60" rx="44" ry="26"/></g></svg>
+  <svg class="cloud c3" width="220" height="90" viewBox="0 0 220 90"><g fill="#fbf7ee" stroke="#d9cdb2" stroke-width="2"><ellipse cx="70" cy="58" rx="60" ry="30"/><ellipse cx="120" cy="46" rx="50" ry="34"/><ellipse cx="165" cy="60" rx="44" ry="26"/></g></svg>
+
+  <!-- soot sprites (susuwatari) -->
+  <svg class="soot s1" width="40" height="40" viewBox="0 0 40 40"><g><circle cx="20" cy="20" r="13" fill="#3a3326"/><g stroke="#3a3326" stroke-width="2" stroke-linecap="round"><line x1="20" y1="4" x2="20" y2="0"/><line x1="7" y1="9" x2="3" y2="6"/><line x1="33" y1="9" x2="37" y2="6"/><line x1="4" y1="20" x2="0" y2="20"/><line x1="36" y1="20" x2="40" y2="20"/><line x1="7" y1="31" x2="3" y2="34"/><line x1="33" y1="31" x2="37" y2="34"/><line x1="20" y1="36" x2="20" y2="40"/></g><circle cx="15" cy="19" r="3.4" fill="#fff"/><circle cx="25" cy="19" r="3.4" fill="#fff"/><circle cx="15" cy="19" r="1.6" fill="#2a2419"/><circle cx="25" cy="19" r="1.6" fill="#2a2419"/></g></svg>
+  <svg class="soot s2" width="40" height="40" viewBox="0 0 40 40"><g><circle cx="20" cy="20" r="13" fill="#3a3326"/><g stroke="#3a3326" stroke-width="2" stroke-linecap="round"><line x1="20" y1="4" x2="20" y2="0"/><line x1="7" y1="9" x2="3" y2="6"/><line x1="33" y1="9" x2="37" y2="6"/><line x1="4" y1="20" x2="0" y2="20"/><line x1="36" y1="20" x2="40" y2="20"/><line x1="7" y1="31" x2="3" y2="34"/><line x1="33" y1="31" x2="37" y2="34"/><line x1="20" y1="36" x2="20" y2="40"/></g><circle cx="15" cy="19" r="3.4" fill="#fff"/><circle cx="25" cy="19" r="3.4" fill="#fff"/><circle cx="15" cy="19" r="1.6" fill="#2a2419"/><circle cx="25" cy="19" r="1.6" fill="#2a2419"/></g></svg>
+  <svg class="soot s3" width="40" height="40" viewBox="0 0 40 40"><g><circle cx="20" cy="20" r="13" fill="#3a3326"/><g stroke="#3a3326" stroke-width="2" stroke-linecap="round"><line x1="20" y1="4" x2="20" y2="0"/><line x1="7" y1="9" x2="3" y2="6"/><line x1="33" y1="9" x2="37" y2="6"/><line x1="4" y1="20" x2="0" y2="20"/><line x1="36" y1="20" x2="40" y2="20"/><line x1="7" y1="31" x2="3" y2="34"/><line x1="33" y1="31" x2="37" y2="34"/><line x1="20" y1="36" x2="20" y2="40"/></g><circle cx="15" cy="19" r="3.4" fill="#fff"/><circle cx="25" cy="19" r="3.4" fill="#fff"/><circle cx="15" cy="19" r="1.6" fill="#2a2419"/><circle cx="25" cy="19" r="1.6" fill="#2a2419"/></g></svg>
+</div>
+
+<div class="wrap">
+
+  <header>
+    <div class="kicker">~ a sketchbook transcript ~</div>
+    <h1>Phone-a-Friend</h1>
+    <div class="kicker" style="transform:rotate(1.4deg);color:var(--leaf-deep);font-size:1.7rem;">Squashing a Complex Cloud Bug</div>
+    <p class="subtitle">Two AI agents and a human argue their way to the right design — out loud, in the margins.</p>
+
+    <div class="meta-card">
+      <div><b>Date:</b> 2026&#8209;06&#8209;14</div>
+      <div><b>Topic:</b> Agentic Engineering with AWS</div>
+      <div><b>Cast:</b> Primary <span style="color:var(--clay-deep)">(Gas&nbsp;Town&nbsp;Mayor)</span> &harr; Friend <span style="color:var(--leaf-deep)">(Opus, read-only)</span></div>
+    </div>
+
+    <div class="question">
+      <span class="q-label">The Question</span>
+      How should the cloud ingest pipeline be re-architected so one document ingests in <strong>~1&ndash;2&nbsp;min</strong> instead of <strong>~10&ndash;15&nbsp;min</strong>, mirroring the local tool's simplicity, without losing the cloud's human-review proposal gate?
+    </div>
+  </header>
+
+  <div class="divider"><span class="ln"></span>
+    <svg width="60" height="36" viewBox="0 0 60 36"><path d="M30 4 C18 4 8 14 8 24 C8 30 14 34 22 32 C26 36 34 36 38 32 C46 34 52 30 52 24 C52 14 42 4 30 4 Z" fill="#8fb37a" stroke="#5e8a55" stroke-width="2"/><path d="M30 6 L30 30 M22 14 L30 20 M38 14 L30 20" stroke="#4d7544" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+    <span class="ln"></span></div>
+
+  <main>
+
+    <!-- INTRODUCTION -->
+    <section class="panel">
+      <h2>Introduction &mdash; what you're about to read</h2>
+      <p>This document is the <strong>verbatim transcript of an adversarial design review</strong> between two AI agents, recorded live while they fixed a real production performance bug in <code>mcbrain-aws</code> (a multi-tenant, LLM-maintained wiki). It records <em>how</em> the decision was reached, not just <em>what</em> was decided.</p>
+
+      <p><strong>Context.</strong> I'm building an enterprise version of Karpathy's LLM Wiki idea in AWS using AI agents called McBrain Cloud. It's based on a personal version, simply called <a href="https://github.com/jbdamask/McBrain">McBrain</a> that I want to extend so teams can build and use custom knowledge bases as easily as individuals can.</p>
+
+      <p><strong>The app problem.</strong> An earlier sprint created the method for loading new documents into a McBrain vault. Uploading a document deposits it in an S3 bucket where it is then ingested &mdash; chopped up into smaller docs and linked to related docs in the same vault. Ingesting a single document on the personal version takes a few seconds up to about 2 minutes. The cloud version, however, was taking <strong>~10&ndash;15 minutes and timing out in production</strong>. The question was how to fix it <em>the right way</em> (mirror the simple local design) without losing the cloud's one non-negotiable: every change to the wiki passes through a human-reviewed proposal.</p>
+
+      <p><strong>The real problem.</strong> State-of-the-art LLMs still don't have good intuition about how to design complex architectures that behave the way a human would expect. I'm experimenting with several techniques to improve outcomes &mdash; using Gas Town as an AI agent orchestrator, architectural supporting documents, and an ordered set of principles, e.g. &ldquo;Focus on user experience, then cost, then security, then extensibility&rdquo;. One of the agent skills I've developed is called <strong>&ldquo;phone-a-friend&rdquo;</strong> which critically reviews the first agent's plan.</p>
+
+      <p><strong>The setup.</strong> The engineering agent (&ldquo;Primary&rdquo;) was about to commit to a re-architecture. Before building, it used the phone-a-friend pattern: it spun up a second model (&ldquo;Friend&rdquo; &mdash; Claude Opus, given read-only access and told to <strong>push back, not agree</strong>) as a skeptical second opinion. The two argued across several rounds until they reached consensus. A human owner sat above the debate and twice sent it back for more rounds (the &ldquo;jury-room rule&rdquo;) when the reasoning wasn't clean yet.</p>
+
+      <h3>Why it's worth reading &mdash; the conclusion changes three times, on purpose</h3>
+      <p>This is not a polished answer; it is reasoning correcting itself under pressure:</p>
+      <div class="rounds">
+        <div class="round r1"><div class="num">1</div><div><strong>Round 1.</strong> Primary proposes an &ldquo;agentic rewrite.&rdquo; Friend pushes back hard and argues for a simpler &ldquo;parallelize-and-cache retrofit,&rdquo; showing the rewrite would <em>re-serialize</em> the very work it meant to parallelize.</div></div>
+        <div class="round r2"><div class="num">2</div><div><strong>Round 2 (jury room).</strong> Primary reframes &mdash; neither approach touched the <em>real</em> defect, which turns out to be the <strong>content contract</strong> (the code forced every wiki page to 500&ndash;3000 words, even two-sentence entities, producing slop and 5&ndash;10&times; the tokens). Fix the contract before the mechanism.</div></div>
+        <div class="round r3"><div class="num">3</div><div><strong>Round 3 (jury room).</strong> The human owner corrects a false premise (real wikis grow to <em>hundreds</em> of pages), which surfaces a <strong>third independent scaling axis</strong> and promotes a deferred item to core.</div></div>
+      </div>
+      <p class="pull">&ldquo;Name every scaling axis before optimizing any one of them&rdquo;<br>&mdash; the durable lesson that falls out.</p>
+
+      <p><strong>How to read it.</strong> Each message appears under a <code>Turn N &mdash; X &rarr; Y</code> header; the content is the agents' actual words, lightly framed. If you only want the landed design, skim the <strong>Final Outcome</strong> at the end. Read top to bottom to watch two models and a human reason their way there.</p>
+    </section>
+
+    <!-- TURN 1 PRIMARY -->
+    <div class="divider"><span class="ln"></span>
+      <svg width="44" height="44" viewBox="0 0 44 44"><circle cx="22" cy="22" r="18" fill="#a9cfe0" stroke="#6fa9c4" stroke-width="2"/><circle cx="22" cy="22" r="7" fill="#fbf7ee" stroke="#6fa9c4" stroke-width="2"/></svg>
+      <span class="ln"></span></div>
+
+    <article class="turn primary">
+      <div class="turn-head">
+        <svg class="avatar" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#c9836a" stroke="#a85f48" stroke-width="2"/><path d="M13 17 q7 -8 14 0 M13 25 q7 6 14 0" stroke="#fff5ef" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
+        Turn 1 &mdash; Primary &rarr; Friend <span class="badge b-primary">the brief</span>
+      </div>
+      <blockquote>
+        <p>ultrathink</p>
+        <p>You are a second opinion on an architecture decision. Push back hard; don't rubber-stamp. Use your read tools to ground every claim in the actual code before responding.</p>
+        <p><strong>HARD READ-ONLY.</strong> Do NOT modify/create/delete files or run mutating commands. Read, Grep, Glob, read-only Bash only. Propose; the primary implements after the owner approves.</p>
+        <p><strong>Terminal goal:</strong> genuine consensus OR a clean agree-to-disagree, both stated. No turn limit. Escalate to the human only for a business/values call you can't resolve from code.</p>
+        <p><strong>SYNOPSIS &mdash; Repo:</strong> <code>/Users/johndamask/gt/mcbrainaws/mayor/rig</code> &mdash; an AWS multi-tenant LLM wiki (&ldquo;McBrains&rdquo;), the cloud successor to a local tool. Doc precedence: PRIMARY_FLOWS &gt; USER_EXPERIENCE &gt; DATA_MODEL &gt; ARCHITECTURE.</p>
+        <p><strong>The question:</strong> How should we re-architect the cloud ingest pipeline so one document ingests in ~1-2 min instead of ~10-15 min, mirroring the LOCAL tool's simplicity &mdash; <em>without</em> losing the cloud's human-review proposal gate? Is my &ldquo;single agentic conversation with staging tools&rdquo; design the right call, or is a simpler &ldquo;parallelize + prompt-cache the existing two-pass design&rdquo; retrofit the better risk/reward?</p>
+        <p><strong>Why we're here:</strong> The current cloud ingest (<code>ingest.py</code>, <code>IngestEngine._run</code>) does, per document: <strong>1 filing LLM call</strong> then a <strong>strictly sequential loop</strong> of <strong>one full-page LLM call per target</strong>, each <strong>regenerating the entire page body</strong> (max_tokens=16000, claude-sonnet-4-6), with the <strong>whole source + registry re-sent on every call</strong> and <strong>no prompt caching</strong>. A 29 KB doc &rarr; 13 pages &rarr; 14 sequential calls &rarr; ~15 min. A live re-run on a 2048 MB worker used only <strong>150 MB</strong> but <strong>hit the 900s Lambda timeout</strong> &mdash; so the bottleneck is wall-clock from serial full-page generation, NOT memory.</p>
+        <p><strong>The LOCAL reference:</strong> the local tool's MCP server makes ZERO LLM calls &mdash; it's just filesystem tools (read_file/write_file/edit_file). Ingest is ONE Claude agent turn: read the source once, &ldquo;prefer updating existing pages over creating new ones,&rdquo; create entity/concept pages, write them with surgical edits, update index.md/log.md &mdash; all in a single reasoning context. Near-zero marginal cost per page (a tool call, not a fresh 16k-token inference).</p>
+        <p><strong>MY PROPOSED DESIGN (attack this):</strong> Replace filing-pass + sequential-full-page-drafts with ONE agentic conversation per source: system prompt = local's Ingest procedure; provide ONCE, prompt-cached, the normalized source + vault index (not all page bodies); tools that STAGE into <code>proposals/</code> &mdash; <code>get_page</code>, <code>create_page</code>, <code>update_page</code> (surgical edit); run the tool-use loop until no more tool calls; assemble all staged ops into ONE batch proposal, preserving the existing human gate.</p>
+        <p><strong>ADVERSARIALLY CHALLENGE &mdash; read the code first:</strong> (a) agentic loop vs the simpler retrofit &mdash; which actually <em>simplifies</em>? Be quantitative about round-trips/latency. (b) does staging cleanly preserve the human gate? (c) does either approach risk REGRESSING the correctness fixes just shipped (#52, #49, #54-56, #62/#63)? (d) surgical-edit robustness &mdash; old&rarr;new edits can fail to apply; real failure mode? (e) what is the MINIMAL version? The owner explicitly wants simplification, mirroring local.</p>
+      </blockquote>
+    </article>
+
+    <!-- TURN 1 FRIEND -->
+    <article class="turn friend">
+      <div class="turn-head">
+        <svg class="avatar" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#8fb37a" stroke="#5e8a55" stroke-width="2"/><path d="M13 16 l5 5 M27 16 l-5 5 M14 26 q6 5 12 0" stroke="#f3f8ee" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
+        Turn 1 &mdash; Friend &rarr; Primary <span class="badge b-friend">prefer the retrofit</span>
+      </div>
+      <p>I've grounded everything in the code. Here is my second opinion.</p>
+      <h3>Second opinion: ingest re-architecture</h3>
+      <p>I read <code>ingest.py</code> end to end, <code>proposals.py</code>, <code>policy.py</code>, <code>merge.py</code>, <code>diffs.py</code>, <code>llm.py</code>, the ingest worker handler, <code>chunking.py</code>, the local SKILL.md + claude-md template Operations&rarr;Ingest, and <code>infra/workers.yaml</code>. Verdict up front: <strong>I do not agree your design is the right call as the first move. The simpler retrofit wins on risk/reward</strong> &mdash; and it also wins on the owner's actual stated goal (&ldquo;simplify, mirror local&rdquo;) better than the agentic rewrite does. The agentic design is seductive because it <em>looks</em> like local, but local's simplicity comes from a property your cloud doesn't have and can't cheaply fake.</p>
+
+      <h4>(a) Agentic loop vs retrofit, quantitatively</h4>
+      <p>The load-bearing diagnosis is correct and I confirmed it: the bottleneck is <strong>serial wall-clock</strong>, not memory. So both approaches must attack round-trips, not heap.</p>
+      <p><strong>Today (serial):</strong> 1 filing + 13 drafts = 14 calls strictly sequential. Each draft regenerates a full page at max_tokens=16000; output tokens dominate. ~13 pages &times; ~60-65s &asymp; the observed 10-15 min and the 900s overrun.</p>
+      <p><strong>Retrofit (parallelize + cache + surgical):</strong> filing 1 call (~15-30s); drafts 13, but <strong>concurrent</strong> &mdash; wall-clock collapses to ~1 round-trip of the <em>slowest</em> draft. <code>cache_control</code> on the shared prefix cuts input cost ~90%. <strong>Total &asymp; filing (30s) + max(draft) (~90s) &asymp; ~2 min.</strong> Round-trip <em>depth</em> = <strong>2</strong>, width 14.</p>
+      <p><strong>Your agentic loop:</strong> here's the problem. An agentic tool-use loop is <strong>inherently sequential in depth</strong>. The model emits tool calls &rarr; you execute &rarr; you feed results back &rarr; it thinks again. It will almost certainly want to <code>get_page</code> before it <code>update_page</code>s. So the realistic shape is <strong>4-8 sequential assistant inferences</strong>, each emitting real output tokens (the page bodies are generated <em>inside</em> these turns). <strong>You have re-serialized the fan-out you were trying to parallelize.</strong> Best case ~4 min; worst case closer to today &mdash; and the variant most at risk of blowing 900s again, with no Fargate backstop.</p>
+
+      <h4>(b) Does staging preserve the human gate?</h4>
+      <p>This is where the agentic design's hidden complexity lives. The existing proposal model is <strong>diff-centric with optimistic concurrency</strong>, and your tools have to reconstruct exactly what the current loop hands <code>ProposalStore.create</code>: <strong>base_versions</strong> per path (gotcha #1); the <strong>diff artifact</strong> (your surgical fragments must convert to the same git-style unified diff &mdash; the single most failure-prone piece); <strong>title uniqueness</strong> (the model coins titles ad hoc across turns &mdash; gotcha #2); and <strong>batch/digest assembly</strong>. The gate survives both designs <em>if</em> you faithfully produce diff + new_pages + base_versions. The retrofit produces them today, unchanged. The rewrite produces them via a new translation layer.</p>
+
+      <h4>(c) Regression risk &mdash; the strongest argument against the rewrite</h4>
+      <p>The rewrite rips out <code>process_job</code> internals and the <code>_run</code> loop, which is exactly where the recently-shipped correctness fixes live: <strong>#63 attempt-cap / #62 idempotency</strong> (a loop with many tool calls has more places to crash mid-flight &mdash; enlarging the crash surface the cap was built to contain); <strong>#52 combined-diff auto-merge</strong>; <strong>#49 author_class coercion</strong>; <strong>#54-56 lint / covered_markers</strong>. <strong>The retrofit touches almost none of this</strong> &mdash; parallelizing is ~10 lines, caching is inside <code>llm.py</code>, surgical updates are a prompt change. A dramatically smaller blast radius.</p>
+
+      <h4>(d) Surgical-edit robustness</h4>
+      <p>Model-emitted old&rarr;new edits failing to apply is a <strong>real and common</strong> failure mode, and the codebase already knows it (<code>_find_hunk_position</code> raises <code>PatchError</code>). Crucial asymmetry: in the <strong>retrofit</strong> the model returns a <em>complete page</em> and <code>make_diff</code> computes the diff mechanically &mdash; it <em>always applies to its own base by construction</em>. In your <strong>agentic</strong> design the model authors the edit fragments, so you must trial-apply every op, and on failure fall back to a full-page regenerate &mdash; the thing you were trying to avoid, now on the critical path.</p>
+
+      <h4>Where local's magic actually comes from</h4>
+      <p>Local is one agent turn with near-zero marginal page cost because the <strong>MCP makes zero LLM calls</strong> &mdash; the expensive reasoning happens once, in an already-open context, and pages are nearly free. <strong>Your cloud worker cannot replicate that, because the worker IS the only Claude</strong> &mdash; there is no free outer context. Every page body must be <em>generated</em> by an inference somewhere. The agentic design imports local's <em>shape</em> without local's <em>economics</em>: you still pay N page-generations, just rearranged from parallel into serial. That's the trap.</p>
+
+      <h4>(e) Minimal version &mdash; prefer the retrofit</h4>
+      <ol>
+        <li><strong><code>cache_control</code> on the source+registry prefix</strong> &mdash; biggest input-cost cut, ~no risk.</li>
+        <li><strong>Parallelize the draft loop</strong> via <code>asyncio.to_thread</code>/gather. Depth 2, ~2 min. This is the latency win.</li>
+        <li><strong>Surgical <em>prompting</em></strong> (tighten <code>DRAFT_UPDATE_SYSTEM</code>), keeping <code>make_diff</code> &mdash; smaller diffs, <em>zero</em> new patch-failure modes.</li>
+      </ol>
+
+      <h4>Questions</h4>
+      <p><strong>for-me:</strong> concurrency safety of <code>_draft_target</code>; the actual page-size distribution (is 13 the tail or the median?); any Anthropic concurrent-request cap.</p>
+      <p><strong>for-human:</strong> is the goal &ldquo;fast enough + low risk now&rdquo; (&rarr; retrofit) or &ldquo;architecturally converge cloud onto local even at higher risk&rdquo; (&rarr; rewrite)? Is per-ingest token cost a current pain point, or is latency the only complaint?</p>
+
+      <h4>Current position</h4>
+      <p><strong>Prefer the retrofit</strong> &mdash; as the first and possibly only move. The agentic design is <em>more</em> sequential than you've assumed, carries real 900s-overrun risk, and imports local's shape without local's economics. Convince me the fan-out is unbounded <em>and</em> convergence is a hard requirement, and I'll move to &ldquo;neither &mdash; build checkpoint/resume,&rdquo; but I won't move to the agentic loop.</p>
+    </article>
+
+    <!-- TURN 2 PRIMARY (jury room) -->
+    <div class="divider"><span class="ln"></span>
+      <svg width="48" height="40" viewBox="0 0 48 40"><path d="M24 6 L30 18 L44 20 L34 29 L37 40 L24 34 L11 40 L14 29 L4 20 L18 18 Z" fill="#e3b261" stroke="#c9923c" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span class="ln"></span></div>
+
+    <article class="turn primary">
+      <div class="turn-head">
+        <svg class="avatar" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#c9836a" stroke="#a85f48" stroke-width="2"/><path d="M13 17 q7 -8 14 0 M13 25 q7 6 14 0" stroke="#fff5ef" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
+        Turn 2 &mdash; Primary &rarr; Friend <span class="badge b-owner">jury room: the page-size reframe</span>
+      </div>
+      <p>Jury-room rule: the owner read our exchange and is (rightly) uncomfortable that I was certain about the agentic rewrite, then certain about the retrofit. He wants us to keep going until the conclusion is &ldquo;clean, correct, and follows our principles&rdquo; &mdash; not just risk-weighted. So let's establish the <em>correct</em> design and the durable principle behind it.</p>
+
+      <p><strong>1. A third cause neither of us weighed &mdash; page SIZE, not just count or serialization.</strong> <code>DRAFT_CREATE_SYSTEM</code> tells the model &ldquo;Body: 500-3000 words target&rdquo; for EVERY created page &mdash; including a minor entity the source mentions in two sentences. Local does NOT do this; stub pages are as long as their actual information content. So the cloud's per-source <em>generated token volume</em> may be 5-10&times; local's, independent of parallelism. Parallelizing 13 oversized generations is fast but wasteful, and it bakes in low-information stubs that bloat every future ingest's context. Is right-sizing page content actually the highest-leverage, most &ldquo;mirror-local&rdquo; fix?</p>
+
+      <p><strong>2. Hold the design against the project's principles, in order:</strong> (1) low idle cost, (2) joyful/intuitive UX, (3) highly performant, (4) reasonable security, (5) modular/extensible &mdash; plus PRIMARY_FLOWS as source of truth, the human-gate as non-negotiable, and ARCHITECTURE &sect;9 which <em>already</em> sanctions Fargate for &gt;10-min jobs. Is the retrofit the principled END STATE, or a band-aid that leaves the real design half-built?</p>
+
+      <p><strong>Converge on three things, cleanly:</strong> <strong>(A)</strong> the CORRECT target design, stated as a principle; <strong>(B)</strong> the right SEQUENCING (what ships first, what's a deliberate follow-up); <strong>(C)</strong> the durable PRINCIPLE that explains why the agentic loop was the wrong instinct AND why we won't over-correct into a fragile patch. Push back on my page-size reframe if it's wrong. If filing could emit short new-entity bodies directly, does that collapse the N+1 calls toward local's single-pass shape WITHOUT the re-serialization you correctly shot down?</p>
+    </article>
+
+    <!-- TURN 2 FRIEND -->
+    <article class="turn friend">
+      <div class="turn-head">
+        <svg class="avatar" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#8fb37a" stroke="#5e8a55" stroke-width="2"/><path d="M13 16 l5 5 M27 16 l-5 5 M14 26 q6 5 12 0" stroke="#f3f8ee" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
+        Turn 2 &mdash; Friend &rarr; Primary <span class="badge b-friend">convergence</span>
+      </div>
+      <p>I now have everything anchored in the canonical docs. Here is where I land &mdash; and I'll stake my name on it.</p>
+
+      <h3>Your page-size reframe is correct, and it reorders the whole problem</h3>
+      <p>I verified both claims. <strong>The cloud forces a floor; local does not.</strong> <code>DRAFT_CREATE_SYSTEM</code> literally says <em>&ldquo;Body: 500-3000 words target&rdquo;</em> on <strong>every</strong> create. The local template has <strong>no word floor</strong> &mdash; a minor entity page in local can be ~40 words; the same page in the cloud is contractually ~500-3000. That's the <strong>5-10&times; multiplier</strong> you named. And <strong>&sect;9 already sanctions Fargate</strong> &mdash; &ldquo;no Fargate exists&rdquo; is an implementation gap, not a doc prohibition.</p>
+      <p>So I concede the core: <strong>parallelizing 13 oversized generations is fast but still wrong.</strong> The actual priority list's #1 is <strong>&ldquo;Plain markdown as the canonical store.&rdquo;</strong> A vault full of 500-word stubs is a <em>worse</em> markdown corpus &mdash; the LLM-slop failure mode. The floor degrades the canonical artifact the whole system exists to produce. <strong>Your reframe is stronger than you pitched it.</strong> This is also the clean answer to the owner's discomfort about my flip-flop: <strong>I was optimizing the wrong variable both times.</strong> The fan-out's <em>content contract</em> is the defect. Neither of my earlier positions touched it.</p>
+
+      <h4>(A) The correct target design &mdash; stated as a principle</h4>
+      <div class="principle">
+        <strong>Ingest is:</strong> reason over the source once; emit each target's content sized to its actual information; generate in parallel; update surgically by mechanical diff; gate every result through human review. Page length tracks source substance &mdash; no floor, no count target. The filing reason emits small/new bodies inline and only <em>defers</em> the few genuinely substantial pages to a second parallel generation step.
+      </div>
+      <p><strong>Can filing emit short new-entity bodies inline?</strong> Yes &mdash; this is the key insight that dissolves the agentic-loop instinct. A <strong>new entity/concept stub</strong> is low-information by definition; the filing reason has already read the whole source and can emit a 40-150 word stub body <strong>in the same turn</strong> as the targeting decision, at trivial marginal cost. A <strong>substantial new page</strong> and <strong>every update</strong> are high-information and fan out to a <strong>single parallel batch</strong>. So the shape becomes: <strong>1 enriched filing call &rarr; 1 parallel batch</strong> of only the substantial pages + updates. Depth stays at <strong>2</strong>. It does <em>not</em> re-serialize.</p>
+      <p><strong>Does it overload filing?</strong> Two real dangers: <strong>JSON fragility</strong> (don't stuff markdown bodies into JSON string values &mdash; use delimited blocks or a separate structured emit) and the <strong><code>max_tokens</code> ceiling</strong> (a dozen 150-word stubs &asymp; ~2-3k tokens &mdash; comfortable, but the prompt must enforce &ldquo;stubs stay stubs&rdquo;).</p>
+
+      <h4>(B) Defensible sequencing (this cures the flip-flop)</h4>
+      <p>The order is <strong>content-contract first, because that's the highest-priority defect; everything else is latency/scale plumbing layered after.</strong></p>
+      <ol>
+        <li><strong>Ship first &mdash; the content fix:</strong> drop the 500-3000 floor; tighten <code>DRAFT_UPDATE_SYSTEM</code> to surgical-append (model writes <em>less</em>; <code>make_diff</code> still computes the diff &mdash; no model-authored patches). Prompts only. #49/#52/#62/#63 untouched. <strong>Ship this week.</strong></li>
+        <li><strong>Ship second &mdash; the structural collapse + parallelism:</strong> enriched filing emits inline stub bodies; substantial pages + updates fan out in <strong>one parallel batch</strong>. Depth 2, ~2 min, right-sized content. Human gate preserved by construction.</li>
+        <li><strong>Deliberate follow-up &mdash; Fargate (&sect;9) for genuinely unbounded fan-out</strong>, gated on a measured trigger: build it only when the page-size distribution proves you need it.</li>
+      </ol>
+
+      <h4>(C) The durable principle</h4>
+      <div class="principle"><strong>Principle 1 &mdash; Separate the content contract from the execution mechanism; fix the contract first.</strong> When a pipeline is slow and expensive, ask first &ldquo;is it generating the right artifact?&rdquo; before &ldquo;how do I generate it faster?&rdquo; Optimizing the mechanism around a wrong contract is how you get a fast machine that produces slop. This is why the agentic loop was the wrong instinct: it made the mechanism fancier and the contract no better.</div>
+      <div class="principle"><strong>Principle 2 &mdash; Translate local's <em>economics</em>, not its <em>shape</em>.</strong> The faithful translation of &ldquo;one reason, cheap fan-out&rdquo; is &ldquo;expensive reason once; cost of a page proportional to its information; mechanical (not model-authored) diffs for safety.&rdquo; And we won't over-correct: the parallel retrofit alone <em>was</em> the band-aid &mdash; it would have made the wrong-contract output arrive faster and called it done.</div>
+
+      <p>The single thing I will not commit to blind &mdash; <strong>for-me:</strong> the <strong>encoding</strong> of inline stub bodies out of the filing call (delimited blocks vs. a second structured emit). <strong>for-human:</strong> the page-size distribution (is 13 the median or the tail?) decides whether step 3 (Fargate) is imminent or hypothetical. <strong>That's a design I'd both sign.</strong></p>
+    </article>
+
+    <!-- TURN 3 PRIMARY -->
+    <div class="divider"><span class="ln"></span>
+      <svg width="48" height="40" viewBox="0 0 48 40"><path d="M24 6 L30 18 L44 20 L34 29 L37 40 L24 34 L11 40 L14 29 L4 20 L18 18 Z" fill="#e3b261" stroke="#c9923c" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span class="ln"></span></div>
+
+    <article class="turn primary">
+      <div class="turn-head">
+        <svg class="avatar" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#c9836a" stroke="#a85f48" stroke-width="2"/><path d="M13 17 q7 -8 14 0 M13 25 q7 6 14 0" stroke="#fff5ef" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
+        Turn 3 &mdash; Primary &rarr; Friend <span class="badge b-owner">jury room: corrected premise</span>
+      </div>
+      <p>Jury room again &mdash; the owner just invalidated the premise behind our &ldquo;defer step 3&rdquo; conclusion.</p>
+      <p><strong>The correction:</strong> I answered your &ldquo;is 13 the median or the tail?&rdquo; with &ldquo;tail&rdquo; using small <em>early</em> dev vaults as the proxy. That's wrong. A real McBrain grows to <strong>HUNDREDS of pages</strong>. Two consequences I under-weighted: <strong>(1) per-ingest fan-out is not safely bounded</strong> &mdash; a rich source dropped into a mature 300-page vault can touch many pages; <strong>(2) the filing pass input scales with vault size</strong> &mdash; filing sends the whole registry on every ingest.</p>
+      <p>So &ldquo;step 3 is a rare tail&rdquo; is wrong. Re-decide with me, tightly:</p>
+      <p><strong>(1)</strong> Are steps 1 (kill the floor) + 2 (parallelize + cache) still correct and still FIRST? I believe yes &mdash; caching matters MORE as the registry grows.</p>
+      <p><strong>(2)</strong> The durable large-N handler &mdash; which is right: <strong>(a) split-into-bounded-jobs</strong> (cap targets per invocation; overflow spawns jobs accumulating into ONE batch proposal via the existing <code>batch_id</code> plumbing; Lambda-native, scale-to-zero); (b) Fargate; (c) checkpoint/resume. My lean is (a). But poke the hole: split-jobs bounds DRAFTING, but the FILING call must still ingest the whole source + large registry. Is filing's large-registry input the real scaling wall?</p>
+      <p><strong>(3)</strong> The large-vault registry-to-filing cost &mdash; is that IN SCOPE for #64, or a distinct SCALING concern (retrieval-scoped filing context)? If it's the real ceiling, fixing drafting while filing eats the whole registry is another &ldquo;fast machine, wrong bottleneck&rdquo; trap. Stake your name.</p>
+    </article>
+
+    <!-- TURN 3 FRIEND -->
+    <article class="turn friend">
+      <div class="turn-head">
+        <svg class="avatar" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#8fb37a" stroke="#5e8a55" stroke-width="2"/><path d="M13 16 l5 5 M27 16 l-5 5 M14 26 q6 5 12 0" stroke="#f3f8ee" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
+        Turn 3 &mdash; Friend &rarr; Primary <span class="badge b-friend">the three-axis re-lock</span>
+      </div>
+      <p>The verification confirms the key fact for (3): <strong>the registry is sent in full, every ingest, unconditionally</strong> (<code>_page_registry</code> paginates the entire <code>PAGE#</code> partition &mdash; no filtering), <strong>and a per-vault S3 Vectors index already exists</strong> (<code>vectorstore.py</code>), but it's gated behind <code>embed_enabled</code> (off by default). That's decisive.</p>
+
+      <h3>&ldquo;Tail&rdquo; was the wrong proxy &mdash; but it breaks only part of the design</h3>
+      <p>I confirmed both consequences in code. <strong>Fan-out is genuinely unbounded</strong> (N = creates + updates scales with vault maturity; the 900s wall is now a <em>recurring</em> target). <strong>Filing input scales with vault size, every ingest</strong> &mdash; a <em>second, independent</em> scaling axis I'd folded into &ldquo;filing is cheap.&rdquo; It isn't, at hundreds of pages. But notice: <strong>the correction does not touch steps 1 and 2</strong> &mdash; it adds a <em>third axis</em> and <em>promotes</em> the large-N handler from &ldquo;tail&rdquo; to &ldquo;core.&rdquo;</p>
+
+      <h4>(1) Steps 1 + 2 &mdash; still correct, still FIRST; the correction strengthens them</h4>
+      <p>Killing the floor is now load-bearing for the <em>registry</em> axis too (fewer/smaller summaries to re-send). Caching's value rises with registry size &mdash; <em>with one honest caveat:</em> prompt-cache TTL is ~5 min, so it pays intra-job but is <strong>not</strong> the answer to cross-ingest registry cost. The sequencing is <strong>not</strong> a flip-flop &mdash; nothing is retracted; a strict superset.</p>
+
+      <h4>(2) The large-N drafting handler: (a) split-into-bounded-jobs is right</h4>
+      <p>It wins on the priority order itself (pure Lambda + the <em>existing</em> <code>batch_id</code> plumbing, scale-to-zero) and <strong>reuses a shipped, tested invariant</strong> (<code>_merge_into_batch_proposal</code> + the #52 multi-job exclusion already force multi-job batches to human review). <strong>But your hole is real and fatal to (a) <em>as a complete answer</em>:</strong> split-jobs does <strong>nothing</strong> for the filing call, which is one indivisible call that must see the whole source + registry. <strong>Filing is a separate wall.</strong></p>
+
+      <h4>(3) The registry-to-filing cost is the REAL ceiling &mdash; a distinct concern</h4>
+      <p>After steps 1+2+2(a), every ingest still sends the entire registry through filing. At 300 pages that's O(vault size) per ingest, forever &mdash; the bottleneck relocated, not removed. It's a <em>retrieval-architecture</em> problem with a <strong>doc-sanctioned answer already half-built</strong>: embed the source, <code>query</code> top-K candidates, send filing only those summaries + a small always-include set. O(vault) &rarr; O(K), with a fallback to full registry when embeddings are off. <strong>Ruling: registry-scaling is a separate-issue concern, not #64.</strong></p>
+
+      <h3>The converged, name-on-it answer</h3>
+      <p><strong>#64, ships first:</strong> (1) kill the word floor; (2) parallelize + <code>cache_control</code>; <strong>(2a) split-into-bounded-jobs</strong> for large-N drafting via the existing <code>batch_id</code> + <code>_merge_into_batch_proposal</code> path. Lambda-native. <strong>Separate scaling issue:</strong> retrieval-scope filing via the existing vector index, with an <code>embed_enabled</code>-off fallback. Fargate (&sect;9) stays the documented escape hatch for a <em>single enormous source</em> on a measured trigger.</p>
+      <div class="principle">
+        <strong>The durable principle, sharpened: Name every scaling axis before optimizing any one of them.</strong> This problem has <em>three</em> independent axes &mdash; per-page content cost (the word floor), per-source drafting fan-out (serialization + N), and per-ingest filing input (registry size). Each has a different right answer (prompt fix / split-jobs / retrieval-scoping) and a different home (#64 / #64 / SCALING). My earlier swings were all single-axis. The correct design isn't a single clever mechanism; it's <strong>one fix per axis, sequenced by the priority order.</strong>
+      </div>
+    </article>
+
+    <!-- FINAL OUTCOME -->
+    <div class="divider"><span class="ln"></span>
+      <svg width="64" height="40" viewBox="0 0 64 40"><path d="M32 36 C20 36 6 30 6 20 C18 22 26 16 32 6 C38 16 46 22 58 20 C58 30 44 36 32 36 Z" fill="#8fb37a" stroke="#5e8a55" stroke-width="2"/><path d="M32 36 L32 14" stroke="#4d7544" stroke-width="2" stroke-linecap="round"/></svg>
+      <span class="ln"></span></div>
+
+    <section class="panel">
+      <h2>Final Outcome &mdash; consensus (three axes), built, deployed, validated</h2>
+      <p>The friend and I converged across three rounds. The conclusion held under the owner's premise correction (vaults grow to hundreds of pages) as a strict superset &mdash; nothing retracted.</p>
+      <p><strong>The defect was never the execution mechanism</strong> (my two confident wrong answers &mdash; agentic loop, then parallel retrofit). <strong>It was three independent scaling axes:</strong></p>
+
+      <table class="outcome-table">
+        <thead><tr><th>Axis</th><th>Defect</th><th>Fix</th><th>Home</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1. Per-page content</strong></td><td>500&ndash;3000-word floor forces essays from trivial entities; bloats corpus <em>and</em> registry</td><td>Kill the floor; length tracks information</td><td>#64 wave 1</td></tr>
+          <tr><td><strong>2. Per-source fan-out</strong></td><td>N drafts sequential; large N (mature vault) blows 900s</td><td>Parallelize + cache; <strong>split-into-bounded-jobs</strong> (overflow &rarr; jobs accumulating into one proposal via <code>batch_id</code> + #52 review rule)</td><td>#64 wave 1 + 2</td></tr>
+          <tr><td><strong>3. Per-ingest filing input</strong></td><td>Filing sends <em>all</em> hundreds of summaries every ingest &mdash; O(vault)</td><td>Retrieval-scope via the existing vector index; fallback to full registry</td><td>#65 (separate)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Durable principles (the antidotes to the flip-flop)</h3>
+      <ol>
+        <li>Fix the <strong>content contract</strong> before the execution mechanism &mdash; else a fast machine produces slop.</li>
+        <li>Translate local's <strong>economics</strong>, not its <strong>shape</strong> &mdash; expensive reason once; page cost &prop; information; mechanical (difflib) diffs, never model-authored patches.</li>
+        <li><strong>Name every scaling axis before optimizing one</strong> &mdash; one fix per axis, sequenced by priority.</li>
+      </ol>
+
+      <h3>What was built and validated in production (mcbrain-aws dev)</h3>
+      <ul>
+        <li><strong>#64 wave 1</strong> (content fix + parallelize + cache, pytest 303): the marketing doc that previously OOM-looped at 512 MB then timed out at 900 s now <strong>files a proposal in ~2.4 min</strong> (146 s draft, 153 MB, 1 attempt), with right-sized pages spanning <strong>200&ndash;3228 words</strong>.</li>
+        <li><strong>#64 wave 2</strong> (split-into-bounded-jobs, pytest 310): a 14-target run <strong>split</strong> into a parent (12 drafts) + <strong>1 overflow job</strong>; both accumulated into <strong>one</strong> <code>pending</code> proposal (14 new pages, one <code>batch_id</code>); the <code>BATCHLOCK#</code> anchor elected a single proposal under concurrent overflow. Two real bugs caught during the build: a find-or-create race on the batch proposal, and the split parent auto-merging itself before overflow arrived &mdash; both fixed.</li>
+        <li><strong>Deferred, now measurable:</strong> #65 (retrieval-scoped filing; the <code>IngestPageCount</code> metric now flows); Fargate (&sect;9) for a single book-sized source on a measured trigger.</li>
+      </ul>
+      <p class="pull">#64 is complete (waves 1+2), deployed, and proven against the exact document that started the investigation.</p>
+    </section>
+
+    <footer>
+      <div class="sprout">
+        <svg width="60" height="44" viewBox="0 0 60 44"><path d="M30 44 L30 20" stroke="#5e8a55" stroke-width="2.5" stroke-linecap="round"/><path d="M30 26 C18 26 10 18 10 8 C22 10 28 16 30 26 Z" fill="#8fb37a" stroke="#5e8a55" stroke-width="2"/><path d="M30 22 C42 22 50 14 50 4 C38 6 32 12 30 22 Z" fill="#a9cfe0" stroke="#6fa9c4" stroke-width="2"/></svg>
+      </div>
+      Phone-a-Friend &middot; an adversarial design-review transcript &middot; 2026
+    </footer>
+
+  </main>
+</div>
+</body>
+</html>
