@@ -59,6 +59,13 @@ excerpt: "One-line summary for the post card."
 
 ### Adding a Social / Open Graph Card
 
+**Required for every direct blog post.** Any post whose content lives in
+this repo — a markdown post in `_posts/`, or a self-contained HTML/MHTML
+page added via the scripts above — MUST ship with a companion social
+card. (This rule does **not** apply to timeline entries that merely link
+out to a post hosted elsewhere, e.g. Substack or LinkedIn — those keep
+the platform's own preview and need no card here.)
+
 Posts using `layout: app` emit Open Graph + Twitter `summary_large_image`
 tags automatically. To give a post its own share image, add an `image:`
 key to the front matter pointing at a **1200×630** PNG:
@@ -87,6 +94,34 @@ python3 -m http.server 8911 &
   --screenshot=assets/images/MY-CARD.png \
   http://localhost:8911/assets/social-cards/MY-CARD.html \
   --virtual-time-budget=4000
+```
+
+Then point the post at it: `image: /assets/images/MY-CARD.png`.
+
+### Site Favicon
+
+The site favicon is the **Amroja icon**. It's wired site-wide in two
+places so every page gets it regardless of layout — no per-post action
+needed:
+
+- `_includes/head/custom.html` — used by the theme's default layouts
+  (`single`, `home`, etc.).
+- `_layouts/app.html` — the full-width post layout has its own
+  hand-rolled `<head>`, so the favicon links live there too.
+
+Both use the same tags:
+
+```html
+<link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
+```
+
+`assets/images/favicon.png` is a square (256×256) version of
+`assets/images/amroja-icon.png`. If the source icon changes, regenerate
+the square favicon:
+
+```bash
+python3 -c "from PIL import Image; im=Image.open('assets/images/amroja-icon.png').convert('RGBA'); s=max(im.size); c=Image.new('RGBA',(s,s),(0,0,0,0)); c.paste(im,((s-im.width)//2,(s-im.height)//2),im); c.resize((256,256),Image.LANCZOS).save('assets/images/favicon.png')"
 ```
 
 ### Adding MHTML Pages (From Your Apps)

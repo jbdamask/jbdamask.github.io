@@ -17,6 +17,10 @@ layout: none
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} - {{ site.title }}</title>
 
+  <!-- Favicon (Amroja icon) -->
+  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
+
   {% comment %} Social / Open Graph card. Set `image:` in a post's front matter
      to a 1200x630 card; falls back to the site-wide author avatar. {% endcomment %}
   {% assign og_desc = page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 200 %}
