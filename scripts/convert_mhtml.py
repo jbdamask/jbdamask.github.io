@@ -12,6 +12,8 @@ from datetime import datetime
 import argparse
 from urllib.parse import urlparse
 
+import make_social_card
+
 def convert_mhtml_to_html(mhtml_path, output_path):
     """Convert MHTML file to standalone HTML"""
 
@@ -107,7 +109,7 @@ def extract_text_preview(html, max_length=200):
         text = text[:max_length] + '...'
     return text
 
-def create_blog_post(title, html_content, date=None):
+def create_blog_post(title, html_content, date=None, image_path=None):
     """Create Jekyll blog post with front matter"""
     if date is None:
         date = datetime.now()
@@ -117,13 +119,15 @@ def create_blog_post(title, html_content, date=None):
     # Extract excerpt from HTML
     excerpt = extract_text_preview(html_content)
 
+    image_line = f"image: {image_path}\n" if image_path else ""
+
     # Create front matter
     front_matter = f"""---
 layout: app
 title: "{title}"
 date: {date_str}
 excerpt: "{excerpt}"
----
+{image_line}---
 
 """
 
@@ -200,8 +204,19 @@ Examples:
     with open(temp_file, 'r', encoding='utf-8') as f:
         html_content = f.read()
 
+    # Every direct post gets a companion social card automatically.
+    slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', Path(output_file).stem)
+    excerpt = extract_text_preview(html_content)
+    image_path = None
+    try:
+        image_path = make_social_card.generate_card(slug, title, excerpt)
+        print(f"  Social card: {image_path}")
+    except Exception as exc:  # never block post creation on card render
+        print(f"  Social card: FAILED ({exc})")
+        print(f"    Run: python scripts/make_social_card.py --post {output_file}")
+
     # Create blog post with front matter
-    blog_post = create_blog_post(title, html_content, post_date)
+    blog_post = create_blog_post(title, html_content, post_date, image_path)
 
     # Write final file
     with open(output_file, 'w', encoding='utf-8') as f:

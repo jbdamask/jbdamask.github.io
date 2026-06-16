@@ -4,6 +4,7 @@ _site
 .jekyll-metadata
 vendor
 .DS_Store
+__pycache__/
 
 # bv (beads viewer) local config and caches
 .bv/

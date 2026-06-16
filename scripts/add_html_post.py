@@ -23,6 +23,8 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+import make_social_card
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 POSTS_DIR = REPO_ROOT / "_posts"
 
@@ -95,12 +97,29 @@ def main():
     else:
         dest = POSTS_DIR / f"{date}-{slugify(title)}.html"
 
+    # Every direct post gets a companion social card automatically. This is
+    # required for share previews and must not depend on a human remembering.
+    slug = dest.stem
+    slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", slug)
+    image_line = ""
+    card_msg = None
+    try:
+        image_path = make_social_card.generate_card(slug, title, excerpt)
+        image_line = f"image: {image_path}\n"
+        card_msg = f"  card:    {image_path}"
+    except Exception as exc:  # noqa: BLE001 -- never block post creation on card render
+        card_msg = (
+            f"  card:    FAILED ({exc})\n"
+            f"           Run: python scripts/make_social_card.py --post {dest.relative_to(REPO_ROOT)}"
+        )
+
     front_matter = (
         "---\n"
         "layout: app\n"
         f'title: "{escape_yaml(title)}"\n'
         f"date: {date}\n"
         f'excerpt: "{escape_yaml(excerpt)}"\n'
+        f"{image_line}"
         "---\n\n"
     )
 
@@ -112,6 +131,7 @@ def main():
     print(f"  title:   {title}")
     print(f"  date:    {date}")
     print(f"  excerpt: {excerpt or '(none)'}")
+    print(card_msg)
     print()
     print("Next steps:")
     print("  bundle exec jekyll build   # verify it renders")

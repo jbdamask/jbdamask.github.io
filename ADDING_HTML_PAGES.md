@@ -26,11 +26,17 @@ python scripts/add_html_post.py ~/Downloads/my-page.html \
   --excerpt "One-line summary shown on the post card."
 ```
 
-Then build, commit, and push:
+This also auto-generates a **social card** for the post and wires the
+`image:` front matter for you (see "Social / Open Graph Cards" below) —
+nothing else to remember.
+
+Then build, commit, and push (include the generated card files):
 
 ```bash
 bundle exec jekyll build      # verify it renders
-git add _posts/2026-06-12-a-random-walk-through-gas-town.html
+git add _posts/2026-06-12-a-random-walk-through-gas-town.html \
+        assets/images/a-random-walk-through-gas-town-card.png \
+        assets/social-cards/a-random-walk-through-gas-town.html
 git commit -m "Add post: A Random Walk Through Gas Town"
 git push
 ```
@@ -57,18 +63,47 @@ excerpt: "One-line summary for the post card."
 ---
 ```
 
-### Adding a Social / Open Graph Card
+### Social / Open Graph Cards (automatic)
 
-**Required for every direct blog post.** Any post whose content lives in
-this repo — a markdown post in `_posts/`, or a self-contained HTML/MHTML
-page added via the scripts above — MUST ship with a companion social
-card. (This rule does **not** apply to timeline entries that merely link
-out to a post hosted elsewhere, e.g. Substack or LinkedIn — those keep
-the platform's own preview and need no card here.)
+**Every direct blog post gets a companion social card automatically — you
+don't have to do anything.** `add_html_post.py` and `convert_mhtml.py`
+both call `scripts/make_social_card.py` after creating the post: it
+renders an on-brand **1200×630** card (Amroja blue, the site mark, the
+post title + excerpt, the canonical domain) with headless Chrome and
+writes the `image:` key into the post's front matter for you. The card
+source is saved under `assets/social-cards/<slug>.html` and the PNG under
+`assets/images/<slug>-card.png`.
+
+(This applies only to posts whose content lives in this repo. Timeline
+entries that merely link out to a post hosted elsewhere — Substack,
+LinkedIn — keep the platform's own preview and get no card here.)
+
+If card rendering fails (e.g. Chrome isn't installed), the post is still
+created — the script prints the one command to finish the job:
+
+```bash
+python scripts/make_social_card.py --post _posts/2026-06-15-my-post.html
+```
+
+**Markdown posts** (written by hand, not via a script) won't have a card
+until you generate one. Either run the `--post` command above, or
+backfill every post missing a card at once:
+
+```bash
+python scripts/make_social_card.py --all
+```
+
+#### Hand-designed cards
+
+The auto-generated card is a clean default. To give a post a bespoke
+card that matches its own visual style (as with the Fable 5 and Gas Town
+posts), build an HTML source under `assets/social-cards/`, render it, and
+point the post's `image:` at the PNG. A custom `image:` already in the
+front matter is **never overwritten** by `--post`/`--all` (use `--force`
+to regenerate).
 
 Posts using `layout: app` emit Open Graph + Twitter `summary_large_image`
-tags automatically. To give a post its own share image, add an `image:`
-key to the front matter pointing at a **1200×630** PNG:
+tags automatically. The front-matter key the card system sets looks like:
 
 ```yaml
 ---
