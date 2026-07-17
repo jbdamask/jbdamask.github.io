@@ -1,6 +1,41 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "SEFAM: explain your AI agents' work simply enough for a manager"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7483514616107413504/
+  date: 2026-07-16
+  excerpt: "SEFAM (Simple Enough For A Manager) is a Claude Skill you point at parts of your code, an interactive session, or a pull request. It writes a short document explaining what your coding agents actually did — so a lead who has delegated the code can still ask the deeper questions."
+  image: ""
+
+- title: "My nightly message to overnight AI agents"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7482283944843898880/
+  date: 2026-07-13
+  excerpt: "A typical final instruction before bed: build four features written up in GitHub, keep the code consistent with the existing codebase, and use a second LLM to stress-test the hard parts. Terse prose in, shipped features by morning — it still blows my mind."
+  image: ""
+
+- title: "Observations and tips for building software with AI agents"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7481349022952185856/
+  date: 2026-07-10
+  excerpt: "Adversarial review agents are now core to development, going vertical on open source via the Codebase Memory MCP beats stitching third-party tools together, and agent orchestration is reshaping how software gets built. Field notes from recent work."
+  image: ""
+
+- title: "From deep research to evolving knowledge bases"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7480821255957393409/
+  date: 2026-07-09
+  excerpt: "Web research is shifting from a single deep-research task to many parallel searches synthesized into knowledge bases that grow over time. A demo builds a wiki on blood-based diagnostics — agents fan out to cloud search, propose content I accept or reject, then answer the follow-up questions."
+  image: ""
+
+- title: "Building an app on vacation as my own customer"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7477149169699250176/
+  date: 2026-06-29
+  excerpt: "The fun of building an app on vacation is that I'm my own customer. I want to add pictures — boom. I want to just chat with my app — done. I want to personalize it any way I like — here you go."
+  image: ""
+
 - title: "What should companies budget for AI tokens?"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7468316732483489792/
