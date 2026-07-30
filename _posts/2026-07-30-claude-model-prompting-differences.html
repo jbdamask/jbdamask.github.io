@@ -1,0 +1,371 @@
+---
+layout: app
+title: "Comparison of Anthropic's Prompting Guidelines for Claude Models"
+date: 2026-07-30
+excerpt: "Claude models respond similarly to most instructions, but there are a few key differences to be aware of. Keep these in mind when using the same prompt, skill, or agent with different models."
+image: /assets/images/claude-model-prompting-differences-card.png
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Comparison of Anthropic's Prompting Guidelines for Claude Models</title>
+<style>
+/* ── Academic Scholar ───────────────────────────────────────────
+   Parchment, charcoal, one oxblood accent. Typography and
+   whitespace carry the page. Light only.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  --parchment:   #F5F1E8;
+  --parchment-2: #EFEADC;   /* the conflict column, one step deeper */
+  --charcoal:    #2B2B2B;
+  --charcoal-2:  #575249;
+  --charcoal-3:  #857F72;
+  --oxblood:     #6B2A2A;
+  --rule:        #D8D1BF;
+  --rule-dark:   #A9A08A;
+
+  --serif: Georgia, "Times New Roman", Times, serif;
+  --mono:  "Iowan Old Style", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--parchment);
+  color: var(--charcoal);
+  font: 1.1rem/1.62 var(--serif);
+  overflow-x: hidden;
+}
+::selection { background: var(--oxblood); color: var(--parchment); }
+:focus-visible { outline: 2px solid var(--oxblood); outline-offset: 3px; }
+
+.sheet {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5.5rem) clamp(1.15rem, 4vw, 3.5rem) 7rem;
+}
+
+/* ── masthead ─────────────────────────────────────────────────
+   Title and abstract share one left axis with the table below.  */
+header {
+  padding-bottom: 2.25rem;
+  border-bottom: 1px solid var(--rule-dark);
+}
+
+h1 {
+  margin: 0 auto 1.75rem;
+  max-width: 24ch;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2rem, 4.4vw, 3.15rem);
+  line-height: 1.14;
+  letter-spacing: -0.015em;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--oxblood);
+}
+
+.lede {
+  max-width: 62ch;
+  margin: 0 auto;
+  font-size: 1.18rem;
+  line-height: 1.7;
+  text-align: center;
+  text-wrap: pretty;
+  color: var(--charcoal);
+}
+
+.refs { margin: 0; padding-left: 1.15em; }
+.refs li { margin-bottom: .35rem; }
+.refs li::marker { color: var(--charcoal-3); }
+
+a { color: var(--oxblood); text-underline-offset: 3px; text-decoration-color: var(--rule-dark); }
+a:hover { text-decoration-color: var(--oxblood); }
+
+/* ── section heads ────────────────────────────────────────── */
+.head {
+  display: flex;
+  align-items: baseline;
+  gap: 1.1rem;
+  margin: 4.75rem 0 1.5rem;
+}
+.head h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+  font-variant: small-caps;
+  letter-spacing: .1em;
+  color: var(--oxblood);
+}
+.head .rule { flex: 1; height: 1px; background: var(--rule-dark); }
+
+/* ── the table ────────────────────────────────────────────── */
+section.first { margin-top: 3.25rem; }
+.scroller { overflow-x: auto; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 1060px;
+  table-layout: fixed;
+  border-top: 2px solid var(--charcoal);
+  border-bottom: 2px solid var(--charcoal);
+}
+thead th {
+  text-align: left;
+  padding: .75rem .95rem;
+  border-bottom: 1px solid var(--charcoal);
+  font-weight: 400;
+  font-size: .84rem;
+  font-variant: small-caps;
+  letter-spacing: .12em;
+  color: var(--charcoal-2);
+  white-space: nowrap;
+}
+thead th.c-axis  { width: 10rem; }
+thead th.c-model { width: 15.5%; }
+thead th.c-flag  { width: 21%; color: var(--oxblood); }
+
+tbody th {
+  text-align: left;
+  vertical-align: top;
+  padding: 1.05rem .95rem;
+  border-top: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+  font-weight: 400;
+  font-size: .92rem;
+  font-variant: small-caps;
+  letter-spacing: .08em;
+  color: var(--oxblood);
+}
+tbody td {
+  vertical-align: top;
+  padding: 1.05rem .95rem;
+  border-top: 1px solid var(--rule);
+  font-size: .95rem;
+  line-height: 1.55;
+}
+td.flag {
+  background: var(--parchment-2);
+  border-left: 1px solid var(--rule-dark);
+}
+td.flag::before {
+  content: "†";
+  color: var(--oxblood);
+  margin-right: .4em;
+}
+td.flag b { color: var(--oxblood); font-weight: 700; }
+td.na { color: var(--charcoal-3); font-style: italic; }
+
+b, strong { font-weight: 700; color: var(--charcoal); }
+em { font-style: italic; }
+code {
+  font-family: var(--mono);
+  font-size: .95em;
+  font-style: italic;
+  color: var(--oxblood);
+  overflow-wrap: anywhere;
+}
+
+/* ── narrow: the table sets as entries, not a grid ────────── */
+@media (max-width: 880px) {
+  body { font-size: 1.05rem; }
+  .scroller { overflow-x: visible; }
+  table, tbody, tr, th, td { display: block; width: auto; min-width: 0; }
+  table { border: 0; }
+  thead { display: none; }
+  tbody tr { border-top: 2px solid var(--charcoal); padding-bottom: 1.1rem; }
+  tbody th {
+    border: 0;
+    padding: 1rem 0 .5rem;
+    font-size: 1.05rem;
+  }
+  tbody td { border-top: 1px solid var(--rule); padding: .7rem 0; }
+  tbody td::before {
+    content: attr(data-model);
+    display: block;
+    font-size: .8rem;
+    font-variant: small-caps;
+    letter-spacing: .12em;
+    color: var(--charcoal-3);
+    margin-bottom: .15rem;
+  }
+  td.flag { background: none; border-left: 0; padding-left: 1rem; border-left: 2px solid var(--oxblood); }
+  td.flag::before { content: "† " attr(data-model); color: var(--oxblood); }
+
+  h1 { font-size: clamp(1.75rem, 6.2vw, 2.4rem); }
+  .lede { font-size: 1.05rem; text-align: left; max-width: none; }
+  header { padding-bottom: 0; border-bottom: 0; }   /* the first row's rule divides */
+  section.first { margin-top: 2.25rem; }
+}
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <header>
+    <h1>Comparison of Anthropic's Prompting Guidelines for Claude Models</h1>
+
+    <p class="lede">Claude models respond similarly to most instructions, but there are a few key differences to be aware of. Keep these in mind when using the same prompt, skill, or agent with different models.</p>
+
+  </header>
+
+  <section class="first">
+    <div class="scroller" tabindex="0" role="region" aria-label="Comparison table">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col" class="c-axis">Category</th>
+            <th scope="col" class="c-model">Fable 5 / Mythos 5</th>
+            <th scope="col" class="c-model">Opus 5</th>
+            <th scope="col" class="c-model">Sonnet 5</th>
+            <th scope="col" class="c-model">Opus 4.8</th>
+            <th scope="col" class="c-flag">Summary</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <th scope="row">Effort</th>
+            <td data-model="Fable 5"><code>high</code> default. <code>xhigh</code> only for capability-critical work; <b>low and medium are genuinely fine</b> — they often beat <code>xhigh</code> on older models.</td>
+            <td data-model="Opus 5"><code>high</code> default. Use <code>low</code>/<code>medium</code> <b>liberally</b> as your primary cost lever; step to <code>xhigh</code> only for demanding agentic work.</td>
+            <td data-model="Sonnet 5"><code>high</code> default. Raise to <code>xhigh</code> for the hardest coding and agentic tasks.</td>
+            <td data-model="Opus 4.8"><b>Start at <code>xhigh</code></b> for coding and agentic work; never below <code>high</code> for anything intelligence-sensitive.</td>
+            <td class="flag" data-model="Summary">The arrow reverses. Carrying 4.8's always-<b>xhigh</b> habit into Opus 5 or Fable 5 burns tokens for no gain; carrying Opus 5's <b>low is fine</b> back to 4.8 under-thinks.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Thinking</th>
+            <td data-model="Fable 5">Adaptive only. <b>No budgets</b>, summarized output only.</td>
+            <td data-model="Opus 5">On by default. Can be disabled <b>only at <code>high</code> effort or below</b>.</td>
+            <td data-model="Sonnet 5">On by default — changed from 4.6. Turn off with <code>thinking:{type:"disabled"}</code>.</td>
+            <td data-model="Opus 4.8"><b>Off</b> unless you explicitly set <code>{type:"adaptive"}</code>.</td>
+            <td class="flag" data-model="Summary">A prompt written for 4.8 assumes no thinking. The same request on Sonnet 5 or Opus 5 now spends <b>max_tokens</b> on thinking and can truncate mid-answer.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Verbosity</th>
+            <td data-model="Fable 5">One short brevity rule is enough — it replaces enumerating every pattern you dislike.</td>
+            <td data-model="Opus 5"><b>Prompt for length explicitly.</b> Lowering effort cuts thinking, not the visible answer.</td>
+            <td data-model="Sonnet 5">Length self-calibrates to task complexity. Tune only if your product needs a fixed style.</td>
+            <td data-model="Opus 4.8">Length self-calibrates. Tune only if your product needs a fixed style.</td>
+            <td class="flag" data-model="Summary">On Opus 5, dropping effort to get shorter replies is <b>the wrong knob</b>. On 4.8 and Sonnet 5 it partly works, which is why the habit survives.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Verify-your-work</th>
+            <td data-model="Fable 5"><b>Add it.</b> Make self-verification explicit and run fresh-context verifier subagents on an interval.</td>
+            <td data-model="Opus 5"><b>Delete it.</b> Explicit verification triggers over-verification. Drop "double-check your answer" too.</td>
+            <td data-model="Sonnet 5" class="na">not flagged</td>
+            <td data-model="Opus 4.8" class="na">not flagged</td>
+            <td class="flag" data-model="Summary">A flat contradiction. The long-run prompt that makes Fable 5 reliable makes Opus 5 <b>pay twice for the same work</b>.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Subagents</th>
+            <td data-model="Fable 5">Delegates readily — so <b>use them more</b>: async, long-lived, running in parallel.</td>
+            <td data-model="Opus 5">Delegates readily — so <b>cap it</b>. Never delegate verification of its own work; keep spawn counts low.</td>
+            <td data-model="Sonnet 5" class="na">not flagged</td>
+            <td data-model="Opus 4.8">Spawns <b>too few</b>. Prompt it to fan out across files and items.</td>
+            <td class="flag" data-model="Summary">Three different directions. 4.8 needs encouragement, Opus 5 needs a leash, Fable 5 wants more delegation than either.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Prompt detail</th>
+            <td data-model="Fable 5"><b>Strip it back.</b> Skills tuned for older models are too prescriptive and actively <em>degrade</em> output.</td>
+            <td data-model="Opus 5">Remove legacy verification scaffolding; otherwise 4.8 prompts run as-is.</td>
+            <td data-model="Sonnet 5">Sonnet 4.6 prompts work out of the box.</td>
+            <td data-model="Opus 4.8">Prescriptive prompting is how you steer it.</td>
+            <td class="flag" data-model="Summary">Fable 5 is the one model where your <b>most carefully tuned legacy prompt is the liability</b>. More specific stops being better.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Instruction style</th>
+            <td data-model="Fable 5">Give intent and the <em>reason</em> behind the ask. Short instructions steer broadly.</td>
+            <td data-model="Opus 5">Constrain scope explicitly on narrow tasks — it expands scope on its own.</td>
+            <td data-model="Sonnet 5"><b>Literal.</b> Won't generalize an instruction from one item to the next. State the scope.</td>
+            <td data-model="Opus 4.8"><b>Literal.</b> Same as Sonnet 5.</td>
+            <td class="flag" data-model="Summary">Sonnet 5 and 4.8 need every case spelled out. Fable 5 <b>penalizes that same enumeration</b>.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Progress scaffolding</th>
+            <td data-model="Fable 5">Replace it with a <b>send_to_user tool</b> plus elicitation language, and add a re-grounding rule for final summaries.</td>
+            <td data-model="Opus 5"><b>Remove it, then tune narration down</b> — Opus 5 over-narrates.</td>
+            <td data-model="Sonnet 5"><b>Remove it.</b> Updates are already good.</td>
+            <td data-model="Opus 4.8"><b>Remove it.</b> Updates are already good.</td>
+            <td class="flag" data-model="Summary">Only Fable 5 wants <em>new</em> machinery here. Only Opus 5 needs the volume turned down after you delete the old scaffolding.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Reasoning rules</th>
+            <td data-model="Fable 5"><b>Never</b> ask it to echo or explain its reasoning — that trips the <code>reasoning_extraction</code> refusal and elevated fallbacks.</td>
+            <td data-model="Opus 5"><b>Never</b> tell it "don't think" or "don't reason" — that increases <code>&lt;thinking&gt;</code> tag leakage when thinking is off.</td>
+            <td data-model="Sonnet 5" class="na">—</td>
+            <td data-model="Opus 4.8" class="na">—</td>
+            <td class="flag" data-model="Summary">Opposite failure modes, same root cause. Both resolve to: <b>write no rules about reasoning at all</b>.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Sampling parameters</th>
+            <td data-model="Fable 5">Not accepted.</td>
+            <td data-model="Opus 5">Not accepted.</td>
+            <td data-model="Sonnet 5"><b>400 error</b> on <code>temperature</code>, <code>top_p</code>, <code>top_k</code> — new for Sonnet-class models.</td>
+            <td data-model="Opus 4.8">Not accepted.</td>
+            <td class="flag" data-model="Summary">Anything using <b>temperature for stylistic or design variety</b> has to move to asking the model for several directions up front.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Frontend defaults</th>
+            <td data-model="Fable 5" class="na">—</td>
+            <td data-model="Opus 5" class="na">—</td>
+            <td data-model="Sonnet 5">Settles into <em>a</em> house style; generic negatives just move it to a different fixed palette.</td>
+            <td data-model="Opus 4.8">A documented house style: cream <code>#F4F1EA</code>, serif display, terracotta accent.</td>
+            <td class="flag" data-model="Summary">"Don't use cream" fails on both. <b>Give a concrete spec, or ask for four directions and pick one.</b></td>
+          </tr>
+
+          <tr>
+            <th scope="row">Code review recall</th>
+            <td data-model="Fable 5">Higher bug-finding recall, but cyber and bio safety classifiers can decline findings outright.</td>
+            <td data-model="Opus 5">Ask for <b>everything</b>; filter in a second pass.</td>
+            <td data-model="Sonnet 5">Ask for <b>everything</b>; filter in a second pass.</td>
+            <td data-model="Opus 4.8">Ask for <b>everything</b>; filter in a second pass.</td>
+            <td class="flag" data-model="Summary">The rare axis where all four agree — and it still breaks you. <b>"Only high-severity"</b> is now obeyed literally, and measured recall collapses.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Watch for</th>
+            <td data-model="Fable 5">Runs for minutes to hours, so fix client timeouts. Ground progress claims in tool results. State boundaries on unrequested actions. Give it a memory file. Don't show it a context countdown.</td>
+            <td data-model="Opus 5">Files it writes run long — calibrate document length. With thinking off, tool calls can leak into the response as plain text.</td>
+            <td data-model="Sonnet 5">Tool use is up versus 4.6 but drops with thinking off, so nudge explicitly. The new tokenizer produces roughly 30% more tokens.</td>
+            <td data-model="Opus 4.8">Prefers reasoning over tool calls. Raise effort to get more tool use.</td>
+            <td class="flag" data-model="Summary">Same knob, opposite ends: Sonnet 5 and 4.8 need agentic behavior <b>pushed up</b>, Fable 5 and Opus 5 need it <b>reined in</b>.</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <h2>Sources</h2>
+      <span class="rule"></span>
+    </div>
+
+    <ul class="refs">
+      <li><a target="_blank" rel="noopener noreferrer" href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5">Prompting Claude Fable 5</a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5">Prompting Claude Opus 5</a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-sonnet-5">Prompting Claude Sonnet 5</a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-4-8">Prompting Claude Opus 4.8</a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices">Prompting best practices (general)</a></li>
+    </ul>
+  </section>
+
+</main>
+</body>
+</html>
