@@ -60,7 +60,16 @@ with no posts returns nothing and costs nothing. Up to 25 posts are accepted
 per run; on a cold start (no existing YAML) it backfills a bounded 5.
 
 History is preserved across runs — the API only returns recent posts, so the
-script merges new results into the existing file and keeps the newest 250.
+script merges new results into the existing file and keeps the newest 150
+(`MAX_HISTORICAL_TWEETS`).
+
+That cap is a **page-weight** limit, not just a file-size one: `index.html` and
+`_includes/sidebar/twitter-feed.html` each emit a hidden `<div>` per stored
+post, so every entry lands in the HTML of every page. Retention is enforced on
+every run, including runs that fetch nothing — so lowering the number takes
+effect on the next run rather than waiting for your next post.
+
+Trimming only affects the site's copy. **Nothing is ever deleted from X.**
 
 ### Manual Updates
 
@@ -124,7 +133,7 @@ annotation on the most recent run, which will say exactly what happened.
 |---|---|
 | `.github/workflows/fetch-twitter.yml` | Workflow definition |
 | `scripts/fetch_twitter.py` | Fetch + merge script |
-| `_data/twitter-posts.yml` | Generated feed data (max 250 posts) |
+| `_data/twitter-posts.yml` | Generated feed data (max 150 posts) |
 | `.twitter-user-id` | Cached numeric user ID — avoids a billed lookup per run |
 
 ## Troubleshooting
