@@ -264,6 +264,19 @@ def main():
     fetched = len(tweets_data.get('data', []))
     print(f"Fetched {fetched} new tweets (billed ~${fetched * 0.005:.3f})")
 
+    # The API returns the *newest* posts up to the cap. If we hit the cap there
+    # may be older unseen posts below it -- and because since_id advances to the
+    # newest fetched, they will never be picked up by a later run. Say so
+    # loudly rather than losing them silently.
+    applied_cap = MAX_TWEETS if since_id else COLD_START_TWEETS
+    if fetched >= applied_cap:
+        warn(
+            f"Hit the {applied_cap}-post cap this run. Older posts made since "
+            "the last run may have been skipped, and will NOT be picked up "
+            "later (since_id advances past them). Raise MAX_TWEETS and re-run "
+            "manually if posts are missing."
+        )
+
     if fetched == 0:
         print("Nothing new since last run; leaving twitter-posts.yml unchanged.")
         sys.exit(0)
