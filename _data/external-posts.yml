@@ -1,6 +1,34 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Two tips for large software systems with AI agents"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7490471646781345792/
+  date: 2026-08-04
+  excerpt: "Co-locate documentation with the code so agents can grep for what they need instead of hunting down and re-downloading Confluence pages every session. Then add a reorient skill to the project, so a new agent starts oriented instead of guessing."
+  image: ""
+
+- title: "Taking the LLM wiki from laptop to team"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7489725067619315712/
+  date: 2026-08-02
+  excerpt: "The LLM wiki idea credited to Andrej Karpathy works well on a personal machine, but that limits it to one user. Extending it to a team on AWS means solving a pile of problems that never come up locally, which is exactly what makes it fun."
+  image: ""
+
+- title: "I'm not buying the AI-killed-engineering-jobs story"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7489381663177658368/
+  date: 2026-08-01
+  excerpt: "The post-COVID economy and general global churn look like likelier drivers than AI. To get past intuition, I had Claude Fable pull US job posting data, normalize it to a pre-pandemic baseline, and chart engineering against HR as a comparator."
+  image: ""
+
+- title: "GitHub Issues as the input queue for coding agents"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7488991464551510016/
+  date: 2026-07-31
+  excerpt: "Every feature, bug fix, and improvement gets an issue, often sparse and sometimes just a marked-up image. Agents pick them up, escalate clarifying questions, then write detailed plans. Big features get debated with a reviewer before being decomposed into Beads."
+  image: ""
+
 - title: "SEFAM: explain your AI agents' work simply enough for a manager"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7483514616107413504/
