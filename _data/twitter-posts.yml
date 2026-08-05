@@ -2,6 +2,199 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 250 most recent tweets (LIFO)
 
+- title: 'Two things I find helpful when working on large software systems with coding
+    agents: 1) Co-locate do...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2084708143745868266
+  date: '2026-08-04'
+  excerpt: 'Two things I find helpful when working on large software systems with
+    coding agents: 1) Co-locate documentation with code 2) Add a "reorient" skill
+    to the project'
+  image: ''
+- title: Thanks anyway @Steve_Yegge . I still get good stuff from GasTown
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2084685800071979307
+  date: '2026-08-04'
+  excerpt: Thanks anyway @Steve_Yegge . I still get good stuff from GasTown
+  image: ''
+- title: 'Agents are great for more than just coding. To make this, I: 1. Chatted
+    with Claude about a particul...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2084035055345668145
+  date: '2026-08-02'
+  excerpt: 'Agents are great for more than just coding. To make this, I: 1. Chatted
+    with Claude about a particular part of my app 2. When happy w/ level of detail,
+    asked for a doc 3. Uploaded to NotebookLM 4. Cli...'
+  image: ''
+- title: I really don't care if a tweet, blog, or article was written with AI. All
+    I care about is if the inf...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2083618416296964103
+  date: '2026-08-01'
+  excerpt: I really don't care if a tweet, blog, or article was written with AI. All
+    I care about is if the information is good and my time is respected.
+  image: ''
+- title: One of the best tips from @HamelHusain and @sh_reya Evals course is to build
+    a data labelling tool f...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2083607657043157258
+  date: '2026-08-01'
+  excerpt: One of the best tips from @HamelHusain and @sh_reya Evals course is to
+    build a data labelling tool for every AI app you make. It takes no time at all
+    for an LLM to code one up.
+  image: ''
+- title: Starting to use paid promotions to get out the word about Now I Get It! We'll
+    see if it does anythin...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2083580741829443609
+  date: '2026-08-01'
+  excerpt: Starting to use paid promotions to get out the word about Now I Get It!
+    We'll see if it does anything for this little niche product
+  image: https://pbs.twimg.com/news_img/2083580786825977856/WpSY4Ga8?format=jpg&name=orig
+- title: Graphic design won't be replaced by AI anytime soon. Constantly having to
+    tell an agent "shrink by 2...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2083571633600520248
+  date: '2026-08-01'
+  excerpt: Graphic design won't be replaced by AI anytime soon. Constantly having
+    to tell an agent "shrink by 20%", "distribute those evenly", "move the logo to
+    the upper" right, then waiting isn't fun or fast.
+  image: ''
+- title: Interesting how little applied knowledge Opus 4.8 has around application
+    evals. I had to wrestle it ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2083538793349456176
+  date: '2026-08-01'
+  excerpt: Interesting how little applied knowledge Opus 4.8 has around application
+    evals. I had to wrestle it to make a subsystem; and even then it lacked basic
+    intuition. Opus 5 has a May 2026 cutoff so maybe ...
+  image: ''
+- title: Here's a trace showing why asking your model to self-judge is a bad idea.
+    "Naïve judge says Haiku wo...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2083518563373940810
+  date: '2026-08-01'
+  excerpt: Here's a trace showing why asking your model to self-judge is a bad idea.
+    "Naïve judge says Haiku worse → switch judge → new judge says Haiku fine → report
+    the second"
+  image: ''
+- title: I laughed at this part of Open 5's system prompt. Definitely would like to
+    know what it really think...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2083504330213109767
+  date: '2026-08-01'
+  excerpt: I laughed at this part of Open 5's system prompt. Definitely would like
+    to know what it really thinks
+  image: ''
+- title: Rational model routing is when you select a model because you have used it
+    enough in a given setting...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2083362293853630781
+  date: '2026-08-01'
+  excerpt: Rational model routing is when you select a model because you have used
+    it enough in a given setting, know the general inputs/outputs, and have a good
+    reason to use it. At this point, I'm happy doing ...
+  image: ''
+- title: GitHub Issues are still how I capture all ideas and communicate what I want
+    to Agents. Every feature...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2083223747876581481
+  date: '2026-07-31'
+  excerpt: GitHub Issues are still how I capture all ideas and communicate what I
+    want to Agents. Every feature, bug fix, or improvement gets an issue. My planner
+    converts these into detailed plans (tech + UX) a...
+  image: ''
+- title: Don't forget to add LLM-call circuit breakers to your apps!
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2083201243292311887
+  date: '2026-07-31'
+  excerpt: Don't forget to add LLM-call circuit breakers to your apps!
+  image: ''
+- title: The rate of LLM evolution is faster than many apps that use them should evolve.
+    Builders will either...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2083195871886189036
+  date: '2026-07-31'
+  excerpt: The rate of LLM evolution is faster than many apps that use them should
+    evolve. Builders will either accept that or figure out app-specific eval test
+    suites and automation to triage new models. Intern...
+  image: ''
+- title: the explosion of open source projects is nice...but triaging them to see
+    what's useful is a slog
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2083174447435891197
+  date: '2026-07-31'
+  excerpt: the explosion of open source projects is nice...but triaging them to see
+    what's useful is a slog
+  image: ''
+- title: The usefulness of AI is like liquid finding its way into every crack and
+    crease in my life. This mea...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2083157306926141632
+  date: '2026-07-31'
+  excerpt: The usefulness of AI is like liquid finding its way into every crack and
+    crease in my life. This means constancy, which is too expensive now. Things need
+    to converge on cheaper frontier models, local ...
+  image: ''
+- title: Claude's skill-creator is the best way to make a skill, so you'd think that
+    all published Anthropic ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2083030867610321004
+  date: '2026-07-31'
+  excerpt: Claude's skill-creator is the best way to make a skill, so you'd think
+    that all published Anthropic skills would be consistent. This isn't true. A comparison
+    of hundreds reveals best practices in term...
+  image: https://pbs.twimg.com/news_img/2083030870252765184/5IwKtv4Q?format=jpg&name=orig
+- title: Frontier companies pump out a LOT of docs. A useful habit to get into is
+    to have Claude (or your fav...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2083030496448016747
+  date: '2026-07-31'
+  excerpt: Frontier companies pump out a LOT of docs. A useful habit to get into is
+    to have Claude (or your fav LLM) find patterns/inconsistencies. This way, you
+    can see if the companies actually walk the talk a...
+  image: ''
+- title: Human judgement is still a thing
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2081015425278575087
+  date: '2026-07-25'
+  excerpt: Human judgement is still a thing
+  image: https://pbs.twimg.com/news_img/2081015426436222976/4O_aoBui?format=jpg&name=orig
+- title: uh...hello. I didn't know you were here
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2080701293027279088
+  date: '2026-07-24'
+  excerpt: uh...hello. I didn't know you were here
+  image: ''
+- title: 'Weird one: a DynamoDB performance audit showed that a bad design element
+    was burning 95% of the tabl...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2080651252124291324
+  date: '2026-07-24'
+  excerpt: 'Weird one: a DynamoDB performance audit showed that a bad design element
+    was burning 95% of the table''s read capacity. After refactoring, I asked why
+    the feature existed in the first place. It shouldn...'
+  image: ''
+- title: Is it time to move past neo-brutalist designs?
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2080645710895099953
+  date: '2026-07-24'
+  excerpt: Is it time to move past neo-brutalist designs?
+  image: ''
+- title: Impressive test suite written by my agents
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2080463505216467087
+  date: '2026-07-24'
+  excerpt: Impressive test suite written by my agents
+  image: ''
+- title: There's too much software out there. For a product to move from "Gotta try
+    it" to "Part of my life",...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2080342812772454830
+  date: '2026-07-23'
+  excerpt: There's too much software out there. For a product to move from "Gotta
+    try it" to "Part of my life", it needs be easy to use and understand
+  image: ''
 - title: Remember, the job of a software engineer these days is to make sure the plan
     AND tests are comprehen...
   source: twitter
