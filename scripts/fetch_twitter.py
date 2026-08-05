@@ -1,7 +1,25 @@
 #!/usr/bin/env python3
 """
-Fetch recent tweets from Twitter API and save to _data/twitter-posts.yml
+Fetch recent tweets from the X API and save to _data/twitter-posts.yml
 Requires TWITTER_BEARER_TOKEN environment variable
+
+Cost model (X pay-per-use, post-Feb-2026 pricing):
+  - reading posts:        $0.005 per post returned
+  - reading user objects: $0.010 per user returned
+
+Two things keep the bill down, both load-bearing -- do not "simplify" either:
+
+1. The user-object lookup is cached (see resolve_user_id) so it is billed once
+   ever, not once per run. A per-run username lookup would add $0.30/month at
+   daily cadence for an ID that never changes.
+
+2. Requests are bounded by since_id (see newest_known_tweet_id), so we are
+   billed for genuinely new posts rather than re-reading the same recent five
+   every day. A quiet day returns zero posts and costs nothing.
+
+Worst case is MAX_TWEETS x $0.005 = $0.125 per run ($3.75/month if every
+single day hit the cap); realistic cost at a few posts a week is under
+$0.10/month. Without since_id it would be a flat $0.75/month.
 """
 
 import os
@@ -13,51 +31,146 @@ from datetime import datetime
 
 # Configuration
 TWITTER_USERNAME = "jbdamask"
-MAX_TWEETS = 5  # Keep it low for Free tier (max 10)
+# Ceiling on posts returned per run. This is a cost guard, not a target: with
+# since_id set we normally get far fewer. It only binds if you post more than
+# MAX_TWEETS times between runs. 5 is the API's minimum accepted value.
+MAX_TWEETS = 25
+# Used only on a cold start (no existing YAML to derive since_id from), to
+# avoid a first run that bills for a large backfill.
+COLD_START_TWEETS = 5
 MAX_HISTORICAL_TWEETS = 250  # Maximum tweets to keep in history (LIFO)
 OUTPUT_FILE = "_data/twitter-posts.yml"
+USER_ID_CACHE = ".twitter-user-id"
 
-def get_user_id(bearer_token, username):
-    """Get Twitter user ID from username"""
-    url = f"https://api.twitter.com/2/users/by/username/{username}"
-    headers = {"Authorization": f"Bearer {bearer_token}"}
+# Transient / billing conditions. These mean "no data this run", not "broken
+# config", so we skip the update and exit 0 rather than reddening the workflow
+# every single day. 402 in particular is a depleted prepaid credit balance,
+# which persists until the account is topped up.
+SOFT_FAIL_STATUSES = {402, 429, 500, 502, 503, 504}
 
-    response = requests.get(url, headers=headers)
 
-    if response.status_code != 200:
-        print(f"Error getting user ID: {response.status_code}")
-        print(response.text)
-        sys.exit(1)
+class SoftFail(Exception):
+    """A condition that should skip this run without failing the workflow."""
 
-    data = response.json()
-    return data['data']['id']
 
-def fetch_tweets(bearer_token, user_id, max_results=10):
-    """Fetch recent tweets from Twitter API v2"""
-    url = f"https://api.twitter.com/2/users/{user_id}/tweets"
+def warn(message):
+    """Emit a GitHub Actions warning annotation (visible without a red run)."""
+    print(f"::warning::{message}")
 
-    headers = {"Authorization": f"Bearer {bearer_token}"}
 
-    params = {
-        "max_results": max_results,
-        "tweet.fields": "created_at,text,entities",
-        "exclude": "retweets,replies"  # Only original tweets
-    }
+def api_get(bearer_token, url, params=None):
+    """GET the X API, mapping transient/billing errors to SoftFail."""
+    response = requests.get(
+        url,
+        headers={"Authorization": f"Bearer {bearer_token}"},
+        params=params,
+        timeout=30,
+    )
 
-    response = requests.get(url, headers=headers, params=params)
+    if response.status_code == 200:
+        return response.json()
+
+    detail = response.text.strip()
+
+    if response.status_code == 402:
+        raise SoftFail(
+            "X API returned 402 (credits depleted). The prepaid balance is "
+            "empty -- top it up at https://console.x.com to resume syncing. "
+            f"Response: {detail}"
+        )
 
     if response.status_code == 429:
-        print("Rate limit exceeded (429). This is expected on Twitter Free tier.")
-        print("The workflow runs daily, so rate limits will reset before the next run.")
-        print("Keeping existing twitter-posts.yml file (if it exists).")
-        return None
+        raise SoftFail(f"X API rate limit (429); will retry next run. {detail}")
 
-    if response.status_code != 200:
-        print(f"Error fetching tweets: {response.status_code}")
-        print(response.text)
-        sys.exit(1)
+    if response.status_code in SOFT_FAIL_STATUSES:
+        raise SoftFail(f"X API transient error {response.status_code}. {detail}")
 
-    return response.json()
+    # 401/403/404 and friends are genuine misconfiguration -- fail loudly.
+    print(f"Error: X API returned {response.status_code}")
+    print(detail)
+    sys.exit(1)
+
+
+def resolve_user_id(bearer_token, username):
+    """Resolve the numeric user ID, hitting the billed lookup at most once.
+
+    Order: TWITTER_USER_ID env var -> on-disk cache -> API lookup (then cached).
+    """
+    from_env = os.environ.get("TWITTER_USER_ID", "").strip()
+    if from_env:
+        print(f"User ID {from_env} (from TWITTER_USER_ID env var)")
+        return from_env
+
+    if os.path.exists(USER_ID_CACHE):
+        try:
+            with open(USER_ID_CACHE) as f:
+                cached = f.read().strip()
+            if cached:
+                print(f"User ID {cached} (cached, no billed lookup)")
+                return cached
+        except OSError as e:
+            print(f"Warning: could not read {USER_ID_CACHE}: {e}")
+
+    print(f"No cached user ID; performing one-time billed lookup for @{username}...")
+    data = api_get(
+        bearer_token, f"https://api.twitter.com/2/users/by/username/{username}"
+    )
+    user_id = data["data"]["id"]
+
+    try:
+        with open(USER_ID_CACHE, "w") as f:
+            f.write(user_id + "\n")
+        print(f"Cached user ID {user_id} to {USER_ID_CACHE}")
+    except OSError as e:
+        warn(f"Could not cache user ID to {USER_ID_CACHE}: {e}")
+
+    return user_id
+
+
+def newest_known_tweet_id(existing_posts):
+    """Highest tweet ID already stored, for use as since_id.
+
+    Tweet IDs are monotonically increasing snowflakes, so the numeric max is
+    the most recent post we've already paid for. Returns None if we can't
+    determine one (cold start), in which case the caller backfills a little.
+    """
+    ids = []
+    for post in existing_posts:
+        m = re.search(r'/status/(\d+)', post.get('url', ''))
+        if m:
+            ids.append(int(m.group(1)))
+    return str(max(ids)) if ids else None
+
+
+def fetch_tweets(bearer_token, user_id, since_id=None):
+    """Fetch tweets newer than since_id from X API v2."""
+    params = {
+        "tweet.fields": "created_at,text,entities",
+        "exclude": "retweets,replies",  # Only original tweets
+    }
+
+    if since_id:
+        params["since_id"] = since_id
+        params["max_results"] = MAX_TWEETS
+        print(f"Requesting posts newer than {since_id} (cap {MAX_TWEETS})")
+    else:
+        params["max_results"] = COLD_START_TWEETS
+        print(f"Cold start: no known tweet IDs, fetching {COLD_START_TWEETS} recent posts")
+
+    return api_get(
+        bearer_token, f"https://api.twitter.com/2/users/{user_id}/tweets", params=params
+    )
+
+
+def parse_created_at(value):
+    """Parse the API timestamp, tolerating presence or absence of milliseconds."""
+    for fmt in ("%Y-%m-%dT%H:%M:%S.%fZ", "%Y-%m-%dT%H:%M:%SZ"):
+        try:
+            return datetime.strptime(value, fmt)
+        except ValueError:
+            continue
+    raise ValueError(f"Unrecognized created_at format: {value!r}")
+
 
 def strip_urls(text):
     """Remove URLs from tweet text"""
@@ -85,7 +198,7 @@ def tweets_to_yaml(tweets_data):
 
     for tweet in tweets_data['data']:
         # Parse date
-        created_at = datetime.strptime(tweet['created_at'], "%Y-%m-%dT%H:%M:%S.%fZ")
+        created_at = parse_created_at(tweet['created_at'])
 
         # Get tweet text and strip URLs
         text = strip_urls(tweet['text'])
@@ -120,27 +233,11 @@ def main():
 
     print(f"Fetching tweets for @{TWITTER_USERNAME}...")
 
-    # Get user ID
-    user_id = get_user_id(bearer_token, TWITTER_USERNAME)
-    print(f"User ID: {user_id}")
-
-    # Fetch tweets
-    tweets_data = fetch_tweets(bearer_token, user_id, MAX_TWEETS)
-
-    # If rate limited, exit gracefully without updating the file
-    if tweets_data is None:
-        print("Skipping update due to rate limit.")
-        sys.exit(0)
-
-    print(f"Fetched {len(tweets_data.get('data', []))} tweets")
-
-    # Convert to YAML format
-    new_posts = tweets_to_yaml(tweets_data)
-
     # Ensure _data directory exists
     os.makedirs('_data', exist_ok=True)
 
-    # Load existing posts to preserve history (API only returns recent tweets)
+    # Load existing posts first: they preserve history (the API only returns
+    # recent tweets) AND they tell us the since_id that bounds what we pay for.
     existing_posts = []
     if os.path.exists(OUTPUT_FILE):
         try:
@@ -148,7 +245,31 @@ def main():
                 existing_posts = yaml.safe_load(f) or []
             print(f"Loaded {len(existing_posts)} existing posts")
         except Exception as e:
-            print(f"Warning: Could not load existing posts: {e}")
+            # Do not fall through to a cold-start backfill on a transient read
+            # error -- that would silently re-bill for tweets we already have.
+            warn(f"Could not load existing posts ({e}); aborting rather than risk "
+                 "overwriting history with a partial fetch.")
+            sys.exit(1)
+
+    since_id = newest_known_tweet_id(existing_posts)
+
+    try:
+        user_id = resolve_user_id(bearer_token, TWITTER_USERNAME)
+        tweets_data = fetch_tweets(bearer_token, user_id, since_id)
+    except SoftFail as e:
+        warn(str(e))
+        print("Skipping update; existing twitter-posts.yml left untouched.")
+        sys.exit(0)
+
+    fetched = len(tweets_data.get('data', []))
+    print(f"Fetched {fetched} new tweets (billed ~${fetched * 0.005:.3f})")
+
+    if fetched == 0:
+        print("Nothing new since last run; leaving twitter-posts.yml unchanged.")
+        sys.exit(0)
+
+    # Convert to YAML format
+    new_posts = tweets_to_yaml(tweets_data)
 
     # Merge posts: keep existing posts and update/add new ones
     # Create a dictionary of existing posts by URL for fast lookup

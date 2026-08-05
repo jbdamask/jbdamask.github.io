@@ -2,12 +2,28 @@ name: Fetch Twitter Posts
 
 on:
   schedule:
-    # Run every hour (on the hour)
-    - cron: '0 * * * *'
+    # Once daily at 12:17 UTC.
+    #
+    # Cadence is a cost decision, not a freshness one. X moved to prepaid
+    # pay-per-use in Feb 2026: $0.005 per post returned, $0.010 per user
+    # object. At MAX_TWEETS=5 with a cached user ID that is $0.025/run:
+    #   daily  ->  30 runs/mo  =  $0.75/mo   <-- current setting
+    #   hourly -> 720 runs/mo  = $18.00/mo
+    # The previous hourly schedule is what drained the credit balance on
+    # 2026-03-30. Do not restore it without re-doing this math.
+    #
+    # Offset from :00 because scheduled jobs at the top of the hour queue
+    # behind the rest of GitHub and can be delayed or dropped.
+    - cron: '17 12 * * *'
   workflow_dispatch: # Allow manual trigger
 
 permissions:
   contents: write
+
+# Never let a manual run race the scheduled one into the same push.
+concurrency:
+  group: fetch-twitter
+  cancel-in-progress: false
 
 jobs:
   fetch-tweets:
@@ -15,12 +31,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v7
         with:
-          python-version: '3.11'
+          python-version: '3.14'
 
       - name: Install dependencies
         run: |
@@ -36,7 +52,12 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          git add -A
+          # Scoped rather than `git add -A` so an unrelated stray file in the
+          # workspace can never ride along in an automated commit. The user-id
+          # cache is committed so the billed username lookup happens once ever.
+          for f in _data/twitter-posts.yml .twitter-user-id; do
+            if [ -e "$f" ]; then git add "$f"; fi
+          done
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
