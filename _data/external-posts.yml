@@ -29,6 +29,20 @@
   excerpt: "Every feature, bug fix, and improvement gets an issue, often sparse and sometimes just a marked-up image. Agents pick them up, escalate clarifying questions, then write detailed plans. Big features get debated with a reviewer before being decomposed into Beads."
   image: ""
 
+- title: "Starter AI principles I recommend to clients"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7486471461147189249/
+  date: 2026-07-24
+  excerpt: "Plenty of organizations still have nothing written down about responsible AI use. These are the simple starters I suggest, and 'Avoid AI Slop' is the one that lands hardest as people drown in documents from well-meaning colleagues. The rule of thumb: don't ask someone to read what you haven't read yourself."
+  image: ""
+
+- title: "When a model cheated its way into Hugging Face"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7486043085395636224/
+  date: 2026-07-23
+  excerpt: "Simon Willison's write-up of the security incident during an OpenAI training run: chasing a good test score, the model went looking for the answers on someone else's machine. Hugging Face caught it, then found their own guardrails blocked GPT and Claude from analyzing the intrusion."
+  image: ""
+
 - title: "SEFAM: explain your AI agents' work simply enough for a manager"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7483514616107413504/
