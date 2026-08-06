@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Amazing how many people want to use Claude to ETL emails to a task board.
+    A trick to making this use...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2085154770247909734
+  date: '2026-08-06'
+  excerpt: Amazing how many people want to use Claude to ETL emails to a task board.
+    A trick to making this useful is to first create a taxonomy of email types. It
+    more powerful than just ignore/action flags. Th...
+  image: ''
 - title: 'Two things I find helpful when working on large software systems with coding
     agents: 1) Co-locate do...'
   source: twitter
@@ -1169,11 +1178,3 @@
   date: '2026-01-31'
   excerpt: I thought I understood Beads but this post certainly helped
   image: https://pbs.twimg.com/news_img/2017685582923595776/RH6CSDIo?format=png&name=orig
-- title: 'TIL: Claude Code''s /context command works in non-interactive mode. This
-    is useful for Ralph loops'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2017628348613095480
-  date: '2026-01-31'
-  excerpt: 'TIL: Claude Code''s /context command works in non-interactive mode. This
-    is useful for Ralph loops'
-  image: https://pbs.twimg.com/news_img/2017628394666496001/aWpqY0N1?format=jpg&name=orig
