@@ -53,9 +53,7 @@ See my [GitHub](https://github.com/jbdamask) for source code of these and more.
 
 ---
 
-## Elsewhere
-
-Not a single-page app, but worth a look — the Claude Code skills I've built and use day to day.
+## Open Source Tools
 
 <a class="external-card" href="https://github.com/jbdamask/john-claude-skills">
   <img src="{{ '/assets/images/john-claude-skills-card.png' | relative_url }}"
