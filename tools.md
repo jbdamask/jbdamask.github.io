@@ -46,6 +46,17 @@ See my [GitHub](https://github.com/jbdamask) for source code of these and more.
   </div>
 {% endfor %}
 
+  <!-- External tools (hosted outside this site) -->
+  <div class="tool-card">
+    <h3>
+      <a href="https://github.com/jbdamask/john-claude-skills">John Claude Skills</a>
+    </h3>
+    <p>A collection of Claude Code skills I use day to day.</p>
+    <p class="tool-link">
+      <a href="https://github.com/jbdamask/john-claude-skills" class="btn btn--primary">View on GitHub →</a>
+    </p>
+  </div>
+
 {% if html_tools.size == 0 %}
   <p class="no-tools">No tools available yet. Add HTML files to the <code>tools/</code> directory to see them here!</p>
 {% endif %}
