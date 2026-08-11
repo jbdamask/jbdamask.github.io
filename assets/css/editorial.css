@@ -547,6 +547,32 @@ a:hover { color: #b33d1e; }
   color: var(--text) !important;
 }
 
+/* ─── EXTERNAL (OFF-SITE) CARD ─── */
+.external-card {
+  display: block;
+  max-width: 640px;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  line-height: 0;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.external-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.external-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+}
+
 /* ─── TOOL PAGE ─── */
 .ed-tool-launch {
   margin: 2rem 0;
