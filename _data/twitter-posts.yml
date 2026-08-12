@@ -2,6 +2,46 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Jeez, working with Fable shows me that it won't be long before LLMs nail
+    all the non-functional requ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2087508406177276287
+  date: '2026-08-12'
+  excerpt: Jeez, working with Fable shows me that it won't be long before LLMs nail
+    all the non-functional requirements about an app. Already, it's going deep into
+    areas like security, performance, robustness, w...
+  image: ''
+- title: Handoffs between coding sessions is kinda, sorta a solved problem. Gas Town
+    can do it. Claude's agen...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2087506068918210995
+  date: '2026-08-12'
+  excerpt: Handoffs between coding sessions is kinda, sorta a solved problem. Gas
+    Town can do it. Claude's agent teams are getting there. Beads is the glue but
+    it's also good to have app context docs and devlog
+  image: ''
+- title: Trying Fable agent teams on my next project. Feels a lot like Gas Town. Still
+    using Beads because I ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2087369745393676587
+  date: '2026-08-12'
+  excerpt: Trying Fable agent teams on my next project. Feels a lot like Gas Town.
+    Still using Beads because I trust it. Love it when my agents say "sleep well"
+  image: ''
+- title: 'TIL: Empty Lambda logs don''t prove the user never clicked — a request killed
+    upstream logs nothing. ...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2087203801744748917
+  date: '2026-08-11'
+  excerpt: 'TIL: Empty Lambda logs don''t prove the user never clicked — a request
+    killed upstream logs nothing. Check API Gateway 4XX.'
+  image: ''
+- title: 'TIL: Append .md to doc URLs to get page content as markdown.'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2087203418347544686
+  date: '2026-08-11'
+  excerpt: 'TIL: Append .md to doc URLs to get page content as markdown.'
+  image: https://pbs.twimg.com/news_img/2086008285656764416/mZVEuKWx?format=png&name=orig
 - title: Amazing how many people want to use Claude to ETL emails to a task board.
     A trick to making this use...
   source: twitter
@@ -1140,41 +1180,3 @@
   excerpt: I think the definition of AGI should be updated to, “LLMs can write code
     without CORS errors”
   image: ''
-- title: A Moltbook thread inspired me to make a Claude Skill for memory checkpointing
-    with semantic search
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2018311712470872443
-  date: '2026-02-02'
-  excerpt: A Moltbook thread inspired me to make a Claude Skill for memory checkpointing
-    with semantic search
-  image: ''
-- title: 'Global files: Get today''s date before doing anything. Never assume your
-    knowledge is current. Look u...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2018112223986516026
-  date: '2026-02-02'
-  excerpt: 'Global files: Get today''s date before doing anything. Never assume your
-    knowledge is current. Look up info Project files: Always activate venv before
-    installing packages. Create one if it doesn''t exis...'
-  image: https://pbs.twimg.com/news_img/2016719050026729472/1frO7_sv?format=png&name=orig
-- title: 'Heard about Claude Code''s agent swarm? Find out for yourself. Paste this
-    in a CC session: run this a...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2017981659761557651
-  date: '2026-02-01'
-  excerpt: 'Heard about Claude Code''s agent swarm? Find out for yourself. Paste this
-    in a CC session: run this and interpret the response for me: strings ~/.local/share/claude/versions/2.1.29
-    | grep TeammateTool'
-  image: ''
-- title: Fun discussion on Ralph loops vs subagents over here
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2017981227643408663
-  date: '2026-02-01'
-  excerpt: Fun discussion on Ralph loops vs subagents over here
-  image: https://pbs.twimg.com/news_img/2017981228113092608/WY4oM-Jn?format=jpg&name=orig
-- title: I thought I understood Beads but this post certainly helped
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2017685534777180170
-  date: '2026-01-31'
-  excerpt: I thought I understood Beads but this post certainly helped
-  image: https://pbs.twimg.com/news_img/2017685582923595776/RH6CSDIo?format=png&name=orig
