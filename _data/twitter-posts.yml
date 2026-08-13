@@ -2,6 +2,49 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: One of the funnier things about AI slop is that I don't even know how to
+    make an em dash
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2087631493984129387
+  date: '2026-08-12'
+  excerpt: One of the funnier things about AI slop is that I don't even know how to
+    make an em dash
+  image: ''
+- title: Fable's UX intuition is very good - much better than prior models. In this
+    case, I'm having it make ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2087600872918257940
+  date: '2026-08-12'
+  excerpt: Fable's UX intuition is very good - much better than prior models. In this
+    case, I'm having it make a dashboard to manage cloud servers. On AWS, a new public
+    IP is assigned on restarts. Fable anticipa...
+  image: ''
+- title: hehe, Fable is expressing favorites now, "and my favorite check — with a
+    deliberately fake GITHUB_TO...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2087597762971943232
+  date: '2026-08-12'
+  excerpt: hehe, Fable is expressing favorites now, "and my favorite check — with
+    a deliberately fake GITHUB_TOKEN"
+  image: ''
+- title: Don't know why I didn't think of this before... Now I make a human task board
+    for each project and t...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2087550854190579952
+  date: '2026-08-12'
+  excerpt: Don't know why I didn't think of this before... Now I make a human task
+    board for each project and tell my agent about it. This way it can post things
+    it needs me to do and I don't have to keep asking...
+  image: ''
+- title: If you're not using Beads by @Steve_Yegge and Beads Viewer by @doodlestein
+    , why not? Beads is an am...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2087541082011615571
+  date: '2026-08-12'
+  excerpt: If you're not using Beads by @Steve_Yegge and Beads Viewer by @doodlestein
+    , why not? Beads is an amazing tool for keeping agent teams on track and Beads
+    Viewer helps us poor, slow humans follow along...
+  image: ''
 - title: Jeez, working with Fable shows me that it won't be long before LLMs nail
     all the non-functional requ...
   source: twitter
@@ -1139,44 +1182,4 @@
   excerpt: The problem I have with running multi-agent sessions is the amount of flipping
     back and forth. Beads solves the task management and Beads Viewer makes it easy
     to follow along. Going to experiment with...
-  image: ''
-- title: Interesting...Claude Code Opus decides to kick of Sonnet in plan mode to
-    figure out how to implement...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2018875209277997404
-  date: '2026-02-04'
-  excerpt: Interesting...Claude Code Opus decides to kick of Sonnet in plan mode to
-    figure out how to implement a Beads task. I think this means the task wasn't granular
-    enough
-  image: ''
-- title: Thank you for Beads Viewer @doodlestein !
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2018866417035247722
-  date: '2026-02-04'
-  excerpt: Thank you for Beads Viewer @doodlestein !
-  image: ''
-- title: One of the most useful Claude Code agents I've made. Just ask "where were
-    we" when starting a sessio...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2018857334261399797
-  date: '2026-02-04'
-  excerpt: One of the most useful Claude Code agents I've made. Just ask "where were
-    we" when starting a session. A subagent queries recent git history, planning files,
-    devlog, chat history, Beads and task lists...
-  image: https://pbs.twimg.com/news_img/2018857337130242048/Vi_0AFg-?format=jpg&name=orig
-- title: Beads and Beads Viewer are two of the coolest open source projects out there
-    today. Massive producti...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2018530594364272808
-  date: '2026-02-03'
-  excerpt: Beads and Beads Viewer are two of the coolest open source projects out
-    there today. Massive productivity boosters
-  image: ''
-- title: I think the definition of AGI should be updated to, “LLMs can write code
-    without CORS errors”
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2018513822345245109
-  date: '2026-02-03'
-  excerpt: I think the definition of AGI should be updated to, “LLMs can write code
-    without CORS errors”
   image: ''
