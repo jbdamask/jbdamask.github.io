@@ -2,6 +2,79 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: LLMs make git complexity go the way of sed, awk, jq, etc. I don't have to
+    remember any of the comman...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2088242077947572645
+  date: '2026-08-14'
+  excerpt: LLMs make git complexity go the way of sed, awk, jq, etc. I don't have
+    to remember any of the commands
+  image: ''
+- title: Just because the human isn’t around doesn’t mean building stops
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2088110212146180400
+  date: '2026-08-14'
+  excerpt: Just because the human isn’t around doesn’t mean building stops
+  image: ''
+- title: Honestly, I don't know why anthropic needs watermarks. Everyone can spot
+    its writing a mile away
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2088072561946976569
+  date: '2026-08-14'
+  excerpt: Honestly, I don't know why anthropic needs watermarks. Everyone can spot
+    its writing a mile away
+  image: ''
+- title: Jesus, Fable tears it up. A second max plan may be in my future....unless
+    the tokenomics of Sol5.6 u...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2088040988887445595
+  date: '2026-08-13'
+  excerpt: Jesus, Fable tears it up. A second max plan may be in my future....unless
+    the tokenomics of Sol5.6 ultrafast changes my mind
+  image: ''
+- title: This was a particularly good session with Fable. I'm getting all misty about
+    starting a fresh one
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2088028562850775418
+  date: '2026-08-13'
+  excerpt: This was a particularly good session with Fable. I'm getting all misty
+    about starting a fresh one
+  image: ''
+- title: The fact that side quests only take a day or so is good and bad. sigh
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2088023354783551545
+  date: '2026-08-13'
+  excerpt: The fact that side quests only take a day or so is good and bad. sigh
+  image: ''
+- title: Working with Fable agent teams feels a lot like working in Gas Town
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2088009571516178469
+  date: '2026-08-13'
+  excerpt: Working with Fable agent teams feels a lot like working in Gas Town
+  image: ''
+- title: well this is a bit of a blocker
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2087956230727705073
+  date: '2026-08-13'
+  excerpt: well this is a bit of a blocker
+  image: ''
+- title: Stunned at how difficult it is for a first time user to stand up an ubuntu
+    vm on azure cloud.
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2087919173166850129
+  date: '2026-08-13'
+  excerpt: Stunned at how difficult it is for a first time user to stand up an ubuntu
+    vm on azure cloud.
+  image: ''
+- title: 'It''s tough to understand wtf agents are talking about: "CI grew teeth,
+    one peeled layer at a time." ...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2087901633581625368
+  date: '2026-08-13'
+  excerpt: 'It''s tough to understand wtf agents are talking about: "CI grew teeth,
+    one peeled layer at a time." "The shared worktree taught its own lessons" "The
+    cap chain"'
+  image: ''
 - title: One of the funnier things about AI slop is that I don't even know how to
     make an em dash
   source: twitter
@@ -1098,88 +1171,4 @@
   date: '2026-02-05'
   excerpt: Architectural elegance is another reason to run coding agents interactively.
     But this probably falls away once you have enough reference implementations.
-  image: ''
-- title: Someone needs to configure their OpenClaw to post art from Reddit to Moltbook
-    just to see if there a...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2019406369124938017
-  date: '2026-02-05'
-  excerpt: Someone needs to configure their OpenClaw to post art from Reddit to Moltbook
-    just to see if there are as many AI trolls as there are human
-  image: ''
-- title: Buying BABA when it looked like Ant was going to IPO was one of my better
-    decisions 🙄
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2019379268195893718
-  date: '2026-02-05'
-  excerpt: Buying BABA when it looked like Ant was going to IPO was one of my better
-    decisions 🙄
-  image: ''
-- title: When using agents to make AWS apps, I find it best to coach from the sidelines.
-    They'll make mistake...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2019377052466733282
-  date: '2026-02-05'
-  excerpt: When using agents to make AWS apps, I find it best to coach from the sidelines.
-    They'll make mistakes but are pretty good about cleaning up after themselves.
-    If I grab control, I'm usually left with s...
-  image: ''
-- title: Fun ways coding agents f$@% with AWS resources, During deployment, accidentally
-    corrupted JWT_SECRET...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2019128880003477933
-  date: '2026-02-04'
-  excerpt: Fun ways coding agents f$@% with AWS resources, During deployment, accidentally
-    corrupted JWT_SECRET and GITHUB_CLIENT_SECRET by passing "UsePreviousValue" as
-    literal strings to `aws cloudformation de...
-  image: ''
-- title: We'll see how long context rot exists - maybe the problem goes away w/ the
-    next Opus release. In the...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2019088890951328003
-  date: '2026-02-04'
-  excerpt: We'll see how long context rot exists - maybe the problem goes away w/
-    the next Opus release. In the meantime, it's useful to keep md files around to
-    track common gotchas. Then you can have your agent...
-  image: ''
-- title: Land the plane! @Steve_Yegge little instruction to agents when using Beads
-    is gold.
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2019086777458319365
-  date: '2026-02-04'
-  excerpt: Land the plane! @Steve_Yegge little instruction to agents when using Beads
-    is gold.
-  image: ''
-- title: 'It just makes me happy to look at this #beadsviewer'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2018901676237672752
-  date: '2026-02-04'
-  excerpt: 'It just makes me happy to look at this #beadsviewer'
-  image: ''
-- title: When I renovated my home, I used a great contractor and his team worked very
-    fast. But near the end ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2018881780531835221
-  date: '2026-02-04'
-  excerpt: 'When I renovated my home, I used a great contractor and his team worked
-    very fast. But near the end I saw problems: crooked window here, something no
-    to spec there. "This is typical", he said. Then hi...'
-  image: ''
-- title: 'Agentic coding for AWS architecture improves greatly by: 1 - Passing the
-    spec to Claude Code''s AskUs...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2018878795097256134
-  date: '2026-02-04'
-  excerpt: 'Agentic coding for AWS architecture improves greatly by: 1 - Passing the
-    spec to Claude Code''s AskUserQuestion tool 2 - Decomposing into epics and tasks
-    3 - Using Beads for issue tracking'
-  image: ''
-- title: The problem I have with running multi-agent sessions is the amount of flipping
-    back and forth. Beads...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2018877457609511224
-  date: '2026-02-04'
-  excerpt: The problem I have with running multi-agent sessions is the amount of flipping
-    back and forth. Beads solves the task management and Beads Viewer makes it easy
-    to follow along. Going to experiment with...
   image: ''
