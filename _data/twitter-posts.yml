@@ -2,6 +2,37 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Here's a practical example of using McBrain vaults To help develop a Claude
+    training class for a fin...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2088595381038760004
+  date: '2026-08-15'
+  excerpt: Here's a practical example of using McBrain vaults To help develop a Claude
+    training class for a finance department, I loaded all transcripts from the Luke
+    Finance YouTube channel into a McBrain. Now ...
+  image: https://pbs.twimg.com/news_img/2088595386323628032/qbAu501w?format=jpg&name=orig
+- title: 'Me over the past 18 months: Cursor-&gt;Claude code-&gt;Cursor-&gt;Amp-&gt;Codex-&gt;Claude
+    code-&gt;...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2088443855435682008
+  date: '2026-08-15'
+  excerpt: 'Me over the past 18 months: Cursor-&gt;Claude code-&gt;Cursor-&gt;Amp-&gt;Codex-&gt;Claude
+    code-&gt;Gas Town-&gt;Claude Code with Fable teams I’m exhausted'
+  image: ''
+- title: Hello 2nd Claude max plan
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2088339379068531023
+  date: '2026-08-14'
+  excerpt: Hello 2nd Claude max plan
+  image: ''
+- title: I have to wonder about recency bias with newer models. My teenage son constantly
+    starts a sentence w...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2088272831087792634
+  date: '2026-08-14'
+  excerpt: I have to wonder about recency bias with newer models. My teenage son constantly
+    starts a sentence with, "honestly..." and so do Fable and Opus.
+  image: ''
 - title: LLMs make git complexity go the way of sed, awk, jq, etc. I don't have to
     remember any of the comman...
   source: twitter
@@ -1140,35 +1171,4 @@
   url: https://twitter.com/jbdamask/status/2025182011233567136
   date: '2026-02-21'
   excerpt: Is it weird to feel a little paternal pride when your agent learns?
-  image: ''
-- title: This is working pretty well. I use GitHub for Issues, then use my beads-planner
-    plugin to build a pl...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2024994557989962048
-  date: '2026-02-20'
-  excerpt: This is working pretty well. I use GitHub for Issues, then use my beads-planner
-    plugin to build a plan and decompose into Beads. The Beads are branch-specific
-    so another agent can pick up and code whi...
-  image: https://pbs.twimg.com/news_img/2024994606333517824/9QBAddqm?format=jpg&name=orig
-- title: What software engineers do these days
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2024986733264167262
-  date: '2026-02-20'
-  excerpt: What software engineers do these days
-  image: ''
-- title: With all the hoopla about the Claude and Codex releases, let me just say
-    beads beads viewer
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2019562066626117907
-  date: '2026-02-06'
-  excerpt: With all the hoopla about the Claude and Codex releases, let me just say
-    beads beads viewer
-  image: ''
-- title: Architectural elegance is another reason to run coding agents interactively.
-    But this probably falls...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2019489835036152225
-  date: '2026-02-05'
-  excerpt: Architectural elegance is another reason to run coding agents interactively.
-    But this probably falls away once you have enough reference implementations.
   image: ''
