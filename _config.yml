@@ -49,6 +49,7 @@ include:
   - .htaccess
   - _pages
   - tools
+  - games
 
 # Exclude from processing
 exclude:

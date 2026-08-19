@@ -3,3 +3,5 @@ main:
     url: /about/
   - title: "Tools"
     url: /tools/
+  - title: "Games"
+    url: /games/
