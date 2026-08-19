@@ -62,12 +62,13 @@ $ curl -s https://api.anthropic.com/v1/messages \
     -H "content-type: application/json" \
     -d '{"model":"claude-haiku-4-5","max_tokens":100,"messages":[{"role":"user","content":"Explain how AI works in a few words"}]}' \
     | jq -r '.content[0].text'
-# How AI Works (Brief)
-#
-# 1. **Learn from data** - AI systems are trained on large datasets to recognize patterns
-# 2. **Find patterns** - They identify relationships between inputs and outputs
-# 3. **Make predictions** - When given new input, they apply learned patterns to generate responses
-# 4. **Improve with feedback** - Performance gets better through additional training or fine-tuning
-#
-# **In essence:** AI learns patterns from examples, then uses those patterns to make predictions
+
+How AI Works (Brief)
+
+ 1. **Learn from data** - AI systems are trained on large datasets to recognize patterns
+ 2. **Find patterns** - They identify relationships between inputs and outputs
+ 3. **Make predictions** - When given new input, they apply learned patterns to generate responses
+ 4. **Improve with feedback** - Performance gets better through additional training or fine-tuning
+
+ **In essence:** AI learns patterns from examples, then uses those patterns to make predictions
 ```
