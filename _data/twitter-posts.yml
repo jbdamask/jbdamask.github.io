@@ -2,6 +2,56 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: 'Yesterday''s builder haul: 1. Significant progress on my new open source
+    project (already dogfooding)...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2090422732068463087
+  date: '2026-08-20'
+  excerpt: 'Yesterday''s builder haul: 1. Significant progress on my new open source
+    project (already dogfooding) 2. Two beefy skills to help agents maintain state
+    across sessions 3. Security hardening 4. Two simp...'
+  image: ''
+- title: I was wrong. Fable speaks in riddles, too. Sigh. Great coder, though
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2090235855981916314
+  date: '2026-08-20'
+  excerpt: I was wrong. Fable speaks in riddles, too. Sigh. Great coder, though
+  image: ''
+- title: Man, that Cordis paper from DeepSeek is pretty math-heavy. Another reason
+    why I'm happy I built Now ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2090169075229995132
+  date: '2026-08-19'
+  excerpt: Man, that Cordis paper from DeepSeek is pretty math-heavy. Another reason
+    why I'm happy I built Now I Get It!
+  image: ''
+- title: At some point I fully expect my coding agents to push back so hard that we
+    get into a spat and break...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2090145002328301908
+  date: '2026-08-19'
+  excerpt: At some point I fully expect my coding agents to push back so hard that
+    we get into a spat and break up. Then we'll probably reconcile with a bunch of
+    "I'm sorry, I love you man!"
+  image: ''
+- title: Sometimes Opus 5 seems to have real engineer intuition and sometimes I'm
+    in disbelief about its lack...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2090142551013523531
+  date: '2026-08-19'
+  excerpt: Sometimes Opus 5 seems to have real engineer intuition and sometimes I'm
+    in disbelief about its lack of intuition. No problems with Fable yet...ignoring
+    token conflagrations
+  image: ''
+- title: 'TIL: Protect your API keys from inadvertent exposure by coding agents. On
+    a mac, store keys in mac''s...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2090085436316123273
+  date: '2026-08-19'
+  excerpt: 'TIL: Protect your API keys from inadvertent exposure by coding agents.
+    On a mac, store keys in mac''s keychain and use a helper function to retrieve
+    them at runtime.'
+  image: https://pbs.twimg.com/news_img/2090085438438416384/d19S7NND?format=jpg&name=orig
 - title: Here's a practical example of using McBrain vaults To help develop a Claude
     training class for a fin...
   source: twitter
@@ -1131,44 +1181,4 @@
   url: https://twitter.com/jbdamask/status/2026728484199084488
   date: '2026-02-25'
   excerpt: 'I just love this: claude --dangerously-skip-permissions'
-  image: ''
-- title: Sometimes Claude gets a bit overzealous with planning
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2026725522483581267
-  date: '2026-02-25'
-  excerpt: Sometimes Claude gets a bit overzealous with planning
-  image: ''
-- title: Yes, you need DCG
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2026433944506478660
-  date: '2026-02-24'
-  excerpt: Yes, you need DCG
-  image: https://pbs.twimg.com/news_img/2027029719342862336/_0pIXqBa?format=jpg&name=orig
-- title: Understanding scientific articles can be tough, even in your own field. Trying
-    to comprehend article...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2026162973975499080
-  date: '2026-02-24'
-  excerpt: Understanding scientific articles can be tough, even in your own field.
-    Trying to comprehend articles from others? Good luck. I made this app for curious
-    people. Free for now - I cap it to 20 articles...
-  image: ''
-- title: Deploying from a laptop on a plane wifi is dumb. I should have thought ahead
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2025282185230778423
-  date: '2026-02-21'
-  excerpt: Deploying from a laptop on a plane wifi is dumb. I should have thought
-    ahead
-  image: ''
-- title: Humans are still needed. Not sure for how long but it’s nice to feel important
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2025185712895561937
-  date: '2026-02-21'
-  excerpt: Humans are still needed. Not sure for how long but it’s nice to feel important
-  image: ''
-- title: Is it weird to feel a little paternal pride when your agent learns?
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2025182011233567136
-  date: '2026-02-21'
-  excerpt: Is it weird to feel a little paternal pride when your agent learns?
   image: ''
