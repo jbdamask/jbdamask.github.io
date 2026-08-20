@@ -2,6 +2,12 @@
 # Fetches RSS feed (latest 5) and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: Protect API keys from exposure by coding agents (Mac)
+  source: substack
+  url: https://johndamask.substack.com/p/protect-api-keys-from-exposure-by
+  date: '2026-08-20'
+  excerpt: Public service announcement
+  image: ''
 - title: Job market be damned, I believe in the future of software engineering
   source: substack
   url: https://johndamask.substack.com/p/job-market-be-damned-i-believe-in
