@@ -2,6 +2,37 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: 'One of the most useful CLI functions in my .zshrc: yolo() { claude -p --dangerously-skip-permissions...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2090494280523522340
+  date: '2026-08-20'
+  excerpt: 'One of the most useful CLI functions in my .zshrc: yolo() { claude -p
+    --dangerously-skip-permissions --model claude-haiku-4-5 "$@" }'
+  image: ''
+- title: 'Two complimentary skills for multi-session coding: 1. pass-along - Beefier
+    then the average "handoff...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2090466122793390463
+  date: '2026-08-20'
+  excerpt: 'Two complimentary skills for multi-session coding: 1. pass-along - Beefier
+    then the average "handoff". It introspects the session, agent, &amp; model and
+    writes a structured doc. It knows Beads, too! ...'
+  image: https://pbs.twimg.com/news_img/2090466167345270784/HWVSaj2i?format=jpg&name=orig
+- title: Grok Build has a good sense of humor
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2090463533154586783
+  date: '2026-08-20'
+  excerpt: Grok Build has a good sense of humor
+  image: ''
+- title: Just about any coding agent can make simple games now. I regularly have agents
+    running on cloud VMs ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2090445560436191280
+  date: '2026-08-20'
+  excerpt: Just about any coding agent can make simple games now. I regularly have
+    agents running on cloud VMs one-shotting things. I check in every now and again
+    to nudge them this way or that
+  image: ''
 - title: 'Yesterday''s builder haul: 1. Significant progress on my new open source
     project (already dogfooding)...'
   source: twitter
@@ -1152,33 +1183,3 @@
   excerpt: DevLog for building Now I Get It! - an app that makes it easy to understand
     scientific articles
   image: https://pbs.twimg.com/news_img/2027539527485562880/YUAhVjag?format=jpg&name=orig
-- title: Nice note from an old colleague about
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2027436429870047282
-  date: '2026-02-27'
-  excerpt: Nice note from an old colleague about
-  image: ''
-- title: It's tempting to ignore plan review. Don't. Even when using Opus, Claude
-    will sometimes give poor an...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2027099903919321228
-  date: '2026-02-26'
-  excerpt: It's tempting to ignore plan review. Don't. Even when using Opus, Claude
-    will sometimes give poor answers. For example, it doesn't know that Skills are
-    a thing. But you can always revise plans and poi...
-  image: ''
-- title: The last step of my "beads-planner" plugin decomposes a comprehensive plan
-    into beads with relations...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2026847905022132651
-  date: '2026-02-26'
-  excerpt: The last step of my "beads-planner" plugin decomposes a comprehensive plan
-    into beads with relationships. Everything is branched so beads are self-contained
-    for workers to bang out.
-  image: ''
-- title: 'I just love this: claude --dangerously-skip-permissions'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2026728484199084488
-  date: '2026-02-25'
-  excerpt: 'I just love this: claude --dangerously-skip-permissions'
-  image: ''
