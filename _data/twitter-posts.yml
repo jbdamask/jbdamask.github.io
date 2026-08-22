@@ -2,6 +2,20 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: planning and building and testing, oh my
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2090904333546033531
+  date: '2026-08-21'
+  excerpt: planning and building and testing, oh my
+  image: ''
+- title: 'Claude for Legal Conjecture: If you put Opus 5 on both ends of a contract
+    negotiation, you could bil...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2090862580524888487
+  date: '2026-08-21'
+  excerpt: 'Claude for Legal Conjecture: If you put Opus 5 on both ends of a contract
+    negotiation, you could bill your client infinitely'
+  image: ''
 - title: 'One of the most useful CLI functions in my .zshrc: yolo() { claude -p --dangerously-skip-permissions...'
   source: twitter
   url: https://twitter.com/jbdamask/status/2090494280523522340
@@ -1169,17 +1183,3 @@
     I would be building all the freaking time. In fact, if you are in your 20s with
     no family and it's just you, don't bother gett...
   image: ''
-- title: Lots of great input Hacker News for Now I Get It!
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2027809119655039246
-  date: '2026-02-28'
-  excerpt: Lots of great input Hacker News for Now I Get It!
-  image: ''
-- title: DevLog for building Now I Get It! - an app that makes it easy to understand
-    scientific articles
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2027539743555121245
-  date: '2026-02-28'
-  excerpt: DevLog for building Now I Get It! - an app that makes it easy to understand
-    scientific articles
-  image: https://pbs.twimg.com/news_img/2027539527485562880/YUAhVjag?format=jpg&name=orig
