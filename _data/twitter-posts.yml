@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: 'This was interesting: A client commented on a doc using MS Word. I opened
+    it in Google Docs and didn...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2091332054541611239
+  date: '2026-08-23'
+  excerpt: 'This was interesting: A client commented on a doc using MS Word. I opened
+    it in Google Docs and didn’t any see comments. Claude read it and extracted all
+    so I could read them'
+  image: ''
 - title: planning and building and testing, oh my
   source: twitter
   url: https://twitter.com/jbdamask/status/2090904333546033531
@@ -1173,13 +1182,4 @@
   excerpt: 'I opened up to people on Hacker News for two days. Each day I paid for
     100 posts (~$64 per day). This little app hit #1 in the Show discussions and people
     went to town. Really cool to see and great co...'
-  image: ''
-- title: If I was in my 20s, with no family, and it was just me, I wouldn't sleep.
-    I would be building all th...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2028324300948738257
-  date: '2026-03-02'
-  excerpt: If I was in my 20s, with no family, and it was just me, I wouldn't sleep.
-    I would be building all the freaking time. In fact, if you are in your 20s with
-    no family and it's just you, don't bother gett...
   image: ''
