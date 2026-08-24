@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: The AWS Learnings Library is a great resource for coding agents when building
+    AWS apps. It contains ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2091528303010078882
+  date: '2026-08-23'
+  excerpt: The AWS Learnings Library is a great resource for coding agents when building
+    AWS apps. It contains expert-curated gotchas and solutions so your agents don't
+    build footguns. Point your coding agents t...
+  image: https://pbs.twimg.com/news_img/2090466167345270784/HWVSaj2i?format=jpg&name=orig
 - title: 'This was interesting: A client commented on a doc using MS Word. I opened
     it in Google Docs and didn...'
   source: twitter
@@ -1173,13 +1182,4 @@
   url: https://twitter.com/jbdamask/status/2028466007988113683
   date: '2026-03-02'
   excerpt: Wow. isn't fully global yet but not a bad first week
-  image: ''
-- title: I opened up to people on Hacker News for two days. Each day I paid for 100
-    posts (~$64 per day). Thi...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2028325057332711761
-  date: '2026-03-02'
-  excerpt: 'I opened up to people on Hacker News for two days. Each day I paid for
-    100 posts (~$64 per day). This little app hit #1 in the Show discussions and people
-    went to town. Really cool to see and great co...'
   image: ''
