@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Modern Software Engineering in Anger"
+  source: blog
+  url: https://johndamask.com/modern-software-engineering-in-anger/
+  date: 2026-08-25
+  excerpt: "Engineering principles for software development in the age of AI agents"
+  image: ""
+
 - title: "Two tips for large software systems with AI agents"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7490471646781345792/
