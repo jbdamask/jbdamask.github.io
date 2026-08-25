@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: I wonder if small software shops that make commercial, yet fairly easy to
+    copy software will become ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092231491170324710
+  date: '2026-08-25'
+  excerpt: I wonder if small software shops that make commercial, yet fairly easy
+    to copy software will become this generation's version of mom-and-pop stores.
+  image: ''
 - title: The AWS Learnings Library is a great resource for coding agents when building
     AWS apps. It contains ...
   source: twitter
@@ -1176,10 +1184,4 @@
   excerpt: Since there's interest in my little app, it's time to get serious about
     DevOps and AppOps. The last thing I want is to deploy something people like and
     get bogged down on operations. First step, make ...
-  image: ''
-- title: Wow. isn't fully global yet but not a bad first week
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2028466007988113683
-  date: '2026-03-02'
-  excerpt: Wow. isn't fully global yet but not a bad first week
   image: ''
