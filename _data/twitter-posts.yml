@@ -2,6 +2,69 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: /pass-along and /session-recap are now the top two skills I use. They allows
+    agents to communicate a...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092601195189662167
+  date: '2026-08-26'
+  excerpt: /pass-along and /session-recap are now the top two skills I use. They allows
+    agents to communicate across time, since one session is never enough. Coding harnesses
+    will handle this soon enough, but un...
+  image: https://pbs.twimg.com/news_img/2090466167345270784/HWVSaj2i?format=jpg&name=orig
+- title: Ooooo, is very cool!
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092588817379135866
+  date: '2026-08-26'
+  excerpt: Ooooo, is very cool!
+  image: https://pbs.twimg.com/news_img/2092588821674065920/zNwobQnu?format=jpg&name=orig
+- title: Modern Software Engineering in Anger
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092432306174595506
+  date: '2026-08-26'
+  excerpt: Modern Software Engineering in Anger
+  image: ''
+- title: Had a bunch of perplexing interactions with Claude today. Then realized it
+    was on Opus instead of Fa...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092431994126827802
+  date: '2026-08-26'
+  excerpt: Had a bunch of perplexing interactions with Claude today. Then realized
+    it was on Opus instead of Fable. I agree there's something off with that model.
+    It just feels weird.
+  image: ''
+- title: can't believe how clunky it is to stand up a simple server in azure
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092408349786583074
+  date: '2026-08-26'
+  excerpt: can't believe how clunky it is to stand up a simple server in azure
+  image: ''
+- title: Da Phaq? is a free Chrome extension and one of the first widgets I built
+    with agents. It's still sur...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092318401695727659
+  date: '2026-08-25'
+  excerpt: Da Phaq? is a free Chrome extension and one of the first widgets I built
+    with agents. It's still surprisingly useful. I'll read something online, highlight
+    it and hit the plug in. It passes the select...
+  image: ''
+- title: A great skill-pair is /pass-along and /session-recap. Coding agents often
+    tire before work completes...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092314254841950368
+  date: '2026-08-25'
+  excerpt: A great skill-pair is /pass-along and /session-recap. Coding agents often
+    tire before work completes, so making software involves multiple sessions. The
+    problem isn't communicating across agents, it's...
+  image: https://pbs.twimg.com/news_img/2090466167345270784/HWVSaj2i?format=jpg&name=orig
+- title: 'Working on too many things at once: A new open source tool for managing
+    cloud servers for coding age...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092298745958350929
+  date: '2026-08-25'
+  excerpt: 'Working on too many things at once: A new open source tool for managing
+    cloud servers for coding agents, a post about modern software engineering, a companion
+    skill to the doc that audits codebases, r...'
+  image: ''
 - title: I wonder if small software shops that make commercial, yet fairly easy to
     copy software will become ...
   source: twitter
@@ -1121,67 +1184,4 @@
   excerpt: You learn so much by shipping a product in its infancy. By self-funding
     Now I Get It! and letting a few people use it every day, I'm rewarded by seeing
     creativity in action. Someone uploaded a Qwen-ge...
-  image: ''
-- title: 'Even the best models will do crazy stuff when building AWS apps. I just
-    found this: DynamoDB records...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029390823696015591
-  date: '2026-03-05'
-  excerpt: 'Even the best models will do crazy stuff when building AWS apps. I just
-    found this: DynamoDB records for failed jobs were being assigned a TTL...meaning
-    these records automatically delete after an hou...'
-  image: ''
-- title: As an alternative to all the amazing things people are posting about on X,
-    I'm posting about putting...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029364310867095965
-  date: '2026-03-05'
-  excerpt: As an alternative to all the amazing things people are posting about on
-    X, I'm posting about putting text on telling people when the daily processing
-    limit has been hit. This involved changing index.h...
-  image: ''
-- title: Kewl. User accounts working in test environment
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029049123765096458
-  date: '2026-03-04'
-  excerpt: Kewl. User accounts working in test environment
-  image: ''
-- title: But then again, this is the kind of nonsense AWS pro cert exams test for.
-    So glad I don't have to sp...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029040130523124096
-  date: '2026-03-04'
-  excerpt: But then again, this is the kind of nonsense AWS pro cert exams test for.
-    So glad I don't have to spelunk docs for this stuff anymore
-  image: ''
-- title: Even Opus 4.6 grinds its teeth at CloudFormation errors
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029039280127926392
-  date: '2026-03-04'
-  excerpt: Even Opus 4.6 grinds its teeth at CloudFormation errors
-  image: ''
-- title: Honestly, I don't know where I'd be without Beads by @Steve_Yegge . Such
-    an elegant solution.
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029035394180764150
-  date: '2026-03-04'
-  excerpt: Honestly, I don't know where I'd be without Beads by @Steve_Yegge . Such
-    an elegant solution.
-  image: ''
-- title: AWS test account configured and code deployed and tested. Next, add user
-    support
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029007669462286388
-  date: '2026-03-04'
-  excerpt: AWS test account configured and code deployed and tested. Next, add user
-    support
-  image: ''
-- title: Since there's interest in my little app, it's time to get serious about DevOps
-    and AppOps. The last ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2028990927843254398
-  date: '2026-03-04'
-  excerpt: Since there's interest in my little app, it's time to get serious about
-    DevOps and AppOps. The last thing I want is to deploy something people like and
-    get bogged down on operations. First step, make ...
   image: ''
