@@ -2,6 +2,70 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Very happy with my Rocky Surf logo. I should have it made into a puzzle
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2093057191666151818
+  date: '2026-08-27'
+  excerpt: Very happy with my Rocky Surf logo. I should have it made into a puzzle
+  image: ''
+- title: 'Create your own font: 1. ChatGPT: "Make a fun font. All letters and characters.
+    Image and .ttf" 2. U...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092993663798239449
+  date: '2026-08-27'
+  excerpt: 'Create your own font: 1. ChatGPT: "Make a fun font. All letters and characters.
+    Image and .ttf" 2. Upload to Claude Design. Grab design system. 3. Implement with
+    Claude Code'
+  image: ''
+- title: Considering how integral Excalidraw is to my everyday, $72/yr is money well
+    spent
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092979804496683058
+  date: '2026-08-27'
+  excerpt: Considering how integral Excalidraw is to my everyday, $72/yr is money
+    well spent
+  image: ''
+- title: I’m starting to think it’s all coordinated. AI floods the web with 1000-word
+    articles and while we’r...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092961947553591468
+  date: '2026-08-27'
+  excerpt: I’m starting to think it’s all coordinated. AI floods the web with 1000-word
+    articles and while we’re yelling about slop, it’s quietly building agent communities
+  image: ''
+- title: Nice. AWS's docs are now agent friendly. Just change the suffix from .html
+    to .md
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092960204409254345
+  date: '2026-08-27'
+  excerpt: Nice. AWS's docs are now agent friendly. Just change the suffix from .html
+    to .md
+  image: ''
+- title: Why does Claude Design feel like it was made by Adobe? It's insanely frustrating
+    to work with
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092819204198089158
+  date: '2026-08-27'
+  excerpt: Why does Claude Design feel like it was made by Adobe? It's insanely frustrating
+    to work with
+  image: ''
+- title: Pffft….agents would never pass an enterprise security audit. “Agents later
+    posted credentials on thi...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092772147542323437
+  date: '2026-08-27'
+  excerpt: Pffft….agents would never pass an enterprise security audit. “Agents later
+    posted credentials on this board that were used to carry out the cyber attack.”
+  image: ''
+- title: /github-pages-deploy A handy skill to automatically push content to GitHub
+    Pages. It verifies the UI...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2092661221254205887
+  date: '2026-08-26'
+  excerpt: /github-pages-deploy A handy skill to automatically push content to GitHub
+    Pages. It verifies the UI, commits/pushes, creates a repo for the page with GitHub
+    pages enabled, and gets it out there.
+  image: https://pbs.twimg.com/news_img/2090466167345270784/HWVSaj2i?format=jpg&name=orig
 - title: /pass-along and /session-recap are now the top two skills I use. They allows
     agents to communicate a...
   source: twitter
@@ -1121,67 +1185,4 @@
   url: https://twitter.com/jbdamask/status/2029914107764236466
   date: '2026-03-06'
   excerpt: Got txts to see Metallica at Sphere 🤘 Kids, sorry about your college fund
-  image: ''
-- title: Ok, that took me too long but I finally put up a waitlist for Now I Get It!
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029745818056495372
-  date: '2026-03-06'
-  excerpt: Ok, that took me too long but I finally put up a waitlist for Now I Get
-    It!
-  image: ''
-- title: Sometimes, even the best mess up
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029677830120857930
-  date: '2026-03-05'
-  excerpt: Sometimes, even the best mess up
-  image: ''
-- title: Cool, got down-to-the-penny tokens reporting working for papers processed
-    by
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029675225990734270
-  date: '2026-03-05'
-  excerpt: Cool, got down-to-the-penny tokens reporting working for papers processed
-    by
-  image: ''
-- title: Added modes to 1) Native, for technical audiences 2) Non-technical 3) Kid-friendly
-    Getting closer to...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029632123779338654
-  date: '2026-03-05'
-  excerpt: Added modes to 1) Native, for technical audiences 2) Non-technical 3) Kid-friendly
-    Getting closer to launch.
-  image: ''
-- title: Another tip about Claude Opus 4.6 and cloud-first architecture is that Opus
-    wants to put everything ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029586803615768697
-  date: '2026-03-05'
-  excerpt: Another tip about Claude Opus 4.6 and cloud-first architecture is that
-    Opus wants to put everything in the smallest design package possible. It doesn't
-    think about distributed architecture unless remi...
-  image: ''
-- title: Why is it so hard to understand my Claude bills? And what's with the 90s-era
-    support page?
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029573426399097173
-  date: '2026-03-05'
-  excerpt: Why is it so hard to understand my Claude bills? And what's with the 90s-era
-    support page?
-  image: ''
-- title: I did a lot of consulting Aug-Dec. It's important to earn a living but glad
-    I was able to balance co...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029533975379837104
-  date: '2026-03-05'
-  excerpt: I did a lot of consulting Aug-Dec. It's important to earn a living but
-    glad I was able to balance consulting with building last month.
-  image: ''
-- title: You learn so much by shipping a product in its infancy. By self-funding Now
-    I Get It! and letting a ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029519907155513633
-  date: '2026-03-05'
-  excerpt: You learn so much by shipping a product in its infancy. By self-funding
-    Now I Get It! and letting a few people use it every day, I'm rewarded by seeing
-    creativity in action. Someone uploaded a Qwen-ge...
   image: ''
