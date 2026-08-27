@@ -1,11 +1,46 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Verifying AWS gotchas with Claude for Chrome"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7498461785591599105/
+  date: 2026-08-26
+  excerpt: "The AWS Learnings Library collects expert-curated gotchas that trip up coding agents building AWS apps. When a contributor suggested a new one, John used the Claude for Chrome extension to search AWS docs and verify both the problem and the proposed fix."
+  image: ""
+
 - title: "Modern Software Engineering in Anger"
   source: blog
   url: https://johndamask.com/modern-software-engineering-in-anger/
   date: 2026-08-25
   excerpt: "Engineering principles for software development in the age of AI agents"
+  image: ""
+
+- title: "Pass-along and session-recap: building across agent sessions"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7498078852796289024/
+  date: 2026-08-25
+  excerpt: "AI coding agents get tired before the work is done, so building software means many sessions across time, not just across agents. The /pass-along and /session-recap skill pair commits structured handoff notes into the repo so any agent, on any server, can pick up where the last one left off."
+  image: ""
+
+- title: "Building an 8-bit fishing game as a coding side-quest"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7497039501316374529/
+  date: 2026-08-22
+  excerpt: "Inspired by a Montauk Point surf-fishing guide who out-fishes everyone on the beach, John built an Atari-style 8-bit game honoring him — the kind of small, fun side-quest that coding agents make easy to chase mid-project."
+  image: ""
+
+- title: "What today's coding agents get right without being told"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7496211127039664128/
+  date: 2026-08-20
+  excerpt: "Testing coding agents on cloud servers by having them build simple video games reveals real engineering intuition: translating vague feature requests into a working game engine, picking sensible UX, choosing right-sized implementation patterns, and anticipating failure points."
+  image: ""
+
+- title: "DeepSeek's hot-swappable plugins, translated"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7495932162211237888/
+  date: 2026-08-19
+  excerpt: "DeepSeek's new coding harness lets plugins be added or removed without restarting the agent, solving the slow re-orientation problem as more software gets built on the fly by agents. John ran their math-heavy paper through Now I Get It! for a plain-language translation."
   image: ""
 
 - title: "Two tips for large software systems with AI agents"
@@ -50,6 +85,20 @@
   excerpt: "Simon Willison's write-up of the security incident during an OpenAI training run: chasing a good test score, the model went looking for the answers on someone else's machine. Hugging Face caught it, then found their own guardrails blocked GPT and Claude from analyzing the intrusion."
   image: ""
 
+- title: "A Claude Skill for searching YouTube channel transcripts"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7485312072415866880/
+  date: 2026-07-21
+  excerpt: "A new skill in John Claude Skills downloads transcripts for every video on a YouTube channel, so Claude can search across them — for example, finding the exact moment a guest mentions a specific person or topic."
+  image: ""
+
+- title: "Video search lands in McBrain"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7484050866782486528/
+  date: 2026-07-18
+  excerpt: "McBrain, John's proto-app for organizing work, interests, and personal life on the LLM Wiki structure, now searches across both what's said and what's shown in video. Real product work remains, like defining truth and managing wiki evolution, but this feature is just fun."
+  image: ""
+
 - title: "SEFAM: explain your AI agents' work simply enough for a manager"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7483514616107413504/
@@ -83,6 +132,13 @@
   url: https://www.linkedin.com/feed/update/urn:li:activity:7477149169699250176/
   date: 2026-06-29
   excerpt: "The fun of building an app on vacation is that I'm my own customer. I want to add pictures — boom. I want to just chat with my app — done. I want to personalize it any way I like — here you go."
+  image: ""
+
+- title: "LLM Wikis as a new kind of information store"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7475400399596740608/
+  date: 2026-06-24
+  excerpt: "Where relational databases handle transactions and column stores handle analytics, LLM Wikis excel at surfacing relationships between documents and concepts. An MCP now lets John chat with his personal wikis (McBrains) through Claude, built from something as simple as a vacation itinerary."
   image: ""
 
 - title: "What should companies budget for AI tokens?"
