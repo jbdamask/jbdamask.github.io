@@ -2,6 +2,12 @@
 # Fetches RSS feed (latest 5) and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: Create and use your own fonts with ChatGPT and Claude Design
+  source: substack
+  url: https://johndamask.substack.com/p/create-and-use-your-own-fonts-with
+  date: '2026-08-27'
+  excerpt: Make your app stand out
+  image: https://substackcdn.com/image/fetch/$s_!pWyc!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6e7f82b7-3079-4310-9e47-587e2c352589_1250x870.png
 - title: Protect API keys from exposure by coding agents (Mac)
   source: substack
   url: https://johndamask.substack.com/p/protect-api-keys-from-exposure-by
