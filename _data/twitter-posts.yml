@@ -2,6 +2,38 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Rocky Surf is not only very useful, but I really like the look of it, too.
+    Custom fonts, call-to-act...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2093321465391108268
+  date: '2026-08-28'
+  excerpt: Rocky Surf is not only very useful, but I really like the look of it, too.
+    Custom fonts, call-to-action components pop, chill cloudy-night vibe. Makes it
+    so easy to manage my cloud-based coding agents...
+  image: ''
+- title: 'Fable. What are you trying to say? PR 213 design: vendor the designer''s
+    rendered guide to the applie...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2093308672701075896
+  date: '2026-08-28'
+  excerpt: 'Fable. What are you trying to say? PR 213 design: vendor the designer''s
+    rendered guide to the applied system'
+  image: ''
+- title: hmmmm....it seems like Anthropic model training violates their own terms
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2093306562601247160
+  date: '2026-08-28'
+  excerpt: hmmmm....it seems like Anthropic model training violates their own terms
+  image: ''
+- title: There are a lot of people building anti-AI slop skills now. I have to say,
+    none of their names beat ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2093305248848691657
+  date: '2026-08-28'
+  excerpt: 'There are a lot of people building anti-AI slop skills now. I have to
+    say, none of their names beat the one I launched in April: The Cringelinter Ralph
+    Loop'
+  image: https://pbs.twimg.com/news_img/2093305292956000256/RESm4uOP?format=jpg&name=orig
 - title: Very happy with my Rocky Surf logo. I should have it made into a puzzle
   source: twitter
   url: https://twitter.com/jbdamask/status/2093057191666151818
@@ -1153,36 +1185,4 @@
   url: https://twitter.com/jbdamask/status/2030096287761138037
   date: '2026-03-07'
   excerpt: 'Now I Get It! Update: Added LaTeX to the rendered web pages!'
-  image: ''
-- title: I'm pretty happy about this. Just opened up the waitlist yesterday and did
-    very little advertising (...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2030091646654689747
-  date: '2026-03-07'
-  excerpt: I'm pretty happy about this. Just opened up the waitlist yesterday and
-    did very little advertising (here and LinkedIn). People are mostly just finding
-    the site
-  image: ''
-- title: One of the more insidious things that LLMs write into coding plans is options,
-    like, "Include KaTeX ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2030027742591238476
-  date: '2026-03-06'
-  excerpt: One of the more insidious things that LLMs write into coding plans is options,
-    like, "Include KaTeX or MathJax". This can f*** up your app in weird ways. Another
-    reason why humans still need to scruti...
-  image: ''
-- title: Another reason why I use Opus 4.6 to troubleshoot. There's no way I would
-    have identified the root c...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029966938395291766
-  date: '2026-03-06'
-  excerpt: Another reason why I use Opus 4.6 to troubleshoot. There's no way I would
-    have identified the root cause of my bug that fast
-  image: ''
-- title: Got txts to see Metallica at Sphere 🤘 Kids, sorry about your college fund
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2029914107764236466
-  date: '2026-03-06'
-  excerpt: Got txts to see Metallica at Sphere 🤘 Kids, sorry about your college fund
   image: ''
