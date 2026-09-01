@@ -2,6 +2,13 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: The DOM selector and comment widget in Claude Design is a super-powered feature
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2094763200730235299
+  date: '2026-09-01'
+  excerpt: The DOM selector and comment widget in Claude Design is a super-powered
+    feature
+  image: ''
 - title: lol, of course The agent responsible for creating the Artifactory message
     board in the OpenAI securi...
   source: twitter
@@ -1177,12 +1184,3 @@
   excerpt: I'm having a lot of trouble trusting ChatGPT lately. This kind of thing
     is fairly common where it contradicts itself.
   image: ''
-- title: Added a cost-tracking skill to In Claude Code, just type /cost-tracking before
-    running the command y...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2030660949313560974
-  date: '2026-03-08'
-  excerpt: Added a cost-tracking skill to In Claude Code, just type /cost-tracking
-    before running the command you want to track. When ready, say "stop tracking"
-    and you'll get a nice breakdown.
-  image: https://pbs.twimg.com/news_img/2030660997174755328/diUqUxgz?format=jpg&name=orig
