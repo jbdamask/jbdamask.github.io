@@ -2,6 +2,61 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: This is my CLAUDE.md these days.
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2095181404459892798
+  date: '2026-09-02'
+  excerpt: This is my CLAUDE.md these days.
+  image: ''
+- title: I feel a bit sorry to the next generation of software engineers. They'll
+    never need to learn terms l...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2095175883606704196
+  date: '2026-09-02'
+  excerpt: I feel a bit sorry to the next generation of software engineers. They'll
+    never need to learn terms like "exponential backoff" or "idempotency". And they'll
+    never lose hours of their lives struggling w...
+  image: ''
+- title: Adversarial agents to stress-test plans should be baked into coding harnesses.
+    They save time, token...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2095147249567170972
+  date: '2026-09-02'
+  excerpt: Adversarial agents to stress-test plans should be baked into coding harnesses.
+    They save time, tokens, and money.
+  image: ''
+- title: Coding agents still have a tendency to be addition machines. Find bug? Add
+    code to fix. I run in to ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2095141840148152499
+  date: '2026-09-02'
+  excerpt: Coding agents still have a tendency to be addition machines. Find bug?
+    Add code to fix. I run in to this even when claude.md/agent.md directs agents
+    to keep things simple. As of now, the only answers ...
+  image: ''
+- title: 'TIL: If you''re on a hot spot network, your IP for web traffic is different
+    than your IP for ssh. Thi...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2095131075152351266
+  date: '2026-09-02'
+  excerpt: 'TIL: If you''re on a hot spot network, your IP for web traffic is different
+    than your IP for ssh. This has implications for ssh''ing into cloud boxes while
+    on the move. Use portquiz to check'
+  image: ''
+- title: sigh
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2094983752116060351
+  date: '2026-09-02'
+  excerpt: sigh
+  image: ''
+- title: Nice, I have official Surge Packs for 11 different coding agents in Rocky
+    Surf Get coding agents off...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2094971640413098121
+  date: '2026-09-02'
+  excerpt: Nice, I have official Surge Packs for 11 different coding agents in Rocky
+    Surf Get coding agents off of your laptop and onto your cloud. Launch is imminent!
+  image: ''
 - title: The DOM selector and comment widget in Claude Design is a super-powered feature
   source: twitter
   url: https://twitter.com/jbdamask/status/2094763200730235299
@@ -1127,60 +1182,4 @@
   excerpt: Opus 4.6 is fucking amazing. Add a blog page to my app. Done. Chop up my
     DevLog into individual posts. Done. Make tag-based filters. Done. I like @yoheinakajima
     blog timeline design, copy that. Done.
-  image: ''
-- title: X is really just a note taking app for myself. Evidence for this includes
-    tweets getting &lt;=4 impr...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2030850137409384726
-  date: '2026-03-09'
-  excerpt: X is really just a note taking app for myself. Evidence for this includes
-    tweets getting &lt;=4 impressions.
-  image: ''
-- title: Added chips to the carousel so you can easily see if article translations
-    are Native (full science),...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2030835427909714067
-  date: '2026-03-09'
-  excerpt: Added chips to the carousel so you can easily see if article translations
-    are Native (full science), Non-technical (for smart people without all the math),
-    or Kid-friendly
-  image: ''
-- title: Opus 4.6 still makes a lot of questionable decisions when it comes to distributed
-    cloud architecture...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2030831819671646321
-  date: '2026-03-09'
-  excerpt: Opus 4.6 still makes a lot of questionable decisions when it comes to distributed
-    cloud architecture, but it's great when given guidance.
-  image: ''
-- title: 'Three development tools I can''t live without: * Beads by @Steve_Yegge *
-    Beads Viewer and Destructive...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2030826637227360290
-  date: '2026-03-09'
-  excerpt: 'Three development tools I can''t live without: * Beads by @Steve_Yegge
-    * Beads Viewer and Destructive Command Guard by @doodlestein Agentic engineering
-    has been so smooth since I started using these.'
-  image: ''
-- title: Claude's frontend designer skill puts it on par with Lovable apps
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2030816496830517391
-  date: '2026-03-09'
-  excerpt: Claude's frontend designer skill puts it on par with Lovable apps
-  image: ''
-- title: Added a feedback mechanism to web pages created by Now I Get It! This helps
-    me improve the app over ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2030815590839971899
-  date: '2026-03-09'
-  excerpt: Added a feedback mechanism to web pages created by Now I Get It! This helps
-    me improve the app over time
-  image: ''
-- title: I'm having a lot of trouble trusting ChatGPT lately. This kind of thing is
-    fairly common where it co...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2030804995939922169
-  date: '2026-03-09'
-  excerpt: I'm having a lot of trouble trusting ChatGPT lately. This kind of thing
-    is fairly common where it contradicts itself.
   image: ''
