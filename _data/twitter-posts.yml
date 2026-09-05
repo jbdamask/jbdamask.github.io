@@ -2,6 +2,33 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: I'm still getting used to how freaking slow Fable 5.1 is
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2096029037399302205
+  date: '2026-09-05'
+  excerpt: I'm still getting used to how freaking slow Fable 5.1 is
+  image: ''
+- title: approvals in coding agents should be banned
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2096019157884027103
+  date: '2026-09-04'
+  excerpt: approvals in coding agents should be banned
+  image: ''
+- title: Six months ago working with coding agents meant they'd grind for about 20
+    mins. So I'd run a bunch o...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2096012809905561893
+  date: '2026-09-04'
+  excerpt: Six months ago working with coding agents meant they'd grind for about
+    20 mins. So I'd run a bunch of agents on different projects and be able to keep
+    them in mind. Now that agents run for 1hr+, I hav...
+  image: ''
+- title: ''
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2095946499528004085
+  date: '2026-09-04'
+  excerpt: ''
+  image: ''
 - title: Hmmmm…..if astral is AGI then why isn’t it maxxing all benchmarks? And if
     it’s AGI, isn’t it the las...
   source: twitter
@@ -1153,32 +1180,4 @@
   url: https://twitter.com/jbdamask/status/2031072563334377655
   date: '2026-03-09'
   excerpt: It's March 9. Yup
-  image: ''
-- title: Zoiks. Need to improve my hygiene a bit
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2030989325589164274
-  date: '2026-03-09'
-  excerpt: Zoiks. Need to improve my hygiene a bit
-  image: ''
-- title: If Vibe Coding is like writing a punk rock tune - fast, sloppy, fun - Agentic
-    Engineering (AE) lets ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2030987846979346529
-  date: '2026-03-09'
-  excerpt: If Vibe Coding is like writing a punk rock tune - fast, sloppy, fun - Agentic
-    Engineering (AE) lets you create symphonies.
-  image: ''
-- title: 🤣
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2030855129260306897
-  date: '2026-03-09'
-  excerpt: 🤣
-  image: ''
-- title: If you think @bcherny quote about coding being solved means engineering is
-    solved, here's a DevLog t...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2030854851987489254
-  date: '2026-03-09'
-  excerpt: If you think @bcherny quote about coding being solved means engineering
-    is solved, here's a DevLog to provide some education
   image: ''
