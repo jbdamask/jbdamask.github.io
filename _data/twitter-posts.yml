@@ -2,6 +2,41 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: In praise of consistent, hard work. Super proud of my son. He recorded 450
+    hrs of grind over 11 mont...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2096601895817142593
+  date: '2026-09-06'
+  excerpt: In praise of consistent, hard work. Super proud of my son. He recorded
+    450 hrs of grind over 11 months making this Geometry Dash level (no, you probably
+    can't beat it). Designed and aligned around a @...
+  image: https://pbs.twimg.com/news_img/2095248744664985602/8i8MsCYG?format=jpg&name=orig
+- title: One learning from building Rocky Surf is that designing truly personalized
+    apps is possible. Simply ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2096591901948256433
+  date: '2026-09-06'
+  excerpt: One learning from building Rocky Surf is that designing truly personalized
+    apps is possible. Simply decide the fixed and variable parts of yr app, have yr
+    agents build a plug-in system and hand users ...
+  image: ''
+- title: Nice! Got the add-provider skill working so new cloud providers can be dynamically
+    added to Rocky Su...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2096584330638184485
+  date: '2026-09-06'
+  excerpt: Nice! Got the add-provider skill working so new cloud providers can be
+    dynamically added to Rocky Surf. Now I can fire up Droplets on Digital Ocean
+  image: ''
+- title: It's really not about coding anymore. It's about bringing ideas into the
+    world as fast as they come....
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2096448044564680943
+  date: '2026-09-06'
+  excerpt: It's really not about coding anymore. It's about bringing ideas into the
+    world as fast as they come. The problem is that there's a never-ending stream
+    of ideas so I'm glued to my agents. A cyber-symbi...
+  image: ''
 - title: I'm still getting used to how freaking slow Fable 5.1 is
   source: twitter
   url: https://twitter.com/jbdamask/status/2096029037399302205
@@ -1153,31 +1188,4 @@
   excerpt: Crazy how reliant I've become on Claude Code. Can't use it currently. Pretty
     funny how Claude answered my question about the problem, saying "Rough week for
     them"...meaning Anthropic
-  image: ''
-- title: 199 people have signed up for the waitlist for Super excited to launch this!
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2031553365000229345
-  date: '2026-03-11'
-  excerpt: 199 people have signed up for the waitlist for Super excited to launch
-    this!
-  image: ''
-- title: Hey Claude, analyze all my endpoints for security vulnerabilities and come
-    back with a plan! beep bo...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2031080780605042855
-  date: '2026-03-09'
-  excerpt: Hey Claude, analyze all my endpoints for security vulnerabilities and come
-    back with a plan! beep boop beep
-  image: ''
-- title: First hack...and the app isn't even live. Maybe that's a good thing.
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2031073957105787159
-  date: '2026-03-09'
-  excerpt: First hack...and the app isn't even live. Maybe that's a good thing.
-  image: ''
-- title: It's March 9. Yup
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2031072563334377655
-  date: '2026-03-09'
-  excerpt: It's March 9. Yup
   image: ''
