@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: I used to think I had a lot of ideas. But now I see that the number was artificially
+    limited by exec...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2096930118379688342
+  date: '2026-09-07'
+  excerpt: I used to think I had a lot of ideas. But now I see that the number was
+    artificially limited by execution speed. The fact that AI lets us test more ideas
+    is true in absolute terms, but I'm not sure ho...
+  image: ''
 - title: In praise of consistent, hard work. Super proud of my son. He recorded 450
     hrs of grind over 11 mont...
   source: twitter
@@ -1179,13 +1188,4 @@
   excerpt: Did you know that over 3 million academic papers are published every year?
     But these can’t be understood by everyone, which contributes to people not trusting
     science. Now I Get It! Solves this proble...
-  image: ''
-- title: Crazy how reliant I've become on Claude Code. Can't use it currently. Pretty
-    funny how Claude answer...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2031774864428642759
-  date: '2026-03-11'
-  excerpt: Crazy how reliant I've become on Claude Code. Can't use it currently. Pretty
-    funny how Claude answered my question about the problem, saying "Rough week for
-    them"...meaning Anthropic
   image: ''
