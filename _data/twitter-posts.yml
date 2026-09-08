@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: 'Regardless of the latest hype, I still like Skills. There are two types
+    of Skills: 1. Procedures - W...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2097335403871195552
+  date: '2026-09-08'
+  excerpt: 'Regardless of the latest hype, I still like Skills. There are two types
+    of Skills: 1. Procedures - What to do 2. Style - How to do it Fewer Skills are
+    needed for generic stuff, but every person &amp; ...'
+  image: ''
 - title: I used to think I had a lot of ideas. But now I see that the number was artificially
     limited by exec...
   source: twitter
@@ -1179,13 +1188,4 @@
   date: '2026-03-12'
   excerpt: it doesn't matter if engineers aren't coding anymore - there's still endless
     work to do
-  image: ''
-- title: Did you know that over 3 million academic papers are published every year?
-    But these can’t be unders...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2031875215509115011
-  date: '2026-03-11'
-  excerpt: Did you know that over 3 million academic papers are published every year?
-    But these can’t be understood by everyone, which contributes to people not trusting
-    science. Now I Get It! Solves this proble...
   image: ''
