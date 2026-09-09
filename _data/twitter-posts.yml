@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: 'Me to Fable: Make a 20 second video showing how to use Rocky Surf to create
+    a new coding agent cloud...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2097516249114653154
+  date: '2026-09-09'
+  excerpt: 'Me to Fable: Make a 20 second video showing how to use Rocky Surf to create
+    a new coding agent cloud VM Fable:'
+  image: ''
 - title: 'Regardless of the latest hype, I still like Skills. There are two types
     of Skills: 1. Procedures - W...'
   source: twitter
@@ -1180,12 +1188,4 @@
   url: https://twitter.com/jbdamask/status/2032181090727723343
   date: '2026-03-12'
   excerpt: navigating copyright law so I can launch zzzzzz
-  image: ''
-- title: it doesn't matter if engineers aren't coding anymore - there's still endless
-    work to do
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032084583269957951
-  date: '2026-03-12'
-  excerpt: it doesn't matter if engineers aren't coding anymore - there's still endless
-    work to do
   image: ''
