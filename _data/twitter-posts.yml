@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: 'Modern website design: T-2 weeks: ChatGPT makes me a logo and font, load
+    into Claude Design. T-1 wee...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2097786039888667003
+  date: '2026-09-09'
+  excerpt: 'Modern website design: T-2 weeks: ChatGPT makes me a logo and font, load
+    into Claude Design. T-1 week: v1 finished. Plain. T-1 day: Asked Fable to make
+    app walkthrough vids. Awesome. T-4 hrs: Find ran...'
+  image: ''
 - title: 'Me to Fable: Make a 20 second video showing how to use Rocky Surf to create
     a new coding agent cloud...'
   source: twitter
@@ -1182,10 +1191,4 @@
   url: https://twitter.com/jbdamask/status/2032211696069025847
   date: '2026-03-12'
   excerpt: It's amazing how much non-functional stuff goes into launching a product
-  image: ''
-- title: navigating copyright law so I can launch zzzzzz
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032181090727723343
-  date: '2026-03-12'
-  excerpt: navigating copyright law so I can launch zzzzzz
   image: ''
