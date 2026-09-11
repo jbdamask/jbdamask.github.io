@@ -2,6 +2,33 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: 'Rocky Surf implements two things that will quickly become tables stakes
+    for all software: 1. UI inte...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2098239704982233297
+  date: '2026-09-11'
+  excerpt: 'Rocky Surf implements two things that will quickly become tables stakes
+    for all software: 1. UI interface for humans and MCP interface for agents 2. Extensible
+    architecture so that customization, even...'
+  image: https://pbs.twimg.com/news_img/2098213879947952132/2G1x2Gn7?format=jpg&name=orig
+- title: For regular work it’s still mostly CC but I’m increasingly pairing with gpt
+    since sol/astra. Also ex...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2098221098613526682
+  date: '2026-09-11'
+  excerpt: For regular work it’s still mostly CC but I’m increasingly pairing with
+    gpt since sol/astra. Also experimenting with open models so I needed a way to
+    quickly package and deploy harnesses to VMs. Rocky...
+  image: ''
+- title: Rocky Surf started late last year after Claude Code crashed my laptop. Since
+    then, I've done much of...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2098213879503274437
+  date: '2026-09-11'
+  excerpt: Rocky Surf started late last year after Claude Code crashed my laptop.
+    Since then, I've done much of my coding from cloud VMs (aws, gcp, &amp; hetzner)
+    with several different harnesses. Decided to tur...
+  image: https://pbs.twimg.com/news_img/2098213879947952132/2G1x2Gn7?format=jpg&name=orig
 - title: 'Modern website design: T-2 weeks: ChatGPT makes me a logo and font, load
     into Claude Design. T-1 wee...'
   source: twitter
@@ -1169,26 +1196,4 @@
   excerpt: Here's another example of how Opus 4.6 thinks like an engineer. I tasked
     it with breaking apart my deployment scripts and it realized that it should add
     a reminder in CLAUDE.md
-  image: ''
-- title: 16 hrs and 6 PRs today. I'm of two minds about that. Solid progress and ever
-    closer to launch. But a...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032282558092714347
-  date: '2026-03-13'
-  excerpt: 16 hrs and 6 PRs today. I'm of two minds about that. Solid progress and
-    ever closer to launch. But at the same time, I thought I would have more to show.
-  image: ''
-- title: Honestly, I don't know why I fought this for so long, but I just bumped to
-    the $200/month max plan f...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032232035192852684
-  date: '2026-03-12'
-  excerpt: Honestly, I don't know why I fought this for so long, but I just bumped
-    to the $200/month max plan for Claude.
-  image: ''
-- title: It's amazing how much non-functional stuff goes into launching a product
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032211696069025847
-  date: '2026-03-12'
-  excerpt: It's amazing how much non-functional stuff goes into launching a product
   image: ''
