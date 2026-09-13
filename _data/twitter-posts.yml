@@ -2,6 +2,32 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: I expect that all new software designed for humans is usable by agents (not
+    computer use) I expect t...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2099112044020547898
+  date: '2026-09-13'
+  excerpt: I expect that all new software designed for humans is usable by agents
+    (not computer use) I expect that all new software will allow me to extend its
+    primary feature set
+  image: ''
+- title: Rocky Surf + Herdr Rocky Surf MCP or UI is used to create and manage VMs
+    running in your own cloud H...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2099110104037494963
+  date: '2026-09-13'
+  excerpt: Rocky Surf + Herdr Rocky Surf MCP or UI is used to create and manage VMs
+    running in your own cloud Herdr manages the agents running on the VMs
+  image: ''
+- title: Rocky Surf and @herdrdev make an amazing pair. Rocky Surf makes it easy to
+    spin up servers in your o...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2098813902297448957
+  date: '2026-09-12'
+  excerpt: Rocky Surf and @herdrdev make an amazing pair. Rocky Surf makes it easy
+    to spin up servers in your own cloud with your favorite coding agents installed,
+    whereas Herdr makes it easy to manage multiple ...
+  image: https://pbs.twimg.com/news_img/2098213879947952132/2G1x2Gn7?format=jpg&name=orig
 - title: 'Rocky Surf implements two things that will quickly become tables stakes
     for all software: 1. UI inte...'
   source: twitter
@@ -1172,28 +1198,4 @@
   url: https://twitter.com/jbdamask/status/2032532585104941410
   date: '2026-03-13'
   excerpt: ooooooooo....beefy
-  image: ''
-- title: 'Before agentic engineering: Worktree wha? Now: Oh yea, totally worktrees'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032528131337150566
-  date: '2026-03-13'
-  excerpt: 'Before agentic engineering: Worktree wha? Now: Oh yea, totally worktrees'
-  image: ''
-- title: The job of an engineer remains that of an engineer, even though coding is
-    now done by agents. Engine...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032516947632382226
-  date: '2026-03-13'
-  excerpt: The job of an engineer remains that of an engineer, even though coding
-    is now done by agents. Engineers need to think through problems, decompose them,
-    architect solutions, and keep the LLM on track. ...
-  image: ''
-- title: Here's another example of how Opus 4.6 thinks like an engineer. I tasked
-    it with breaking apart my d...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032473008548254208
-  date: '2026-03-13'
-  excerpt: Here's another example of how Opus 4.6 thinks like an engineer. I tasked
-    it with breaking apart my deployment scripts and it realized that it should add
-    a reminder in CLAUDE.md
   image: ''
