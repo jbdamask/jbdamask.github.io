@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Spinning up cloud VMs for agentic coding has never been easier. With Rocky
+    Surf you just pick a clou...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2099656604689850410
+  date: '2026-09-15'
+  excerpt: Spinning up cloud VMs for agentic coding has never been easier. With Rocky
+    Surf you just pick a cloud, a box size, an agentic coding harness and poof. Bob's
+    your uncle
+  image: ''
 - title: I expect that all new software designed for humans is usable by agents (not
     computer use) I expect t...
   source: twitter
@@ -1192,10 +1201,4 @@
   url: https://twitter.com/jbdamask/status/2032539574874849349
   date: '2026-03-13'
   excerpt: This is what combining git worktrees with Beads looks like.
-  image: ''
-- title: ooooooooo....beefy
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032532585104941410
-  date: '2026-03-13'
-  excerpt: ooooooooo....beefy
   image: ''
