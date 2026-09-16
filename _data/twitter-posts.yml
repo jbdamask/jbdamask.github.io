@@ -2,6 +2,21 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: This is going to be fun. I'm building a mobile app to help me improve at
+    rock climbing. Fired up a R...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2100227399665238417
+  date: '2026-09-16'
+  excerpt: This is going to be fun. I'm building a mobile app to help me improve at
+    rock climbing. Fired up a Rocky Surf server, worked out the initial plan, had
+    Claude decompose into epics and loop-built overni...
+  image: ''
+- title: Tell me again, why do businesses need phones?
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2099957952098586873
+  date: '2026-09-15'
+  excerpt: Tell me again, why do businesses need phones?
+  image: ''
 - title: Spinning up cloud VMs for agentic coding has never been easier. With Rocky
     Surf you just pick a clou...
   source: twitter
@@ -1187,18 +1202,4 @@
   excerpt: 5 PRs today for Now I Get It! 1. Add support for Opus 1M token window 2.
     Scrub PII 3. Add BCDR to the system 4. Modularize deploy scripts 5. Automate copyright
     claim response emails Blog posts for eac...
-  image: ''
-- title: If your boss thinks "AI solves coding" means "AI solves engineering", point
-    'em at my devlog for Now...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032560949991809024
-  date: '2026-03-13'
-  excerpt: If your boss thinks "AI solves coding" means "AI solves engineering", point
-    'em at my devlog for Now I Get It!
-  image: ''
-- title: This is what combining git worktrees with Beads looks like.
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032539574874849349
-  date: '2026-03-13'
-  excerpt: This is what combining git worktrees with Beads looks like.
   image: ''
