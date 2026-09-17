@@ -2,6 +2,50 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Anyone know how to pronounce Noul?
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2100626857586512210
+  date: '2026-09-17'
+  excerpt: Anyone know how to pronounce Noul?
+  image: ''
+- title: Remember to always look for llms.txt!
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2100609774035316865
+  date: '2026-09-17'
+  excerpt: Remember to always look for llms.txt!
+  image: ''
+- title: Azure's console could benefit from Jev. Why do I have to go through the entire
+    wizard only to be tol...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2100557940436398337
+  date: '2026-09-17'
+  excerpt: Azure's console could benefit from Jev. Why do I have to go through the
+    entire wizard only to be told there's an error?
+  image: ''
+- title: Yay Jev Boo sleep
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2100399278824800537
+  date: '2026-09-17'
+  excerpt: Yay Jev Boo sleep
+  image: ''
+- title: Moving forward, apps that have UIs for people should also have MCPs for agents.
+    Rocky Surf has this ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2100394835588858270
+  date: '2026-09-17'
+  excerpt: Moving forward, apps that have UIs for people should also have MCPs for
+    agents. Rocky Surf has this in spades. It's great to be able to spin up agent
+    boxes running in the cloud of my choice from insid...
+  image: ''
+- title: By having a good process and docs for my apps, I'm able to rubber stamp nearly
+    all agent PRs. The on...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2100330033231409223
+  date: '2026-09-16'
+  excerpt: By having a good process and docs for my apps, I'm able to rubber stamp
+    nearly all agent PRs. The only times I don't are if an agent a) made a large change;
+    b) got the UX egregiously wrong Even these ...
+  image: ''
 - title: This is going to be fun. I'm building a mobile app to help me improve at
     rock climbing. Fired up a R...
   source: twitter
@@ -1156,50 +1200,4 @@
   excerpt: A key learning from @HamelHusain and @sh_reya Evals course is to make it
     easy to annotate failure modes. I added an open coding feature to the ops plane
     for my Now I Get It! app to do just that
-  image: ''
-- title: I can't remember the last time Claude said, "You're absolutely right!".
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032912455593046527
-  date: '2026-03-14'
-  excerpt: I can't remember the last time Claude said, "You're absolutely right!".
-  image: ''
-- title: I'm so close to launching Now I Get It! - the app that translates complex
-    scientific articles into i...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032831015664640071
-  date: '2026-03-14'
-  excerpt: I'm so close to launching Now I Get It! - the app that translates complex
-    scientific articles into interactive webapps that everyone can understand. But
-    Opus 1M token became GA yesterday, so I have to...
-  image: ''
-- title: Added an operations dashboard to Now I Get It! Now I can see processed jobs,
-    token usage, costs, wai...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032830396061090152
-  date: '2026-03-14'
-  excerpt: Added an operations dashboard to Now I Get It! Now I can see processed
-    jobs, token usage, costs, waitlist, feedback, and even copyright claims.
-  image: ''
-- title: Wow
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032818289039094271
-  date: '2026-03-14'
-  excerpt: Wow
-  image: ''
-- title: Tell me I should cancel my ski trip without telling I should cancel my ski
-    trip
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032657255502336305
-  date: '2026-03-14'
-  excerpt: Tell me I should cancel my ski trip without telling I should cancel my
-    ski trip
-  image: ''
-- title: 5 PRs today for Now I Get It! 1. Add support for Opus 1M token window 2.
-    Scrub PII 3. Add BCDR to th...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2032655672031031376
-  date: '2026-03-14'
-  excerpt: 5 PRs today for Now I Get It! 1. Add support for Opus 1M token window 2.
-    Scrub PII 3. Add BCDR to the system 4. Modularize deploy scripts 5. Automate copyright
-    claim response emails Blog posts for eac...
   image: ''
