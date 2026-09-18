@@ -1,6 +1,41 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Pairing Typesafe's Jev model with Claude Code"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7506506700732960768/
+  date: 2026-09-18
+  excerpt: "Jev is a \"system 1\" model: it makes fast, cheap decisions from input and evaluation criteria rather than writing text. Because Typesafe's docs follow the llms.txt convention, you can point a coding agent at them and build. First test: sorting which emails actually need action."
+  image: ""
+
+- title: "Every new app should ship an MCP server"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7506345399113293824/
+  date: 2026-09-17
+  excerpt: "Claude and ChatGPT are becoming the universal app, so why alt-tab to anything else? MCP is the standard that connects them to your software, and frontier models now know it well enough to write the server code for you."
+  image: ""
+
+- title: "A rock climbing coach app, built overnight"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7506002827316731904/
+  date: 2026-09-16
+  excerpt: "Planned with Fable on a Rocky Surf server, then left to build while John slept. The app tracks hands and feet through a climb and measures your center of gravity against the plumb line: the closer the two, the more efficiently you move. First test subject was a door."
+  image: ""
+
+- title: "Rocky Surf and Herdr, running together"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7504577586199449600/
+  date: 2026-09-12
+  excerpt: "Two open-source tools that solve different halves of the same problem. Rocky Surf spins up servers in your own cloud with coding agents installed; Herdr manages the agent sessions. An uncut video shows agents across AWS, GCP, and a laptop working as one fleet."
+  image: ""
+
+- title: "Rocky Surf is out"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7503882233686966274/
+  date: 2026-09-10
+  excerpt: "Coding agents shouldn't run on the same machine you use for work and life. Rocky Surf creates and manages Linux VMs in your own AWS, GCP, Azure, or Hetzner account, pre-installed with your agents and repos, driven from a local web app or MCP server."
+  image: ""
+
 - title: "Verifying AWS gotchas with Claude for Chrome"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7498461785591599105/
