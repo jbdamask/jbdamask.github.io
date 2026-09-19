@@ -2,6 +2,22 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Not sure how would work, but LLMs could benefit from incorporating decision
+    models
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2101304624376394123
+  date: '2026-09-19'
+  excerpt: Not sure how would work, but LLMs could benefit from incorporating decision
+    models
+  image: ''
+- title: Just learned about the ctrl+enter feature on Claude Code where you can interrupt
+    it's response. This...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2101007607922110662
+  date: '2026-09-18'
+  excerpt: Just learned about the ctrl+enter feature on Claude Code where you can
+    interrupt it's response. This is helpful when i click "enter" too quickly
+  image: ''
 - title: Soooo, can enterprises use Jev? The Privacy Policy says Typesafe won't train
     on input data coming fr...
   source: twitter
@@ -1180,21 +1196,4 @@
   url: https://twitter.com/jbdamask/status/2034015908952199263
   date: '2026-03-17'
   excerpt: UPS's chatbot hasn't taken the plunge yet
-  image: ''
-- title: If Apple keeps surprising me with awful UI each time iOS updates, I may just
-    build my own phone
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2033858226408636881
-  date: '2026-03-17'
-  excerpt: If Apple keeps surprising me with awful UI each time iOS updates, I may
-    just build my own phone
-  image: ''
-- title: Releasing a software product means building two apps since you need admin
-    and operations tooling as ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2033211312193298608
-  date: '2026-03-15'
-  excerpt: Releasing a software product means building two apps since you need admin
-    and operations tooling as well. Claude makes short work of this because it just
-    has to read the code and grok the architecture...
   image: ''
