@@ -2,6 +2,12 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: c'mon google
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2102762248813080785
+  date: '2026-09-23'
+  excerpt: c'mon google
+  image: ''
 - title: Not sure how would work, but LLMs could benefit from incorporating decision
     models
   source: twitter
@@ -1190,10 +1196,4 @@
   date: '2026-03-18'
   excerpt: Putting Claude’s 1M context window to work! Now I Get It! translated a
     172 pg doc on Copyright law into a much easier to understand webpage
-  image: ''
-- title: UPS's chatbot hasn't taken the plunge yet
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2034015908952199263
-  date: '2026-03-17'
-  excerpt: UPS's chatbot hasn't taken the plunge yet
   image: ''
