@@ -2,6 +2,23 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: My first use of Opus 5.5 was to research insurance plans for my business.
+    It made rookie mistakes th...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2103115644862361876
+  date: '2026-09-24'
+  excerpt: My first use of Opus 5.5 was to research insurance plans for my business.
+    It made rookie mistakes that a reasonable human wouldn’t. Point being, humans
+    still need to be deliberate about what they dele...
+  image: ''
+- title: why can't i use claude tags from my max plan? calling claude by name just
+    isn't as cool.
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2102915972671971408
+  date: '2026-09-24'
+  excerpt: why can't i use claude tags from my max plan? calling claude by name just
+    isn't as cool.
+  image: ''
 - title: c'mon google
   source: twitter
   url: https://twitter.com/jbdamask/status/2102762248813080785
@@ -1179,21 +1196,4 @@
   excerpt: Sometimes, I just need an endpoint. "Make me an logging endpoint" or "Make
     me an endpoint to track Chuck Norris memes". Here's a skill. The skill creates
     a Lambda with CRUD endpoints backed by a DDB t...
-  image: ''
-- title: Love the idea of tracking skill use but I want to do it across a company,
-    which means central storag...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2034726018146071015
-  date: '2026-03-19'
-  excerpt: Love the idea of tracking skill use but I want to do it across a company,
-    which means central storage. Here's a skill to quickly create an AWS endpoint
-    backed by a single DDB table. Then the hook scri...
-  image: ''
-- title: Putting Claude’s 1M context window to work! Now I Get It! translated a 172
-    pg doc on Copyright law i...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2034245693418750251
-  date: '2026-03-18'
-  excerpt: Putting Claude’s 1M context window to work! Now I Get It! translated a
-    172 pg doc on Copyright law into a much easier to understand webpage
   image: ''
