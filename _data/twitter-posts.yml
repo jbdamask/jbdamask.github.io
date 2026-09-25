@@ -2,6 +2,12 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: keep going claude cloud credits!
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2103207152332554449
+  date: '2026-09-24'
+  excerpt: keep going claude cloud credits!
+  image: ''
 - title: My first use of Opus 5.5 was to research insurance plans for my business.
     It made rookie mistakes th...
   source: twitter
@@ -1187,13 +1193,4 @@
   url: https://twitter.com/jbdamask/status/2034974609406071050
   date: '2026-03-20'
   excerpt: Running Claude Code outside of yolo mode is a complete buzzkill
-  image: ''
-- title: Sometimes, I just need an endpoint. "Make me an logging endpoint" or "Make
-    me an endpoint to track C...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2034803043670122662
-  date: '2026-03-20'
-  excerpt: Sometimes, I just need an endpoint. "Make me an logging endpoint" or "Make
-    me an endpoint to track Chuck Norris memes". Here's a skill. The skill creates
-    a Lambda with CRUD endpoints backed by a DDB t...
   image: ''
