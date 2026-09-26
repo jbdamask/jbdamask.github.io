@@ -2,6 +2,24 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: 'Sendopathy (sen-DOP-uh-thee): A pathological condition related to sending
+    rock climbs. The coaching ...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2103877743343460534
+  date: '2026-09-26'
+  excerpt: 'Sendopathy (sen-DOP-uh-thee): A pathological condition related to sending
+    rock climbs. The coaching app is coming along nicely! No idea how far I''ll take
+    this but it''s fun to make and Claude cloud cre...'
+  image: ''
+- title: My expectations for UX have changed a lot in the last couple of years. It's
+    clunky to have to click ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2103571238102679922
+  date: '2026-09-25'
+  excerpt: My expectations for UX have changed a lot in the last couple of years.
+    It's clunky to have to click through several screens to turn off app notifications
+    on my iPhone. All settings should be accessibl...
+  image: ''
 - title: keep going claude cloud credits!
   source: twitter
   url: https://twitter.com/jbdamask/status/2103207152332554449
@@ -1179,18 +1197,3 @@
     Claude Code was very helpful in doing the research &gt; Research the current size
     of the claude code team. Look at and...
   image: https://pbs.twimg.com/news_img/2035604368578453504/49vOkDsP?format=jpg&name=orig
-- title: 'When planning, it''s always worth instructing your model to reflect: "Double
-    check your plan to ensur...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2035899690613350506
-  date: '2026-03-23'
-  excerpt: 'When planning, it''s always worth instructing your model to reflect: "Double
-    check your plan to ensure that it is complete, accurate, and elegant. It should
-    adhere to our existing architecture and aest...'
-  image: ''
-- title: Running Claude Code outside of yolo mode is a complete buzzkill
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2034974609406071050
-  date: '2026-03-20'
-  excerpt: Running Claude Code outside of yolo mode is a complete buzzkill
-  image: ''
