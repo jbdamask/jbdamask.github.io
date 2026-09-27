@@ -2,6 +2,23 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: I think the economics of a certain class of software will change. We'll see
+    more niche software made...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2103946246105047071
+  date: '2026-09-26'
+  excerpt: I think the economics of a certain class of software will change. We'll
+    see more niche software made for subcultures (e.g. rock climbing, bird watching,
+    surf fishing, etc) that devs will operate at or...
+  image: ''
+- title: The fact that I need Claude to write a script to copy attachments from Gmail
+    to Drive seems is weird
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2103896706815545818
+  date: '2026-09-26'
+  excerpt: The fact that I need Claude to write a script to copy attachments from
+    Gmail to Drive seems is weird
+  image: ''
 - title: 'Sendopathy (sen-DOP-uh-thee): A pathological condition related to sending
     rock climbs. The coaching ...'
   source: twitter
@@ -1179,21 +1196,3 @@
     They exist only for SEO and now GEO (or is it AEO). Certainly not for humans.
     This is the type of design we get when purely...
   image: ''
-- title: And this is why you check for attacks. Not I Get It!, the app that translates
-    scientific articles in...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2036751078843097430
-  date: '2026-03-25'
-  excerpt: And this is why you check for attacks. Not I Get It!, the app that translates
-    scientific articles into web sites anyone can understand, checks all user-provided
-    for bad stuff using traditional and LLM...
-  image: ''
-- title: Dunno if these results on Claude Code team size is accurate but seems reasonable.
-    Claude Code was ve...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2036107574014104014
-  date: '2026-03-23'
-  excerpt: Dunno if these results on Claude Code team size is accurate but seems reasonable.
-    Claude Code was very helpful in doing the research &gt; Research the current size
-    of the claude code team. Look at and...
-  image: https://pbs.twimg.com/news_img/2035604368578453504/49vOkDsP?format=jpg&name=orig
