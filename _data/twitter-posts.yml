@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: The fact that I have to unlock my phone, find an app, open it, login, find
+    the feature, then finally...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2104680952991826322
+  date: '2026-09-28'
+  excerpt: The fact that I have to unlock my phone, find an app, open it, login, find
+    the feature, then finally get to what I want is ridiculous
+  image: ''
 - title: I think the economics of a certain class of software will change. We'll see
     more niche software made...
   source: twitter
@@ -1186,13 +1194,4 @@
   date: '2026-03-26'
   excerpt: Be careful with your code out there. The upcoming changes mean you have
     to opt-out.
-  image: ''
-- title: Landing pages, in general, are awful when it comes to conveying information.
-    They exist only for SEO...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2036754293064093899
-  date: '2026-03-25'
-  excerpt: Landing pages, in general, are awful when it comes to conveying information.
-    They exist only for SEO and now GEO (or is it AEO). Certainly not for humans.
-    This is the type of design we get when purely...
   image: ''
