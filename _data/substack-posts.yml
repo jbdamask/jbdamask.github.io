@@ -2,6 +2,12 @@
 # Fetches RSS feed (latest 5) and merges with existing posts
 # This preserves older posts not in the RSS feed
 
+- title: Turning boring into fun
+  source: substack
+  url: https://johndamask.substack.com/p/turning-boring-into-fun
+  date: '2026-10-04'
+  excerpt: Converting a University&#8217;s dull website into a video game
+  image: https://substackcdn.com/image/fetch/$s_!s0Mz!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3e4dde99-4180-4c75-bf24-499a58743eb0_1234x1160.png
 - title: Create and use your own fonts with ChatGPT and Claude Design
   source: substack
   url: https://johndamask.substack.com/p/create-and-use-your-own-fonts-with
