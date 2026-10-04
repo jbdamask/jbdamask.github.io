@@ -2,6 +2,33 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Technical universities have an opportunity to update old websites to something
+    more engaging for pro...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2106770206387212594
+  date: '2026-10-04'
+  excerpt: Technical universities have an opportunity to update old websites to something
+    more engaging for prospective students. It took me about an hour to convert @WPI's
+    great Interactive Media &amp; Game Dev...
+  image: ''
+- title: I asked ChatGPT to build something and wanted it to value engineer so that
+    it didn’t exhaust my avai...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2106724952917344363
+  date: '2026-10-04'
+  excerpt: I asked ChatGPT to build something and wanted it to value engineer so that
+    it didn’t exhaust my available usage. Funny that it had no idea what I was talking
+    about or how to do it. I had to paste a sc...
+  image: ''
+- title: Technical universities should be more inventive with their program catalogs.
+    Give them MCPs, gamify ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2106719667070828766
+  date: '2026-10-04'
+  excerpt: Technical universities should be more inventive with their program catalogs.
+    Give them MCPs, gamify them, make it easier and more fun for prospective students
+    to engage. Their websites are from the 90...
+  image: ''
 - title: The fact that I have to unlock my phone, find an app, open it, login, find
     the feature, then finally...
   source: twitter
@@ -1174,24 +1201,4 @@
   url: https://twitter.com/jbdamask/status/2037303494214848891
   date: '2026-03-26'
   excerpt: holy crap, it worked!
-  image: ''
-- title: confident, as always...but will it work???
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2037303287813148693
-  date: '2026-03-26'
-  excerpt: confident, as always...but will it work???
-  image: ''
-- title: we'll see how this works out
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2037302891229127155
-  date: '2026-03-26'
-  excerpt: we'll see how this works out
-  image: ''
-- title: Be careful with your code out there. The upcoming changes mean you have to
-    opt-out.
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2037126855560438197
-  date: '2026-03-26'
-  excerpt: Be careful with your code out there. The upcoming changes mean you have
-    to opt-out.
   image: ''
