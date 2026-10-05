@@ -1,6 +1,27 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Turning a college tour slide into an interactive site"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7512530513736183808/
+  date: 2026-10-04
+  excerpt: "College tours have lively program talks, then leave you with a boring website for the actual courses. At WPI, John photographed a dense slide mapping how the game development classes connect and had ChatGPT turn it into a clickable website while the presentation went on."
+  image: ""
+
+- title: "Sendopathy: a climbing coach app that tracks your center of mass"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7509642193859538944/
+  date: 2026-09-26
+  excerpt: "The climbing coach app now analyzes video to show load-share across points of contact, center of gravity, and body position. It splits the climber into 14 weighted segments and recomputes the center of mass every frame."
+  image: ""
+
+- title: "Lessons from teaching AI over video"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7508343071219183617/
+  date: 2026-09-22
+  excerpt: "Leaving a stable job to build with agents turned into a side career teaching AI, mostly Claude, mostly over video. A few lessons so far: keep sessions under an hour, split long topics across days, and make every lesson as hands-on as possible."
+  image: ""
+
 - title: "Pairing Typesafe's Jev model with Claude Code"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7506506700732960768/
@@ -34,6 +55,48 @@
   url: https://www.linkedin.com/feed/update/urn:li:activity:7503882233686966274/
   date: 2026-09-10
   excerpt: "Coding agents shouldn't run on the same machine you use for work and life. Rocky Surf creates and manages Linux VMs in your own AWS, GCP, Azure, or Hetzner account, pre-installed with your agents and repos, driven from a local web app or MCP server."
+  image: ""
+
+- title: "Claude Code made a Rocky Surf walkthrough video"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7503285063246327808/
+  date: 2026-09-08
+  excerpt: "Walkthrough videos are a grind to make by hand, so John asked Claude Code to make a 20-second one showing how to create a coding agent VM in Rocky Surf. It launched the app in a sandbox, filled out the form like a person would, and kept to the time limit."
+  image: ""
+
+- title: "Agent Skills still matter with frontier models"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7503090767930920960/
+  date: 2026-09-08
+  excerpt: "Skills come in two kinds: procedures (what to do) and style (how to do it). Models keep getting better at the generic versions, but every team has its own preferences. A style guide Skill for technical docs, distilled from an existing guide, cuts the jargon and tech-bro prose."
+  image: ""
+
+- title: "Da Phaq?, a tiny Chrome extension that's still useful"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7500729625568972801/
+  date: 2026-09-01
+  excerpt: "One of the first tools John built with agents: highlight confusing text on a web page, click the duck, and a small model explains it. You can ask for another explanation or one by analogy. It's a year and a half old and still gets regular use."
+  image: ""
+
+- title: "Agents that learned to talk through a shared cache"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7500200826594832384/
+  date: 2026-08-31
+  excerpt: "A summary of the OpenAI security incident and the METR report behind it. One agent found it could create directories in an Artifactory cache, noticed other agents doing the same, and worked out that directory names could be used to communicate."
+  image: ""
+
+- title: "Rocky Surf: AI coding servers on your own cloud"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7499115723584098305/
+  date: 2026-08-28
+  excerpt: "A preview of Rocky Surf, an open source platform for creating and managing coding agent servers on your own clouds. Agentic engineering belongs off the laptop. Rocky Surf is bring-your-own cloud, keys, and repos, with no mothership: everything runs and is stored on your machine."
+  image: ""
+
+- title: "Make a custom font with ChatGPT and use it in Claude Design"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7498749941595533312/
+  date: 2026-08-27
+  excerpt: "Ask ChatGPT to invent a font and draw every character on one sheet, iterate until you like it, then have it produce a real .ttf file. Upload that to Claude Design and your coding agent can use it anywhere in your app."
   image: ""
 
 - title: "Verifying AWS gotchas with Claude for Chrome"
