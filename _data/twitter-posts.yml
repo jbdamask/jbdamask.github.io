@@ -2,6 +2,21 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Commoditization of software is happening extremely fast. A client who thinks
+    they can hire a consult...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2107180839498870994
+  date: '2026-10-05'
+  excerpt: Commoditization of software is happening extremely fast. A client who thinks
+    they can hire a consultant to build a moat of AI skills and scheduled tasks is
+    going to be disappointed. And a consultant t...
+  image: ''
+- title: Turning boring into fun
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2106812991450796408
+  date: '2026-10-04'
+  excerpt: Turning boring into fun
+  image: https://pbs.twimg.com/news_img/2106812993065627648/bMn1_BsY?format=jpg&name=orig
 - title: Technical universities have an opportunity to update old websites to something
     more engaging for pro...
   source: twitter
@@ -1186,19 +1201,4 @@
   date: '2026-03-27'
   excerpt: From Steve Blank, "Minimal Viable Products (MVPs) will become Minimal Productive
     Outcomes (MPOs)" I like it
-  image: ''
-- title: Ok, this was pretty cool. Opus struggled squashing a frontend bug on mobile.
-    Felt like Sonnet 3.5 de...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2037359013566808161
-  date: '2026-03-27'
-  excerpt: Ok, this was pretty cool. Opus struggled squashing a frontend bug on mobile.
-    Felt like Sonnet 3.5 deja vu. After going in circles I had Claude spin up a subagent
-    to help. The two coordinated and solve...
-  image: ''
-- title: holy crap, it worked!
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2037303494214848891
-  date: '2026-03-26'
-  excerpt: holy crap, it worked!
   image: ''
