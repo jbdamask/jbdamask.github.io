@@ -2,6 +2,12 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: No connector tool? No problem
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2107224124489916557
+  date: '2026-10-05'
+  excerpt: No connector tool? No problem
+  image: ''
 - title: Commoditization of software is happening extremely fast. A client who thinks
     they can hire a consult...
   source: twitter
@@ -1193,12 +1199,4 @@
   excerpt: When building larger projects with LLMs, even the best frontier models
     optimize for things that you may not expect. It's important to tell them what
     factors are important to you.
-  image: ''
-- title: From Steve Blank, "Minimal Viable Products (MVPs) will become Minimal Productive
-    Outcomes (MPOs)" I ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2037566438878196060
-  date: '2026-03-27'
-  excerpt: From Steve Blank, "Minimal Viable Products (MVPs) will become Minimal Productive
-    Outcomes (MPOs)" I like it
   image: ''
