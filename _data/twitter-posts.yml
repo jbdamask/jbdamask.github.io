@@ -2,6 +2,23 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: I recently taught a session at @UMassChan on building personal knowledge
+    bases. Slides and tutorial ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2107792379495514346
+  date: '2026-10-07'
+  excerpt: 'I recently taught a session at @UMassChan on building personal knowledge
+    bases. Slides and tutorial here:'
+  image: https://pbs.twimg.com/news_img/2107792383077384192/MA1PPPWt?format=jpg&name=orig
+- title: LLMs will certainly become the dominant creator of online content. All the
+    hype about slop is tempor...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2107781993920626972
+  date: '2026-10-07'
+  excerpt: LLMs will certainly become the dominant creator of online content. All
+    the hype about slop is temporarily justified but I bet myself $1 it will pass.
+    Agents will also be the primary consumer. Where do...
+  image: ''
 - title: No connector tool? No problem
   source: twitter
   url: https://twitter.com/jbdamask/status/2107224124489916557
@@ -1181,22 +1198,4 @@
   excerpt: Our jobs as engineers are to scrutinize AI plans and question design decisions.
     The more complex a system gets, the more important it is that we partner with
     AI, not just delegate to it.
-  image: ''
-- title: Adversarial sub-agents are quickly becoming a thing for me when using Claude
-    Code. If something smel...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2037884911126798735
-  date: '2026-03-28'
-  excerpt: Adversarial sub-agents are quickly becoming a thing for me when using Claude
-    Code. If something smells off with a plan, I'll have Claude fire up a sub-agent
-    to do research. Invariably, it comes back w...
-  image: ''
-- title: When building larger projects with LLMs, even the best frontier models optimize
-    for things that you ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2037867109443620869
-  date: '2026-03-28'
-  excerpt: When building larger projects with LLMs, even the best frontier models
-    optimize for things that you may not expect. It's important to tell them what
-    factors are important to you.
   image: ''
