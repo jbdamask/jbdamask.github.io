@@ -2,6 +2,37 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: I predict that if you have two Claude agents negotiate a contract from different
+    positions, they wil...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2108597777664266544
+  date: '2026-10-09'
+  excerpt: I predict that if you have two Claude agents negotiate a contract from
+    different positions, they will eventually cost more than lawyers.
+  image: ''
+- title: If you don't have a software background, AI can write software for you but
+    it won't be great softwar...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2108576573263642768
+  date: '2026-10-09'
+  excerpt: If you don't have a software background, AI can write software for you
+    but it won't be great software. If you don't have a legal background, AI can write
+    a contract for you but it won't be a great con...
+  image: ''
+- title: 'Read a great term today from Jimmy Chin: “Meaningless purpose”'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2108368872218693858
+  date: '2026-10-09'
+  excerpt: 'Read a great term today from Jimmy Chin: “Meaningless purpose”'
+  image: ''
+- title: If models can "discover" new biology and prove hundred year-old math problems,
+    why can't they write ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2108303642239385670
+  date: '2026-10-08'
+  excerpt: If models can "discover" new biology and prove hundred year-old math problems,
+    why can't they write a decent IP clause for a contract?
+  image: ''
 - title: Claude Opus 5.5 can write legal contract boilerplate, but beware that that
     it glosses over word defi...
   source: twitter
@@ -1166,36 +1197,4 @@
   date: '2026-07-23'
   excerpt: There's too much software out there. For a product to move from "Gotta
     try it" to "Part of my life", it needs be easy to use and understand
-  image: ''
-- title: Like I said, the agentic engineer's job doesn't stop at planning - you need
-    to consider tests. Somet...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2038310932221145513
-  date: '2026-03-29'
-  excerpt: 'Like I said, the agentic engineer''s job doesn''t stop at planning - you
-    need to consider tests. Sometimes even the best LLM''s don''t think it all through.
-    Full post:'
-  image: ''
-- title: Remember, the job of a software engineer these days is to make sure the plan
-    AND tests are comprehen...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2038280113385533465
-  date: '2026-03-29'
-  excerpt: Remember, the job of a software engineer these days is to make sure the
-    plan AND tests are comprehensive I added user accounts to Now I Get It! yesterday
-    and had Claude test it in Chrome. Good thing I...
-  image: ''
-- title: Why yes, Claude, that was a big one
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2037980474551742676
-  date: '2026-03-28'
-  excerpt: Why yes, Claude, that was a big one
-  image: ''
-- title: More often than not, I regret having my AI buddy make code changes without
-    filing Beads first
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2037937404846190797
-  date: '2026-03-28'
-  excerpt: More often than not, I regret having my AI buddy make code changes without
-    filing Beads first
   image: ''
