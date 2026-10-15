@@ -2,6 +2,12 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: What a difference 8 months makes
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2110757542561448441
+  date: '2026-10-15'
+  excerpt: What a difference 8 months makes
+  image: ''
 - title: I predict that if you have two Claude agents negotiate a contract from different
     positions, they wil...
   source: twitter
@@ -1189,12 +1195,4 @@
   url: https://twitter.com/jbdamask/status/2080463505216467087
   date: '2026-07-24'
   excerpt: Impressive test suite written by my agents
-  image: ''
-- title: There's too much software out there. For a product to move from "Gotta try
-    it" to "Part of my life",...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2080342812772454830
-  date: '2026-07-23'
-  excerpt: There's too much software out there. For a product to move from "Gotta
-    try it" to "Part of my life", it needs be easy to use and understand
   image: ''
