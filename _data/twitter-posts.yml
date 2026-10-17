@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: 'I''m arriving at an interesting architectural decision for open source:
+    Ship the spec along with impl...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2111155706867163632
+  date: '2026-10-16'
+  excerpt: 'I''m arriving at an interesting architectural decision for open source:
+    Ship the spec along with implementation skills. The user''s agent will be smart
+    enough to call the skill and build to the spec. Th...'
+  image: ''
 - title: What a difference 8 months makes
   source: twitter
   url: https://twitter.com/jbdamask/status/2110757542561448441
@@ -1189,10 +1198,4 @@
   url: https://twitter.com/jbdamask/status/2080645710895099953
   date: '2026-07-24'
   excerpt: Is it time to move past neo-brutalist designs?
-  image: ''
-- title: Impressive test suite written by my agents
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2080463505216467087
-  date: '2026-07-24'
-  excerpt: Impressive test suite written by my agents
   image: ''
