@@ -2,6 +2,12 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: “Hive coding” - love that term
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2111829232540360838
+  date: '2026-10-18'
+  excerpt: “Hive coding” - love that term
+  image: ''
 - title: 'I''m arriving at an interesting architectural decision for open source:
     Ship the spec along with impl...'
   source: twitter
@@ -1192,10 +1198,4 @@
   excerpt: 'Weird one: a DynamoDB performance audit showed that a bad design element
     was burning 95% of the table''s read capacity. After refactoring, I asked why
     the feature existed in the first place. It shouldn...'
-  image: ''
-- title: Is it time to move past neo-brutalist designs?
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2080645710895099953
-  date: '2026-07-24'
-  excerpt: Is it time to move past neo-brutalist designs?
   image: ''
