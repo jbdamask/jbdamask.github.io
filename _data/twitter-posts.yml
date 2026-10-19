@@ -2,6 +2,20 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: 'I found a special talent for Opus 5.5: burning tokens on jev'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2111883735540924918
+  date: '2026-10-18'
+  excerpt: 'I found a special talent for Opus 5.5: burning tokens on jev'
+  image: ''
+- title: 'Tip: have your agent team build a companion newsfeed (with audio) so you
+    can easily get updates as a...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2111868049678880984
+  date: '2026-10-18'
+  excerpt: 'Tip: have your agent team build a companion newsfeed (with audio) so you
+    can easily get updates as agents grind'
+  image: ''
 - title: “Hive coding” - love that term
   source: twitter
   url: https://twitter.com/jbdamask/status/2111829232540360838
@@ -1184,18 +1198,3 @@
   date: '2026-07-25'
   excerpt: Human judgement is still a thing
   image: https://pbs.twimg.com/news_img/2081015426436222976/4O_aoBui?format=jpg&name=orig
-- title: uh...hello. I didn't know you were here
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2080701293027279088
-  date: '2026-07-24'
-  excerpt: uh...hello. I didn't know you were here
-  image: ''
-- title: 'Weird one: a DynamoDB performance audit showed that a bad design element
-    was burning 95% of the tabl...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2080651252124291324
-  date: '2026-07-24'
-  excerpt: 'Weird one: a DynamoDB performance audit showed that a bad design element
-    was burning 95% of the table''s read capacity. After refactoring, I asked why
-    the feature existed in the first place. It shouldn...'
-  image: ''
