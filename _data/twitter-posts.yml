@@ -2,6 +2,20 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Every now and again I forget I added an easter egg skill
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2112652224555851807
+  date: '2026-10-20'
+  excerpt: Every now and again I forget I added an easter egg skill
+  image: ''
+- title: This is working really well! My agent teams make podcast episodes to update
+    me on their progress. Vo...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2112615818139951425
+  date: '2026-10-20'
+  excerpt: This is working really well! My agent teams make podcast episodes to update
+    me on their progress. Voices from @ElevenLabs Listen here
+  image: https://pbs.twimg.com/news_img/2112360762945499136/tspVUQsA?format=jpg&name=orig
 - title: I’ve started to have my agents give me updates as podcasts.
   source: twitter
   url: https://twitter.com/jbdamask/status/2112360762588954796
@@ -1179,22 +1193,4 @@
   excerpt: The usefulness of AI is like liquid finding its way into every crack and
     crease in my life. This means constancy, which is too expensive now. Things need
     to converge on cheaper frontier models, local ...
-  image: ''
-- title: Claude's skill-creator is the best way to make a skill, so you'd think that
-    all published Anthropic ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2083030867610321004
-  date: '2026-07-31'
-  excerpt: Claude's skill-creator is the best way to make a skill, so you'd think
-    that all published Anthropic skills would be consistent. This isn't true. A comparison
-    of hundreds reveals best practices in term...
-  image: https://pbs.twimg.com/news_img/2083030870252765184/5IwKtv4Q?format=jpg&name=orig
-- title: Frontier companies pump out a LOT of docs. A useful habit to get into is
-    to have Claude (or your fav...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2083030496448016747
-  date: '2026-07-31'
-  excerpt: Frontier companies pump out a LOT of docs. A useful habit to get into is
-    to have Claude (or your fav LLM) find patterns/inconsistencies. This way, you
-    can see if the companies actually walk the talk a...
   image: ''
