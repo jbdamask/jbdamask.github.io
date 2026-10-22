@@ -2,6 +2,18 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: software will soon be grown
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2113100530847191320
+  date: '2026-10-22'
+  excerpt: software will soon be grown
+  image: ''
+- title: oof...agent teammates going idle and resuming is killing me
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2112956116204441867
+  date: '2026-10-21'
+  excerpt: oof...agent teammates going idle and resuming is killing me
+  image: ''
 - title: Every now and again I forget I added an easter egg skill
   source: twitter
   url: https://twitter.com/jbdamask/status/2112652224555851807
@@ -1176,21 +1188,4 @@
   excerpt: The rate of LLM evolution is faster than many apps that use them should
     evolve. Builders will either accept that or figure out app-specific eval test
     suites and automation to triage new models. Intern...
-  image: ''
-- title: the explosion of open source projects is nice...but triaging them to see
-    what's useful is a slog
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2083174447435891197
-  date: '2026-07-31'
-  excerpt: the explosion of open source projects is nice...but triaging them to see
-    what's useful is a slog
-  image: ''
-- title: The usefulness of AI is like liquid finding its way into every crack and
-    crease in my life. This mea...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2083157306926141632
-  date: '2026-07-31'
-  excerpt: The usefulness of AI is like liquid finding its way into every crack and
-    crease in my life. This means constancy, which is too expensive now. Things need
-    to converge on cheaper frontier models, local ...
   image: ''
