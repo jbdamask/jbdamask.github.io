@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: '"Teams of agents seem to inherit the same failure modes as teams of people"
+    Hear more about this in ...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2115064629252812970
+  date: '2026-10-27'
+  excerpt: '"Teams of agents seem to inherit the same failure modes as teams of people"
+    Hear more about this in episode 32 of the Thesis Dispatch Watch - a podcast created
+    by Claude Code to update me on a large s...'
+  image: https://pbs.twimg.com/news_img/2115064678317776896/ATPzNM10?format=jpg&name=orig
 - title: software will soon be grown
   source: twitter
   url: https://twitter.com/jbdamask/status/2113100530847191320
@@ -1179,13 +1188,4 @@
   url: https://twitter.com/jbdamask/status/2083201243292311887
   date: '2026-07-31'
   excerpt: Don't forget to add LLM-call circuit breakers to your apps!
-  image: ''
-- title: The rate of LLM evolution is faster than many apps that use them should evolve.
-    Builders will either...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2083195871886189036
-  date: '2026-07-31'
-  excerpt: The rate of LLM evolution is faster than many apps that use them should
-    evolve. Builders will either accept that or figure out app-specific eval test
-    suites and automation to triage new models. Intern...
   image: ''
