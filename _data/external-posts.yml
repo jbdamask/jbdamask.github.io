@@ -1,6 +1,48 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Agent teams inherit the failure modes of human teams"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7520585409538658304/
+  date: 2026-10-26
+  excerpt: "An inquest into a coding agent team, covered in episode 32 of the Thesis Watch Dispatch podcast, found that teams of agents fail in the same ways teams of people do. Left unwatched, they still run off the rails and burn millions of tokens without producing value."
+  image: ""
+
+- title: "Organize Claude agent teams around ephemeral agents and Beads"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7519127529480208384/
+  date: 2026-10-22
+  excerpt: "Sub-agents lose their cache after five minutes idle, so every wake-up rebuilds context from scratch. Keeping idle agents around burned a third of a 200x Max plan in about 12 hours. The fix: short-lived agents that pick up work from Beads."
+  image: ""
+
+- title: "Explainers for software grown by AI agents"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7519016217496510465/
+  date: 2026-10-22
+  excerpt: "Explainers translate information from one form to another, like Khan Academy did for thermodynamics. As agent teams grow software, they matter more. The Thesis Watch Dispatch episodes are Explainers, including a visual one about the system's graph database of entities and impacts."
+  image: ""
+
+- title: "Keeping tabs on a team of AI coding agents"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7518311306974662657/
+  date: 2026-10-20
+  excerpt: "In the latest Claude Code experiment, Claude builds its own team of agents to make a decision support platform. Too much happens too fast to monitor, so after trying Slack updates and summaries, the team's progress now arrives as a podcast: The Thesis Watch Dispatch."
+  image: ""
+
+- title: "AI delegation still needs human expertise"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7514411022095593472/
+  date: 2026-10-09
+  excerpt: "AI can write software or review a contract, but without a background in the field you may not know whether the result is any good. The need for expertise scales with the importance of the task, and curiosity and critical questions help you spot where AI falls short."
+  image: ""
+
+- title: "Teaching LLM wikis at the UMass Chan AI bootcamp"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7513278507553222656/
+  date: 2026-10-06
+  excerpt: "Alper Kucukural's multi-week AI bootcamp at UMass Chan Medical School included a session on personal knowledge bases. Participants used a coding agent to build an LLM wiki on atopic dermatitis, seeded it with papers, and then built a research tracker on top."
+  image: ""
+
 - title: "Turning a college tour slide into an interactive site"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7512530513736183808/
