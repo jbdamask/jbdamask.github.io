@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Install: cp scripts/com.johndamask.linkedin-sync.plist ~/Library/LaunchAgents/ && launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.johndamask.linkedin-sync.plist -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.johndamask.linkedin-sync</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>/Users/johndamask/code/jbdamask.github.io/scripts/linkedin_sync_scheduled.sh</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>7</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>/Users/johndamask/Library/Logs/linkedin-sync/launchd.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/johndamask/Library/Logs/linkedin-sync/launchd.log</string>
+</dict>
+</plist>
