@@ -2,6 +2,23 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: I've been running an experiment this month to see if AI can "grow" software.
+    The hypothesis is that ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2115452725085221065
+  date: '2026-10-28'
+  excerpt: I've been running an experiment this month to see if AI can "grow" software.
+    The hypothesis is that models and agents are now capable enough to operate as
+    a team, using a core set of principles to gui...
+  image: ''
+- title: I've named my primary coding agent "Chestnut", after Joey Chestnut. Midjourney
+    did a nice job showin...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2115429146998501872
+  date: '2026-10-28'
+  excerpt: I've named my primary coding agent "Chestnut", after Joey Chestnut. Midjourney
+    did a nice job showing me what he looks like.
+  image: ''
 - title: '"Teams of agents seem to inherit the same failure modes as teams of people"
     Hear more about this in ...'
   source: twitter
@@ -1173,19 +1190,4 @@
   excerpt: Rational model routing is when you select a model because you have used
     it enough in a given setting, know the general inputs/outputs, and have a good
     reason to use it. At this point, I'm happy doing ...
-  image: ''
-- title: GitHub Issues are still how I capture all ideas and communicate what I want
-    to Agents. Every feature...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2083223747876581481
-  date: '2026-07-31'
-  excerpt: GitHub Issues are still how I capture all ideas and communicate what I
-    want to Agents. Every feature, bug fix, or improvement gets an issue. My planner
-    converts these into detailed plans (tech + UX) a...
-  image: ''
-- title: Don't forget to add LLM-call circuit breakers to your apps!
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2083201243292311887
-  date: '2026-07-31'
-  excerpt: Don't forget to add LLM-call circuit breakers to your apps!
   image: ''
