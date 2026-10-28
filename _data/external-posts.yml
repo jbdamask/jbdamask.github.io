@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Idle Claude subagents quietly burn tokens"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7520899488178139136/
+  date: 2026-10-27
+  excerpt: "When long-lived agents on a Claude Code team sit idle, their cache expires after five minutes and has to be rebuilt every time they wake up. You can raise the subagent cache TTL and compaction threshold, but the better fix is spawning short-lived subagents."
+  image: ""
+
 - title: "Agent teams inherit the failure modes of human teams"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7520585409538658304/
