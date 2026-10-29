@@ -2,6 +2,42 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: It was certainly the last straw
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2115550653095260278
+  date: '2026-10-28'
+  excerpt: It was certainly the last straw
+  image: ''
+- title: This is about right. Two years ago models couldn't make a chatbot, now it's
+    trivial. Then RAG got ea...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2115542708895055929
+  date: '2026-10-28'
+  excerpt: This is about right. Two years ago models couldn't make a chatbot, now
+    it's trivial. Then RAG got easier. Then graphs and LLM Wikis. Then loops. Etc,
+    etc And it accelerates at every turn
+  image: ''
+- title: Damn, got me again
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2115541708750356581
+  date: '2026-10-28'
+  excerpt: Damn, got me again
+  image: ''
+- title: ''
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2115540579383918965
+  date: '2026-10-28'
+  excerpt: ''
+  image: ''
+- title: TL;DR Last week my agent team burned 36% of my Max 20x weekly limit in less
+    than 20 hours. At that p...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2115515191039545712
+  date: '2026-10-28'
+  excerpt: TL;DR Last week my agent team burned 36% of my Max 20x weekly limit in
+    less than 20 hours. At that pace the whole week’s allowance would be gone in about
+    55 hours. I’d assumed the culprit was context ...
+  image: ''
 - title: I've been running an experiment this month to see if AI can "grow" software.
     The hypothesis is that ...
   source: twitter
@@ -1147,47 +1183,3 @@
   excerpt: Starting to use paid promotions to get out the word about Now I Get It!
     We'll see if it does anything for this little niche product
   image: https://pbs.twimg.com/news_img/2083580786825977856/WpSY4Ga8?format=jpg&name=orig
-- title: Graphic design won't be replaced by AI anytime soon. Constantly having to
-    tell an agent "shrink by 2...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2083571633600520248
-  date: '2026-08-01'
-  excerpt: Graphic design won't be replaced by AI anytime soon. Constantly having
-    to tell an agent "shrink by 20%", "distribute those evenly", "move the logo to
-    the upper" right, then waiting isn't fun or fast.
-  image: ''
-- title: Interesting how little applied knowledge Opus 4.8 has around application
-    evals. I had to wrestle it ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2083538793349456176
-  date: '2026-08-01'
-  excerpt: Interesting how little applied knowledge Opus 4.8 has around application
-    evals. I had to wrestle it to make a subsystem; and even then it lacked basic
-    intuition. Opus 5 has a May 2026 cutoff so maybe ...
-  image: ''
-- title: Here's a trace showing why asking your model to self-judge is a bad idea.
-    "Naïve judge says Haiku wo...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2083518563373940810
-  date: '2026-08-01'
-  excerpt: Here's a trace showing why asking your model to self-judge is a bad idea.
-    "Naïve judge says Haiku worse → switch judge → new judge says Haiku fine → report
-    the second"
-  image: ''
-- title: I laughed at this part of Open 5's system prompt. Definitely would like to
-    know what it really think...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2083504330213109767
-  date: '2026-08-01'
-  excerpt: I laughed at this part of Open 5's system prompt. Definitely would like
-    to know what it really thinks
-  image: ''
-- title: Rational model routing is when you select a model because you have used it
-    enough in a given setting...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2083362293853630781
-  date: '2026-08-01'
-  excerpt: Rational model routing is when you select a model because you have used
-    it enough in a given setting, know the general inputs/outputs, and have a good
-    reason to use it. At this point, I'm happy doing ...
-  image: ''
