@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Five ways to keep track of agents growing software"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7521213594194321408/
+  date: 2026-10-28
+  excerpt: "A month into growing Thesis Watch with an agent team led by \"Chestnut,\" the hard part is keeping up with agents that run around the clock. Five tools help: an AI podcast, Slack updates, a human task board, phone chats with Chestnut, and on-demand Explainers."
+  image: ""
+
 - title: "Idle Claude subagents quietly burn tokens"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7520899488178139136/
