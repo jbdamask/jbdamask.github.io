@@ -2,6 +2,48 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: If you’re not following my agent’s podcast, check it out. It might be very
+    interesting if you are an...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2116209355188031515
+  date: '2026-10-30'
+  excerpt: If you’re not following my agent’s podcast, check it out. It might be very
+    interesting if you are an investor in the biotech space, but more generally it’s
+    about a grand experiment to “grow software” ...
+  image: ''
+- title: I rarely have multiple terminals open for coding agents because I simply
+    have the primary session cr...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2116169289661116858
+  date: '2026-10-30'
+  excerpt: I rarely have multiple terminals open for coding agents because I simply
+    have the primary session create as many agents as it needs to do the work. The
+    only times I do is when I’m working on multiple ...
+  image: ''
+- title: As I’ve moved deeper into autonomous agent teams (NOT factories), I’ve started
+    adding a TEAMS.md fil...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2116160207843635259
+  date: '2026-10-30'
+  excerpt: As I’ve moved deeper into autonomous agent teams (NOT factories), I’ve
+    started adding a TEAMS.md file to my projects. This gets read by every agent on
+    start (my agents are ephemeral, with the exceptio...
+  image: ''
+- title: Some things eat a day even if they don't take a day to do
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2115878893122982005
+  date: '2026-10-29'
+  excerpt: Some things eat a day even if they don't take a day to do
+  image: ''
+- title: 'Claude: Searching for data... Me: Why are you searching that? Claude: This
+    is a primary data source ...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2115875046333862338
+  date: '2026-10-29'
+  excerpt: 'Claude: Searching for data... Me: Why are you searching that? Claude:
+    This is a primary data source for Clinical Trial information. We always use it.
+    Me: That''s the state website for Connecticut Claud...'
+  image: ''
 - title: It was certainly the last straw
   source: twitter
   url: https://twitter.com/jbdamask/status/2115550653095260278
@@ -1143,43 +1185,3 @@
     coding agents: 1) Co-locate documentation with code 2) Add a "reorient" skill
     to the project'
   image: ''
-- title: Thanks anyway @Steve_Yegge . I still get good stuff from GasTown
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2084685800071979307
-  date: '2026-08-04'
-  excerpt: Thanks anyway @Steve_Yegge . I still get good stuff from GasTown
-  image: ''
-- title: 'Agents are great for more than just coding. To make this, I: 1. Chatted
-    with Claude about a particul...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2084035055345668145
-  date: '2026-08-02'
-  excerpt: 'Agents are great for more than just coding. To make this, I: 1. Chatted
-    with Claude about a particular part of my app 2. When happy w/ level of detail,
-    asked for a doc 3. Uploaded to NotebookLM 4. Cli...'
-  image: ''
-- title: I really don't care if a tweet, blog, or article was written with AI. All
-    I care about is if the inf...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2083618416296964103
-  date: '2026-08-01'
-  excerpt: I really don't care if a tweet, blog, or article was written with AI. All
-    I care about is if the information is good and my time is respected.
-  image: ''
-- title: One of the best tips from @HamelHusain and @sh_reya Evals course is to build
-    a data labelling tool f...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2083607657043157258
-  date: '2026-08-01'
-  excerpt: One of the best tips from @HamelHusain and @sh_reya Evals course is to
-    build a data labelling tool for every AI app you make. It takes no time at all
-    for an LLM to code one up.
-  image: ''
-- title: Starting to use paid promotions to get out the word about Now I Get It! We'll
-    see if it does anythin...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2083580741829443609
-  date: '2026-08-01'
-  excerpt: Starting to use paid promotions to get out the word about Now I Get It!
-    We'll see if it does anything for this little niche product
-  image: https://pbs.twimg.com/news_img/2083580786825977856/WpSY4Ga8?format=jpg&name=orig
