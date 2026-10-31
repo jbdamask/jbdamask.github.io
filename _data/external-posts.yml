@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "A TEAMS.md file for autonomous agent teams"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7521946924787138560/
+  date: 2026-10-30
+  excerpt: "Every agent reads TEAMS.md on start to learn the app's fundamentals, conventions, coordination patterns, and escalation paths. It also holds a decision tree for new features: write code if you can, use a decision model like JEV for narrow repeated judgments, and use the smallest LLM that works for the rest."
+  image: ""
+
 - title: "Five ways to keep track of agents growing software"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7521213594194321408/
