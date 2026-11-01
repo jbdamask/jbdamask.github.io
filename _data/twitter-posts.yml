@@ -2,6 +2,24 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: When building with agent teams, have them make dashboards to track the metrics
+    that matter to you. I...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2116924793639333949
+  date: '2026-11-01'
+  excerpt: When building with agent teams, have them make dashboards to track the
+    metrics that matter to you. It's trivial to do and if you're working with Beads
+    and git, the data is readily available. Also, hav...
+  image: ''
+- title: Managing agent teams is interesting for many reasons. One being that you
+    find yourself recreating or...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2116885516297650679
+  date: '2026-11-01'
+  excerpt: Managing agent teams is interesting for many reasons. One being that you
+    find yourself recreating organizational principals and procedures that human teams
+    have had for years. Things like roles and re...
+  image: ''
 - title: If you’re not following my agent’s podcast, check it out. It might be very
     interesting if you are an...
   source: twitter
@@ -1167,21 +1185,3 @@
   date: '2026-08-11'
   excerpt: 'TIL: Append .md to doc URLs to get page content as markdown.'
   image: https://pbs.twimg.com/news_img/2086008285656764416/mZVEuKWx?format=png&name=orig
-- title: Amazing how many people want to use Claude to ETL emails to a task board.
-    A trick to making this use...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2085154770247909734
-  date: '2026-08-06'
-  excerpt: Amazing how many people want to use Claude to ETL emails to a task board.
-    A trick to making this useful is to first create a taxonomy of email types. It
-    more powerful than just ignore/action flags. Th...
-  image: ''
-- title: 'Two things I find helpful when working on large software systems with coding
-    agents: 1) Co-locate do...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2084708143745868266
-  date: '2026-08-04'
-  excerpt: 'Two things I find helpful when working on large software systems with
-    coding agents: 1) Co-locate documentation with code 2) Add a "reorient" skill
-    to the project'
-  image: ''
