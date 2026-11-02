@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Managing agent teams means relearning management"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7522651706069966848/
+  date: 2026-11-01
+  excerpt: "Running AI agent teams means rebuilding what human organizations already know: roles, decision rights, escalations, communication standards, and KPIs. Models went from knowing stuff to doing stuff, and now they're learning teamwork. Until that's built in, it pays for people to learn a little management theory."
+  image: ""
+
 - title: "A TEAMS.md file for autonomous agent teams"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7521946924787138560/
