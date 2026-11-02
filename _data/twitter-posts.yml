@@ -2,6 +2,14 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Opus 5.5 is much better that older models about creating venv before trying
+    to install python packag...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2117017370761818224
+  date: '2026-11-01'
+  excerpt: Opus 5.5 is much better that older models about creating venv before trying
+    to install python packages
+  image: ''
 - title: When building with agent teams, have them make dashboards to track the metrics
     that matter to you. I...
   source: twitter
@@ -1179,9 +1187,3 @@
   excerpt: 'TIL: Empty Lambda logs don''t prove the user never clicked — a request
     killed upstream logs nothing. Check API Gateway 4XX.'
   image: ''
-- title: 'TIL: Append .md to doc URLs to get page content as markdown.'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2087203418347544686
-  date: '2026-08-11'
-  excerpt: 'TIL: Append .md to doc URLs to get page content as markdown.'
-  image: https://pbs.twimg.com/news_img/2086008285656764416/mZVEuKWx?format=png&name=orig
