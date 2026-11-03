@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Have your agent team build metrics dashboards"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7522991699162497024/
+  date: 2026-11-02
+  excerpt: "When you build with AI agent teams, have them make dashboards for the metrics you care about. It's easy, and with Beads and git the data is already there. Also, have your agent fold Shreya Shankar's principles for readable AI text into your project's standards so it writes better."
+  image: ""
+
 - title: "Managing agent teams means relearning management"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7522651706069966848/
