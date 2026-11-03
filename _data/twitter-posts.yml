@@ -2,6 +2,39 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Just when I thought my agent team was humming along, I learn about the 10,000
+    character cap for clau...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2117674511806149106
+  date: '2026-11-03'
+  excerpt: Just when I thought my agent team was humming along, I learn about the
+    10,000 character cap for claude code hooks. This has been creating silent fails
+    for over a week!
+  image: ''
+- title: I asked Claude to put my token burn dashboard in a cockpit
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2117629404696227886
+  date: '2026-11-03'
+  excerpt: I asked Claude to put my token burn dashboard in a cockpit
+  image: ''
+- title: Something I'd like to see with agent teams is a sanity check on human input
+    while they are running. ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2117621777383756251
+  date: '2026-11-03'
+  excerpt: Something I'd like to see with agent teams is a sanity check on human input
+    while they are running. Agents are so human-centric that a simple request made
+    by the human becomes a fire drill for the tea...
+  image: ''
+- title: While not as impressive as weight-space programming, my agent team had a
+    breakthrough this week. By ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2117436617023795345
+  date: '2026-11-03'
+  excerpt: While not as impressive as weight-space programming, my agent team had
+    a breakthrough this week. By using simple primitives of ephemeral agents, shared
+    memory, system principles, and instructions to c...
+  image: ''
 - title: Opus 5.5 is much better that older models about creating venv before trying
     to install python packag...
   source: twitter
@@ -1152,38 +1185,4 @@
   excerpt: If you're not using Beads by @Steve_Yegge and Beads Viewer by @doodlestein
     , why not? Beads is an amazing tool for keeping agent teams on track and Beads
     Viewer helps us poor, slow humans follow along...
-  image: ''
-- title: Jeez, working with Fable shows me that it won't be long before LLMs nail
-    all the non-functional requ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2087508406177276287
-  date: '2026-08-12'
-  excerpt: Jeez, working with Fable shows me that it won't be long before LLMs nail
-    all the non-functional requirements about an app. Already, it's going deep into
-    areas like security, performance, robustness, w...
-  image: ''
-- title: Handoffs between coding sessions is kinda, sorta a solved problem. Gas Town
-    can do it. Claude's agen...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2087506068918210995
-  date: '2026-08-12'
-  excerpt: Handoffs between coding sessions is kinda, sorta a solved problem. Gas
-    Town can do it. Claude's agent teams are getting there. Beads is the glue but
-    it's also good to have app context docs and devlog
-  image: ''
-- title: Trying Fable agent teams on my next project. Feels a lot like Gas Town. Still
-    using Beads because I ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2087369745393676587
-  date: '2026-08-12'
-  excerpt: Trying Fable agent teams on my next project. Feels a lot like Gas Town.
-    Still using Beads because I trust it. Love it when my agents say "sleep well"
-  image: ''
-- title: 'TIL: Empty Lambda logs don''t prove the user never clicked — a request killed
-    upstream logs nothing. ...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2087203801744748917
-  date: '2026-08-11'
-  excerpt: 'TIL: Empty Lambda logs don''t prove the user never clicked — a request
-    killed upstream logs nothing. Check API Gateway 4XX.'
   image: ''
