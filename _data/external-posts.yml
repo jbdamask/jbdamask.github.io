@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Giving agent teams a shared memory with Beads and hooks"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7523503706999414784/
+  date: 2026-11-03
+  excerpt: "AI coding agents compact their memory when they near their limits, and on a team each agent may remember different things, which drives entropy in the code. A central memory in Beads, wired in with harness hooks like a SessionStart call to 'bd prime', keeps lead agent Chestnut and its helpers working from the same context."
+  image: ""
+
 - title: "Have your agent team build metrics dashboards"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7522991699162497024/
