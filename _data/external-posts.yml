@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "There is no shorthand for URLs"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7523793893474099200/
+  date: 2026-11-04
+  excerpt: "Asked for clinical trial data, Claude went searching CT.gov, which turned out to be Connecticut's state website. Its explanation: it was using CT.gov as shorthand for clinicaltrials.gov. There is no such thing as shorthand for URLs."
+  image: ""
+
 - title: "Giving agent teams a shared memory with Beads and hooks"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7523503706999414784/
