@@ -2,6 +2,33 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Large language models calculate the statistical likelihood of which token
+    should come next in a sent...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2118369596029771779
+  date: '2026-11-05'
+  excerpt: Large language models calculate the statistical likelihood of which token
+    should come next in a sentence based on the patterns they learned during training.
+    That's a fancy way of saying they're squish...
+  image: ''
+- title: I see weird variability across different sessions with the same model. Sometimes
+    they seem to "get i...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2118089169469866301
+  date: '2026-11-04'
+  excerpt: I see weird variability across different sessions with the same model.
+    Sometimes they seem to "get it" more than others. Can't prove it but I've felt
+    this a few times. Just me?
+  image: ''
+- title: Good use of Haiku v5.5 does seem to be something special. I've only used
+    Haiku models to check for p...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2118070991649734926
+  date: '2026-11-04'
+  excerpt: Good use of Haiku v5.5 does seem to be something special. I've only used
+    Haiku models to check for prompt injection in the past but am testing this one
+    more things - classification, decisions, and sim...
+  image: ''
 - title: One of the more surprising things I've found in leading agent teams, is that
     they need to do time ca...
   source: twitter
@@ -1157,29 +1184,4 @@
   url: https://twitter.com/jbdamask/status/2087956230727705073
   date: '2026-08-13'
   excerpt: well this is a bit of a blocker
-  image: ''
-- title: Stunned at how difficult it is for a first time user to stand up an ubuntu
-    vm on azure cloud.
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2087919173166850129
-  date: '2026-08-13'
-  excerpt: Stunned at how difficult it is for a first time user to stand up an ubuntu
-    vm on azure cloud.
-  image: ''
-- title: 'It''s tough to understand wtf agents are talking about: "CI grew teeth,
-    one peeled layer at a time." ...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2087901633581625368
-  date: '2026-08-13'
-  excerpt: 'It''s tough to understand wtf agents are talking about: "CI grew teeth,
-    one peeled layer at a time." "The shared worktree taught its own lessons" "The
-    cap chain"'
-  image: ''
-- title: One of the funnier things about AI slop is that I don't even know how to
-    make an em dash
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2087631493984129387
-  date: '2026-08-12'
-  excerpt: One of the funnier things about AI slop is that I don't even know how to
-    make an em dash
   image: ''
