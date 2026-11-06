@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Give your coding agents a shared vocabulary"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7524133627769671680/
+  date: 2026-11-05
+  excerpt: "LLMs are squishy with language, and that bites when agents build large apps. On a biotech investor project, one agent quietly redefined \"Holding\" to include competitors because the term was never written down. The fix: a DEFINITIONS.jsonl file and a hook that injects it into every new agent."
+  image: ""
+
 - title: "There is no shorthand for URLs"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7523793893474099200/
