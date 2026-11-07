@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Coding agents are excellent at researching third party software in the context
+    of a given project. I...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2119087500928938284
+  date: '2026-11-07'
+  excerpt: Coding agents are excellent at researching third party software in the
+    context of a given project. It’s trivial to ask for an assessment of whether a
+    piece of tech could be useful to your system. “Are...
+  image: ''
 - title: I don't get the anti-hype about adversarial agents. I use them constantly
     and they always pay off. M...
   source: twitter
@@ -1181,10 +1190,4 @@
   url: https://twitter.com/jbdamask/status/2088023354783551545
   date: '2026-08-13'
   excerpt: The fact that side quests only take a day or so is good and bad. sigh
-  image: ''
-- title: Working with Fable agent teams feels a lot like working in Gas Town
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2088009571516178469
-  date: '2026-08-13'
-  excerpt: Working with Fable agent teams feels a lot like working in Gas Town
   image: ''
