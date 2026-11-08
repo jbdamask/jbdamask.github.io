@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Give your agents an SOP for evaluating new tech"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7524852893976481792/
+  date: 2026-11-07
+  excerpt: "Coding agents are great at assessing whether third-party tech fits your project, like JEV in place of LLM calls or Neo4j versus an RDF store. But they need a standard operating procedure, or they'll reject a tool over constraints like cost instead of its technical merits."
+  image: ""
+
 - title: "Give your coding agents a shared vocabulary"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7524133627769671680/
