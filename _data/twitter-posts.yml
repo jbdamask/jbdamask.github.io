@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: This may seem a bit Rube Goldberg-esque, but it works quite well. 1. Take
+    handwritten notes during m...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120164864937074826
+  date: '2026-11-10'
+  excerpt: This may seem a bit Rube Goldberg-esque, but it works quite well. 1. Take
+    handwritten notes during meetings. Why? You can't write very fast so it forces
+    you to pick the most important bits from the me...
+  image: ''
 - title: Coding agents are excellent at researching third party software in the context
     of a given project. I...
   source: twitter
@@ -1184,10 +1193,4 @@
   date: '2026-08-13'
   excerpt: This was a particularly good session with Fable. I'm getting all misty
     about starting a fresh one
-  image: ''
-- title: The fact that side quests only take a day or so is good and bad. sigh
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2088023354783551545
-  date: '2026-08-13'
-  excerpt: The fact that side quests only take a day or so is good and bad. sigh
   image: ''
