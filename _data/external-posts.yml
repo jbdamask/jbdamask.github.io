@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Merging Gas Town ideas with Claude Agent Teams"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7525549504415039488/
+  date: 2026-11-09
+  excerpt: "Steve Yegge's Gas Town gave John his first lead agent that managed a team. Claude Code's Agent Teams borrows some of those ideas, but its long-lived agents waste tokens rebuilding cache and miss queued messages. His setup pairs Agent Teams with Beads, a PRIME.md for short-lived agents, and a LEAD.md for the lead."
+  image: ""
+
 - title: "Give your agents an SOP for evaluating new tech"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7524852893976481792/
