@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "From handwritten meeting notes to an LLM wiki"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7525930452344328192/
+  date: 2026-11-10
+  excerpt: "A slightly Rube Goldberg workflow that works: take handwritten notes so you only capture what matters, have Claude transcribe photos of them, save the results to a Notion database with meeting metadata, then regularly ingest those notes into LLM wikis so AI can search across them by topic."
+  image: ""
+
 - title: "Merging Gas Town ideas with Claude Agent Teams"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7525549504415039488/
