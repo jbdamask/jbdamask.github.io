@@ -2,6 +2,96 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Many impressive-looking apps made with Fable 5.2 are the modern equivalent
+    of Hello World
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120566691629264938
+  date: '2026-11-11'
+  excerpt: Many impressive-looking apps made with Fable 5.2 are the modern equivalent
+    of Hello World
+  image: ''
+- title: 'Observation: Opus 5.5 is better at explaining things if you ask it to write
+    a two-person podcast rat...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120521976397881687
+  date: '2026-11-11'
+  excerpt: 'Observation: Opus 5.5 is better at explaining things if you ask it to
+    write a two-person podcast rather than a document.'
+  image: ''
+- title: I paused my grand experiment to "grow software" this morning after learning
+    that my Opus 5.5 agents ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120517898640744739
+  date: '2026-11-11'
+  excerpt: I paused my grand experiment to "grow software" this morning after learning
+    that my Opus 5.5 agents polluted system code and tests with actual data. Doing
+    an RCA now. An initial learning, is that as t...
+  image: ''
+- title: Here's an example of a custom news feed made with Claude. Simply make a new
+    Scheduled Task in Claude...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120496391956889871
+  date: '2026-11-11'
+  excerpt: Here's an example of a custom news feed made with Claude. Simply make a
+    new Scheduled Task in Claude and paste in the text below. (Note that Scheduled
+    Tasks run in Anthropic's cloud, which blocks most...
+  image: ''
+- title: The worst kind of AI-slop is the kind that tries to put meetings on my calendar
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120493940654645570
+  date: '2026-11-11'
+  excerpt: The worst kind of AI-slop is the kind that tries to put meetings on my
+    calendar
+  image: ''
+- title: The fact of the matter is that, even with the latest and greatest model,
+    humans are still needed if ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120360977795297443
+  date: '2026-11-11'
+  excerpt: The fact of the matter is that, even with the latest and greatest model,
+    humans are still needed if we're going to build software that we can vouch for.
+    Maybe the people who had access to Fable 5.2 wi...
+  image: ''
+- title: Lemmy and Randy Marsh discuss recent developments in genetic medicine
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120353378547216533
+  date: '2026-11-11'
+  excerpt: Lemmy and Randy Marsh discuss recent developments in genetic medicine
+  image: ''
+- title: One of the most useful things in my zshrc yolo() { claude -p --dangerously-skip-permissions
+    --model ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120271325818139103
+  date: '2026-11-10'
+  excerpt: One of the most useful things in my zshrc yolo() { claude -p --dangerously-skip-permissions
+    --model claude-haiku-5-5 "$@" }
+  image: ''
+- title: Sweet. I've been w/ CC for over a year. Fable resets incoming!
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120270434415558918
+  date: '2026-11-10'
+  excerpt: Sweet. I've been w/ CC for over a year. Fable resets incoming!
+  image: ''
+- title: Part intelligent, personalized newsletter using Paperclip by @gxl_ai. Part
+    AI-slop podcast with cust...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120268100050321731
+  date: '2026-11-10'
+  excerpt: Part intelligent, personalized newsletter using Paperclip by @gxl_ai. Part
+    AI-slop podcast with custom Eleven lab voices trained on Randy Marsh and Lemmy.
+  image: ''
+- title: Fable 5.2 used 10% of my Ultra plan in about an hour. C'mon Reset!
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120265434314195250
+  date: '2026-11-10'
+  excerpt: Fable 5.2 used 10% of my Ultra plan in about an hour. C'mon Reset!
+  image: ''
+- title: Fable 5.2. Here goes nothing...except a few zillion tokens
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120250232806273031
+  date: '2026-11-10'
+  excerpt: Fable 5.2. Here goes nothing...except a few zillion tokens
+  image: ''
 - title: This may seem a bit Rube Goldberg-esque, but it works quite well. 1. Take
     handwritten notes during m...
   source: twitter
@@ -1097,100 +1187,4 @@
   date: '2026-08-19'
   excerpt: Man, that Cordis paper from DeepSeek is pretty math-heavy. Another reason
     why I'm happy I built Now I Get It!
-  image: ''
-- title: At some point I fully expect my coding agents to push back so hard that we
-    get into a spat and break...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2090145002328301908
-  date: '2026-08-19'
-  excerpt: At some point I fully expect my coding agents to push back so hard that
-    we get into a spat and break up. Then we'll probably reconcile with a bunch of
-    "I'm sorry, I love you man!"
-  image: ''
-- title: Sometimes Opus 5 seems to have real engineer intuition and sometimes I'm
-    in disbelief about its lack...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2090142551013523531
-  date: '2026-08-19'
-  excerpt: Sometimes Opus 5 seems to have real engineer intuition and sometimes I'm
-    in disbelief about its lack of intuition. No problems with Fable yet...ignoring
-    token conflagrations
-  image: ''
-- title: 'TIL: Protect your API keys from inadvertent exposure by coding agents. On
-    a mac, store keys in mac''s...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2090085436316123273
-  date: '2026-08-19'
-  excerpt: 'TIL: Protect your API keys from inadvertent exposure by coding agents.
-    On a mac, store keys in mac''s keychain and use a helper function to retrieve
-    them at runtime.'
-  image: https://pbs.twimg.com/news_img/2090085438438416384/d19S7NND?format=jpg&name=orig
-- title: Here's a practical example of using McBrain vaults To help develop a Claude
-    training class for a fin...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2088595381038760004
-  date: '2026-08-15'
-  excerpt: Here's a practical example of using McBrain vaults To help develop a Claude
-    training class for a finance department, I loaded all transcripts from the Luke
-    Finance YouTube channel into a McBrain. Now ...
-  image: https://pbs.twimg.com/news_img/2088595386323628032/qbAu501w?format=jpg&name=orig
-- title: 'Me over the past 18 months: Cursor-&gt;Claude code-&gt;Cursor-&gt;Amp-&gt;Codex-&gt;Claude
-    code-&gt;...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2088443855435682008
-  date: '2026-08-15'
-  excerpt: 'Me over the past 18 months: Cursor-&gt;Claude code-&gt;Cursor-&gt;Amp-&gt;Codex-&gt;Claude
-    code-&gt;Gas Town-&gt;Claude Code with Fable teams I’m exhausted'
-  image: ''
-- title: Hello 2nd Claude max plan
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2088339379068531023
-  date: '2026-08-14'
-  excerpt: Hello 2nd Claude max plan
-  image: ''
-- title: I have to wonder about recency bias with newer models. My teenage son constantly
-    starts a sentence w...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2088272831087792634
-  date: '2026-08-14'
-  excerpt: I have to wonder about recency bias with newer models. My teenage son constantly
-    starts a sentence with, "honestly..." and so do Fable and Opus.
-  image: ''
-- title: LLMs make git complexity go the way of sed, awk, jq, etc. I don't have to
-    remember any of the comman...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2088242077947572645
-  date: '2026-08-14'
-  excerpt: LLMs make git complexity go the way of sed, awk, jq, etc. I don't have
-    to remember any of the commands
-  image: ''
-- title: Just because the human isn’t around doesn’t mean building stops
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2088110212146180400
-  date: '2026-08-14'
-  excerpt: Just because the human isn’t around doesn’t mean building stops
-  image: ''
-- title: Honestly, I don't know why anthropic needs watermarks. Everyone can spot
-    its writing a mile away
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2088072561946976569
-  date: '2026-08-14'
-  excerpt: Honestly, I don't know why anthropic needs watermarks. Everyone can spot
-    its writing a mile away
-  image: ''
-- title: Jesus, Fable tears it up. A second max plan may be in my future....unless
-    the tokenomics of Sol5.6 u...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2088040988887445595
-  date: '2026-08-13'
-  excerpt: Jesus, Fable tears it up. A second max plan may be in my future....unless
-    the tokenomics of Sol5.6 ultrafast changes my mind
-  image: ''
-- title: This was a particularly good session with Fable. I'm getting all misty about
-    starting a fresh one
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2088028562850775418
-  date: '2026-08-13'
-  excerpt: This was a particularly good session with Fable. I'm getting all misty
-    about starting a fresh one
   image: ''
