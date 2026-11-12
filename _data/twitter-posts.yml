@@ -2,6 +2,24 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Three weeks ago, I used a team of long-lived agents that had responsibilities
+    such as strategist, re...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120886592902480296
+  date: '2026-11-12'
+  excerpt: Three weeks ago, I used a team of long-lived agents that had responsibilities
+    such as strategist, red team evaluator, etc. The problem I ran into was that these
+    agents were spawned by a lead, but they...
+  image: ''
+- title: My mom used to tell my friends that they couldn't come over if they were
+    too serious. In that spirit...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120868515347329499
+  date: '2026-11-12'
+  excerpt: My mom used to tell my friends that they couldn't come over if they were
+    too serious. In that spirit, here's how to make a personalized newsletter on recent
+    updates in genetic medicine using Claude Co...
+  image: ''
 - title: Many impressive-looking apps made with Fable 5.2 are the modern equivalent
     of Hello World
   source: twitter
@@ -1173,18 +1191,4 @@
   excerpt: 'Yesterday''s builder haul: 1. Significant progress on my new open source
     project (already dogfooding) 2. Two beefy skills to help agents maintain state
     across sessions 3. Security hardening 4. Two simp...'
-  image: ''
-- title: I was wrong. Fable speaks in riddles, too. Sigh. Great coder, though
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2090235855981916314
-  date: '2026-08-20'
-  excerpt: I was wrong. Fable speaks in riddles, too. Sigh. Great coder, though
-  image: ''
-- title: Man, that Cordis paper from DeepSeek is pretty math-heavy. Another reason
-    why I'm happy I built Now ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2090169075229995132
-  date: '2026-08-19'
-  excerpt: Man, that Cordis paper from DeepSeek is pretty math-heavy. Another reason
-    why I'm happy I built Now I Get It!
   image: ''
