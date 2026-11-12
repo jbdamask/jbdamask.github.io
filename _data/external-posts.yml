@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "A custom news feed built with Claude Scheduled Tasks"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7526253131769413632/
+  date: 2026-11-11
+  excerpt: "An example of a custom news feed made with Claude: create a new Scheduled Task and paste in a prompt for a weekly Anthropic and Claude news digest. Scheduled Tasks run in Anthropic's cloud, which blocks most of the web, so for other newsletters John would use a Claude Code Scheduled Task instead."
+  image: ""
+
 - title: "From handwritten meeting notes to an LLM wiki"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7525930452344328192/
