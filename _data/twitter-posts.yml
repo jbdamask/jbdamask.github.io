@@ -2,6 +2,45 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: 'In my experience: Frontier models can be trusted to write code but need
+    help with architecture. They...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2121322935214289198
+  date: '2026-11-13'
+  excerpt: 'In my experience: Frontier models can be trusted to write code but need
+    help with architecture. They can be trusted with data engineering but need help
+    designing good data models. They can be trusted ...'
+  image: ''
+- title: Yea, i don't think i can put off a second ultra plan much longer. Opus 5.5
+    is great at writing code ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2121081596782559349
+  date: '2026-11-13'
+  excerpt: Yea, i don't think i can put off a second ultra plan much longer. Opus
+    5.5 is great at writing code but I feel that it doesn't have great judgement when
+    it comes to making architectural trade-offs. It...
+  image: ''
+- title: All this work on agent orchestrators...wondering if it will cease to matter
+    as models cross some thr...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2121047738305647100
+  date: '2026-11-13'
+  excerpt: All this work on agent orchestrators...wondering if it will cease to matter
+    as models cross some threshold where they figure out process, continuous improvement,
+    efficiency, etc
+  image: ''
+- title: haha. Claude isn't great at predicting Jev costs yet
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120982633731535087
+  date: '2026-11-12'
+  excerpt: haha. Claude isn't great at predicting Jev costs yet
+  image: ''
+- title: South Park predicted it. Anthropic has become trapper keeper
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2120981181877383485
+  date: '2026-11-12'
+  excerpt: South Park predicted it. Anthropic has become trapper keeper
+  image: ''
 - title: Three weeks ago, I used a team of long-lived agents that had responsibilities
     such as strategist, re...
   source: twitter
@@ -1151,44 +1190,4 @@
   date: '2026-08-21'
   excerpt: 'Claude for Legal Conjecture: If you put Opus 5 on both ends of a contract
     negotiation, you could bill your client infinitely'
-  image: ''
-- title: 'One of the most useful CLI functions in my .zshrc: yolo() { claude -p --dangerously-skip-permissions...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2090494280523522340
-  date: '2026-08-20'
-  excerpt: 'One of the most useful CLI functions in my .zshrc: yolo() { claude -p
-    --dangerously-skip-permissions --model claude-haiku-4-5 "$@" }'
-  image: ''
-- title: 'Two complimentary skills for multi-session coding: 1. pass-along - Beefier
-    then the average "handoff...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2090466122793390463
-  date: '2026-08-20'
-  excerpt: 'Two complimentary skills for multi-session coding: 1. pass-along - Beefier
-    then the average "handoff". It introspects the session, agent, &amp; model and
-    writes a structured doc. It knows Beads, too! ...'
-  image: https://pbs.twimg.com/news_img/2090466167345270784/HWVSaj2i?format=jpg&name=orig
-- title: Grok Build has a good sense of humor
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2090463533154586783
-  date: '2026-08-20'
-  excerpt: Grok Build has a good sense of humor
-  image: ''
-- title: Just about any coding agent can make simple games now. I regularly have agents
-    running on cloud VMs ...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2090445560436191280
-  date: '2026-08-20'
-  excerpt: Just about any coding agent can make simple games now. I regularly have
-    agents running on cloud VMs one-shotting things. I check in every now and again
-    to nudge them this way or that
-  image: ''
-- title: 'Yesterday''s builder haul: 1. Significant progress on my new open source
-    project (already dogfooding)...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2090422732068463087
-  date: '2026-08-20'
-  excerpt: 'Yesterday''s builder haul: 1. Significant progress on my new open source
-    project (already dogfooding) 2. Two beefy skills to help agents maintain state
-    across sessions 3. Security hardening 4. Two simp...'
   image: ''
