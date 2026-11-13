@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "A genetic medicine newsletter with Claude Code and Paperclip"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7526620091514499072/
+  date: 2026-11-12
+  excerpt: "How to build a personalized newsletter on recent updates in genetic medicine using Claude Code and Paperclip, an agent-native filesystem over full-text papers, clinical trials, regulatory documents, and more. Then make it fun by turning it into a podcast voiced by Lemmy from Motorhead and Randy Marsh."
+  image: ""
+
 - title: "A custom news feed built with Claude Scheduled Tasks"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7526253131769413632/
