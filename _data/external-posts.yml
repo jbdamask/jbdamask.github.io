@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "What frontier models can and can't be trusted with"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7527089394785157120/
+  date: 2026-11-13
+  excerpt: "After two years of long hours with frontier models, agents, and harnesses, John's take: they can be trusted to write code, engineer data, and analyze logs, but they need help with architecture, data models, and picking the metrics that matter. Their judgment slips as the number of factors grows, especially when some factors aren't in their context."
+  image: ""
+
 - title: "A genetic medicine newsletter with Claude Code and Paperclip"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7526620091514499072/
