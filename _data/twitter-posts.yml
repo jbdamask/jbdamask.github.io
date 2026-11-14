@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Models will still do bad things if left on their own. I had to issue a stop
+    work order yesterday aft...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2121437385733120440
+  date: '2026-11-14'
+  excerpt: Models will still do bad things if left on their own. I had to issue a
+    stop work order yesterday after learning the agents polluted the code base with
+    data
+  image: ''
 - title: 'In my experience: Frontier models can be trusted to write code but need
     help with architecture. They...'
   source: twitter
@@ -1182,12 +1191,4 @@
   url: https://twitter.com/jbdamask/status/2090904333546033531
   date: '2026-08-21'
   excerpt: planning and building and testing, oh my
-  image: ''
-- title: 'Claude for Legal Conjecture: If you put Opus 5 on both ends of a contract
-    negotiation, you could bil...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2090862580524888487
-  date: '2026-08-21'
-  excerpt: 'Claude for Legal Conjecture: If you put Opus 5 on both ends of a contract
-    negotiation, you could bill your client infinitely'
   image: ''
