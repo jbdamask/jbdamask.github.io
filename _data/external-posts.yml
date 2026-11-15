@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Claude Code tip: agent personas over AGENTS.md"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7527493429992525824/
+  date: 2026-11-14
+  excerpt: "A power tip for Claude Code: worry less about AGENTS.md and define agent persona files instead, like Worker, Spec Writer, and Red Team, so your primary agent can spawn the subagent types it needs. Then ask for periodic reports on which subagents ran and refine each persona on its own."
+  image: ""
+
 - title: "What frontier models can and can't be trusted with"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7527089394785157120/
