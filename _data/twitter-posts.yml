@@ -2,6 +2,24 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: 'Power tip for Claude Code: Spend less time worrying about AGENTS.md and
+    more time defining agent per...'
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2121725992100409518
+  date: '2026-11-14'
+  excerpt: 'Power tip for Claude Code: Spend less time worrying about AGENTS.md and
+    more time defining agent persona files, e.g. Worker, Spec Writer, Red Team, etc
+    This way, your primary agent can spawn subagents...'
+  image: ''
+- title: “That bucket contained limited coding agent traces, mostly from 2025, from
+    sessions not in Privacy M...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2121701594324422728
+  date: '2026-11-14'
+  excerpt: “That bucket contained limited coding agent traces, mostly from 2025, from
+    sessions not in Privacy Mode, which we were permitted to use for model training.
+    A small number of those traces contained cre...
+  image: ''
 - title: Models will still do bad things if left on their own. I had to issue a stop
     work order yesterday aft...
   source: twitter
@@ -1177,18 +1195,3 @@
     AWS apps. It contains expert-curated gotchas and solutions so your agents don't
     build footguns. Point your coding agents t...
   image: https://pbs.twimg.com/news_img/2090466167345270784/HWVSaj2i?format=jpg&name=orig
-- title: 'This was interesting: A client commented on a doc using MS Word. I opened
-    it in Google Docs and didn...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2091332054541611239
-  date: '2026-08-23'
-  excerpt: 'This was interesting: A client commented on a doc using MS Word. I opened
-    it in Google Docs and didn’t any see comments. Claude read it and extracted all
-    so I could read them'
-  image: ''
-- title: planning and building and testing, oh my
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2090904333546033531
-  date: '2026-08-21'
-  excerpt: planning and building and testing, oh my
-  image: ''
