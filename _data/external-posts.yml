@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Teaching Claude Code knowledge bases at UMass Chan"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7527906394096881664/
+  date: 2026-11-15
+  excerpt: "Slides and a tutorial from a 90-minute UMass Chan Medical School bootcamp session where participants used Claude Code and Paperclip to build a personal knowledge base on Atopic Dermatitis, add a research tracker for automated literature mining, and package the process as a reusable Claude Skill for any topic."
+  image: ""
+
 - title: "Claude Code tip: agent personas over AGENTS.md"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7527493429992525824/
