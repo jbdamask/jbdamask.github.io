@@ -2,6 +2,38 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Saying it again, Opus 5.5 seems to be a much better writer when asked to
+    make a podcast rather than ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2123871892851634583
+  date: '2026-11-20'
+  excerpt: Saying it again, Opus 5.5 seems to be a much better writer when asked to
+    make a podcast rather than a document
+  image: ''
+- title: Update on this...instead of taking pictures of each page, just take a video
+    of the notebook as you t...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2123828517133537614
+  date: '2026-11-20'
+  excerpt: Update on this...instead of taking pictures of each page, just take a video
+    of the notebook as you turn the pages. Claude is smart enough to take snapshots
+    of each page itself.
+  image: ''
+- title: $250 for this course? Everything in it is commodity and freely available
+    online. It's so easy to mak...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2123793529755328560
+  date: '2026-11-20'
+  excerpt: '$250 for this course? Everything in it is commodity and freely available
+    online. It''s so easy to make your own courses these days: Just point Claude at
+    the page and have it design your own version of ...'
+  image: ''
+- title: GOAT post
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2123581598897738171
+  date: '2026-11-20'
+  excerpt: GOAT post
+  image: ''
 - title: Interesting. If your one gets stolen and the bad guy can open Claude mobile,
     they can access your co...
   source: twitter
@@ -1160,37 +1192,4 @@
   excerpt: Had a bunch of perplexing interactions with Claude today. Then realized
     it was on Opus instead of Fable. I agree there's something off with that model.
     It just feels weird.
-  image: ''
-- title: can't believe how clunky it is to stand up a simple server in azure
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2092408349786583074
-  date: '2026-08-26'
-  excerpt: can't believe how clunky it is to stand up a simple server in azure
-  image: ''
-- title: Da Phaq? is a free Chrome extension and one of the first widgets I built
-    with agents. It's still sur...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2092318401695727659
-  date: '2026-08-25'
-  excerpt: Da Phaq? is a free Chrome extension and one of the first widgets I built
-    with agents. It's still surprisingly useful. I'll read something online, highlight
-    it and hit the plug in. It passes the select...
-  image: ''
-- title: A great skill-pair is /pass-along and /session-recap. Coding agents often
-    tire before work completes...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2092314254841950368
-  date: '2026-08-25'
-  excerpt: A great skill-pair is /pass-along and /session-recap. Coding agents often
-    tire before work completes, so making software involves multiple sessions. The
-    problem isn't communicating across agents, it's...
-  image: https://pbs.twimg.com/news_img/2090466167345270784/HWVSaj2i?format=jpg&name=orig
-- title: 'Working on too many things at once: A new open source tool for managing
-    cloud servers for coding age...'
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2092298745958350929
-  date: '2026-08-25'
-  excerpt: 'Working on too many things at once: A new open source tool for managing
-    cloud servers for coding agents, a post about modern software engineering, a companion
-    skill to the doc that audits codebases, r...'
   image: ''
