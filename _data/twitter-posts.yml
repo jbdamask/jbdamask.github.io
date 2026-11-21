@@ -2,6 +2,32 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: Enterprise SaaS isn’t going to die as fast as some people think. Decisions
+    to buy or build aren’t ma...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2124160463214608761
+  date: '2026-11-21'
+  excerpt: Enterprise SaaS isn’t going to die as fast as some people think. Decisions
+    to buy or build aren’t made unilaterally by tech teams or individual departments.
+    CFOs, COOs, etc will ask basic questions to...
+  image: ''
+- title: This is an example of why I don't care for Claude Code in the desktop app.
+    It has weird restrictions...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2124137206365192302
+  date: '2026-11-21'
+  excerpt: This is an example of why I don't care for Claude Code in the desktop app.
+    It has weird restrictions that you simply don't run into with the TUI.
+  image: ''
+- title: The assumption about frontier models and coding agents is that they can do
+    what you want. Sometimes ...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2124123916473872624
+  date: '2026-11-21'
+  excerpt: The assumption about frontier models and coding agents is that they can
+    do what you want. Sometimes they do and sometimes they don’t. Sometimes they teach
+    you that you don’t know what you want.
+  image: ''
 - title: Saying it again, Opus 5.5 seems to be a much better writer when asked to
     make a podcast rather than ...
   source: twitter
@@ -1172,24 +1198,3 @@
     agents to communicate across time, since one session is never enough. Coding harnesses
     will handle this soon enough, but un...
   image: https://pbs.twimg.com/news_img/2090466167345270784/HWVSaj2i?format=jpg&name=orig
-- title: Ooooo, is very cool!
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2092588817379135866
-  date: '2026-08-26'
-  excerpt: Ooooo, is very cool!
-  image: https://pbs.twimg.com/news_img/2092588821674065920/zNwobQnu?format=jpg&name=orig
-- title: Modern Software Engineering in Anger
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2092432306174595506
-  date: '2026-08-26'
-  excerpt: Modern Software Engineering in Anger
-  image: ''
-- title: Had a bunch of perplexing interactions with Claude today. Then realized it
-    was on Opus instead of Fa...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2092431994126827802
-  date: '2026-08-26'
-  excerpt: Had a bunch of perplexing interactions with Claude today. Then realized
-    it was on Opus instead of Fable. I agree there's something off with that model.
-    It just feels weird.
-  image: ''
