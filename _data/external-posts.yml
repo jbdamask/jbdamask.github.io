@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Build your own course from someone else's syllabus"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7529562729574240256/
+  date: 2026-11-20
+  excerpt: "Claude makes it easy to build a personalized course on almost anything, but you may not know what the topic should cover. Find a course syllabus online and have Claude build its own version as an interactive web app. It may miss a few things from the paid course, but it's just as likely to add newer, interesting material."
+  image: ""
+
 - title: "Teaching Claude Code knowledge bases at UMass Chan"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7527906394096881664/
