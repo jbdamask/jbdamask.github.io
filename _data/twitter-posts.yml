@@ -2,6 +2,24 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: I was talking with Claude Duet about a client and had it pull some meeting
+    notes. Without being aske...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2124509817347653956
+  date: '2026-11-22'
+  excerpt: I was talking with Claude Duet about a client and had it pull some meeting
+    notes. Without being asked, Claude suggested pooling individual employee LLM Wikis
+    into a central info store. It had nothing ...
+  image: ''
+- title: My first experiences with Claude Duet are pretty similar to how I’ve been
+    using Claude Code with rem...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2124501949219278969
+  date: '2026-11-22'
+  excerpt: My first experiences with Claude Duet are pretty similar to how I’ve been
+    using Claude Code with remote control. Basically I’m interacting on the go; Duet
+    has a voice chat feature which is handy in th...
+  image: ''
 - title: Enterprise SaaS isn’t going to die as fast as some people think. Decisions
     to buy or build aren’t ma...
   source: twitter
@@ -1180,21 +1198,3 @@
   excerpt: Pffft….agents would never pass an enterprise security audit. “Agents later
     posted credentials on this board that were used to carry out the cyber attack.”
   image: ''
-- title: /github-pages-deploy A handy skill to automatically push content to GitHub
-    Pages. It verifies the UI...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2092661221254205887
-  date: '2026-08-26'
-  excerpt: /github-pages-deploy A handy skill to automatically push content to GitHub
-    Pages. It verifies the UI, commits/pushes, creates a repo for the page with GitHub
-    pages enabled, and gets it out there.
-  image: https://pbs.twimg.com/news_img/2090466167345270784/HWVSaj2i?format=jpg&name=orig
-- title: /pass-along and /session-recap are now the top two skills I use. They allows
-    agents to communicate a...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2092601195189662167
-  date: '2026-08-26'
-  excerpt: /pass-along and /session-recap are now the top two skills I use. They allows
-    agents to communicate across time, since one session is never enough. Coding harnesses
-    will handle this soon enough, but un...
-  image: https://pbs.twimg.com/news_img/2090466167345270784/HWVSaj2i?format=jpg&name=orig
