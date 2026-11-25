@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: My main experiment last month was to test the concept of a "software factory".
+    The idea is that a hu...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2125616662422450563
+  date: '2026-11-25'
+  excerpt: My main experiment last month was to test the concept of a "software factory".
+    The idea is that a human provides a high-level goal and swarms of coordinated
+    AI agents fan out to make dreams come true....
+  image: ''
 - title: I was talking with Claude Duet about a client and had it pull some meeting
     notes. Without being aske...
   source: twitter
@@ -1189,12 +1198,4 @@
   date: '2026-08-27'
   excerpt: Why does Claude Design feel like it was made by Adobe? It's insanely frustrating
     to work with
-  image: ''
-- title: Pffft….agents would never pass an enterprise security audit. “Agents later
-    posted credentials on thi...
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2092772147542323437
-  date: '2026-08-27'
-  excerpt: Pffft….agents would never pass an enterprise security audit. “Agents later
-    posted credentials on this board that were used to carry out the cyber attack.”
   image: ''
