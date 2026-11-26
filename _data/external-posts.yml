@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "What a month-long software factory experiment taught me"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7531377524006731776/
+  date: 2026-11-25
+  excerpt: "A month testing a Claude \"software factory\", where swarms of agents chase a high-level goal: over-hyped, but it kinda works. AI teams suffer the same problems as human teams. Their additive habits and limited memory piled up entropy until they lost sight of the goal, polluted the codebase with real data, and burned $30 on agent bureaucracy."
+  image: ""
+
 - title: "Build your own course from someone else's syllabus"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7529562729574240256/
