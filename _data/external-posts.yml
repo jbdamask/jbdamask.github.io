@@ -1,6 +1,13 @@
 # External posts from LinkedIn, Twitter, etc.
 # Add your posts here and they'll appear in the unified feed
 
+- title: "Smoking a Thanksgiving turkey with ChatGPT"
+  source: linkedin
+  url: https://www.linkedin.com/feed/update/urn:li:activity:7531765086399496192/
+  date: 2026-11-26
+  excerpt: "I asked ChatGPT how to smoke a turkey. It got most of it right and even helped me pick wood chips from photos I sent while walking the store aisles. It also gave bad advice that caused a small fire. Once I remembered I had a brain and made an adjustment, we had a winning turkey."
+  image: ""
+
 - title: "What a month-long software factory experiment taught me"
   source: linkedin
   url: https://www.linkedin.com/feed/update/urn:li:activity:7531377524006731776/
