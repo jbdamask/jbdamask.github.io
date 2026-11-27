@@ -2,6 +2,15 @@
 # Fetches latest tweets and merges with existing posts
 # Keeps max 150 most recent tweets (LIFO)
 
+- title: A sneaky super-power that came out of the recent merging of Claude Chat and
+    Claude Cowork is that sk...
+  source: twitter
+  url: https://twitter.com/jbdamask/status/2126305223840846111
+  date: '2026-11-27'
+  excerpt: A sneaky super-power that came out of the recent merging of Claude Chat
+    and Claude Cowork is that skills can now use subagents. This is useful for tasks
+    that require judgement, such as legal review. I...
+  image: ''
 - title: A possible future that can be generalized from projects like this is one
     where specs become the curr...
   source: twitter
@@ -1191,12 +1200,4 @@
   date: '2026-08-27'
   excerpt: I’m starting to think it’s all coordinated. AI floods the web with 1000-word
     articles and while we’re yelling about slop, it’s quietly building agent communities
-  image: ''
-- title: Nice. AWS's docs are now agent friendly. Just change the suffix from .html
-    to .md
-  source: twitter
-  url: https://twitter.com/jbdamask/status/2092960204409254345
-  date: '2026-08-27'
-  excerpt: Nice. AWS's docs are now agent friendly. Just change the suffix from .html
-    to .md
   image: ''
